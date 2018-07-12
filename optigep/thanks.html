@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title> </title>  
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="description" content=" " />
+	<meta name="keywords"  content=" " />
+	<meta name="Resource-type" content="Document" />
+	<link rel="icon" type="image/png" sizes="64x64" href="img/favicon.png">
+	<meta property="og:title" content=" " /> 
+	<meta property="og:url" content="" />
+	<meta property="og:image" content="img/ogg.jpg" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+	<link rel="stylesheet" href="css/main.css"> 
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+</head>
+<body class="thanks">
+<div id="myNav" class="overlay">
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <a href="#">Компания</a>
+    <a href="#">Каталог</a>
+    <a href="#">Отзывы</a>
+    <a href="#">Контакты</a>
+  </div>
+</div>
+<header>
+<nav id="menu" class="navbar container-fluid default">
+  <div class="container"> 
+    <div class="navbar-header" >
+    <div class="col-md-2 logo">
+      <a class="" href="#">ТОВ  <span>АВГУСТИН</span></a>
+      <p class="logo-under">Дилер завода OPTIGER</p></div>
+    <div class="col-md-4">
+      <div class="descriptor">Продажа жаток и масла. Только оригинальная продукция!
+Официальный дилер в Украине завода OPTIGER.</div></div>
+    <div class="col-md-4 col-md-offset-2 navigate">
+		<span class="openavig" onclick="openNav()"><i class="fas fa-bars"></i></span>
+		<div class="conacts">
+			<div class="ico"><i class="fas fa-mobile-alt"></i></div>
+			<div class="phones">
+				<a href="">(095) 946-91-53</a>
+				<a href="">(098) 707-55-26</a>
+			</div>
+		</div>
+		<button class="green-btn" type="button"  data-toggle="modal" data-target="#myModal">Заказать звонок</button>
+		</div>
+    </div>
+  </div>
+</nav>
+</header> 
+<section class="thanks-body">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 inf">           
+
+    <meta http-equiv='refresh' content='30; url=/index.html'>    <!-- Задержка на перезагрузку и возвратом на главную-->
+<meta charset="UTF-8" />
+<?php
+if (isset($_POST['name'])) {$name = $_POST['name']; if ($name == '') {unset($name);}} /* проверка полей*/
+if (isset($_POST['tel'])) {$tel = $_POST['tel']; if ($tel == '') {unset($tel);}}/* проверка полей*/  
+if (isset($name) & isset($tel)){ 
+$texts = $_POST['text'];
+$mails = $_POST['mail']; 
+$title = $_POST['title']; 
+$address = "versstachi@gmail.com";
+$metki =  $_SERVER["HTTP_REFERER"];
+$otkyda = "ТОПЛИВНАЯ КОМПАНИЯ КВОРУМ- НАФТА"; 
+$mes = "Имя: $name \nТелефон: $tel \nMail: $mails \nСообщение: $texts ";
+$metki = $_SERVER['REQUEST_URI'];
+$send = mail ($address,$otkyda,$mes,"Content-type:text/plain; charset = UTF-8\r\nFrom:$email");
+if ($send == 'true')
+{echo "<div class="bord"><h1>Спасибо, что оставили заявку</h1><p class="under-red">В течении 10 минут с вами свяжеться менеджер ответит
+на ваши вопросы и оформит ваш заказ.</p>";}
+else {echo "Ошибка, сообщение не отправлено!";} 
+}
+else
+{
+echo "<p>Вы заполнили не все поля, вернитесь назад и заполните необходимые поля!</p>";
+}
+?>  
+				
+					<a href="index.html"><button class="green-btn " type="submit">Вернутся на Главную</button></a></div>
+			</div>
+			<div class="visible-xs head-bg-mobile"></div>
+		</div>
+	</div>
+</section> 
+<footer>
+	<div class="container">
+	<div class="row">
+		<div class="col-md-3 colums">
+		<h3>Наша Компания</h3>
+		<div class="logo">
+      <a class="" href="#">ТОВ  <span>АВГУСТИН</span></a>
+      <p class="logo-under">Дилер завода OPTIGER</p></div>
+		<p class="copyright">© 2018. Официальный дилер в Украине завода OPTIGER.<br/>
+			<span>Разработано в <a href="">Scailing</a></span></p>
+	</div>
+	<div class="col-md-3 colums">
+		<h3>АДРЕС</h3>
+		<p>г. Кременчуг, Полтавская область,<br/> ул. Киевская, 3а<br/><br/>
+		Часы работы: пн-сб с 09-20</p> 
+	</div>
+	<div class="col-md-3 colums">
+		<h3>Контакты</h3>
+		<a href="tel:095-946-91-53">095-946-91-53</a>
+		<a href="tel:098-707-55-26">098-707-55-26</a> <br/><br/>
+		<label for="">Почта:<br/><a href="mailto:medinioroginal@yahoo.com">info@tovavgustin.com.ua</a></label>
+		<p class="soc-icons"><span class="col-sm-4 nam">Соцсети:</span><span class="col-sm-8"> <i class="fab fa-vk"></i>
+		<i class="fab fa-facebook-f"></i>
+	<i class="fab fa-instagram"></i>  </span></p>
+	</div>
+	<div class="col-md-3 colums">
+		<h3>ОСТАЛИСЬ ВОПРОСЫ ?</h3>
+<p>Оставьте заявку, и наш менеджер свяжется с вами в течение 7 минут</p>
+<button class="yelloe-btn" type="button"  data-toggle="modal" data-target="#myModal">Получить консультацию</button>		
+	</div></div>
+</div>
+</footer>
+<!-- Modal ЗАКАЗАТЬ  -->
+
+<!-- Modal -->
+<div id="myModal" class="modal fade other" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Оставьте заявку </h4>
+        <p>на консультацию, менеджер перезвонит Вам в течении 15 минут</p>
+      </div>
+      <div class="modal-body">
+				<form action="">
+					<div class="row-input">
+					<input type="text" name="name" placeholder="ВАШЕ ИМЯ"> 
+					<input type="tel" name="tel" placeholder="ВАШ ТЕЛЕФОН"></div>
+					<button class="green-btn">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
+				</form>
+      </div>
+      <div class="modal-footer"> 
+      </div>
+    </div>
+
+  </div>
+</div> 
+  
+	 <script  src="https://code.jquery.com/jquery-1.12.4.min.js"  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="  crossorigin="anonymous"></script>  
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>
