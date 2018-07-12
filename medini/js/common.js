@@ -50,7 +50,8 @@ $('.slick-product-nav').slick({
 $('.modal').on('shown.bs.modal', function (e) {
     $('.slick-popup').resize();
     $('.slick-popup-nav').resize();
-  }) 
+  });
+ 
  $('.slick-popup').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -96,31 +97,38 @@ $('.slick-popup-nav').slick({
     // instead of a settings object
   ]
 }); 
-
-      $(".center").slick({
-        dots: false,
-        arrows: true,
-        infinite: true,
-        centerMode: true,
-        centerPadding: '60px',
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        prevArrow: '<span class="nav-prev icon-chevron-left"><img src="img/back.svg"  alt=""></span>',
-        nextArrow: '<span class="nav-next icon-chevron-right"><img src="img/next.svg"  alt=""></span>',
-        responsive: [ 
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-             centerMode: false,
-            }
-          } 
-          // You can unslick at a given breakpoint now by adding:
-          // settings: "unslick"
-          // instead of a settings object
-        ]
-      }); 
+  $(".center").slick({
+    dots: false,
+    arrows: true,
+    infinite: true, 
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: '<span class="nav-prev icon-chevron-left"><img src="img/back.svg"  alt=""></span>',
+    nextArrow: '<span class="nav-next icon-chevron-right"><img src="img/next.svg"  alt=""></span>',
+    responsive: [ 
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+         centerMode: false,
+        }
+      } 
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  }); 
+  $('.fade-collection').slick({
+  dots: false,
+  arrows: false,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  cssEase: 'linear',
+  autoplay: true,
+  autoplaySpeed: 5000,
+});
 }); 
 
 // Table Responsive Footable
@@ -167,6 +175,26 @@ $(".more").click(function(){
   $(".spoiler-trigger").click(function() {
     $(this).parent().prev().collapse('toggle');
   });
+  $(".drop-menu a").click(function() { 
+    $(this).parent().toggleClass("active"); 
+  });  
+  // row header info close
+  $(".row-info .close").click(function() { 
+    $(".row-info").hide(); 
+  });  
+// menu pic hover
+$(document).ready(function(){
+  $('a.menu').hover(
+            function() {
+                id = $(this).attr('id');
+                num = id.replace(/menu(\d+)/gi, '$1');
+                $('#img').attr('src', 'img/menu_pic/'+num+'.png');
+            },
+            function() { 
+                $('#img').attr('src', 'img/menu_pic/'+num+'.png'); 
+            }
+        );   
+  }); 
 // media query
 $(document).ready(function(){
   function classFunction(){
@@ -186,15 +214,27 @@ $(document).ready(function(){
 		$("nav ul.navbar-nav li a").hover(function() {
 		  $("#page-overlay").toggleClass("hoverover");  
 		});   
-		$(".dropdown-menu>li>a").hover(function() { 
-		  $("#page-overlay").toggleClass("hoverover");  
-		});   
+    $(".dropdown-menu>li>a.dropdown-toggle").hover(function() { 
+      $("#page-overlay").toggleClass("hoverover");  
+    }); 
+    $("nav .ship-cart-list  a").hover(function() { 
+      $("#page-overlay").toggleClass("hoverover");  
+    });   
+    $(".curense>li>a.dropdown-toggle").hover(function() { 
+      $("#page-overlay").toggleClass("hoverover");  
+    });   
+    $(".curense a").hover(function() { 
+      $("#page-overlay").toggleClass("hoverover");  
+    });   
 		$("nav .js-navbar ul.navbar-nav .full-menu a").hover(function() { 
 		  $("#page-overlay").toggleClass("hoverover");  
 		});  
 		$(".dropdown-menu").hover(function() { 
 		  $("#page-overlay").toggleClass("hoverover");  
-		});    
+		});  
+    $("ul.dropdown-menu.profile-menu a").hover(function() { 
+      $("#page-overlay").toggleClass("hoverover");  
+    });  
     }
     else{ 
     }
@@ -303,18 +343,18 @@ var __slice = [].slice;
     }
   });
 })(window.jQuery, window);
-
+// star rating
 $(function() {
   return $(".starrr").starrr();
 });
 
 $( document ).ready(function() {
       
-  $('#hearts').on('starrr:change', function(e, value){
+  $('.hearts').on('starrr:change', function(e, value){
     $('#count').html(value);
   });
   
-  $('#hearts-existing').on('starrr:change', function(e, value){
+  $('.hearts-existing').on('starrr:change', function(e, value){
     $('#count-existing').html(value);
   });
 });

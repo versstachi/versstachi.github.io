@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title> </title>  
+	<title>Medini</title>  
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<meta name="description" content=" " />
 	<meta name="keywords"  content=" " />
@@ -21,6 +21,17 @@
 </head>
 <body class="front-page">
 <header>
+<div class="row-info">
+        <button type="button" class="close"><img src="img/close.png" alt=""></button>
+        <div class="container">
+        	<div class="row">
+        		<div class="col-sm-3"><a href="delivery.html"><i class="fas fa-truck"></i>Бесплатная доставка по Украине</a></div>
+        		<div class="col-sm-3"><a href=""><i class="fas fa-redo"></i>Возврат товара в течение 14 дней</a></div>
+        		<div class="col-sm-3"><a href="response.html"><i class="fas fa-medal"></i>7 лет на рынке / отзывы</a></div>
+        		<div class="col-sm-3"><a href=""><i class="far fa-star"></i>Celebrity в одежде Medini</a></div>
+        	</div>
+        </div>
+</div>
 	<div class="container-fluid navs"> 
 <nav class="navbar navbar-default navbar-static">
   <div class="container-fluid">
@@ -36,51 +47,52 @@
     <div class="collapse navbar-collapse js-navbar">
     	<div class="mobile-menu-row"></div>
       <ul class="nav navbar-nav hiden-menu">
-        <li class="dropdown"><a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">Коллекции</a>
+        <li class="dropdown" onclick="javascript:location.href='catalog.html'"  ><a id="drop1" href="catalog.html" class="dropdown-toggle" data-toggle="dropdown">Коллекции</a>
           <div class="dropdown-menu full-menu container-fluid">
           	<div class="container">
           		<div class="row">
           	<div class="col-sm-3">
           	<ul> 
-	            <li class="active"><a href="">Medini</a></li>
-	            <li><a href="">Favoritti</a></li> 
-	            <li><a href="">Exclusive</a></li> 
-	            <li><a href="">Vision</a></li>
-	            <li><a href="">Arani</a></li>
-	            <li><a href="">Ожидается</a></li>
+	            <li class="active"><a href="" class="menu" id="menu1">Medini</a></li>
+	            <li><a href="" class="menu" id="menu2">Favoritti</a></li> 
+	            <li><a href="" class="menu" id="menu3">Exclusive</a></li> 
+	            <li><a href="" class="menu" id="menu4">Vision</a></li>
+	            <li><a href="" class="menu" id="menu5">Arani</a></li>
+	            <li><a href="" class="menu" id="menu6">Ожидается</a></li>
           	</ul>
           </div>
           	<div class="col-sm-3">
           	<ul> 
-	            <li><a href="">Космические скидки <span class="red">-50% -33%</span></a></li>
-	            <li><a href="">Деловой стиль</a></li> 
-	            <li class="active"><a href="">Стильный спорт</a></li> 
-	            <li><a href="">Платья на каждый день</a></li>
-	            <li><a href="">Выпускной вечер 2018</a></li>
-	            <li><a href="">Новинки</a></li> 
-	            <li><a href="">Звёздные коллекции</a></li> 
-	            <li><a href="">ТОП продаж</a></li>
+	            <li><a href="" class="menu" id="menu7">Космические скидки <span class="red">-50% -33%</span></a></li>
+	            <li><a href="" class="menu" id="menu8">Деловой стиль</a></li> 
+	            <li class="active"><a href="" class="menu" id="menu9">Стильный спорт</a></li> 
+	            <li><a href="" class="menu" id="menu10">Платья на каждый день</a></li>
+	            <li><a href="" class="menu" id="menu11">Выпускной вечер 2018</a></li>
+	            <li><a href="" class="menu" id="menu12">Новинки</a></li> 
+	            <li><a href="" class="menu" id="menu13">Звёздные коллекции</a></li> 
+	            <li><a href="" class="menu" id="menu14">ТОП продаж</a></li>
           	</ul>
           </div>
           	<div class="col-sm-3">
           	<ul>  
-	            <li class="active"><a href="">Верхняя одежда</a></li>
-	            <li><a href="">Платья</a></li> 
-	            <li><a href="">Костюмы и комплекты</a></li> 
-	            <li><a href="">Комбинезоны</a></li>
-	            <li><a href="">Юбки</a></li> 
-	            <li><a href="">Спортивные костюмы</a></li> 
-	            <li><a href="">Купальники, пляжные туники</a></li>
+	            <li class="active"><a href="" class="menu" id="menu15">Верхняя одежда</a></li>
+	            <li><a href="" class="menu" id="menu16">Платья</a></li> 
+	            <li><a href="" class="menu" id="menu17">Костюмы и комплекты</a></li> 
+	            <li><a href="" class="menu" id="menu18">Комбинезоны</a></li>
+	            <li><a href="" class="menu" id="menu19">Юбки</a></li> 
+	            <li><a href="" class="menu" id="menu20">Спортивные костюмы</a></li> 
+	            <li><a href="" class="menu" id="menu21">Купальники, пляжные туники</a></li>
           	</ul>
           </div>
-          	<div class="col-sm-3">
-          		<img src="img/menu-collecction-pic.png" alt="" >
-          	</div></div>
+          	<div class="col-sm-3 img_menu_hover" id="img-menu-block" > 
+				<img src="img/menu_pic/1.png" id="img" alt="" />
+          	</div>
+          </div>
           	</div>
           </div>
         </li>
-        <li class="dropdown">
-          <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <li class="dropdown" onclick="javascript:location.href='page-about-us.html'" >
+          <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown">
             Компания 
           </a>
          
@@ -92,7 +104,7 @@
 	            <li class="active"><a href="page-about-us.html">О нас</a></li>
 	            <li><a href="destribution.html">Дистрибюторы</a></li> 
 	            <li><a href="shops.html">Магазины</a></li> 
-	            <li><a href="">Look Book</a></li>
+	            <li><a href="gallery.html">Look Book</a></li>
 	            <li><a href="">Видео</a></li>
 	            <li><a href="response.html">Отзывы</a></li>
           	</ul>
@@ -102,8 +114,8 @@
           	</div>
           </div>
         </li>
-        <li class="dropdown">
-          <a id="drop1" href="faq.html" class="dropdown-toggle" data-toggle="dropdown">
+        <li class="dropdown" onclick="javascript:location.href='faq.html'">
+          <a id="drop3" href="faq.html" class="dropdown-toggle" data-toggle="dropdown">
             Помощь
           </a>
          
@@ -114,29 +126,29 @@
           	<ul> 
 	            <li class="active"><a href="payment.html">Оплата</a></li>
 	            <li><a href="delivery.html">Доставка</a></li> 
-	            <li><a href="">Выбрать размер</a></li> 
+	            <li><a href="sizes.html">Выбрать размер</a></li> 
 	            <li><a href="faq.html">Частые вопросы</a></li>
 	            <li><a href="download.html">Скачать</a></li>
 	            <li><a href="contacts.html">Контакты</a></li>
           	</ul>
           </div>
           	<div class="col-sm-4"><img src="img/menu-help-pic.png" alt="" title="" class="img-responsive"></div>
-          	<div class="col-sm-3 "><label for=""><strong>Телефоны:</strong>
-          		<a href="tel:+380 (99) 174-43-24">+380 (99) 174-43-24</a>
-							<a href="tel:+380 (97) 496-59-71">+380 (97) 496-59-71</a>
-							<a href="tel:+380 (63) 352-36-23">+380 (63) 352-36-23</a>
-							<a href="tel:+380 (66) 162-08-61">+380 (66) 162-08-61 <span>(viber, whatsapp)</span></a></label>
-							<label for=""><strong>Email:</strong>
-							<a href="mailto:medinioroginal@yahoo.com">medinioroginal@yahoo.com</a></label>
-							<label for=""><strong>Skype</strong>
-							<a href="mailto:medinioroginal@yahoo.com">medinioroginal@yahoo.com</a></label>
+          	<div class="col-sm-3 "><h4><strong>Телефоны:</strong></h4>
+          		<a href="tel:+380991744324">+380 (99) 174-43-24</a>
+							<a href="tel:+380974965971">+380 (97) 496-59-71</a>
+							<a href="tel:+380633523623">+380 (63) 352-36-23</a>
+							<a href="tel:+380661620861">+380 (66) 162-08-61 <span>(viber, whatsapp)</span></a>
+							<h4><strong>Email:</strong></h4>
+							<a href="mailto:medinioroginal@yahoo.com">medinioroginal@yahoo.com</a> 
+							<h4><strong>Skype</strong></h4>
+							<a href="mailto:medinioroginal@yahoo.com">medinioroginal@yahoo.com</a> 
 						</div>
           	<div class="col-sm-3">
           		<h3><strong>Обратная связь</strong></h3>
-          		<form action="">
-          			<input type="text" placeholder="Введите Ваше Имя">
-          			<input type="text" placeholder="Введите Ваш Email">
-          			<textarea name="" id="" cols="30" rows="3" placeholder="Введите сообщение"></textarea>
+          		<form>
+          			<input name="name" type="text" placeholder="Введите Ваше Имя">
+          			<input name="mail" type="text" placeholder="Введите Ваш Email">
+          			<textarea name="text" cols="30" rows="3" placeholder="Введите сообщение"></textarea>
           			<button>Отправить</button>
           		</form>
           	</div></div>
@@ -145,171 +157,170 @@
         </li>
         <li><a href="blog.html">Блог</a></li>
 		<li><a href="contacts.html">Контакты</a></li>
-
+		<li>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown user-menu">
-          <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown"> 
+          <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown"> 
 					<div class="humb">
 					<span class="lines"></span>
 					<span class="lines"></span>
 					<span class="lines"></span></div>
           </a>
           <ul class="dropdown-menu profile-menu"> 
-						<li><a href="profile.html">Личные данные</a></li>
-						<li><a href="profile-payment-balance.html">Баланс</a></li>
-						<li><a href="profile-payment.html">Мои заказы</a></li>
+						<li><a href="profile-edit.html">Личные данные</a></li>
+						<li><a href="profile-payment.html">Баланс</a></li>
+						<li><a href="profile.html">Мои заказы</a></li>
 						<li><a href="download.html">Скачать</a></li>
 						<li><a href="#">Выйти</a></li>
           </ul>
         </li>
+        <li>
 			<div class="user-block"> 
-				<div class="login"><a href="login.html">Войти</a></div>
-
-      <ul class="nav navbar-nav search">
-        <li class="dropdown">
-          <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">  
-					<div class="search-ico"></div> 
-          </a>
-          <ul class="dropdown-menu"> 
-          	<li>
-						<form class="search-head" action="" method="">
-							<input type="text" name="search_product" class="sb-search-input-js h-search-input" placeholder="Поиск" autocomplete="off" autofocus="">
-							<button type="submit" value="" class="sb-search-submit sb-search-submit-js trans-btn">Найти</button>
-						</form>
+				<div class="login"><a href="login.html">Войти</a>
+			</div>
+			</div>
+		</li>
+        <li>
+	      <ul class="nav navbar-nav search">
+	        <li class="dropdown">
+	          <a id="drop5" href="#" class="dropdown-toggle" data-toggle="dropdown">  
+						<div class="search-ico"></div> 
+	          </a>
+	          <ul class="dropdown-menu"> 
+	          	<li>
+							<form class="search-head" method="post">
+								<input type="text" name="search_product" class="sb-search-input-js h-search-input" placeholder="Поиск" autocomplete="off" autofocus="">
+								<button type="submit" value="" class="sb-search-submit sb-search-submit-js trans-btn">Найти</button>
+							</form>
+							</li>
+	          </ul>
+	        </li>
+	      </ul> 
+	    </li>
+        <li>
+	      <ul class="nav navbar-nav favorite">
+	        <li class="dropdown">
+	          <a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown">  
+	            <div class="counter">0</div>
+	            <div class="heart"></div>
+	          </a>
+	         </li>
+	       </ul> 
+	    </li> 
+	    <li>
+		      <ul class="nav navbar-nav ship-cart">
+		        <li class="dropdown">
+		          <a id="drop7" href="#" class="dropdown-toggle" data-toggle="dropdown">  
+		                <div class="counter">0</div>
+		                <div class="bag-ico"></div> 
+		          </a>
+		          <div class="dropdown-menu"> 
+		          	<h2>Ваша корзина</h2>
+		          	<ul class="ship-cart-list"> 
+						<li class="row">
+						<div class="col-sm-3 col-xs-12">
+						<a href="#"><img src="img/cart-thumb-1.png" alt=""></a></div>
+						<div class="col-sm-6 col-xs-6">
+						<div class="product-info"><h4><a href="#">Платье "Мальвина" В2</a></h4>
+						<div class="input-group spinner ">
+						<div class="input-group-btn-vertical">
+						<button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
+						</div>
+						<input type="text" class="form-control spin-input" value="3" readonly />
+						<div class="input-group-btn-vertical">
+						<button class="btn btn-default" type="button"><i class="fa fa-minus"></i></button> 
+						</div>
+						</div>
+						<p class="count-cell">шт х 750 грн</p>
+						<p class="size-cell"><strong>Размер: М</strong></p>
+						</div>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+						<div class="remove-product col-xs-12 text-right"><a href=""><i class="fas fa-times"></i></a></div>
+						<div class="price col-xs-12 text-right"><strong>750грн</strong></div>
+						</div>
 						</li>
-          </ul>
-        </li>
-      </ul> 
-      <ul class="nav navbar-nav favorite">
-        <li class="dropdown">
-          <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">  
-            <div class="counter">0</div>
-            <div class="heart"></div>
-          </a>
-         </li>
-       </ul> 
-      <ul class="nav navbar-nav ship-cart">
-        <li class="dropdown">
-          <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown">  
-                <div class="counter">0</div>
-                <div class="bag-ico"></div> 
-          </a>
-          <div class="dropdown-menu"> 
-          	<h2>Ваша корзина</h2>
-          	<ul class="ship-cart-list"> 
-				<li class="row">
-				<span class="col-sm-3 col-xs-12">
-				<a href="#"><img src="img/cart-thumb-1.png" alt=""></a></span>
-				<span class="col-sm-6 col-xs-6">
-				<span class="product-info"><h4><a href="#">Платье "Мальвина" В2</a></h4>
-				<div class="input-group spinner ">
-				<div class="input-group-btn-vertical">
-				<button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
-				</div>
-				<input type="text" class="form-control spin-input" value="3" readonly />
-				<div class="input-group-btn-vertical">
-				<button class="btn btn-default" type="button"><i class="fa fa-minus"></i></button> 
-				</div>
-				</div>
-				<p class="count-cell">шт х 750 грн</p>
-				<p class="size-cell"><strong>Размер: М</strong></p>
-				</span>
-				</span>
-				<span class="col-sm-3 col-xs-6">
-				<span class="remove-product col-xs-12 text-right"> <i class="fas fa-times"></i></span>
-				<span class="price col-xs-12 text-right"><strong>750грн</strong></span>
-				</span>
-				</li>
-				<li class="row">
-				<span class="col-sm-3 col-xs-12">
-				<a href="#"><img src="img/cart-thumb-1.png" alt=""></a></span>
-				<span class="col-sm-6 col-xs-6">
-				<span class="product-info"><h4><a href="#">Платье "Мальвина" В2</a></h4>
-				<div class="input-group spinner ">
-				<div class="input-group-btn-vertical">
-				<button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
-				</div>
-				<input type="text" class="form-control spin-input" value="3" readonly />
-				<div class="input-group-btn-vertical">
-				<button class="btn btn-default" type="button"><i class="fa fa-minus"></i></button> 
-				</div>
-				</div>
-				<p class="count-cell">шт х 750 грн</p>
-				<p class="size-cell"><strong>Размер: М</strong></p></span></span>
-				<span class="col-sm-3 col-xs-6">
-				<span class="remove-product col-xs-12 text-right"> <i class="fas fa-times"></i></span>
-				<span class="price col-xs-12 text-right"><strong>750грн</strong></span></span>				
-				</li>
-				<li class="row">
-				<span class="col-sm-3 col-xs-12">
-				<a href="#"><img src="img/cart-thumb-1.png" alt=""></a></span>
-				<span class="col-sm-6 col-xs-6">
-				<span class="product-info"><h4><a href="#">Платье "Мальвина" В2</a></h4> 
-				<div class="input-group spinner ">
-				<div class="input-group-btn-vertical">
-				<button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
-				</div>
-				<input type="text" class="form-control spin-input" value="3" readonly />
-				<div class="input-group-btn-vertical">
-				<button class="btn btn-default" type="button"><i class="fa fa-minus"></i></button> 
-				</div>
-				</div>
-				<p class="count-cell">шт х 750 грн</p>
-				<p class="size-cell"><strong>Размер: М</strong></p></span></span>
-				<span class="col-sm-3 col-xs-6">
-				<span class="remove-product col-xs-12 text-right"> <i class="fas fa-times"></i></span>
-				<span class="price col-xs-12 text-right"><strong>750грн</strong></span></span>				
-				</li>
-				<li class="row">
-				<span class="col-sm-3 col-xs-12">
-				<a href="#"><img src="img/cart-thumb-1.png" alt=""></a></span>
-				<span class="col-sm-6 col-xs-6">
-				<span class="product-info"><h4><a href="#">Платье "Мальвина" В2</a></h4> 
-				<div class="input-group spinner ">
-				<div class="input-group-btn-vertical">
-				<button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
-				</div>
-				<input type="text" class="form-control spin-input" value="3" readonly />
-				<div class="input-group-btn-vertical">
-				<button class="btn btn-default" type="button"><i class="fa fa-minus"></i></button> 
-				</div>
-				</div>
-				<p class="count-cell">шт х 750 грн</p>
-				<p class="size-cell"><strong>Размер: М</strong></p></span></span>
-				<span class="col-sm-3 col-xs-6">
-				<span class="remove-product col-xs-12 text-right"> <i class="fas fa-times"></i></span>
-				<span class="price col-xs-12 text-right"><strong>750грн</strong></span></span>				
-				</li>
-				<li class="row">
-				<span class="col-sm-3 col-xs-12">
-				<a href="#"><img src="img/cart-thumb-1.png" alt=""></a></span>
-				<span class="col-sm-6 col-xs-6">
-				<span class="product-info"><h4><a href="#">Платье "Мальвина" В2</a></h4> 
-				<div class="input-group spinner ">
-				<div class="input-group-btn-vertical">
-				<button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
-				</div>
-				<input type="text" class="form-control spin-input" value="3" readonly />
-				<div class="input-group-btn-vertical">
-				<button class="btn btn-default" type="button"><i class="fa fa-minus"></i></button> 
-				</div>
-				</div>
-				<p class="count-cell">шт х 750 грн</p>
-				<p class="size-cell"><strong>Размер: М</strong></p></span></span>
-				<span class="col-sm-3 col-xs-6">
-				<span class="remove-product col-xs-12 text-right"> <i class="fas fa-times"></i></span>
-				<span class="price col-xs-12 text-right"><strong>750грн</strong></span></span>				
-				</li>
-          </ul>
+						<li class="row">
+						<div class="col-sm-3 col-xs-12">
+						<a href="#"><img src="img/cart-thumb-1.png" alt=""></a></div>
+						<div class="col-sm-6 col-xs-6">
+						<div class="product-info"><h4><a href="#">Платье "Мальвина" В2</a></h4>
+						<div class="input-group spinner ">
+						<div class="input-group-btn-vertical">
+						<button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
+						</div>
+						<input type="text" class="form-control spin-input" value="3" readonly />
+						<div class="input-group-btn-vertical">
+						<button class="btn btn-default" type="button"><i class="fa fa-minus"></i></button> 
+						</div>
+						</div>
+						<p class="count-cell">шт х 750 грн</p>
+						<p class="size-cell"><strong>Размер: М</strong></p>
+						</div>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+						<div class="remove-product col-xs-12 text-right"><a href=""><i class="fas fa-times"></i></a></div>
+						<div class="price col-xs-12 text-right"><strong>750грн</strong></div>
+						</div>
+						</li>
+						<li class="row">
+						<div class="col-sm-3 col-xs-12">
+						<a href="#"><img src="img/cart-thumb-1.png" alt=""></a></div>
+						<div class="col-sm-6 col-xs-6">
+						<div class="product-info"><h4><a href="#">Платье "Мальвина" В2</a></h4>
+						<div class="input-group spinner ">
+						<div class="input-group-btn-vertical">
+						<button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
+						</div>
+						<input type="text" class="form-control spin-input" value="3" readonly />
+						<div class="input-group-btn-vertical">
+						<button class="btn btn-default" type="button"><i class="fa fa-minus"></i></button> 
+						</div>
+						</div>
+						<p class="count-cell">шт х 750 грн</p>
+						<p class="size-cell"><strong>Размер: М</strong></p>
+						</div>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+						<div class="remove-product col-xs-12 text-right"><a href=""><i class="fas fa-times"></i></a></div>
+						<div class="price col-xs-12 text-right"><strong>750грн</strong></div>
+						</div>
+						</li>
+						<li class="row">
+						<div class="col-sm-3 col-xs-12">
+						<a href="#"><img src="img/cart-thumb-1.png" alt=""></a></div>
+						<div class="col-sm-6 col-xs-6">
+						<div class="product-info"><h4><a href="#">Платье "Мальвина" В2</a></h4>
+						<div class="input-group spinner ">
+						<div class="input-group-btn-vertical">
+						<button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
+						</div>
+						<input type="text" class="form-control spin-input" value="3" readonly />
+						<div class="input-group-btn-vertical">
+						<button class="btn btn-default" type="button"><i class="fa fa-minus"></i></button> 
+						</div>
+						</div>
+						<p class="count-cell">шт х 750 грн</p>
+						<p class="size-cell"><strong>Размер: М</strong></p>
+						</div>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+						<div class="remove-product col-xs-12 text-right"><a href=""><i class="fas fa-times"></i></a></div>
+						<div class="price col-xs-12 text-right"><strong>750грн</strong></div>
+						</div>
+						</li>						 
+		          </ul>
 			<div class="row button-row">
 			<span class="col-xs-12 col-sm-6 text-center"><button class="black-btn">Оформить заказ</button></span>
 			<span class="col-xs-12 col-sm-6 text-center"><strong>Цена: 750грн</strong></span>
 				</div></div>
-        </li>
-      </ul>
+         </li>
+       </ul>
+	  </li>
+	  <li>
       <ul class="nav navbar-nav curense">
         <li class="dropdown">
-          <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown"> 
+          <a id="drop8" href="#" class="dropdown-toggle" data-toggle="dropdown"> 
 						UAH
             <span class="caret"></span>
           </a>
@@ -318,15 +329,15 @@
 						<li><a href="#">RUB</a></li>
 						<li><a href="#">EUR</a></li> 
           </ul>
-        </li>
+	    </li>
       </ul>
-			</div>
+	  </li> 
       </ul>
+      </li>
       </ul>
     </div>
   </div>
-</nav> 
-		</nav>
+</nav>  
 	</div>
 </header>
 <section class="content">
@@ -347,45 +358,67 @@
 					<img src="img/header-slide-1-1.png" alt="" class="img-responsive"> 
 			</div>
 		  </div>
-		  <div class="container collection">
-		  	<div class="row head-row">	 
-				<h1 class="head-title"><span>Коллекции</span></h1>
-				<p class="head-title-under"><span>Medini</span></p>
-			</div> 
+		  <div class="container collection"> 
+		  <hr>
 			<div class="row">
 				<div class="col-sm-4 collection-item"> 
+					<div class="fade-collection">
 					<img src="img/main-collection-1.png" alt="" class="img-responsive">
-					<div class="title-collection"><a href=""> <span>- MEDINI -</span></a></div> 
-				</div>
-				<div class="col-sm-4 collection-item"> 
 					<img src="img/main-collection-2.png" alt="" class="img-responsive">
-					<div class="title-collection"><a href=""> <span>- FAVORITTI -</span></a></div>
-				</div>
-				<div class="col-sm-4 collection-item"> 
 					<img src="img/main-collection-3.png" alt="" class="img-responsive">
-					<div class="title-collection"><a href=""> <span>- EXCLUSIVE -</span></a></div>
+					</div>
+					<div class="title-collection"><a href=""> <span>- Medini -</span></a></div> 
 				</div>
 				<div class="col-sm-4 collection-item"> 
+					<div class="fade-collection">
+					<img src="img/main-collection-2.png" alt="" class="img-responsive">
+					<img src="img/main-collection-3.png" alt="" class="img-responsive">
+					<img src="img/main-collection-1.png" alt="" class="img-responsive">
+					</div> 
+					<div class="title-collection"><a href=""> <span>- Favoritti -</span></a></div>
+				</div>
+				<div class="col-sm-4 collection-item"> 
+					<div class="fade-collection">
+					<img src="img/main-collection-3.png" alt="" class="img-responsive">
+					<img src="img/main-collection-2.png" alt="" class="img-responsive">
+					<img src="img/main-collection-1.png" alt="" class="img-responsive">
+					</div>
+					<div class="title-collection"><a href=""> <span>- Exclusive -</span></a></div>
+				</div>
+				<div class="col-sm-4 collection-item"> 
+					<div class="fade-collection">
 					<img src="img/main-collection-4.png" alt="" class="img-responsive">
-					<div class="title-collection"><a href=""> <span>- VISION -</span></a></div>
-				</div>
-				<div class="col-sm-4 collection-item"> 
 					<img src="img/main-collection-5.png" alt="" class="img-responsive">
-					<div class="title-collection"><a href=""> <span>- ARANI -</span></a></div>
+					<img src="img/main-collection-6.png" alt="" class="img-responsive">
+					</div>
+					<div class="title-collection"><a href=""> <span>- Vision -</span></a></div>
 				</div>
 				<div class="col-sm-4 collection-item"> 
+					<div class="fade-collection">
+					<img src="img/main-collection-5.png" alt="" class="img-responsive">
+					<img src="img/main-collection-4.png" alt="" class="img-responsive">
 					<img src="img/main-collection-6.png" alt="" class="img-responsive">
+					</div>
+					<div class="title-collection"><a href=""> <span>- Arani -</span></a></div>
+				</div>
+				<div class="col-sm-4 collection-item"> 
+					<div class="fade-collection">
+					<img src="img/main-collection-6.png" alt="" class="img-responsive">
+					<img src="img/main-collection-5.png" alt="" class="img-responsive">
+					<img src="img/main-collection-4.png" alt="" class="img-responsive">
+					</div>
 					<div class="title-collection"><a href=""> <span>- Скоро -</span></a></div>
 				</div>
 			</div>
 		  </div>
-		  <div class="container latest">
+		  <div class="container-fluid latest">
+		  	<div class="container">
 		  	<div class="row head-row">	 
-				<h1 class="head-title"><span>Новинки</span></h1>
-				<p class="head-title-under"><span>Medini</span></p>
-			</div> 
-			<div class="row"> 
-						 	<div class="product-item col-md-3">
+				<h2 class="head-title text-left"><span>Новые поступления</span></h2> 
+			</div>
+			</div>
+			<div class="row latest-list"> 
+						 	<div class="product-item">
 						 		<div class="product-picture" >
 						 			<img src="img/catalog-pic-5.png" alt="">
 						 			<div class="product-link">
@@ -393,9 +426,10 @@
 						 			<a href="" class="add-to-cart"><img src="img/to-shopping-cart.png" alt=""></a></div>
 						 		</div>
 						 		<a href=""><h3>Платье «Мальвина» B2</h3></a>
-						 		<p class="product-price">1680 ГРН Цена</p>
+						 		<div class="product-price">1680 ГРН Цена </div>
+						 		<div class="product-opt-price">1380 ГРН Опт</div>
 						 	</div>
-						 	<div class="product-item col-md-3">
+						 	<div class="product-item">
 						 		<div class="product-picture">
 						 			<img src="img/catalog-pic-1.png" alt="">
 						 			<div class="product-link">
@@ -403,9 +437,10 @@
 						 			<a href="" class="add-to-cart"><img src="img/to-shopping-cart.png" alt=""></a></div>
 						 		</div>
 						 		<a href=""><h3>Платье «Мальвина» B2</h3></a>
-						 		<p class="product-price">1680 ГРН Цена</p>
+						 		<div class="product-price">1680 ГРН Цена </div>
+						 		<div class="product-opt-price">1380 ГРН Опт</div>
 						 	</div>
-						 	<div class="product-item col-md-3">
+						 	<div class="product-item">
 						 		<div class="product-picture">
 						 			<img src="img/catalog-pic-2.png" alt="">
 						 			<div class="product-link">
@@ -413,9 +448,10 @@
 						 			<a href="" class="add-to-cart"><img src="img/to-shopping-cart.png" alt=""></a></div>
 						 		</div>
 						 		<a href=""><h3>Платье «Мальвина» B2</h3></a>
-						 		<p class="product-price">1680 ГРН Цена</p>
+						 		<div class="product-price">1680 ГРН Цена </div>
+						 		<div class="product-opt-price">1380 ГРН Опт</div>
 						 	</div>
-						 	<div class="product-item col-md-3">
+						 	<div class="product-item">
 						 		<div class="product-picture">
 						 			<img src="img/catalog-pic-3.png" alt="">
 						 			<div class="product-link">
@@ -423,14 +459,36 @@
 						 			<a href="" class="add-to-cart"><img src="img/to-shopping-cart.png" alt=""></a></div>
 						 		</div>
 						 		<a href=""><h3>Платье «Мальвина» B2</h3></a>
-						 		<p class="product-price">1680 ГРН Цена</p>
+						 		<div class="product-price">1680 ГРН Цена </div>
+						 		<div class="product-opt-price">1380 ГРН Опт</div>
+						 	</div>
+						 	<div class="product-item">
+						 		<div class="product-picture" >
+						 			<img src="img/catalog-pic-5.png" alt="">
+						 			<div class="product-link">
+						 			<a href="" class="link-like"><img src="img/heart-like.png" alt=""></a>
+						 			<a href="" class="add-to-cart"><img src="img/to-shopping-cart.png" alt=""></a></div>
+						 		</div>
+						 		<a href=""><h3>Платье «Мальвина» B2</h3></a>
+						 		<div class="product-price">1680 ГРН Цена </div>
+						 		<div class="product-opt-price">1380 ГРН Опт</div>
+						 	</div>
+						 	<div class="product-item">
+						 		<div class="product-picture">
+						 			<img src="img/catalog-pic-1.png" alt="">
+						 			<div class="product-link">
+						 			<a href="" class="link-like"><img src="img/heart-like.png" alt=""></a>
+						 			<a href="" class="add-to-cart"><img src="img/to-shopping-cart.png" alt=""></a></div>
+						 		</div>
+						 		<a href=""><h3>Платье «Мальвина» B2</h3></a>
+						 		<div class="product-price">1680 ГРН Цена </div>
+						 		<div class="product-opt-price">1380 ГРН Опт</div>
 						 	</div>
 			</div>
 		</div>
 		  <div class="container response">
 		  	<div class="row head-row">	 
-				<h1 class="head-title"><span>Отзывы</span></h1>
-				<p class="head-title-under"><span>Medini</span></p>
+				<h2 class="head-title"><span>Отзывы</span></h2> 
 			</div> 
 			<div class="row"> 
 				<div class="col-md-6 resp-item">
@@ -465,8 +523,7 @@
 		</div>
 		  <div class="container blog-block">
 		  	<div class="row head-row">	 
-				<h1 class="head-title"><span>Блог</span></h1>
-				<p class="head-title-under"><span>Medini</span></p>
+				<h2 class="head-title"><span>Блог</span></h2> 
 			</div> 
 			<div class="row"> 
 				<div class="col-md-6">
@@ -488,10 +545,9 @@
 		</div>
 		</div>
 		  <div class="container history-main">
-		  	<div class="row head-row">	 
-				<h1 class="head-title"><span>История</span></h1>
-				<p class="head-title-under"><span>Medini</span></p>
-			</div> 
+		  	<!-- <div class="row head-row">	 
+				<h2 class="head-title"><span>История</span></h2> 
+			</div> --> 
 			<div id="history-body" class="row history-body"> Известный бренд Medini Original был основан в 2008 году. За этот период компания смогла завоевать всё больше растущую популярность на рынке модной одежды. Смелое сочетание стилей в одежде – это главная отличительная черта торговой марки. В коллекциях бренда Medini все чаще просматриваются не сочетаемые, на первый взгляд детали. Если попытаться охарактеризовать такой стиль кратко, то вполне можно употребить выражение – «дерзкая романтика». Модели марки Medini больше преднaзнaчены для современной женщины, которая всегда выглядит и ярко и стильно одновременно, которая может пойти на риск и экспериментировать, которая может предстать в образе, отражающем ее внутренний мир, ее настроение. 
 
 				Женщина в этой одежде всегда соблазнительна, в меру вызывающа и агрессивна, но при этом она очень женственная и немного таинственная. 
@@ -518,19 +574,19 @@
 	</div>
 	<div class="col-md-3 colums">
 		<h3>OFFICIAL STORE</h3>
-		<a href="tel:+380 (99) 174-43-24">+380 (99) 174-43-24</a>
-		<a href="tel:+380 (97) 496-59-71">+380 (97) 496-59-71</a>
-		<a href="tel:+380 (63) 352-36-23">+380 (63) 352-36-23</a>
-		<a href="tel:+380 (66) 162-08-61">+380 (66) 162-08-61 <span>(viber, whatsapp)</span></a>
+		<a href="tel:+380991744324">+380 (99) 174-43-24</a>
+		<a href="tel:+380974965971">+380 (97) 496-59-71</a>
+		<a href="tel:+380633523623">+380 (63) 352-36-23</a>
+		<a href="tel:+380661620861">+380 (66) 162-08-61 <span>(viber, whatsapp)</span></a>
 		<a href="mailto:medinioroginal@yahoo.com">medinioroginal@yahoo.com</a>
 	</div>
 	<div class="col-md-3 colums">
 		<h3>МЫ В СОЦИАЛЬНЫХ СЕТЯХ</h3>
-		<p class="soc-icons"><i class="fab fa-vk"></i>
-		<i class="fab fa-facebook-f"></i>
-	<i class="fab fa-instagram"></i>
-<i class="fab fa-odnoklassniki"></i>
-<i class="google-plus"></i></p>
+		<p class="soc-icons"><a href=""><i class="fab fa-vk"></i></a>
+		<a href=""><i class="fab fa-facebook-f"></i></a>
+	<a href=""><i class="fab fa-instagram"></i></a>
+<a href=""><i class="fab fa-odnoklassniki"></i></a>
+<a href=""><i class="google-plus"></i></a></p>
 <p>Подписаться на соцсети:</p>
 <button class="trans-btn">Подписатся</button>		
 	</div></div>
@@ -538,7 +594,7 @@
 </footer>
 	<script  src="https://code.jquery.com/jquery-1.12.4.min.js"  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="  crossorigin="anonymous"></script>  
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/slick.js" ></script>
 	<script src="js/common.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/3.1.6/footable.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/3.1.6/footable.min.js"></script>
