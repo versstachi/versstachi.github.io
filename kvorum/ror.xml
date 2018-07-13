@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for http://kvorum.mk.ua/</title>
+  <link>http://kvorum.mk.ua/</link>
+
+<item>
+     <link>http://kvorum.mk.ua/</link>
+     <title>Поставка высококачественных нефтепродуктов оптом собственными бензовозами по всей Украине</title>
+     <description> </description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://kvorum.mk.ua/opt-sotrudnichestvo-ukr.html</link>
+     <title>Поставка високоякісних нафтопродуктів оптом власними бензовозами по всій Україні</title>
+     <description> </description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://kvorum.mk.ua/index.html</link>
+     <title>Поставка высококачественных нефтепродуктов оптом собственными бензовозами по всей Украине</title>
+     <description> </description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://kvorum.mk.ua/roznica-seti-azs.html</link>
+     <title>Топливные талоны. Топливные карты для предприятий и организаций</title>
+     <description> </description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://kvorum.mk.ua/roznica-seti-azs-ukr.html</link>
+     <title>Топливные талоны. Топливные карты для предприятий и организаций</title>
+     <description> </description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://kvorum.mk.ua/Loyalyty.docx</link>
+     <title></title>
+     
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
