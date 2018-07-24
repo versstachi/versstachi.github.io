@@ -1940,7 +1940,11 @@ header {
     z-index: 3;
     margin-bottom: 15px;
     padding-left: 10px;
-    padding-right: 10px; }
+    padding-right: 10px;
+    float: left; }
+    .collection .collection-item img {
+      width: 100%;
+      height: 100%; }
     .collection .collection-item:hover .title-collection {
       display: block; }
     @media (max-width: 768px) {
@@ -2585,6 +2589,18 @@ header {
   min-height: 400px;
   padding: 0 .5%; }
 
+.catalog .picture-action-full {
+  display: inline-block;
+  float: left;
+  width: auto;
+  margin: 0px 0px 20px 10px; }
+  @media screen and (max-width: 1500px) {
+    .catalog .picture-action-full {
+      height: auto; } }
+  .catalog .picture-action-full img {
+    width: 100%;
+    height: 100%; }
+
 .catalog .picture-action {
   display: inline-block;
   margin: 0 5px 20px 0px;
@@ -2740,25 +2756,27 @@ header {
 
 .product-item {
   float: left;
-  height: 484px;
-  width: 259px;
-  max-width: 259px;
+  width: 267px;
+  max-width: 267px;
   min-height: 310px;
   -webkit-transform-style: flat;
   transform-style: flat;
   position: relative;
   display: inline-block;
-  padding: 0px 10px;
-  margin-bottom: 50px; }
+  margin: 0px 0.3%  50px;
+  padding: 0px 10px; }
   @media (max-width: 1765px) {
     .product-item {
-      margin: 0 .3% 20px; } }
+      margin: 0 .3% 20px;
+      width: 259px;
+      max-width: 259px; } }
   @media (max-width: 1660px) {
     .product-item {
       margin: 0 2.5% 20px; } }
   @media (max-width: 1610px) {
     .product-item {
-      margin: 0 2% 20px; } }
+      margin: 0 2% 20px;
+      width: 287px; } }
   @media (max-width: 1535px) {
     .product-item {
       margin: 0 1% 20px; } }
@@ -2770,7 +2788,7 @@ header {
       margin: 0 0% 20px; } }
   @media (max-width: 1200px) {
     .product-item {
-      margin: 0 1% 20px;
+      margin: 0 0% 20px;
       max-width: 350px; } }
   @media (max-width: 991px) {
     .product-item {
@@ -2796,15 +2814,14 @@ header {
       margin-top: 0px; }
   .product-item .product-picture {
     width: 100%;
-    height: auto;
-    min-height: 388px;
+    height: 407px;
     overflow: hidden;
     margin-bottom: 25px;
     position: relative; }
     .product-item .product-picture img {
       width: 100%;
       position: relative;
-      height: 388px;
+      height: 100%;
       left: 0;
       top: 0;
       -webkit-transition: all .3s;
