@@ -2730,7 +2730,8 @@ header {
   border-bottom: 0px solid #e6e6e6; }
 
 .catalog .sort {
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  margin-left: 10px; }
 
 .catalog .latest {
   margin-top: 0px; }
