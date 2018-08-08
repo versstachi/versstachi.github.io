@@ -1732,6 +1732,29 @@ header {
 .product .compare a.spoiler-trigger {
   font-size: 24px; }
 
+.product .size-grid-main {
+  padding: 20px; }
+  .product .size-grid-main table {
+    width: 100%; }
+    .product .size-grid-main table tr:nth-child(even) {
+      background: #f2f2f2; }
+    .product .size-grid-main table tr td {
+      padding: 10px;
+      text-align: center; }
+  .product .size-grid-main .download-size {
+    margin-top: 20px;
+    display: block; }
+
+.product h4.modal-title {
+  text-align: center;
+  margin-top: 20px; }
+
+.product .modal button.close {
+  min-width: 50px; }
+
+.product .modal-sizers {
+  cursor: pointer; }
+
 .product .slick-arrow.nav-next .fas {
   bottom: 40px;
   top: unset;
@@ -1795,6 +1818,31 @@ header {
 
 .product .comment-block {
   margin-top: 15px; }
+  .product .comment-block .comment-form {
+    padding: 30px 0px; }
+  .product .comment-block input {
+    width: 32%;
+    float: left; }
+    @media (max-width: 600px) {
+      .product .comment-block input {
+        width: 100%;
+        margin-top: 10px; } }
+    .product .comment-block input:nth-child(2) {
+      margin-left: 12px;
+      margin-right: 12px; }
+      @media (max-width: 600px) {
+        .product .comment-block input:nth-child(2) {
+          margin-left: 0px;
+          margin-right: 0px; } }
+  .product .comment-block button {
+    width: 33%;
+    padding: 10px 15px;
+    margin: 0px;
+    float: right; }
+    @media (max-width: 600px) {
+      .product .comment-block button {
+        width: 100%;
+        margin-top: 10px; } }
 
 .product .align-center {
   margin-top: 50px;
@@ -2131,6 +2179,9 @@ header {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 48%, white 81%); }
   .front-page .history-main .spoil-body.spoil-all {
     position: relative; }
+
+.front-page .product-item .product-picture img {
+  height: 100%; }
 
 .cart-payment .main-body {
   -webkit-box-shadow: 0px 0px 0px #fff;
@@ -2814,6 +2865,7 @@ header {
 
 .product-item {
   float: left;
+  height: 484px;
   width: 267px;
   max-width: 267px;
   min-height: 310px;
@@ -2872,14 +2924,13 @@ header {
       margin-top: 0px; }
   .product-item .product-picture {
     width: 100%;
-    height: 100%;
     overflow: hidden;
     margin-bottom: 25px;
     position: relative; }
     .product-item .product-picture img {
       width: 100%;
+      height: 388px;
       position: relative;
-      height: 100%;
       left: 0;
       top: 0;
       -webkit-transition: all .3s;
@@ -2912,6 +2963,8 @@ header {
       display: block;
       width: 100%; }
       .product-item .product-link .add-to-cart img {
+        display: block;
+        margin: 0 auto;
         width: 63px;
         height: 63px; }
 
@@ -3117,6 +3170,9 @@ header {
 .blog .sidebar {
   padding-right: 0px;
   padding-left: 30px; }
+  @media (max-width: 768px) {
+    .blog .sidebar {
+      padding-left: 0px; } }
 
 .blog .main-body {
   -webkit-box-shadow: 0 0 0 transparent;
@@ -3198,6 +3254,12 @@ header {
       padding-right: 0px; }
     .blog .top-news .top-news-item img {
       margin-top: 15px; }
+      @media (max-width: 425px) {
+        .blog .top-news .top-news-item img {
+          width: 100%; } }
+    @media (max-width: 425px) {
+      .blog .top-news .top-news-item h4 {
+        margin-left: 10px; } }
 
 .blog .video-block {
   padding: 20px 0px; }
@@ -4122,6 +4184,13 @@ ul.blog-menu {
   .slick-dots li button:hover:before {
     opacity: 0.65; }
 
+.modal-header {
+  border-bottom: 1px solid #fff; }
+
+.modal-footer {
+  border-top: 1px solid #fff;
+  padding: 0; }
+
 .gallery-modal .modal-dialog {
   width: 100%;
   max-height: 1170px; }
@@ -4306,13 +4375,20 @@ footer {
       text-transform: none;
       margin-right: 0px;
       margin-top: 10px;
-      padding: 12px; }
+      padding: 12px;
+      float: right; }
+      @media (max-width: 768px) {
+        footer button.mobile-version {
+          float: left; } }
   footer form {
     min-width: 100%; }
   footer .colums {
     padding: 0px 5px 0px 5px;
     width: 20%;
     float: left; }
+    @media (max-width: 768px) {
+      footer .colums {
+        width: 100%; } }
     footer .colums:nth-child(1) {
       padding-left: 0px;
       padding-right: 10px; }
@@ -4321,6 +4397,12 @@ footer {
       text-align: right; }
       footer .colums:nth-child(5) p {
         float: right; }
+        @media (max-width: 768px) {
+          footer .colums:nth-child(5) p {
+            float: left; } }
+      @media (max-width: 768px) {
+        footer .colums:nth-child(5) {
+          text-align: left; } }
     @media (max-width: 768px) {
       footer .colums {
         padding: 20px 0px; } }
