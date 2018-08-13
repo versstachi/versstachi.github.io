@@ -353,10 +353,26 @@
 					<div class="preview col-md-9">
 						 <div class="col-md-9 col-md-push-3">
 						 <div class="slick-product">
-						 	<img src="img/product-pic-1.png" alt="" class="img-responsive">
-						 	<img src="img/product-pic-2.png" alt="" class="img-responsive">
-						 	<img src="img/product-pic-3.png" alt="" class="img-responsive">
-						 	<img src="img/product-pic-4.png" alt="" class="img-responsive">
+						 		<div class="slick-product-picture">
+						 			<img src="img/catalog-pic-1.png" alt="">
+						 			<div class="slick-product-link"> 
+						 			<a href="" class="zoom-img"  data-toggle="modal"  data-target="#modal-product-pic"><img src="img/search.svg" alt=""></a></div>
+						 		</div>
+						 		<div class="slick-product-picture">
+						 			<img src="img/catalog-pic-2.png" alt="">
+						 			<div class="slick-product-link"> 
+						 			<a href="" class="zoom-img"  data-toggle="modal"  data-target="#modal-product-pic"><img src="img/search.svg" alt=""></a></div>
+						 		</div>
+						 		<div class="slick-product-picture">
+						 			<img src="img/catalog-pic-3.png" alt="">
+						 			<div class="slick-product-link"> 
+						 			<a href="" class="zoom-img"  data-toggle="modal"  data-target="#modal-product-pic"><img src="img/search.svg" alt=""></a></div>
+						 		</div>
+						 		<div class="slick-product-picture">
+						 			<img src="img/catalog-pic-4.png" alt="">
+						 			<div class="slick-product-link"> 
+						 			<a href="" class="zoom-img"  data-toggle="modal"  data-target="#modal-product-pic"><img src="img/search.svg" alt=""></a></div>
+						 		</div> 
 						 </div></div>
 						<div class="col-md-3 col-md-pull-9">
 						 <div class="slick-product-nav">
@@ -397,8 +413,17 @@
 						  </div>
 						</div>
 						</div>
-						<p class="align-center"><button class="black-btn">В корзину</button><button class="trans-btn">Купить в один клик</button></p>
-
+						<div class="buttons-product align-center">
+							<button class="black-btn">В корзину</button>
+							<form  class="one-click-buy-form">
+							<div>
+							<input type="text" placeholder="Ваш телефон" name="one-click-buy-phone">
+							<input type="text" placeholder="Ваше имя" name="one-click-buy-name">
+							</div>
+							<button id="one-click-buy" class="trans-btn one-click-buy" type="submit">
+							Купить в один клик
+							</button>
+							</form> </div> 
 						<p class="product-description"><strong>Описание товара:</strong>				
 						Воздушный легкий сарафан, отрезной по линии талии. Юбка-полуклеш с двумя пышными воланами по низу. Линия декольте переда лифа также украшена небольшим  
 						<span class="more-text"> <br/>					
@@ -507,7 +532,7 @@
 								        </div> 
 								    </div>	
 						        </div>
-						        <div class="panel-heading text-center"> 
+						        <div class="panel-heading text-center row"> 
 						        	<button class="trans-btn spoiler-trigger" data-toggle="collapse">Больше отзывов</button>
 						        </div>
 						      </div>
@@ -804,6 +829,32 @@
 
   </div>
 </div>
+<!-- Modal -->
+<div id="modal-product-pic" class="modal fade gallery-modal" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      	<div class="slick-popup-product-pic">
+      		<img src="img/gallery/gallery-pic-slide-1.png" alt="" class="img-responsive">
+      		<img src="img/gallery/gallery-pic-2.png" alt="" class="img-responsive">
+      		<img src="img/gallery/gallery-pic-3.png" alt="" class="img-responsive">
+      		<img src="img/gallery/gallery-pic-4.png" alt="" class="img-responsive">
+      		<img src="img/gallery/gallery-pic-5.png" alt="" class="img-responsive">
+      		<img src="img/gallery/gallery-pic-6.png" alt="" class="img-responsive">
+      		<img src="img/gallery/gallery-pic-7.png" alt="" class="img-responsive">
+      		<img src="img/gallery/gallery-pic-8.png" alt="" class="img-responsive">
+      		<img src="img/gallery/gallery-pic-9.png" alt="" class="img-responsive">
+      	</div> 
+      </div>
+      <div class="modal-footer"> 
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Modal ENd -->
 	<script  src="https://code.jquery.com/jquery-1.12.4.min.js"  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="  crossorigin="anonymous"></script>  
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="js/slick.js" ></script>

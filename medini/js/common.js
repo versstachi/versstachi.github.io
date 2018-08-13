@@ -18,6 +18,7 @@ $('.slick-product-nav').slick({
   focusOnSelect: true,
   centerPadding: '10px', 
   nextArrow: '<span class="nav-next icon-chevron-down"><i class="fas fa-chevron-down"></i></span>',
+  prevArrow: '<span class="nav-prev icon-chevron-up"><i class="fas fa-chevron-up"></i></span>',
   responsive: [
     {
       breakpoint: 768,
@@ -50,7 +51,17 @@ $('.slick-product-nav').slick({
 $('.modal').on('shown.bs.modal', function (e) {
     $('.slick-popup').resize();
     $('.slick-popup-nav').resize();
+    $('.slick-popup-product-pic').resize();
   });
+  // Slick slider - poup
+ $('.slick-popup-product-pic').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: true, 
+  fade: true, 
+  prevArrow: '<span class="nav-prev icon-chevron-left"><img src="img/back.svg"  alt=""></span>',
+  nextArrow: '<span class="nav-next icon-chevron-right"><img src="img/next.svg"  alt=""></span>'
+});
  
  $('.slick-popup').slick({
   slidesToShow: 1,
@@ -191,7 +202,16 @@ jQuery(function($){
 
 // tooltip
 $('[data-toggle="tooltip"]').tooltip(); 
+// one click buy button collapse
 
+$("button.one-click-buy").click(function(){
+ event.preventDefault();
+ $(".buttons-product").addClass('full-form');
+ $(this).prev("div").addClass('active-form');
+ $( "button.one-click-buy" ).click(function(){
+ $( ".one-click-buy-form" ).submit();
+ });
+});
 // sidebar menu open 
 $(".menu-but").click(function(){
  $(this).next(".filter-panels").toggle('show');
