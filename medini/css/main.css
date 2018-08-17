@@ -2029,7 +2029,10 @@ header {
 .product .compare .button-compare {
   border-bottom: 1px solid #ededed; }
   .product .compare .button-compare button {
-    min-width: 49%; }
+    min-width: 48%;
+    padding: 5px;
+    font-size: 14px;
+    letter-spacing: 0; }
     @media (max-width: 1200px) {
       .product .compare .button-compare button {
         margin-right: 0px;
