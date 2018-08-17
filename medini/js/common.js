@@ -1,5 +1,5 @@
 $(function() { 
-// Slick slider - poup
+// Slick slider - 
  $('.slick-product').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -31,30 +31,87 @@ $('.slick-product-nav').slick({
     },
     ]
 });
-
-    $("#myCheckbox").on("click", function () {
-        check = $("#myCheckbox").prop("checked");
-
-        if (check) {
-            if ($('.myCheck i').hasClass('fa-square-o')) {
-                $('.myCheck i').removeClass('fa-square-o').addClass('fa-check-square-o');
-                $(".checkboxText").html('Ohh, You Did It!');
-            }
-        } else {
-            if ($('.myCheck i').hasClass('fa-check-square-o')) {
-                $('.myCheck i').removeClass('fa-check-square-o').addClass('fa-square-o');
-                $(".checkboxText").html('Click Me Again!');
-            }
+  // Slick slider - poup 
+$('.slick-product-popup').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.slick-product-nav-popup', 
+});
+$('.slick-product-nav-popup').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.slick-product-popup',
+  dots: false,  
+  vertical: true,
+  arrows: true,
+  infinite: true, 
+  focusOnSelect: true,
+  centerMode: true,
+  centerPadding: '20px', 
+  nextArrow: '<span class="nav-next icon-chevron-down"><i class="fas fa-chevron-down"></i></span>',
+  prevArrow: '<span class="nav-prev icon-chevron-up"><i class="fas fa-chevron-up"></i></span>',
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true, 
+        vertical: false,
+      }
+    },
+    ]
+});
+$('.slick-product-modal-gallery').slick({
+  dots: false,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  arrows: true,
+  infinite: false,   
+  speed: 500, 
+  cssEase: 'linear', 
+  focusOnSelect: true, 
+  centerPadding: '20px',  
+  prevArrow: '<span class="nav-prev icon-chevron-left"><img src="img/back.svg"  alt=""></span>',
+  nextArrow: '<span class="nav-next icon-chevron-right"><img src="img/next.svg"  alt=""></span>',
+  responsive: [ 
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+         centerMode: false,
         }
-
-    });
-$('.modal').on('shown.bs.modal', function (e) {
-    $('.slick-popup').resize();
-    $('.slick-popup-nav').resize();
-    $('.slick-popup-product-pic').resize();
-  });
-  // Slick slider - poup
- $('.slick-popup-product-pic').slick({
+        },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+         centerMode: false,
+        }
+        },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+         centerMode: false,
+        }
+        },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+         centerMode: false,
+        }
+        } 
+    ]
+});   
+$('.slick-popup-product-pic').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: true, 
@@ -62,7 +119,6 @@ $('.modal').on('shown.bs.modal', function (e) {
   prevArrow: '<span class="nav-prev icon-chevron-left"><img src="img/back.svg"  alt=""></span>',
   nextArrow: '<span class="nav-next icon-chevron-right"><img src="img/next.svg"  alt=""></span>'
 });
- 
  $('.slick-popup').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -103,9 +159,6 @@ $('.slick-popup-nav').slick({
         slidesToScroll: 1
       }
     } 
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
   ]
 }); 
   $(".center").slick({
@@ -126,9 +179,6 @@ $('.slick-popup-nav').slick({
          centerMode: false,
         }
       } 
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ]
   }); 
   $('.latest-list').slick({
@@ -174,25 +224,82 @@ $('.slick-popup-nav').slick({
          centerMode: false,
         }
         } 
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ]
+});  
+$('.product-item-pict-caruousel').each(function(){
+var slickInduvidual = $(this);
+slickInduvidual.slick({
+nextArrow: slickInduvidual.prev().find('.nav-prev'),
+prevArrow: slickInduvidual.prev().find('.nav-next')
+});
+}) 
+$(".catalog .latest-list").slick('unslick');
 }); 
-  $(".catalog .latest-list").slick('unslick');
+// favorite add class
+$(".link-like").on("click", function () {
+  $(this).toggleClass('likeit');
 }); 
+// chekbox
+$("#myCheckbox").on("click", function () {
+    check = $("#myCheckbox").prop("checked");
+    if (check) {
+        if ($('.myCheck i').hasClass('fa-square-o')) {
+            $('.myCheck i').removeClass('fa-square-o').addClass('fa-check-square-o');
+            $(".checkboxText").html('Ohh, You Did It!');
+        }
+    } else {
+        if ($('.myCheck i').hasClass('fa-check-square-o')) {
+            $('.myCheck i').removeClass('fa-check-square-o').addClass('fa-square-o');
+            $(".checkboxText").html('Click Me Again!');
+        }
+    }
+});
+// equal heights
+$('.catalog .product-item h3').equalHeights();
+// modal gallery tabs 
+$('.slick-product-modal-gallery a[href^="#"]').click(function(e) {
+    e.preventDefault();
+    $('.slick-product-modal-gallery a').removeClass('active');
+    $(this).addClass('active');
+    var tab = $(this).attr('href');  
+    $('.modal-gallery').not(tab).css({'height':'0'}); 
+    $(tab).css({'height':'auto'}); 
+});
+// Slick slider - resize
+$('.modal').on('shown.bs.modal', function (e) {
+    $('.slick-product-modal-gallery').resize();
+    $('.slick-product-modal-gallery-block').resize();
+    $('.slick-popup').resize();
+    $('.slick-popup-nav').resize();
+    $('.slick-popup-product-pic').resize();
+    $('.slick-product').resize();
+    $('.slick-product-nav').resize();
+    $('.slick-product-poup').resize();
+    $('.slick-product-nav-poup').resize();
+  });
+$('.modal').on('opened', function() {
+    $('.slick-product-modal-gallery-block').slick("setPosition", 0);
+    $('.slick-product-modal-gallery').slick("setPosition", 0);
+    $('.slick-popup-nav').slick("setPosition", 0); 
+    $('.slick-popup').slick("setPosition", 0); 
+    $('.slick-popup-product-pic').slick("setPosition", 0);
+    $('.slick-product').slick("setPosition", 0);
+    $('.slick-product-nav').slick("setPosition", 0);
+    $('.slick-product-poup').slick("setPosition", 0);
+    $('.slick-product-nav-poup').slick("setPosition", 0);
 
+}); 
 // Table Responsive Footable
 jQuery(function($){
 	$('.table').footable();
 });
 // Spiner input
 (function($) {
-  $('.spinner .input-group-btn-vertical:first-of-type .btn').on('click', function() {
+  $('.spinner .input-group-btn-vertical:last-of-type .btn').on('click', function() {
     var input = $(this).parent().parent().children('input');
     input.val(parseInt(input.val(), 10) + 1);
   });
-  $('.spinner .input-group-btn-vertical:last-of-type .btn').on('click', function() {
+  $('.spinner .input-group-btn-vertical:first-of-type .btn').on('click', function() {
     var input = $(this).parent().parent().children('input');
     var newvalue = parseInt(input.val(), 10) - 1;
     if (newvalue >= 0)
@@ -245,15 +352,15 @@ $(".more").click(function(){
 // menu pic hover
 $(document).ready(function(){
   $('a.menu').hover(
-            function() {
-                id = $(this).attr('id');
-                num = id.replace(/menu(\d+)/gi, '$1');
-                $('#img').attr('src', 'img/menu_pic/'+num+'.png');
-            },
-            function() { 
-                $('#img').attr('src', 'img/menu_pic/'+num+'.png'); 
-            }
-        );   
+    function() {
+        id = $(this).attr('id');
+        num = id.replace(/menu(\d+)/gi, '$1');
+        $('#img').attr('src', 'img/menu_pic/'+num+'.png');
+    },
+    function() { 
+        $('#img').attr('src', 'img/menu_pic/'+num+'.png'); 
+    }
+  );   
   }); 
 // media query
 $(document).ready(function(){
