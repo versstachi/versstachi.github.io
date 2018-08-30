@@ -11,11 +11,47 @@
   src: url(../fonts/latoblack.ttf); }
 
 @font-face {
+  font-family: 'RobotoRegular';
+  src: url(../fonts/robotoregular.eot);
+  src: url(../fonts/robotoregular.woff);
+  src: url(../fonts/robotoregular.ttf); }
+
+@font-face {
+  font-family: 'RobotoBold';
+  src: url(../fonts/RobotoBold.eot);
+  src: url(../fonts/RobotoBold.woff);
+  src: url(../fonts/RobotoBold.ttf); }
+
+@font-face {
+  font-family: 'RobotoLight';
+  src: url(../fonts/robotoregular.eot);
+  src: url(../fonts/robotoregular.woff);
+  src: url(../fonts/robotoregular.ttf); }
+
+@font-face {
+  font-family: 'Roboto-Black';
+  src: url(../fonts/robotoblack.woff2);
+  src: url(../fonts/robotoblack.woff);
+  src: url(../fonts/robotoblack.ttf); }
+
+@font-face {
+  font-family: 'Lora-Italic';
+  src: url(../fonts/Lora-Italic.ttf); }
+
+@font-face {
+  font-family: 'Lora-Regular';
+  src: url(../fonts/Lora-Regular.ttf); }
+
+@font-face {
   font-family: 'CenturyGothicRegular';
   src: url(../fonts/CenturyGothicRegular.ttf); }
 
+@font-face {
+  font-family: 'Ubuntu';
+  src: url(../fonts/Ubuntu.ttf); }
+
 body {
-  font-family: "Lato-Regular";
+  font-family: "RobotoRegular";
   color: #2c2c2c; }
 
 :focus {
@@ -23,20 +59,20 @@ body {
 
 h1 {
   font-size: 36px;
-  font-family: "Lato-Regular";
+  font-family: "RobotoRegular";
   margin: 20px 0px 20px; }
 
 h2 {
   font-size: 24px;
-  font-family: "Lato-Regular"; }
+  font-family: "RobotoRegular"; }
 
 h3 {
   font-size: 18px;
-  font-family: "Lato-Regular"; }
+  font-family: "RobotoRegular"; }
 
 h4 {
   font-size: 16px;
-  font-family: "Lato-Regular"; }
+  font-family: "RobotoRegular"; }
 
 .grey {
   color: #f0f0f0; }
@@ -55,7 +91,7 @@ h4 {
   float: left;
   display: inline-block;
   text-transform: uppercase;
-  font-family: "Lato-Regular"; }
+  font-family: "RobotoRegular"; }
   @media (max-width: 768px) {
     .logo {
       float: none;
@@ -101,7 +137,7 @@ a {
     min-width: 190px;
     margin-top: 35px;
     font-size: 16px;
-    font-family: "Lato-Regular"; }
+    font-family: "RobotoRegular"; }
 
 button {
   background: #2c2c2c;
@@ -116,7 +152,7 @@ button {
   min-width: 190px;
   margin-top: 35px;
   font-size: 16px;
-  font-family: "Lato-Regular"; }
+  font-family: "RobotoRegular"; }
   @media (max-width: 450px) {
     button {
       padding: 12px 5px; } }
@@ -205,7 +241,7 @@ input {
 
 label {
   font-size: 18px;
-  font-family: "Lato-Regular";
+  font-family: "RobotoRegular";
   font-weight: normal; }
   @media (max-width: 1440px) {
     label {
@@ -251,7 +287,7 @@ form {
     width: auto;
     margin-top: 50px; }
   form.login label {
-    font-family: "Lato-Regular"; }
+    font-family: "RobotoRegular"; }
   form.delivery {
     display: -webkit-flex;
     display: -moz-flex;
@@ -287,7 +323,7 @@ form {
     margin-bottom: 10px;
     margin-right: 20px; }
   form.register label {
-    font-family: "Lato-Regular"; }
+    font-family: "RobotoRegular"; }
   form.register p {
     margin-bottom: 8px; }
     form.register p.red {
@@ -503,7 +539,7 @@ nav {
         nav .js-navbar ul.navbar-nav li {
           text-align: center; } }
       nav .js-navbar ul.navbar-nav li label {
-        font-family: "Lato-Regular"; }
+        font-family: "RobotoRegular"; }
         nav .js-navbar ul.navbar-nav li label strong {
           margin-bottom: 5px;
           display: block; }
@@ -555,7 +591,7 @@ nav {
         display: block;
         padding: 0px 0px 15px; }
         nav .js-navbar ul.navbar-nav .full-menu a:hover {
-          font-family: "Lato-Black"; }
+          font-family: "RobotoBold"; }
       nav .js-navbar ul.navbar-nav .full-menu h3 {
         margin-top: 0px;
         margin-bottom: 15px; }
@@ -804,7 +840,7 @@ nav {
         nav .ship-cart .dropdown .dropdown-menu li p {
           margin-bottom: 5px; }
           nav .ship-cart .dropdown .dropdown-menu li p:hover {
-            font-family: "Lato-Regular"; }
+            font-family: "RobotoRegular"; }
         nav .ship-cart .dropdown .dropdown-menu li .spinner {
           margin-bottom: 5px; }
     nav .ship-cart .dropdown a {
@@ -1200,7 +1236,7 @@ nav {
     font-size: 10px;
     text-transform: uppercase;
     color: #d4b987;
-    font-family: "Lato-Regular"; }
+    font-family: "RobotoRegular"; }
     .head-row p.head-title-under:before {
       width: 100%;
       height: 1px;
@@ -1325,7 +1361,7 @@ header {
     padding-top: 70px;
     margin-bottom: 10px;
     text-transform: none;
-    font-family: "Lato-Black";
+    font-family: "RobotoBold";
     top: 0;
     width: 100%; }
   .content .related-posts p.rel-post-descrip {
@@ -1396,7 +1432,7 @@ header {
     .sidebar .sidebar-block-title h3 {
       margin-bottom: 0px;
       float: left;
-      font-family: "Lato-Regular";
+      font-family: "RobotoRegular";
       font-size: 18px; }
     .sidebar .sidebar-block-title a.look-more {
       float: right;
@@ -1407,16 +1443,16 @@ header {
       list-style-type: none;
       margin-bottom: 10px; }
       .sidebar ul li a {
-        font-size: 16px; }
+        font-size: 14px; }
         .sidebar ul li a:hover {
-          font-family: "Lato-Black"; }
+          font-family: "RobotoBold"; }
       .sidebar ul li.active a {
-        font-family: "Lato-Black";
+        font-family: "RobotoBold";
         padding-bottom: 3px;
         border-bottom: 1px solid #c1c1c1; }
   .sidebar h3 {
     margin-bottom: 0px;
-    font-family: "Lato-Black";
+    font-family: "RobotoBold";
     font-size: 18px; }
   .sidebar .sidebar-menu {
     margin-bottom: 30px; }
@@ -2286,7 +2322,7 @@ header {
     width: 100%;
     max-width: 314px; }
     .product .latest .product-item h3 {
-      font-family: "Lato-Regular";
+      font-family: "RobotoRegular";
       font-size: 18px;
       padding: 0px 10px; }
     .product .latest .product-item .product-price {
@@ -2442,6 +2478,15 @@ header {
   .collection .head-row p.head-title-under:before {
     top: 27px; }
 
+.front-page .blog-title .head-row h2 {
+  text-transform: uppercase;
+  font-size: 36px;
+  text-align: left; }
+  .front-page .blog-title .head-row h2:before {
+    display: none; }
+  .front-page .blog-title .head-row h2 span {
+    font-family: "Lora-Regular"; }
+
 .front-page .head-row {
   position: relative;
   height: 150px;
@@ -2455,10 +2500,12 @@ header {
     padding-right: 0px; }
   .front-page .head-row h2 {
     text-transform: uppercase;
-    font-size: 36px;
+    font-size: 48px;
     text-align: left; }
     .front-page .head-row h2:before {
       display: none; }
+    .front-page .head-row h2 span {
+      font-family: "Lora-Italic"; }
   .front-page .head-row:before {
     width: 100%;
     height: 1px;
@@ -2466,13 +2513,14 @@ header {
     content: "";
     position: absolute;
     left: 0;
-    top: 48px;
+    top: 55px;
     z-index: 3; }
 
 .front-page a.look-all {
   text-align: right;
   float: right;
   font-size: 15px;
+  font-family: "RobotoLight";
   margin-top: 25px; }
 
 .front-page .slider .slick-arrow.nav-next .fas {
@@ -2515,9 +2563,10 @@ header {
     padding: 0px;
     margin: 0px;
     width: 100%;
-    max-width: 314px; }
+    max-width: 314px;
+    height: 100%; }
     .front-page .latest .product-item h3 {
-      font-family: "Lato-Regular";
+      font-family: "RobotoRegular";
       font-size: 18px;
       padding: 0px 10px; }
     .front-page .latest .product-item .product-price {
@@ -2541,8 +2590,9 @@ header {
     margin-bottom: 20px; } }
 
 .front-page .response .resp-item h3 {
-  font-family: "Lato-Regular";
-  font-size: 18px; }
+  font-family: "RobotoLight";
+  font-size: 18px;
+  letter-spacing: 1.05px; }
 
 .front-page .blog-block {
   margin-bottom: 0px; }
@@ -2552,13 +2602,15 @@ header {
     margin-top: 75px;
     font-size: 48px; }
   .front-page .blog-block p {
-    color: #818181; }
+    color: #818181;
+    font-family: "RobotoLight"; }
     .front-page .blog-block p.date-publish {
       color: #d4b987; }
     .front-page .blog-block p.head-title-under span {
       color: #d4b987; }
   .front-page .blog-block h3 {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-family: "Lora-Regular"; }
     @media (max-width: 991px) {
       .front-page .blog-block h3 {
         margin-top: 20px; } }
@@ -2577,7 +2629,8 @@ header {
 
 .front-page .history-main a.more-look {
   color: #d4b987;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-family: "Ubuntu"; }
 
 .front-page .history-main .history-body {
   position: relative;
@@ -2593,6 +2646,7 @@ header {
   top: 0;
   width: 100%;
   height: 100%;
+  font-family: "Ubuntu";
   z-index: 5;
   background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 48%, white 81%);
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(48%, rgba(255, 255, 255, 0.9)), color-stop(81%, white));
@@ -2602,7 +2656,8 @@ header {
 
 .front-page .product-item .product-picture img {
   height: 100%;
-  min-height: 100%; }
+  min-height: 100%;
+  max-height: 422px; }
 
 .cart-payment .main-body {
   -webkit-box-shadow: 0px 0px 0px #fff;
@@ -2646,7 +2701,7 @@ header {
     .cart-payment .customer-info .input-group span {
       float: right; }
     .cart-payment .customer-info .input-group label {
-      font-family: "Lato-Regular"; }
+      font-family: "RobotoRegular"; }
   .cart-payment .customer-info button {
     letter-spacing: 0px;
     min-width: auto;
@@ -2951,7 +3006,7 @@ header {
 .cart-user-info .form-enter form {
   padding: 30px; }
   .cart-user-info .form-enter form label {
-    font-family: "Lato-Regular"; }
+    font-family: "RobotoRegular"; }
   .cart-user-info .form-enter form input {
     background-color: #fbfbfb; }
   .cart-user-info .form-enter form button {
@@ -3004,12 +3059,12 @@ header {
       font-size: 14px;
       margin-bottom: 10px; }
     .ship-cart-list li h4 {
-      font-family: "Lato-Black";
+      font-family: "RobotoBold";
       margin-bottom: 20px;
       margin-top: 0px; }
     .ship-cart-list li .price {
       font-size: 20px;
-      font-family: "Lato-Black"; }
+      font-family: "RobotoBold"; }
 
 .cart-page .main-body {
   -webkit-box-shadow: 0px 0px 0px #fff;
@@ -3034,11 +3089,11 @@ header {
   .cart-page .form-enter form p {
     margin-bottom: 10px; }
   .cart-page .form-enter form label {
-    font-family: "Lato-Regular"; }
+    font-family: "RobotoRegular"; }
   .cart-page .form-enter form input {
     background-color: #fbfbfb; }
   .cart-page .form-enter h3 {
-    font-family: "Lato-Regular";
+    font-family: "RobotoRegular";
     font-size: 20px; }
 
 .cart-page .nav > li > a {
@@ -3070,10 +3125,10 @@ header {
 .product-filter .drop-menu.active ul.drop-menu-list {
   display: block; }
   .product-filter .drop-menu.active ul.drop-menu-list a {
-    font-family: "Lato-Regular";
+    font-family: "RobotoRegular";
     border-bottom: 0px solid #c1c1c1; }
   .product-filter .drop-menu.active ul.drop-menu-list li.active a {
-    font-family: "Lato-Black";
+    font-family: "RobotoBold";
     border-bottom: 1px solid #c1c1c1; }
 
 .product-mobile .colums {
@@ -3285,8 +3340,8 @@ header {
 .product-item {
   float: left;
   height: 484px;
-  width: 267px;
-  max-width: 267px;
+  width: 259px;
+  max-width: 259px;
   min-height: 310px;
   -webkit-transform-style: flat;
   transform-style: flat;
@@ -3304,8 +3359,7 @@ header {
       margin: 0 2.5% 20px; } }
   @media (max-width: 1610px) {
     .product-item {
-      margin: 0 2% 20px;
-      width: 287px; } }
+      margin: 0 2% 20px; } }
   @media (max-width: 1535px) {
     .product-item {
       margin: 0 1% 20px; } }
@@ -3317,8 +3371,7 @@ header {
       margin: 0 0% 20px; } }
   @media (max-width: 1200px) {
     .product-item {
-      margin: 0 0% 20px;
-      max-width: 350px; } }
+      margin: 0 0% 20px; } }
   @media (max-width: 991px) {
     .product-item {
       max-width: 100%; } }
@@ -3378,7 +3431,8 @@ header {
     width: 100%;
     overflow: hidden;
     margin-bottom: 25px;
-    position: relative; }
+    position: relative;
+    max-height: 422px; }
     .product-item .product-picture .arrows-slide .slick-arrow.nav-prev,
     .product-item .product-picture .arrows-slide .slick-arrow.nav-next {
       display: none !important;
@@ -3401,8 +3455,7 @@ header {
       z-index: 3; }
     .product-item .product-picture img {
       width: 100%;
-      height: 100%;
-      min-height: 371px;
+      height: 388px;
       position: relative;
       left: 0;
       top: 0;
@@ -3562,7 +3615,7 @@ header {
   .about-us .about-us-header p {
     letter-spacing: 4px;
     font-size: 24px;
-    font-family: "Lato-Black"; }
+    font-family: "RobotoBold"; }
     @media (max-width: 768px) {
       .about-us .about-us-header p {
         display: block;
@@ -3577,7 +3630,7 @@ header {
       .about-us .about-us-header .head-title {
         margin-top: 100px; } }
   .about-us .about-us-header h1 {
-    font-family: "Lato-Black";
+    font-family: "RobotoBold";
     font-size: 48px;
     text-transform: uppercase;
     letter-spacing: 4px; }
@@ -3595,7 +3648,7 @@ header {
   padding-right: 0px; }
 
 .about-us h2 {
-  font-family: "Lato-Black";
+  font-family: "RobotoBold";
   font-size: 48px; }
   .about-us h2.title-rotate {
     -webkit-transform: rotate(-90deg);
@@ -3646,7 +3699,7 @@ header {
       padding-right: 10px;
       padding-left: 10px; } }
   .about-us .about-us-s-2 h2 {
-    font-family: "Lato-Black";
+    font-family: "RobotoBold";
     font-size: 48px; }
     .about-us .about-us-s-2 h2.title-rotate {
       left: -193px;
@@ -3665,7 +3718,7 @@ header {
       padding-right: 10px;
       padding-left: 10px; } }
   .about-us .about-us-s-3 h2 {
-    font-family: "Lato-Black";
+    font-family: "RobotoBold";
     font-size: 48px; }
     .about-us .about-us-s-3 h2.title-rotate {
       left: -193px;
@@ -3785,7 +3838,7 @@ header {
     display: inline-block;
     margin-right: 20px; }
   .blog .top-news h4 {
-    font-family: "Lato-Black";
+    font-family: "RobotoBold";
     display: inline-block;
     float: right; }
   .blog .top-news h3 {
@@ -3865,7 +3918,7 @@ ul.blog-menu {
     padding-right: 0px; }
     .response .resp-item h3 {
       text-transform: uppercase;
-      font-family: "Lato-Regular";
+      font-family: "RobotoRegular";
       margin-bottom: 5px;
       margin-top: 10px; }
     .response .resp-item .price-row {
@@ -3996,7 +4049,7 @@ ul.blog-menu {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Lato-Black";
+  font-family: "RobotoBold";
   font-size: 20px; }
   @media (max-width: 768px) {
     .product-refresh .prod-cols {
@@ -4029,7 +4082,7 @@ ul.blog-menu {
     .product-refresh .prod-cols div {
       margin-bottom: 5px; } }
   .product-refresh .prod-cols h3 {
-    font-family: "Lato-Black";
+    font-family: "RobotoBold";
     font-size: 20px;
     margin-bottom: 0px; }
     @media (max-width: 768px) {
@@ -4037,7 +4090,7 @@ ul.blog-menu {
         margin-bottom: 10px; } }
   .product-refresh .prod-cols .product-remove {
     color: red;
-    font-family: "Lato-Regular"; }
+    font-family: "RobotoRegular"; }
 
 .product-refresh .main-body {
   width: -webkit-calc(100% - 350px);
@@ -4100,7 +4153,7 @@ ul.blog-menu {
     font-size: 16px; }
   .profile .user-pic h4 {
     font-size: 20px;
-    font-family: "Lato-Black";
+    font-family: "RobotoBold";
     margin-bottom: 10px; }
 
 .col-gray {
@@ -4151,7 +4204,7 @@ ul.blog-menu {
   .profile-payment .link-top .privat-info h2 {
     font-size: 30px;
     color: #2eab36;
-    font-family: "Lato-Black";
+    font-family: "RobotoBold";
     margin-bottom: 15px; }
 
 .profile-payment .link-top .vcentr {
@@ -4441,7 +4494,7 @@ ul.blog-menu {
 .thanks h1 {
   font-size: 48px;
   text-transform: uppercase;
-  font-family: "Lato-Black";
+  font-family: "RobotoBold";
   letter-spacing: 6px; }
   @media (max-width: 991px) {
     .thanks h1 {
@@ -4608,7 +4661,7 @@ ul.blog-menu {
       font-size: 38px; }
   .contact-ciols h3 {
     margin-bottom: 10px;
-    font-family: "Lato-Black";
+    font-family: "RobotoBold";
     margin-top: 20px; }
     .contact-ciols h3:nth-child(1) {
       margin-top: 0px; }
@@ -4651,7 +4704,7 @@ ul.blog-menu {
     font-size: 16px; }
 
 .shops h4 {
-  font-family: "Lato-Black";
+  font-family: "RobotoBold";
   margin-bottom: 20px; }
 
 .shops p {
