@@ -12,9 +12,9 @@
 
 @font-face {
   font-family: 'RobotoRegular';
-  src: url(../fonts/robotoregular.eot);
-  src: url(../fonts/robotoregular.woff);
-  src: url(../fonts/robotoregular.ttf); }
+  src: url(../fonts/RobotoRegular.eot);
+  src: url(../fonts/RobotoRegular.woff);
+  src: url(../fonts/RobotoRegular.ttf); }
 
 @font-face {
   font-family: 'RobotoBold';
@@ -24,9 +24,9 @@
 
 @font-face {
   font-family: 'RobotoLight';
-  src: url(../fonts/robotoregular.eot);
-  src: url(../fonts/robotoregular.woff);
-  src: url(../fonts/robotoregular.ttf); }
+  src: url(../fonts/RobotoLight.eot);
+  src: url(../fonts/RobotoLight.woff);
+  src: url(../fonts/RobotoLight.ttf); }
 
 @font-face {
   font-family: 'Roboto-Black';
