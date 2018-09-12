@@ -233,6 +233,8 @@ $('.slick-popup-nav').slick({
     {
       breakpoint: 480,
       settings: {
+        centerMode: true,
+        centerPadding: '50px',
         slidesToShow: 1,
         slidesToScroll: 1
       }
@@ -434,6 +436,12 @@ $(document).ready(function(){
   );   
   }); 
 // media query
+var viewport = jQuery('meta[name="viewport"]');
+if (screen.width <= 768) {
+    viewport.attr("content", "width=device-width, initial-scale=1.0"); 
+} else {
+    viewport.attr("content", "minimum-scale=0.25,maximum-scale=1.5, width=1440, user-scalable=yes"); 
+}
 $(document).ready(function(){
   function classFunction(){
     if($('body').width()<768){

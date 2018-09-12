@@ -1654,6 +1654,22 @@ header {
 .front-page-mobile .blog-block h3 {
   margin-top: 20px; }
 
+.front-page-mobile .latest .latest-row {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
 .center.slider .slick-list {
   width: 100%; }
 
@@ -2482,6 +2498,12 @@ header {
       list-style-type: none;
       margin-right: 5px;
       margin-bottom: 5px; }
+      @media (max-width: 768px) {
+        .collection .main-actions-pic li {
+          width: 100%; } }
+      @media (max-width: 768px) {
+        .collection .main-actions-pic li img {
+          width: 100%; } }
   .collection .head-row p.head-title-under:before {
     top: 27px; }
 
