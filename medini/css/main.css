@@ -2518,8 +2518,8 @@ header {
 .front-page .head-row {
   position: relative;
   height: auto;
-  min-height: 100px;
-  margin-top: 55px;
+  min-height: 80px;
+  margin-top: 0px;
   padding-top: 7px; }
   @media (max-width: 768px) {
     .front-page .head-row {
