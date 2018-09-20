@@ -3505,7 +3505,6 @@ header {
     margin-bottom: 25px;
     position: relative;
     max-height: 422px; }
-    .product-item .product-picture .arrows-slide .slick-arrow.nav-prev,
     .product-item .product-picture .arrows-slide .nav-prev,
     .product-item .product-picture .arrows-slide .nav-next {
       display: none !important;
