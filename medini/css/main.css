@@ -403,10 +403,11 @@ a.forgot-pass {
   position: relative;
   background: #777;
   display: block;
-  color: #fff; }
+  color: #fff;
+  font-size: 12px; }
   @media (max-width: 1440px) {
     .row-info {
-      font-size: 13px;
+      font-size: 12px;
       text-align: center; }
       .row-info [class*=col-] {
         padding-left: 0px;
