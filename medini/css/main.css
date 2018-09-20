@@ -1220,7 +1220,7 @@ nav {
           display: none; } }
     .head-row h2 span {
       background: #fff;
-      padding: 20px;
+      padding: 0px 20px;
       z-index: 4;
       position: relative; }
       @media (max-width: 600px) {
