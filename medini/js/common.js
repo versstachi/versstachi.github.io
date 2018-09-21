@@ -319,6 +319,12 @@ $(".latest-list-cat").slick({
 // $("#add-cart-modal").load("catalog-modal.html");
 // });
 // re - unslick plugin slick
+$(".catalog-load").on("click", function(){  
+$(".product-item-pict-caruousel").slick('unslick'); 
+$(".slick-product-nav-popup").slick('unslick'); 
+$(".slick-product-popup").slick('unslick'); 
+$(".slick-product-modal-gallery").slick('unslick'); 
+});
 $( document ).ajaxStart(function() {
 // destroy slick before ajax call
 $(".product-item-pict-caruousel").slick('unslick'); 
