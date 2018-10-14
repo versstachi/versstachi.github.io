@@ -1,0 +1,41 @@
+
+@font-face {
+    font-family: 'Spectralregular'; 
+    src: local('Spectralregular'), local('Spectralregular'),  
+        url('Spectralregular.ttf') format('truetype');  
+}
+@font-face {
+    font-family: 'Spectralsemibold'; 
+    src: url('Spectralsemibold.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'Merriweather-Regular';
+    src: url('Merriweather-Regular.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'Merriweather-Light'; 
+    src: url('Merriweather-Light.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'Merriweather-Black';
+    src: url('Merriweather-Black.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'Merriweather-Bold';
+    src: url('Merriweather-Bold.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'Oranienbaum-Regular';
+    src: url('Oranienbaum-Regular.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'Merriweather-BoldItalic';
+    src: url('Merriweather-BoldItalic.ttf') format('truetype'); 
+}
+ 
