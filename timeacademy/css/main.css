@@ -83,11 +83,15 @@ p {
       padding-left: 20px;
       padding-right: 20px; } }
 
+a.button,
 button,
 input[type="submit"] {
   max-height: 100%;
-  min-height: 40px;
-  height: auto; }
+  height: auto;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center; }
+  a.button.red-bg,
   button.red-bg,
   input[type="submit"].red-bg {
     -webkit-border-radius: 50px;
@@ -108,6 +112,7 @@ input[type="submit"] {
     font-family: "RobotoBold";
     -webkit-box-shadow: 0px 20px 90px 0px rgba(112, 92, 219, 0.57);
             box-shadow: 0px 20px 90px 0px rgba(112, 92, 219, 0.57); }
+  a.button.img-bg,
   button.img-bg,
   input[type="submit"].img-bg {
     -webkit-border-radius: 50px;
@@ -128,6 +133,7 @@ input[type="submit"] {
     font-family: "RobotoBold";
     -webkit-box-shadow: 0px 20px 90px 0px rgba(112, 92, 219, 0.57);
             box-shadow: 0px 20px 90px 0px rgba(112, 92, 219, 0.57); }
+  a.button.white-bg,
   button.white-bg,
   input[type="submit"].white-bg {
     -webkit-border-radius: 50px;
@@ -148,6 +154,10 @@ input[type="submit"] {
     font-family: "RobotoBold";
     -webkit-box-shadow: 0px 20px 90px 0px rgba(112, 92, 219, 0.57);
             box-shadow: 0px 20px 90px 0px rgba(112, 92, 219, 0.57); }
+  a.button:hover,
+  button:hover,
+  input[type="submit"]:hover {
+    opacity: 0.8; }
 
 header nav {
   padding: 30px 20px; }
@@ -632,6 +642,108 @@ form {
   margin: 0 auto;
   margin-top: 13px; }
 
-.count {
+.slick-counter,
+.slick-counter1 {
   color: #898989;
-  text-align: center; }
+  text-align: center;
+  margin-top: 17px; }
+
+.modalbg {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+  z-index: 99999;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  -transition-delay: 0.2s;
+  display: block;
+  pointer-events: none; }
+  .modalbg form input {
+    margin: 0;
+    margin-bottom: 10px; }
+    .modalbg form input::-webkit-input-placeholder {
+      color: #acacac;
+      text-align: center; }
+    .modalbg form input::-moz-placeholder {
+      color: #acacac;
+      text-align: center; }
+    .modalbg form input:-ms-input-placeholder {
+      color: #acacac;
+      text-align: center; }
+    .modalbg form input::placeholder {
+      color: #acacac;
+      text-align: center; }
+  .modalbg .dialog {
+    width: 320px;
+    position: relative;
+    top: -1000px;
+    margin: 10% auto;
+    padding: 50px 30px 40px 30px;
+    background: #fff;
+    background: -o-linear-gradient(#fff, #ccc);
+    box-shadow: 0 0 10px #000;
+    -moz-box-shadow: 0 0 10px #000;
+    -webkit-box-shadow: 0 0 10px #000; }
+    @media (max-width: 375px) {
+      .modalbg .dialog {
+        width: 100%;
+        max-width: 270px;
+        padding: 30px 15px; } }
+    .modalbg .dialog h2 {
+      font-size: 25pt; }
+      @media (max-width: 375px) {
+        .modalbg .dialog h2 {
+          font-size: 20pt; } }
+    .modalbg .dialog .ie7 {
+      filter: progid:DXImageTransform.Microsoft.Shadow(color='#000', Direction=135, Strength=3); }
+  .modalbg:target {
+    display: block;
+    pointer-events: auto;
+    background: rgba(4, 10, 30, 0.8);
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out; }
+    .modalbg:target .dialog {
+      top: -20px;
+      -webkit-transition: all 0.8s ease-out;
+      transition: all 0.8s ease-out;
+      -webkit-transition-delay: 0.4s;
+      -moz-transition-delay: 0.4s;
+      -o-transition-delay: 0.4s;
+      -transition-delay: 0.4s; }
+
+.close {
+  background-image: url(../img/close.png);
+  line-height: 25px;
+  position: absolute;
+  right: 10px;
+  text-align: center;
+  top: 10px;
+  width: 19px;
+  height: 19px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  -transition-delay: 0.2s;
+  display: block; }
+  .close .ie7 {
+    filter: progid:DXImageTransform.Microsoft.Shadow(color='#000', Direction=135, Strength=3); }
+  .close:hover {
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out; }
+
+.fineprint {
+  font-family: "RobotoLight";
+  text-align: center;
+  margin-top: 20px;
+  color: #8b8b8b; }

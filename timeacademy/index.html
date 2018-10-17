@@ -4,9 +4,8 @@
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Академия времени</title>
-	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css"> 
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -36,7 +35,7 @@
 			<div class="descriptor">Первый бесплатный онлайн-марафон по поиску предназначения</div>
 			<h1>Кармические задачи по дате рождения</h1>
 			<div class="under-title">Узнайте , как начать жить в ритмах Вселенной и достигать желаемого без стресса и сверхусилий</div>
-			<button class="img-bg">Принять участие</button>
+			<a class="button img-bg" href="#openModal">Принять участие</a>
 
 		</div>
 		<div class="wrap row-2">
@@ -57,8 +56,8 @@
 		<div class="wrap row-4">
 			<h2>Раскройте свой потенциал и начните управлять судьбой</h2>
 			<div class="img-block"><img src="img/s-5-bg.png" alt=""></div>
-			<p>Узнайте свои кармические задачи и научитесь жить в гармонии и достатке на бесплатном онлайн—марафоне!</p>
-			<button class="img-bg">Запустить изменения</button>
+			<p>Узнайте свои кармические задачи и научитесь жить в гармонии и достатке на бесплатном онлайн—марафоне!</p> 
+			<a class="button img-bg" href="#openModal">Запустить изменения</a>
 			<p class="quote">Бесплатный набор унастников до 22 октября</p>
 		</div>
 		<div class="wrap row-5">
@@ -114,8 +113,8 @@
 			<div class="inf-row"><div class="numb">11 лет</div><span>консультативной практики</span></div>
 			<div class="inf-row"><div class="numb">> 2700</div><span>стали участниками Марафона</span></div>
 			<p class="quote">Все процессы, явления, события, люди, мысли и чувства есть вибрации различной частоты. Все вибрации имеют числовое значение и могут быть</p>
-			<p class="stronger">Зная смысл и значение чисел, мы можем видеть суть человека или события и более того – делать предсказания. На Марафоне я научу вас этому.</p>
-			<button class="white-bg">Зарегистрироваться на марафон</button>
+			<p class="stronger">Зная смысл и значение чисел, мы можем видеть суть человека или события и более того – делать предсказания. На Марафоне я научу вас этому.</p> 
+			<a class="button white-bg" href="#openModal">Зарегистрироваться на марафон</a>
 		</div>
 		<div class="wrap row-7">
 			<h2>Результаты участников после прохождения</h2>
@@ -165,8 +164,8 @@
 					<h3>Елена Сергеева,<span>домохозяйка</span></h3>
 					<p>Ваша жизнь наполнется радостью и смыслом</p>
 				</li>
-			</ul>
-			<button class="img-bg">забронировать место</button>
+			</ul> 
+			<a class="button img-bg" href="#openModal">забронировать место</a>
 			<div class="bonus-block"><img src="img/bonus.png" alt=""><span>Бонус ценностью в 3000 рублей</span></div>
 		</div>
 		<div class="wrap row-8">
@@ -178,8 +177,8 @@
 				<li><span>Какими вы будете в близких продолжительных отношениях</span></li>
 				<li><span>Какие качества вы проявите в семье, дружбе, партнерстве</span></li>
 				<li><span>Как будете вести себя при решении конфликтных ситуаций</span></li>
-			</ul>
-			<button class="red-bg">Зарегистрироваться и получить бонус</button>
+			</ul> 
+			<a class="button red-bg" href="#openModal">Зарегистрироваться и получить бонус</a>
 		</div>
 		<div class="wrap row-9">
 			<h2>Часто задаваемые вопросы</h2>
@@ -197,7 +196,7 @@
 					<h3>Можно ли в процессе эфира задавать вопросы на личные темы?</h3>
 					<p>Да! Более того - активная коммуникация со спикером поможет вам лучше усвоить материал и найти решение собственных задач.</p>
 				</li>
-			</ul>
+			</ul> 
 		</div>
 		<div class="wrap row-10">
 			<h2>Получите ключ управления вашей жизнью</h2>
@@ -210,8 +209,20 @@
 		</div>
 	 
 
+<div id="openModal" class="modalbg">
+  <div class="dialog">
+    <a href="#close" title="Close" class="close"></a>
+  	<h2>Пройти бесплатную регистрацию и получите доступ к прямым эфирам</h2> 
+			<form action="">
+				<input type="text" placeholder="ВАШЕ ИМЯ" required="required">
+				<input type="mail" placeholder="E-mail адрес" required="required">
+				<input type="submit" class="img-bg" value="Принять участие">
+			</form>
+    <p class="fineprint">Ваши данные под 100% защитой</p>
+	</div>
+</div>
 	 <script  src="https://code.jquery.com/jquery-1.12.4.min.js"  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="  crossorigin="anonymous"></script> 
-	 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js"></script> 
+	 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js"></script>  
 	<script src="js/common.js"></script>
 
 </body>
