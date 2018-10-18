@@ -110,8 +110,8 @@ input[type="submit"] {
     max-width: 320px;
     font-size: 16px;
     font-family: "RobotoBold";
-    -webkit-box-shadow: 0px 20px 90px 0px rgba(112, 92, 219, 0.57);
-            box-shadow: 0px 20px 90px 0px rgba(112, 92, 219, 0.57); }
+    -webkit-box-shadow: 0px 20px 50px 0px rgba(112, 92, 219, 0.57);
+            box-shadow: 0px 20px 50px 0px rgba(112, 92, 219, 0.57); }
   a.button.img-bg,
   button.img-bg,
   input[type="submit"].img-bg {
@@ -131,8 +131,8 @@ input[type="submit"] {
     max-width: 320px;
     font-size: 16px;
     font-family: "RobotoBold";
-    -webkit-box-shadow: 0px 20px 90px 0px rgba(112, 92, 219, 0.57);
-            box-shadow: 0px 20px 90px 0px rgba(112, 92, 219, 0.57); }
+    -webkit-box-shadow: 0px 20px 50px 0px rgba(112, 92, 219, 0.57);
+            box-shadow: 0px 20px 50px 0px rgba(112, 92, 219, 0.57); }
   a.button.white-bg,
   button.white-bg,
   input[type="submit"].white-bg {
@@ -152,8 +152,8 @@ input[type="submit"] {
     max-width: 320px;
     font-size: 16px;
     font-family: "RobotoBold";
-    -webkit-box-shadow: 0px 20px 90px 0px rgba(112, 92, 219, 0.57);
-            box-shadow: 0px 20px 90px 0px rgba(112, 92, 219, 0.57); }
+    -webkit-box-shadow: 0px 20px 50px 0px rgba(112, 92, 219, 0.57);
+            box-shadow: 0px 20px 50px 0px rgba(112, 92, 219, 0.57); }
   a.button:hover,
   button:hover,
   input[type="submit"]:hover {
@@ -391,7 +391,7 @@ nav button.menu-ico-close span.line:nth-child(3) {
             box-shadow: 0px 0px 0px 0px transparent; }
   .row-5 .right-arrow,
   .row-5 .left-arrow {
-    bottom: -25px; }
+    bottom: 0px; }
 
 .row-6 {
   background-image: url(../img/s-6-bg.png);
@@ -539,9 +539,8 @@ nav button.menu-ico-close span.line:nth-child(3) {
             justify-content: flex-start; }
     .row-8 .bonus-block img {
       margin-right: 15px;
-      max-width: 100%;
       height: auto;
-      width: auto; }
+      width: 97px; }
     .row-8 .bonus-block span {
       color: #898989;
       margin-top: -20px; }
@@ -767,7 +766,8 @@ form {
   margin-top: 13px; }
 
 .slick-counter,
-.slick-counter1 {
+.slick-counter1,
+.slick-counter2 {
   color: #898989;
   text-align: center;
   margin-top: 17px; }

@@ -7,7 +7,27 @@ $(function() {
  $(this).toggleClass("menu-ico-close");
 }); 
  // slick slides
- $('.lesson-slide').slick({
+ // $('.lesson-slide').slick({
+ // 	arrows: true,
+ // 	dots: false,
+ //    slidesToShow: 1,
+ //    slidesToScroll: 1,
+ //    prevArrow: '<div class="left-arrow"><span class="nav-prev"></span></div>',
+ //    nextArrow: '<div class="right-arrow"><span class="nav-next"></span></div>',
+	// infinite: false,
+	// adaptiveHeight: true,
+	// speed: 500,
+	// fade: true,
+	// cssEase: 'linear'
+ // });
+  
+$(function() {
+  $('.lesson-slide').on('init', function(event, slick) {
+    $(this).append('<div class="slick-counter2"><span class="current2"></span> / <span class="total2"></span></div>');
+    $('.current2').text(slick.currentSlide + 1);
+    $('.total2').text(slick.slideCount);
+  })
+  .slick({
  	arrows: true,
  	dots: false,
     slidesToShow: 1,
@@ -15,12 +35,16 @@ $(function() {
     prevArrow: '<div class="left-arrow"><span class="nav-prev"></span></div>',
     nextArrow: '<div class="right-arrow"><span class="nav-next"></span></div>',
 	infinite: false,
-	adaptiveHeight: true,
 	speed: 500,
 	fade: true,
+	adaptiveHeight: true,
 	cssEase: 'linear'
- });
-  
+  })
+  .on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+    $('.current2').text(nextSlide + 1);
+  });
+});
+ 
 $(function() {
   $('.faq-slide').on('init', function(event, slick) {
     $(this).append('<div class="slick-counter"><span class="current"></span> / <span class="total"></span></div>');
@@ -95,11 +119,10 @@ window.onclick = function(event) {
     }
 }
 // menu scrol 
-$('.go_anch').click( function(){
-    var scroll_el = $(this).attr('href');
-    if ($(scroll_el).length != 0) {
-        $('html, body').animate({ scrollTop: $(scroll_el).offset().top - 0 }, 500);
-    }
+$('.go_anch').click(function(){
+var target = $(this).attr('href');
+$('html, body').animate({scrollTop: $(target).offset().top}, 800);//800 - длительность скроллинга в мс
+return false;  
 	$('.menu-row').toggle('fade');
 	$('header nav').toggleClass("highlight");
 	$('button.menu-btn').toggleClass("menu-ico-close");
