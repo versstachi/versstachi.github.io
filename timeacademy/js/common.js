@@ -14,7 +14,11 @@ $(function() {
     slidesToScroll: 1,
     prevArrow: '<div class="left-arrow"><span class="nav-prev"></span></div>',
     nextArrow: '<div class="right-arrow"><span class="nav-next"></span></div>',
-	infinite: false
+	infinite: false,
+	adaptiveHeight: true,
+	speed: 500,
+	fade: true,
+	cssEase: 'linear'
  });
   
 $(function() {
@@ -30,7 +34,11 @@ $(function() {
     slidesToScroll: 1,
     prevArrow: '<div class="left-arrow"><span class="nav-prev"></span></div>',
     nextArrow: '<div class="right-arrow"><span class="nav-next"></span></div>',
-	infinite: false
+	infinite: false,
+	speed: 500,
+	fade: true,
+	adaptiveHeight: true,
+	cssEase: 'linear'
   })
   .on('beforeChange', function(event, slick, currentSlide, nextSlide) {
     $('.current').text(nextSlide + 1);
@@ -50,7 +58,11 @@ $(function() {
     slidesToScroll: 1,
     prevArrow: '<div class="left-arrow"><span class="nav-prev"></span></div>',
     nextArrow: '<div class="right-arrow"><span class="nav-next"></span></div>',
-	infinite: false
+	infinite: false,
+	speed: 500,
+	fade: true,
+	adaptiveHeight: true,
+	cssEase: 'linear'
   })
   .on('beforeChange', function(event, slick, currentSlide, nextSlide) {
     $('.current1').text(nextSlide + 1);
@@ -82,4 +94,15 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+// menu scrol 
+$('.go_anch').click( function(){
+    var scroll_el = $(this).attr('href');
+    if ($(scroll_el).length != 0) {
+        $('html, body').animate({ scrollTop: $(scroll_el).offset().top - 0 }, 500);
+    }
+	$('.menu-row').toggle('fade');
+	$('header nav').toggleClass("highlight");
+	$('button.menu-btn').toggleClass("menu-ico-close");
+    return false;
+}); 
 });

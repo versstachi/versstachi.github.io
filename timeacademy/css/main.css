@@ -332,8 +332,8 @@ nav button.menu-ico-close span.line:nth-child(3) {
   background: -webkit-gradient(linear, left top, left bottom, from(#6b4ed8), to(#8e73ee));
   background: linear-gradient(to bottom, #6b4ed8 0%, #8e73ee 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b4ed8', endColorstr='#8e73ee',GradientType=0 );
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   color: #fff; }
   .row-3 h2 {
     font-family: "RobotoBold";
@@ -366,12 +366,15 @@ nav button.menu-ico-close span.line:nth-child(3) {
   .row-5 h2 {
     margin-top: 0px; }
   .row-5 h4 {
-    font-size: 15pt; }
+    font-size: 15pt;
+    margin-top: 10px; }
   .row-5 strong {
     font-size: 12pt; }
   .row-5 .lesson-slide {
     margin-left: 0px;
     padding-bottom: 10px; }
+    .row-5 .lesson-slide .lesson {
+      position: relative; }
   .row-5 ul {
     padding-left: 15px; }
     .row-5 ul li {
@@ -383,6 +386,12 @@ nav button.menu-ico-close span.line:nth-child(3) {
         color: #000000; }
   .row-5 .slick-slider .slick-list {
     padding-bottom: 40px; }
+  .row-5 a.button.img-bg {
+    -webkit-box-shadow: 0px 0px 0px 0px transparent;
+            box-shadow: 0px 0px 0px 0px transparent; }
+  .row-5 .right-arrow,
+  .row-5 .left-arrow {
+    bottom: -25px; }
 
 .row-6 {
   background-image: url(../img/s-6-bg.png);
@@ -456,13 +465,13 @@ nav button.menu-ico-close span.line:nth-child(3) {
       color: #000000;
       font-size: 12pt;
       font-family: "RobotoRegular"; }
-  .row-6 button.white-bg {
+  .row-6 a.button.white-bg {
     font-size: 11pt; }
 
 .row-7 {
   background: #f4f6f8;
   padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-bottom: 70px; }
   .row-7 ul {
     padding-left: 0px;
     margin-left: 0px;
@@ -471,39 +480,22 @@ nav button.menu-ico-close span.line:nth-child(3) {
       width: 100%;
       height: auto; }
     .row-7 ul h3 {
-      font-size: 14pt;
+      font-size: 16pt;
       font-family: "RobotoBold"; }
       .row-7 ul h3 span {
         font-size: 12pt;
         font-family: "RobotoRegular"; }
     .row-7 ul p {
       font-size: 14pt;
-      color: #898989;
-      margin-bottom: 30px; }
-  .row-7 button {
+      color: #000000;
+      margin-bottom: 30px;
+      font-family: "RobotoBold"; }
+      .row-7 ul p.resp-text {
+        font-family: "RobotoLight";
+        color: #898989;
+        font-size: 13pt; }
+  .row-7 a.button.img-bg {
     margin-top: 45px; }
-  .row-7 .bonus-block {
-    margin: 40px 0px 0px;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-            justify-content: flex-start; }
-    .row-7 .bonus-block img {
-      margin-right: 15px; }
-    .row-7 .bonus-block span {
-      color: #898989;
-      margin-top: -20px; }
 
 .row-8 {
   background: #f4f6f8;
@@ -524,10 +516,35 @@ nav button.menu-ico-close span.line:nth-child(3) {
     .row-8 ul li span {
       color: #000000;
       font-size: 13pt; }
-  .row-8 button {
+  .row-8 a.button {
     font-size: 9pt;
     font-family: "RobotoBold";
     margin-top: 50px; }
+  .row-8 .bonus-block {
+    margin: 0px 0px 0px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    .row-8 .bonus-block img {
+      margin-right: 15px;
+      max-width: 100%;
+      height: auto;
+      width: auto; }
+    .row-8 .bonus-block span {
+      color: #898989;
+      margin-top: -20px; }
 
 .row-9 {
   background: #f4f6f8;
@@ -699,7 +716,7 @@ form {
 .left-arrow {
   width: 48px;
   height: 48px;
-  left: 20px; }
+  left: 20%; }
   .left-arrow:hover .nav-prev {
     background: url(../img/left-arrow-angle-white.svg);
     background-size: contain; }
@@ -707,7 +724,7 @@ form {
 .right-arrow {
   width: 48px;
   height: 48px;
-  right: 20px; }
+  right: 20%; }
   .right-arrow:hover .nav-next {
     background: url(../img/right-arrow-angle-white.svg);
     background-size: contain; }
@@ -774,7 +791,8 @@ form {
   pointer-events: none; }
   .modalbg form input {
     margin: 0;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    color: #000000; }
     .modalbg form input::-webkit-input-placeholder {
       color: #acacac;
       text-align: center; }
