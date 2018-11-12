@@ -1,0 +1,130 @@
+@font-face 
+	font-family: 'Gilroy-ExtraBold'
+	src: url(../font/Gilroy-ExtraBold.eot) 
+	src: url(../font/Gilroy-ExtraBold.woff2)
+	src: url(../font/Gilroy-ExtraBold.otf) 
+	src: url(../font/Gilroy-ExtraBold.woff)
+	src: url(../font/Gilroy-ExtraBold.ttf)
+@font-face 
+	font-family: 'Gilroy-Light'
+	src: url(../font/Gilroy-Light.eot) 
+	src: url(../font/Gilroy-Light.woff2)
+	src: url(../font/Gilroy-Light.otf) 
+	src: url(../font/Gilroy-Light.woff)
+	src: url(../font/Gilroy-Light.ttf)
+$gl: 'Gilroy-Light'
+$geb: 'Gilroy-ExtraBold'
+$cf: #00CCFF
+$cb: #333333
+body
+	color: $cb
+	background: url(../img/page-bg.png) 
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	padding: 0px
+	margin: 0px
+	.wrap
+		margin: 0 auto
+		max-width: 1140px 
+		@media (max-width: 1200px) 
+			max-width: 960px 
+		@media (max-width: 991px) 
+			max-width: 767px 
+		@media (max-width: 767px) 
+			max-width: 767px 
+			padding: 0px 20px
+		.col
+			width: 50%
+			padding-top: 163px
+			padding-bottom: 138px
+			@media (max-width: 767px) 
+				width: 100%
+			.logo
+			h1
+				&.title
+					font-family: $geb
+					font-size: 48px
+					text-transform: uppercase
+					@media (max-width: 767px)
+						font-size: 36px
+					span
+						color: $cf
+			.description
+				font-size: 20px
+				font-family: $gl
+				line-height: 29px
+			.form
+				margin: 30px 0px
+				form
+					.row-two-items
+						display: -webkit-flex
+						display: -moz-flex
+						display: -ms-flex
+						display: -o-flex
+						display: flex
+						align-items: center
+						flex-wrap: wrap 
+						a
+							font-size: 20px
+							border-bottom: 1px solid $cb
+							text-decoration: none
+							font-family: $gl
+							color: $cb
+							margin-bottom: 20px
+					.input-row 
+						position: relative
+						margin-bottom: 20px
+						background: #fff
+						width: 100%
+						max-width: 370px 
+						margin-right: 20px
+						&.email
+							&:after
+								content: "";
+								position: absolute
+								height: 24px
+								width: 24px	
+								background: url(../img/mail.png)
+								background-repeat: no-repeat
+								background-size: contain
+								background-position: center
+								top: 20px
+								right: 20px
+						&.tel
+							&:after
+								content: "";
+								position: absolute
+								height: 24px
+								width: 24px	
+								background: url(../img/lock.png)
+								background-repeat: no-repeat
+								background-size: contain
+								background-position: center
+								top: 20px
+								right: 20px
+					input
+						font-family: $gl
+						border: 0px	
+						border-radius: 0px
+						display: block
+						padding: 0px 30px 
+						position: relative
+						height: 60px
+						font-size: 20px
+						&::placeholder
+							font-family: $gl
+						&[type="submit"]
+							background: $cf
+							color: #fff
+							font-family: $geb 
+							padding: 10px 
+							font-size: 20px
+							height: 60px
+							width: 100%
+							max-width: 370px 
+			.social
+				font-size: 24px
+				font-family: $gl
+				a
+					margin-right: 20px
