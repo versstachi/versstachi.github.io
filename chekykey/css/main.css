@@ -299,13 +299,17 @@ body {
   body .search-more h3 {
     margin-top: 40px;
     margin-bottom: 20px; }
+    @media (max-width: 480px) {
+      body .search-more h3 {
+        padding-left: 10px; } }
   body .search-more ul {
     margin-left: 0px;
     padding-left: 0px;
     margin-top: 10px; }
     @media (max-width: 480px) {
       body .search-more ul {
-        margin: 0px; } }
+        margin: 0px;
+        padding-left: 10px; } }
     body .search-more ul li {
       list-style-type: none;
       margin-bottom: 5px;
@@ -320,74 +324,6 @@ body {
   body .search-more .first-col,
   body .search-more .last-col {
     display: inline-block; }
-  body .search-pagin {
-    margin: 30px 0px; }
-    body .search-pagin ul {
-      margin-left: 0px;
-      padding-left: 0px; }
-      body .search-pagin ul li {
-        display: inline-block;
-        font-size: 14px;
-        position: relative;
-        padding: 20px 5px; }
-        @media (max-width: 380px) {
-          body .search-pagin ul li {
-            padding: 20px 0px; } }
-        body .search-pagin ul li a {
-          padding-left: 10px;
-          text-decoration: none; }
-          body .search-pagin ul li a:before {
-            content: "e";
-            position: absolute;
-            top: -14px;
-            font-size: 22px;
-            -webkit-transform: rotate(-30deg);
-                -ms-transform: rotate(-30deg);
-                    transform: rotate(-30deg);
-            display: inline-block;
-            margin-left: -3px;
-            margin-top: 0px; }
-          body .search-pagin ul li a:hover {
-            text-decoration: underline; }
-        body .search-pagin ul li.active {
-          font-family: "Gilroy-ExtraBold";
-          font-size: 15px; }
-          body .search-pagin ul li.active a {
-            margin-top: 2px; }
-            body .search-pagin ul li.active a:before {
-              margin-top: -1px;
-              font-size: 23px;
-              text-align: center; }
-        body .search-pagin ul li.pagin-logo-start a, body .search-pagin ul li.pagin-logo-end a {
-          text-decoration: none; }
-          body .search-pagin ul li.pagin-logo-start a:hover, body .search-pagin ul li.pagin-logo-end a:hover {
-            text-decoration: underline; }
-          body .search-pagin ul li.pagin-logo-start a:before, body .search-pagin ul li.pagin-logo-end a:before {
-            display: none; }
-        body .search-pagin ul li.pagin-logo-start span, body .search-pagin ul li.pagin-logo-end span {
-          position: absolute;
-          top: 0px;
-          font-size: 22px; }
-          body .search-pagin ul li.pagin-logo-start span.rotate, body .search-pagin ul li.pagin-logo-end span.rotate {
-            position: relative;
-            -webkit-transform: rotate(-30deg);
-                -ms-transform: rotate(-30deg);
-                    transform: rotate(-30deg);
-            display: inline-block;
-            margin-left: -2px;
-            margin-top: 1px; }
-        body .search-pagin ul li.pagin-logo-start {
-          padding: 35px 0px 0px 15px;
-          text-align: left; }
-          body .search-pagin ul li.pagin-logo-start span {
-            left: 0; }
-            body .search-pagin ul li.pagin-logo-start span.rotate {
-              margin-left: -1px;
-              margin-top: 1px; }
-        body .search-pagin ul li.pagin-logo-end {
-          padding: 35px 40px 0px 0px;
-          text-align: right;
-          right: 0; }
 
 footer {
   border-bottom: 1px solid #ccc;
