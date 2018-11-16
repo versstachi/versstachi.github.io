@@ -299,17 +299,19 @@ body {
   body .search-more h3 {
     margin-top: 40px;
     margin-bottom: 20px; }
-    @media (max-width: 480px) {
+    @media (max-width: 991px) {
       body .search-more h3 {
         padding-left: 10px; } }
   body .search-more ul {
     margin-left: 0px;
     padding-left: 0px;
     margin-top: 10px; }
+    @media (max-width: 991px) {
+      body .search-more ul {
+        padding-left: 10px; } }
     @media (max-width: 480px) {
       body .search-more ul {
-        margin: 0px;
-        padding-left: 10px; } }
+        margin: 0px; } }
     body .search-more ul li {
       list-style-type: none;
       margin-bottom: 5px;
