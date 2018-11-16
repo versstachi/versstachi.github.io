@@ -1,0 +1,357 @@
+@font-face {
+  font-family: 'Gilroy-ExtraBold';
+  src: url(../font/Gilroy-ExtraBold.eot);
+  src: url(../font/Gilroy-ExtraBold.ttf);
+  src: url(../font/Gilroy-ExtraBold.otf);
+  src: url(../font/Gilroy-ExtraBold.woff);
+  src: url(../font/Gilroy-ExtraBold.woff2); }
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url(../font/Roboto-Regular.eot);
+  src: url(../font/Roboto-Regular.ttf);
+  src: url(../font/Roboto-Regular.otf);
+  src: url(../font/Roboto-Regular.woff);
+  src: url(../font/Roboto-Regular.woff2); }
+
+@font-face {
+  font-family: 'Gilroy-Light';
+  src: url(../font/Gilroy-Light.eot);
+  src: url(../font/Gilroy-Light.ttf);
+  src: url(../font/Gilroy-Light.otf);
+  src: url(../font/Gilroy-Light.woff);
+  src: url(../font/Gilroy-Light.woff2); }
+
+body {
+  background-color: white;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-family: "Gilroy-Light"; }
+  body a {
+    color: #333; }
+    body a:hover {
+      color: #333;
+      text-decoration: underline; }
+  body.frontpage .wrap {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%; }
+  body.frontpage .col {
+    width: 50%; }
+    @media (max-width: 767px) {
+      body.frontpage .col {
+        width: 100%; } }
+  body.frontpage .search-form .field-row {
+    border: 1px solid #eee;
+    width: 100%;
+    height: 60px; }
+  body nav {
+    background-color: #fafafa;
+    min-height: 50px;
+    padding-top: 30px;
+    border-bottom: 1px solid #ccc; }
+    body nav .wrap {
+      margin-left: 200px; }
+      @media (max-width: 767px) {
+        body nav .wrap {
+          margin-left: 0px; } }
+    body nav .logo {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      margin: 20px;
+      font-size: 26px; }
+      body nav .logo img {
+        width: 140px;
+        height: auto; }
+      body nav .logo span {
+        -webkit-transform: rotate(-30deg);
+            -ms-transform: rotate(-30deg);
+                transform: rotate(-30deg);
+        display: inline-block;
+        margin-left: -2px;
+        margin-top: 1px; }
+      @media (max-width: 767px) {
+        body nav .logo {
+          position: relative;
+          left: 0px;
+          top: 0px;
+          margin: 0px auto; } }
+    body nav ul.nav-menu {
+      margin: 0px;
+      padding: 20px 0px 0px; }
+      body nav ul.nav-menu li {
+        display: inline-block;
+        list-style-type: none;
+        padding: 10px;
+        border-bottom: 2px solid transparent; }
+        body nav ul.nav-menu li.active {
+          border-bottom: 2px solid #000; }
+          body nav ul.nav-menu li.active a {
+            color: #000;
+            font-weight: 700; }
+        body nav ul.nav-menu li a {
+          color: #333;
+          font-family: "Gilroy-Light";
+          text-transform: none;
+          text-decoration: none;
+          font-size: 18px; }
+  body .row {
+    width: 672px;
+    margin: 0; }
+    @media (max-width: 767px) {
+      body .row {
+        width: 100%; } }
+  body .logo {
+    font-size: 72px;
+    font-family: "Gilroy-ExtraBold";
+    text-align: center;
+    margin-bottom: 30px; }
+    body .logo span {
+      -webkit-transform: rotate(-30deg);
+          -ms-transform: rotate(-30deg);
+              transform: rotate(-30deg);
+      display: inline-block;
+      margin-left: -6px;
+      margin-top: 1px;
+      padding-right: 2px; }
+    @media (max-width: 767px) {
+      body .logo {
+        padding-bottom: 30px; } }
+    @media (max-width: 380px) {
+      body .logo {
+        font-size: 50px; } }
+    @media (max-width: 767px) {
+      body .logo img {
+        max-width: 220px;
+        height: auto;
+        display: block;
+        margin: 0 auto; } }
+  body .search-form .field-row {
+    border: 1px solid #eee;
+    width: 100%;
+    height: 50px;
+    -webkit-box-shadow: 0px 3px 10px 0px #eee;
+            box-shadow: 0px 3px 10px 0px #eee;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  body .search-form input {
+    background-color: transparent;
+    border: 0;
+    height: 100%;
+    width: 100%;
+    margin-right: 50px;
+    padding-left: 16px; }
+  body .search-form button.btn-search {
+    background-color: transparent;
+    border: 0;
+    right: 0px;
+    height: 100%;
+    line-height: 44px;
+    margin-top: -1px;
+    outline: 0;
+    padding-right: 16px;
+    position: absolute;
+    top: 0px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    cursor: pointer; }
+    body .search-form button.btn-search img {
+      height: 25px;
+      width: 25px;
+      background-position: center;
+      background-repeat: no-repeat; }
+  body .wrap {
+    max-width: 1140px;
+    margin-left: 200px; }
+    @media (max-width: 991px) {
+      body .wrap {
+        margin-left: 0px;
+        padding: 0px 20px; } }
+  body .page-head h2.search-title-page {
+    margin-bottom: 0px;
+    text-align: center; }
+  body .page-head p.result-count {
+    margin-top: 10px;
+    font-size: 14px; }
+  body .menu-row {
+    clear: both;
+    width: 100%;
+    height: auto; }
+  body .serch-row {
+    clear: both;
+    width: 100%;
+    height: auto; }
+    body .serch-row .search-form {
+      width: 50%;
+      max-width: 670px; }
+      @media (max-width: 767px) {
+        body .serch-row .search-form {
+          width: 100%; } }
+  body .search-item .item-header a {
+    font-size: 12px;
+    text-decoration: none; }
+    body .search-item .item-header a:hover {
+      text-decoration: underline; }
+    body .search-item .item-header a h3 {
+      margin-bottom: 2px;
+      font-size: 18px; }
+  body .search-item .item-anonse p {
+    margin: 2px 0px;
+    font-size: 14px; }
+  body .search-item .item-anonse .item-link a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 12px; }
+    body .search-item .item-anonse .item-link a:hover {
+      text-decoration: underline; }
+  body .search-more h3 {
+    margin-top: 40px;
+    margin-bottom: 20px; }
+  body .search-more ul {
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-top: 10px; }
+    @media (max-width: 480px) {
+      body .search-more ul {
+        margin: 0px; } }
+    body .search-more ul li {
+      list-style-type: none;
+      margin-bottom: 5px;
+      padding: 3px 32px 3px 0; }
+      body .search-more ul li a {
+        text-decoration: none;
+        font-family: "Gilroy-Light"; }
+        body .search-more ul li a strong {
+          font-family: "Gilroy-ExtraBold"; }
+        body .search-more ul li a:hover {
+          text-decoration: underline; }
+  body .search-more .first-col,
+  body .search-more .last-col {
+    display: inline-block; }
+  body .search-pagin {
+    margin: 30px 0px; }
+    body .search-pagin ul {
+      margin-left: 0px;
+      padding-left: 0px; }
+      body .search-pagin ul li {
+        display: inline-block;
+        font-size: 14px;
+        position: relative;
+        padding: 20px 5px; }
+        @media (max-width: 380px) {
+          body .search-pagin ul li {
+            padding: 20px 0px; } }
+        body .search-pagin ul li a {
+          padding-left: 10px;
+          text-decoration: none; }
+          body .search-pagin ul li a:before {
+            content: "e";
+            position: absolute;
+            top: -14px;
+            font-size: 22px;
+            -webkit-transform: rotate(-30deg);
+                -ms-transform: rotate(-30deg);
+                    transform: rotate(-30deg);
+            display: inline-block;
+            margin-left: -3px;
+            margin-top: 0px; }
+          body .search-pagin ul li a:hover {
+            text-decoration: underline; }
+        body .search-pagin ul li.active {
+          font-family: "Gilroy-ExtraBold";
+          font-size: 15px; }
+          body .search-pagin ul li.active a {
+            margin-top: 2px; }
+            body .search-pagin ul li.active a:before {
+              margin-top: -1px;
+              font-size: 23px;
+              text-align: center; }
+        body .search-pagin ul li.pagin-logo-start a, body .search-pagin ul li.pagin-logo-end a {
+          text-decoration: none; }
+          body .search-pagin ul li.pagin-logo-start a:hover, body .search-pagin ul li.pagin-logo-end a:hover {
+            text-decoration: underline; }
+          body .search-pagin ul li.pagin-logo-start a:before, body .search-pagin ul li.pagin-logo-end a:before {
+            display: none; }
+        body .search-pagin ul li.pagin-logo-start span, body .search-pagin ul li.pagin-logo-end span {
+          position: absolute;
+          top: 0px;
+          font-size: 22px; }
+          body .search-pagin ul li.pagin-logo-start span.rotate, body .search-pagin ul li.pagin-logo-end span.rotate {
+            position: relative;
+            -webkit-transform: rotate(-30deg);
+                -ms-transform: rotate(-30deg);
+                    transform: rotate(-30deg);
+            display: inline-block;
+            margin-left: -2px;
+            margin-top: 1px; }
+        body .search-pagin ul li.pagin-logo-start {
+          padding: 35px 0px 0px 15px;
+          text-align: left; }
+          body .search-pagin ul li.pagin-logo-start span {
+            left: 0; }
+            body .search-pagin ul li.pagin-logo-start span.rotate {
+              margin-left: -1px;
+              margin-top: 1px; }
+        body .search-pagin ul li.pagin-logo-end {
+          padding: 35px 40px 0px 0px;
+          text-align: right;
+          right: 0; }
+
+footer {
+  border-bottom: 1px solid #ccc;
+  padding-top: 50px; }
