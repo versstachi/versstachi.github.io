@@ -1,0 +1,1039 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=cyrillic,cyrillic-ext')
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&subset=cyrillic')
+
+$filcol: #4b1b4c
+$yelcol: #f2d44d 
+$osw: 'Oswald'
+body
+	font-family: 'Open Sans'
+	user-select: 
+	-webkit-user-select: none  
+	-moz-user-select: none  
+	-ms-user-select: none
+	.container-fluid,
+	.container
+		padding-right: 0px
+		padding-left: 0px		
+		@media only screen and (max-width: 767px) 
+			padding-right: 20px
+			padding-left: 20px		
+	.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9
+		padding-right: 0px
+		padding-left: 0px
+	h2
+		font-weight: 300
+		text-align: center
+		font-size: 36px
+		text-transform: uppercase
+		margin-bottom: 50px 
+		font-family: 'Open Sans'
+		@media only screen and (max-width: 600px) 
+			font-size: 30px
+	h3
+		font-weight: 300 
+		font-family: 'Open Sans' 
+strong
+	font-weight: bold
+	font-family: 'Open Sans'
+h2 
+	font-family: 'Open Sans'
+h3
+	font-weight: 300 
+	font-family: 'Open Sans' 
+:focus
+	outline: none
+
+.logo
+	background-image: url(../img/logo.png)
+	background-position: center left
+	background-repeat: no-repeat 
+	width: 209px 
+	height: 39px
+	@media only screen and (max-width: 767px)
+		display: block
+		margin: 0 auto
+		margin-bottom: 20px
+.logo-w
+	font-size: 30px
+	text-transform: uppercase
+	color: #fff
+	&:before
+		background-image: url(../img/logo-bef.png)
+		width: 19px
+		height: 29px
+		position: absolute
+		content: ""
+		margin-top: 3px
+		margin-left: -10px
+a
+	font-family: 'Open Sans'
+	color: #292929
+	&:hover
+		text-decoration: none
+p
+	font-family: 'Open Sans'
+.row	
+	margin-right: 0px!important
+	margin-left: 0px!important  
+	@media only screen and (max-width: 767px)
+		margin-right: 0px!important
+		margin-left: 0px!important  
+button
+	border-radius: 30px
+	padding: 15px 30px
+	border: 0px solid transparent
+	text-transform: uppercase 
+	font-size: 16px
+	letter-spacing: 1px
+	font-family: 'Open Sans'!important
+	&.yel
+		background-color: $yelcol
+		text-transform: uppercase 
+		font-size: 16px
+		color: #232323
+		padding: 15px 60px
+		font-weight: bold
+	&.filcol
+		background: $filcol
+		color: #fff
+		text-transform: uppercase
+		font-weight: bold
+		font-size: 16px
+		padding: 15px 60px
+		&:hover
+			background: #8b468c
+.logos-raw
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	@media only screen and (max-width: 767px) 
+		display: block
+		position: unset!important
+.numbs
+	display: flex 
+	align-items: center
+	justify-content: space-evenly
+	@media only screen and (max-width: 1260px) 
+		flex-direction: column
+.vib-numb
+	display: flex 
+	align-items: center
+	justify-content: space-evenly
+header
+	background-image: -moz-linear-gradient( -68deg, rgb(115,114,114) 0%, rgb(201,201,201) 100%)
+	background-image: -webkit-linear-gradient( -68deg, rgb(115,114,114) 0%, rgb(201,201,201) 100%)
+	background-image: -ms-linear-gradient( -68deg, rgb(115,114,114) 0%, rgb(201,201,201) 100%)
+	background-position: center bottom
+	background-repeat: no-repeat
+	background-size: cover
+	color: #fff
+	font-family: 'Open Sans'
+	position: relative
+	.container
+		padding-right: 0px
+		padding-left: 0px		
+		@media only screen and (max-width: 767px) 
+			padding-right: 0px
+			padding-left: 0px	
+	.navbar-default
+		background-color: transparent !important
+		border-color:  transparent!important
+		padding: 10px 70px
+		z-index: 55
+		margin-top: 50px
+		@media only screen and (max-width: 1240px)
+			padding: 10px 70px
+		@media only screen and (max-width: 767px)
+			margin-top: 20px
+			padding: 10px 10px 
+			position: unset!important
+		button
+			color: #fff
+			background: $filcol
+			text-transform: none
+			font-weight: 300
+			font-size: 12px
+			padding: 10px 30px
+			&:hover
+				background: #8b468c
+			&.navbar-btn
+				background-color: transparent
+				@media only screen and (max-width: 767px) 
+					position: absolute
+					right: 0px
+					top: 0px
+					padding: 0			
+			&.text-r
+				padding: 10px 10px 10px 0px
+	.descrip
+		@media only screen and (max-width: 767px) 
+			text-align: center
+	h1
+		text-transform: uppercase
+		font-size: 52px
+		font-weight: 300
+		margin-bottom: 50px
+		@media only screen and (max-width: 767px) 
+			font-size: 42px
+		@media only screen and (max-width: 767px) 
+			font-size: 36px
+		span
+			font-size: 62px
+			font-weight: 600
+			@media only screen and (max-width: 767px) 
+				font-size: 50px
+			@media only screen and (max-width: 767px) 
+				font-size: 42px
+	p
+		margin-bottom: 0px
+	a
+		color: #fff
+
+	ul
+		margin-left: 0px
+		padding-left: 0px
+		li
+			list-style-type: none
+			font-size: 20px
+			line-height: 34px
+
+	button
+		background: $yelcol
+		color: #232323
+		text-transform: uppercase 
+		&.yel
+			margin-top: 40px
+			padding: 13px 43px
+			letter-spacing: 1px
+	.butts
+		z-index: 888
+		position: absolute
+		right: 0px
+		top: 0
+		top: -30px
+		width: auto	
+	.head-inf
+		margin-top: 25px
+	.pict-phone
+		margin-top: -57px
+		@media only screen and (max-width: 767px) 
+			margin-top: 20px 
+		img
+			@media only screen and (max-width: 767px) 
+				display: block
+				margin: 0 auto
+
+.logos-svg
+	width: 21px
+	height: 23px 
+	background-image: url(../img/viber.png)
+	background-repeat: no-repeat
+	background-position: center 
+	margin-right: 15px
+#menu
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	min-height: 100%
+	padding-top: 50px
+	z-index: 100
+	width: 100%
+	color: #fff
+	background: $filcol
+	border-color: transparent
+	border-radius: 0px
+.menus
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: space-evenly
+	position: relative
+	z-index: 9999
+	.nav-pills
+		margin: 40px 0px
+.nav-pills>li>a
+	font-size: 26px
+	color: #fff
+	&:focus,
+	&:hover 
+		text-decoration: none 
+		background-color: #f2d44d!important
+		color: #232323
+#menu1
+	text-transform: uppercase
+	text-align: center
+	line-height: 30px
+	background: $filcol
+	text-shadow: 0 0px 0px black
+	-moz-border-radius: 5px
+	-webkit-border-radius: 5px
+	border-radius: 0px
+	z-index: 888
+	display: flex
+	justify-content: space-evenly
+	align-items: center
+	flex-wrap: wrap
+	.logo-w
+		&:before
+			margin-top: -4px
+	ul
+		padding: 0
+		margin: 0
+	li
+		display: inline
+		list-style: none
+		margin: 5px 10px
+		a
+			padding: 5px 10px
+			color: #fff
+			text-decoration: none
+			-webkit-border-radius: 5px
+			-moz-border-radius: 5px
+			border-radius: 5px
+			@media only screen and (max-width: 991px)
+				padding: 0 
+			&:hover
+				background: $filcol
+				color: #fff
+				-webkit-transition-property: color, background
+				-webkit-transition-duration: 0.5s, 0.5s
+	.vib-numb
+		a
+			color: #fff
+			margin-right: 20px
+	button 
+		padding: 3px 30px
+		font-size: 12px
+		text-transform: none
+		letter-spacing: 0px
+.default
+	width: 920px
+	display: none !important
+
+.fixed
+	position: fixed
+	top: -3px
+	left: 0
+	width: 100%
+	padding: 15px 0 
+	@media only screen and (max-width: 767px) 
+		display: none !important
+	.numbs
+		display: flex 
+		align-items: center
+		justify-content: space-evenly
+		@media only screen and (max-width: 1160px) 
+			flex-direction: row  
+.line-hamb
+	height: 2px
+	width: 17px
+	background: #fff
+	display: block
+	margin-bottom: 6px
+	&:first-child 
+		width: 10px 
+		margin-left: 8px
+	&:last-child 
+		width: 10px
+		margin-left: 0px
+.transbg
+	background: $filcol!important
+.conts
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	@media only screen and (max-width: 767px) 
+		justify-content: center
+		position: unset!important  
+.s-1
+	.container
+		padding: 105px 0px
+		@media only screen and (max-width: 767px)
+			padding: 40px 20px
+	h2
+		text-transform: uppercase
+		font-weight: 300
+		margin-bottom: 25px
+	h4
+		font-weight: bold
+		margin-top: 30px
+		margin-top: 70px
+		margin-bottom: 20px
+	img
+		margin-top: 65px
+		@media only screen and (max-width: 767px) 
+			width: 100%
+.s-2
+	background-color: #f9f8f8
+	padding: 50px 0px 32px
+	.container
+		padding: 75px 0px 0px
+		@media only screen and (max-width: 767px)
+			padding: 40px 0px
+
+	.tabbable.boxed.parentTabs
+		margin-top: 66px
+	.frst
+		justify-content: space-between !important
+		@media only screen and (max-width: 767px) 
+			flex-direction: column
+			align-items: center
+		li
+			background: #fff
+			color: #fff
+			float: none
+			flex-basis: auto
+			flex: 30px 0 0
+			flex-grow: 1
+			text-align: center
+			@media only screen and (max-width: 767px) 
+				 width: 150px!important
+				 margin-top: 10px
+				 border-radius: 5px	 
+
+			a 
+				text-transform: uppercase
+				color: #000
+				&:hover,
+				&:focus
+					background-color: #fff
+					color: #000
+			&.active
+				background-color: #fff
+				a
+					color: #fff
+	.nav-tabs>li.active>a
+		background-color: $filcol
+		color: #fff
+		cursor: pointer!important 
+		border: 0px solid transparent!important 
+	.nav-tabs>li.active>a:focus 
+		background-color: $filcol
+		color: #fff
+ 
+	.nav-tabs 
+		border-bottom: 0px solid #ddd
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex 
+		justify-content: center
+		flex-wrap: wrap
+		margin: 15px 0px
+		@media only screen and (max-width: 767px)  
+			align-items: center
+		li
+			@media only screen and (max-width: 767px) 
+				margin-top: 10px 
+			a
+				border-radius: 34px
+				background-color: #fff
+				color: #000
+				text-transform: uppercase
+				border: 0px solid transparent	!important 			
+				&:hover
+					background-color: #fff
+					color: #000
+				i,
+				img
+					padding-right: 7px
+					&:before
+						margin-left: -10px
+	.tabbable
+		.nav-tabs 
+			@media only screen and (max-width: 767px) 
+				margin: 0px 20px
+	.scd
+			@media only screen and (max-width: 767px) 
+				column-count: 3
+				display: block
+				width: 280px
+				text-align: center
+				margin: 0 auto 50px
+	h3
+		text-transform: uppercase
+	.bott-pic
+		margin-top: 50px
+	.tab-inf		
+		border-radius: 5px
+		background-color: rgb(255, 255, 255)
+		box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.09)
+		padding: 30px 0px 30px 30px
+		div
+			padding: 0px
+		a
+			color: #000
+			&:hover
+				text-decoration: none
+				color: #034ea2
+	.cart-panel
+		padding: 30px 30px
+	.cart
+		display: flex
+		flex-direction: column
+		align-items: center
+		box-shadow: 0px 7px 29px 0px rgba(0, 0, 0, 0.07)
+		background-color: #fff
+		padding: 15px 0px 30px
+		position: relative
+		@media only screen and (max-width: 767px) 
+			padding: 0px 20px
+		h4
+			font-family: $osw
+			margin-top: 0px
+			text-align: center
+		p
+			&.old-price
+				color: #bababa
+			&.newprice 
+				font-size: 18px
+				strong
+					font-weight: 700
+					font-size: 22px
+		img 
+			margin-bottom: 0px
+			display: none
+			&:nth-child(1)
+				display: block
+			@media only screen and (max-width: 767px) 
+				min-height: 100%
+				height: 350px
+		.butts
+			margin-top: 25px
+			width: 100%
+			display: flex
+			flex-wrap: nowrap
+			justify-content: space-evenly
+			@media only screen and (max-width: 1200px) 
+				flex-direction: column
+				align-items: center 
+				margin-top: 10px
+			button
+				font-size: 11px
+				text-transform: uppercase
+				font-weight: bold
+				padding: 12px 20px
+				letter-spacing: 1px
+				width: 45%
+				@media only screen and (max-width: 1200px) 
+					margin-bottom: 10px
+					width: 100%
+				&.more
+					background: #f1f1f1
+	.vidg
+		background:  url(../img/instock.png)  
+		background-repeat: no-repeat
+		background-position: center
+		width: 79px
+		height: 79px
+		position: absolute
+		top: -5px
+		right: -5px
+	.und
+		margin-top: 50px
+.s-3
+	background:  url(../img/s-3-bg.png), #f9f8f8 
+	background-repeat: no-repeat
+	background-position: center
+	padding: 30px 0px
+	@media only screen and (max-width: 767px)
+		background-size: cover
+	.glasses
+		@media only screen and (max-width: 1440px)
+			max-height: 580px
+		@media only screen and (max-width: 1200px)
+			max-height: 480px
+	.inf
+		text-align: right
+		min-height: 400px 
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		justify-content: space-evenly
+	.inl
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		@media only screen and (max-width: 767px)  
+			flex-direction: column
+	p
+		font-size: 24px
+		span
+			&.big
+				color: #ff4254 
+				font-size: 80px
+				font-family: $osw
+				line-height: 30px
+			&.smaler
+				font-size: 18px
+	button
+		padding: 15px 73px
+.s-4
+	background:  #f9f8f8
+	padding: 10px 0px 140px
+	@media only screen and (max-width: 767px)
+		padding: 10px 0px 30px
+	.slick-sl
+		width: 327px!important
+		margin: 0 auto
+		@media only screen and (max-width: 767px)
+			width: 300px!important
+			height: 100%
+		img 
+			height: 637px
+			width: 327px!important
+			@media only screen and (max-width: 767px) 
+				width: 300px!important
+				height: 100%
+	h4
+		font-weight: bold
+		margin-top: 45px
+		text-transform: uppercase
+		line-height: 25px
+		font-size: 16px
+	p
+		margin-bottom: 80px
+.s-5
+	padding: 120px 0px 140px
+	@media only screen and (max-width: 767px)
+		padding: 40px 0px
+	h2
+		margin-bottom: 75px
+	.icos-bl
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		align-items: center
+		text-align: center
+		p
+			margin: 30px 
+			font-size: 18px
+	.you-bl
+		background-image: url(../img/you-bg.png)
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center
+		text-align: center
+		iframe
+			width: 100%
+			margin: 0 auto
+			display: block
+			min-height: 500px
+	.vids
+		padding: 80px 0px 95px
+.icos-s-5-ico-6, .icos-s-5-ico-5, .icos-s-5-ico-7, .icos-s-5-ico-1, .icos-s-5-ico-3, .icos-s-5-ico-2, .icos-s-5-ico-4
+  display: inline-block
+  background: url(../img/icos.png) no-repeat
+  overflow: hidden
+  text-indent: -9999px
+  text-align: left
+
+.icos-s-5-ico-6
+  background-position: -5px -0px
+  width: 62px
+  height: 55px
+
+.icos-s-5-ico-5
+  background-position: -5px -60px
+  width: 60px
+  height: 60px
+
+.icos-s-5-ico-7
+  background-position: -5px -125px
+  width: 59px
+  height: 49px
+
+.icos-s-5-ico-1
+  background-position: -5px -179px
+  width: 58px
+  height: 58px
+
+.icos-s-5-ico-3
+  background-position: -5px -242px
+  width: 57px
+  height: 51px
+
+.icos-s-5-ico-2
+  background-position: -5px -298px
+  width: 50px
+  height: 50px
+
+.icos-s-5-ico-4
+  background-position: -5px -353px
+  width: 39px
+  height: 61px
+.s-6
+	background: rgb(250,250,250)
+	background: -moz-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 39%)
+	background: -webkit-linear-gradient(top, rgba(250,250,250,1) 0%,rgba(255,255,255,1) 39%)
+	background: linear-gradient(to bottom, rgba(250,250,250,1) 0%,rgba(255,255,255,1) 39%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#ffffff',GradientType=0 )
+	padding: 116px 0px
+	@media only screen and (max-width: 767px)
+		padding: 40px 0px
+	.logo-s6
+		background-image: url(../img/logo-s6.png)
+		width: 302px
+		height: 45px
+		margin: 0 auto
+	.texts
+		font-size: 24px
+	.full-bg
+		background-image: url(../img/s-6.png)
+		min-height: 593px
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center
+		margin-top: 40px
+		@media only screen and (max-width: 767px)
+			background-size: cover
+.s-7
+	.inst-link
+		background-image: url(../img/color.svg)
+		width: 36px
+		height: 36px
+		display: block
+	.head-resp
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		align-items: center
+	.respos
+		margin: 80px 0px 30px
+		&:nth-child(1)
+			.txt-resp
+				padding-left: 70px
+		&:nth-child(2)
+			.txt-resp
+				padding-left: 45px
+		&:nth-child(3)
+			.txt-resp
+				padding-left: 70px
+	.avas1,
+	.avas2,
+	.avas3
+		background-repeat: no-repeat
+		background-position: center
+	.avas1
+		background-image: url(../img/s-7-otz-1.png)
+		width: 100%
+		height: 303px
+		background-size: contain
+	.avas2
+		background-image: url(../img/s-7-otz-2.png)
+		width: 100%
+		height: 303px
+		background-size: contain
+	.avas3
+		background-image: url(../img/s-7-otz-3.png)
+		width: 100%
+		height: 303px
+		background-size: contain
+	.buts
+		margin: 50px 0px
+		button
+			margin: 10px 10px
+			border-radius: 30px
+			padding: 15px 30px
+			border: 0px solid transparent
+			text-transform: uppercase
+			font-weight: bold
+			font-size: 16px
+	.txt-resp
+		padding-left: 70px
+		padding-right: 70px
+		@media only screen and (max-width: 767px)
+			padding-left: 30px
+			padding-right: 30px
+	a
+		color: #292929
+.s-8
+	padding: 62px 0px
+	@media only screen and (max-width: 767px)
+		padding: 10px 0px
+	h2
+		margin-bottom: 80px
+	.inst
+		background-image: url(../img/s-9-bg.png)
+		height: 480px
+		background-size: contain
+		background-repeat: no-repeat
+		@media only screen and (max-width: 1200px) 
+			background-size: auto
+	.buts
+		margin-top: 70px
+	img
+		display: block
+		margin: 0 auto
+		margin-bottom: 10px
+.s-9
+	background: url(../img/s-8-1.png) center left, url(../img/s-8-2.png) center right
+	background-size: contain
+	background-repeat: no-repeat
+	padding: 40px 0px 195px
+	@media only screen and (max-width: 767px)
+		padding: 40px 0px 100px
+	.form
+		margin: 0 auto
+		width: 460px
+		padding: 30px 30px
+		background: #fff		
+		box-shadow: 0px 9px 68px 0px rgba(0, 0, 0, 0.1)
+		@media only screen and (max-width: 767px)
+			width: 360px
+		@media only screen and (max-width: 450px)
+			width: 300px
+		h3
+			text-transform: uppercase
+		p
+			font-size: 18px
+		form
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			flex-direction: column
+			input,
+			button,
+			textarea
+				width: 100%
+				margin-bottom: 25px
+				padding: 10px 20px
+
+			input,
+			textarea 
+				border-color: transparent
+				background-color: #f4f4f4
+				border-radius: 5px
+				&::placeholder
+					color: #c0c0c0
+			input
+				height: 55px
+			button
+				padding: 15px
+footer
+	padding: 20px 0px
+	background: #f4f4f4
+	color: #b7b7b7
+	p
+		margin-bottom: 0px
+		padding-bottom: 0px
+.modal
+	z-index: 9999999
+	button  
+		&.close
+			top: -30px
+			width: auto
+			&:hover
+				background-color: transparent
+				color: #000
+	form
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		align-items: center
+		input,
+		textarea
+			border: 0px transparent solid
+			border-radius: 5px
+			background-color: rgb(255, 255, 255)
+			box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.09)
+			padding: 10px 20px
+			margin: 0px 10px 
+			margin: 0px  0px 10px
+			width: 280px
+		button  
+			width: 280px
+			padding: 13px 11px 11px
+			&.close
+				top: -30px
+				width: auto
+	.modal-header 
+		padding: 15px
+		border-bottom: 0px solid #e5e5e5
+	.modal-footer
+		padding: 15px
+		text-align: right
+		border-top: 0px solid #e5e5e5 
+	@media (min-width: 768px)
+		.modal-dialog 
+			width: 350px
+			margin: 30px auto
+	&.inf-card  
+		.modal-dialog 
+			width: 100%
+			max-width: 1030px
+			margin: 30px auto
+			z-index: 555
+		.modal-content
+			padding: 0px 30px
+	i
+		&.medal
+			background-image: url(../img/medal.png)
+			width: 17px
+			height: 21px
+			background-repeat: no-repeat
+			background-size: contain
+			background-position: center
+			display: inline-block 
+#myModal-about
+	z-index: 9999 
+#myModal-cheh
+	z-index: 99999999999
+.inf-card
+	.cont
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: stretch
+		@media (max-width: 767px)
+			flex-direction: column
+		.cont-text
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: column
+			justify-content: space-evenly
+	button
+		&.yel
+			width: 100%
+			margin-top: 10px
+	h3
+		margin-bottom: 0px
+	p
+		margin-bottom: 0px
+		&.price
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
+	.slider-for
+		width: 76% !important
+		float: right!important
+		@media (max-width: 1240px) 
+			width: 280px  !important
+			margin: 0 auto 
+		@media (max-width: 767px)
+			float: none!important
+		img
+			width: auto !important
+			max-width: 370px !important
+			height: auto
+			@media (max-width: 1280px) 
+				width: auto !important
+				max-width: 280px  !important
+				height: auto
+			@media (max-width: 767px)
+				width: auto !important
+				max-width: 280px  !important
+				height: auto
+		.slick-track
+			width: 200000px !important
+
+	.slider-nav
+		width: 20%
+		float: left!important
+		@media (max-width: 1240px)
+			float: none
+			width: 100%
+		@media (max-width: 767px)
+			float: none!important
+		.slick-list
+			padding: 0!important
+		img 
+			width: 75px !important 
+			&.slick-cloned
+				display: none
+		.slick-track 
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: column 
+			margin: 0 
+			@media (max-width: 1240px)
+				flex-direction: row  
+				img
+					margin: 0px 10px
+i
+	&.fa-check
+		color: $yelcol
+.inf-serv
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	@media (max-width: 767px)
+		flex-direction: column
+		align-items: start
+	span
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		margin-right: 20px
+		i
+			margin-right: 10px
+.price
+	@media (max-width: 767px)
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+	span
+		margin-right: 20px
+	.old-price
+		color: #bababa
+	.now-price
+		strong
+			color: red
+			font-size: 18px
+.descrip-inf
+	span
+		font-size: 16px	 
+.slide-pic
+	position: relative
+	min-height: 450px!important
+.slider-nav .slick-list
+	width: 100%
+.parentTabs .nav-tabs>li>a:hover
+	    border-color: transparent
+.spoiler-cont
+	display: none
