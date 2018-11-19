@@ -1,34 +1,11 @@
-@font-face {
-  font-family: 'Gilroy-ExtraBold';
-  src: url(../font/Gilroy-ExtraBold.eot);
-  src: url(../font/Gilroy-ExtraBold.ttf);
-  src: url(../font/Gilroy-ExtraBold.otf);
-  src: url(../font/Gilroy-ExtraBold.woff);
-  src: url(../font/Gilroy-ExtraBold.woff2); }
-
-@font-face {
-  font-family: 'Roboto-Regular';
-  src: url(../font/Roboto-Regular.eot);
-  src: url(../font/Roboto-Regular.ttf);
-  src: url(../font/Roboto-Regular.otf);
-  src: url(../font/Roboto-Regular.woff);
-  src: url(../font/Roboto-Regular.woff2); }
-
-@font-face {
-  font-family: 'Gilroy-Light';
-  src: url(../font/Gilroy-Light.eot);
-  src: url(../font/Gilroy-Light.ttf);
-  src: url(../font/Gilroy-Light.otf);
-  src: url(../font/Gilroy-Light.woff);
-  src: url(../font/Gilroy-Light.woff2); }
-
 body {
   background-color: white;
   height: 100vh;
   margin: 0;
   padding: 0;
   color: #333;
-  font-family: "Gilroy-Light"; }
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300; }
   body a {
     color: #333; }
     body a:hover {
@@ -121,7 +98,8 @@ body {
             font-weight: 700; }
         body nav ul.nav-menu li a {
           color: #333;
-          font-family: "Gilroy-Light";
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: 300;
           text-transform: none;
           text-decoration: none;
           font-size: 18px; }
@@ -133,7 +111,7 @@ body {
         width: 100%; } }
   body .logo {
     font-size: 72px;
-    font-family: "Gilroy-ExtraBold";
+    font-family: "Arial Black", Gadget, sans-serif;
     text-align: center;
     margin-bottom: 30px; }
     body .logo span {
@@ -318,9 +296,10 @@ body {
       padding: 3px 32px 3px 0; }
       body .search-more ul li a {
         text-decoration: none;
-        font-family: "Gilroy-Light"; }
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 300; }
         body .search-more ul li a strong {
-          font-family: "Gilroy-ExtraBold"; }
+          font-family: "Arial Black", Gadget, sans-serif; }
         body .search-more ul li a:hover {
           text-decoration: underline; }
   body .search-more .first-col,
