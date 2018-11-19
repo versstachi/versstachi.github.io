@@ -245,12 +245,13 @@ body {
       body .serch-row {
         max-width: 280px;
         margin: 0 auto; } }
-    body .serch-row .search-form {
-      width: 50%;
+    body .serch-row .search-form { 
       max-width: 670px; }
       @media (max-width: 767px) {
         body .serch-row .search-form {
           width: 100%; } }
+    body .search-item {
+      margin: 20px 0px; } 
   @media (max-width: 991px) {
     body .search-item {
       padding: 0px 10px; } }
