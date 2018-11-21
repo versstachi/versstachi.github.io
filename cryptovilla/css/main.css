@@ -69,7 +69,7 @@ button {
     letter-spacing: 0.04em;
     font-size: 16px;
     padding: 21px 15px;
-    max-width: 340px;
+    max-width: 370px;
     width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.08);
     -webkit-box-sizing: border-box;
@@ -92,7 +92,7 @@ button {
     letter-spacing: 0.04em;
     font-size: 16px;
     padding: 21px 15px;
-    max-width: 340px;
+    max-width: 370px;
     width: 100%; }
     @media (max-width: 450px) {
       button.green-btn {
@@ -112,7 +112,7 @@ button {
     letter-spacing: 0.04em;
     font-size: 16px;
     padding: 21px 15px;
-    max-width: 340px;
+    max-width: 370px;
     width: 100%; }
     @media (max-width: 450px) {
       button.red-btn {
@@ -394,7 +394,8 @@ header {
             justify-content: center;
     z-index: 5;
     position: absolute;
-    width: 100%; }
+    width: 100%;
+    height: 100%; }
     @media (max-width: 768px) {
       header .block-info {
         padding: 0px 10px;
