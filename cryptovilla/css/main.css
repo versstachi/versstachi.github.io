@@ -399,7 +399,8 @@ header {
     @media (max-width: 768px) {
       header .block-info {
         padding: 0px 10px;
-        position: relative; } }
+        position: relative;
+        height: auto; } }
     header .block-info h1 {
       font-family: "Gilroy-ExtraBold";
       line-height: normal;
@@ -492,6 +493,8 @@ header {
           @media (max-width: 991px) {
             .s-1 .row.r-2 .img-block:before {
               display: none; } }
+  .s-1 .youtube iframe {
+    min-height: 312px; }
   .s-1 h2 {
     margin-bottom: 80px; }
   .s-1 h3 {
@@ -525,7 +528,7 @@ header {
       background-position: center;
       top: 12px;
       display: block;
-      right: 0; }
+      right: -80px; }
       @media (max-width: 1200px) {
         .s-1 h3:after {
           position: relative;
@@ -640,6 +643,8 @@ header {
       font-size: 16px; }
   .s-2 button {
     margin-top: 33px; }
+  .s-2 .youtube img {
+    margin: 0 auto; }
 
 .s-3 .btn-row {
   z-index: 5;
