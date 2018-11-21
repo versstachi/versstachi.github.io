@@ -562,17 +562,13 @@ $(".more").click(function(){
   });  
 // menu pic hover
 $(document).ready(function(){
-  $('a.menu').hover(
-    function() {
-        id = $(this).attr('id');
-        num = id.replace(/menu(\d+)/gi, '$1');
-        $('#img').attr('src', 'img/menu_pic/'+num+'.png');
-    },
-    function() { 
-        $('#img').attr('src', 'img/menu_pic/'+num+'.png'); 
-    }
-  );   
-  }); 
+   $(function(){
+$(".m").mouseenter(function() {
+   var  i = $(".m").index(this);
+   $(".mn").stop().not($(".mn").eq(i).show()).hide()
+})
+   }) 
+  });
 // media query
 var viewport = jQuery('meta[name="viewport"]');
 if (screen.width <= 768) {
