@@ -653,6 +653,9 @@ header {
     margin-top: -70px;
     z-index: 5; }
 
+.s-3 .youtube img {
+  margin: 0 auto; }
+
 .youtube {
   width: 100%;
   position: relative;
@@ -871,10 +874,11 @@ header {
     border-bottom: 1px solid #ECEEF5;
     padding: 26px 10px; }
   .s-4-5 .card-packet p.text-per {
-    line-height: 29px;
-    font-size: 16px;
-    text-align: center;
-    margin-bottom: 0px; }
+    font-size: 14px;
+    text-align: justify;
+    margin-bottom: 0px;
+    padding: 0px 15px;
+    line-height: 1.6; }
   .s-4-5 .card-packet .packet-price {
     padding: 18px; }
     .s-4-5 .card-packet .packet-price .price-us {
@@ -1250,6 +1254,12 @@ header {
 
 .s-8 button {
   margin-top: 10px; }
+
+.s-8 .youtube iframe {
+  min-height: 191px; }
+
+.s-8 .youtube img {
+  margin: 0 auto; }
 
 .s-9 {
   color: #fff; }
