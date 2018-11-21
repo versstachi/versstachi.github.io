@@ -265,7 +265,8 @@ body {
       font-size: 18px; }
   body .search-item .item-anonse p {
     margin: 2px 0px;
-    font-size: 14px; }
+    font-size: 14px;
+    text-align: justify; }
     @media (max-width: 767px) {
       body .search-item .item-anonse p {
         text-align: justify; } }
