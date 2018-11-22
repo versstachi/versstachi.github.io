@@ -805,3 +805,49 @@
 <script src="js/common.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Записаться на 
+бесплатную консультацию</h4>
+      </div>
+      <div class="modal-body">
+            <form id="callback" action="/pl/lite/block-public/process?id=100127423" method="post" class="handmade">
+              <input type="hidden" name="formParams[setted_offer_id]" class="external-value offer_id">
+			  <input type="text" class="tinput" id="name" placeholder="Имя" name="formParams[full_name]">
+			  <input type="text" maxlength="60" class="f-input" placeholder="Эл. адрес" name="formParams[email]" value="alexeymsk2008@ya.ru" readonly="readonly">
+              <input type="text" class="tinput" id="email" placeholder="Электронный адрес" name="formParams[email]">
+              <div class="button3 animate-button">
+                <button>отправить          </button>
+              </div>
+            </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+          <div class="register center-div">
+          </div>
