@@ -875,9 +875,9 @@ header {
     padding: 26px 10px; }
   .s-4-5 .card-packet p.text-per {
     font-size: 14px;
-    text-align: justify;
+    text-align: left;
     margin-bottom: 0px;
-    padding: 0px 15px;
+    padding: 0px 10%;
     line-height: 1.6; }
   .s-4-5 .card-packet .packet-price {
     padding: 18px; }
