@@ -980,6 +980,9 @@ z-index: 77;}
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
+  @media (max-width: 767px) {
+  .s-5 .row {
+    display: block;} }
     .s-5 .row .col-left {
       padding: 120px 8% 120px 15%;
       background-repeat: no-repeat;
