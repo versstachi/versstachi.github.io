@@ -534,6 +534,9 @@ header {
           position: relative;
           display: inline-block;
           top: -12px; } }
+      @media (max-width: 767px) {
+        .s-1 h3:after { 
+          display: none; } }
   .s-1 p.position {
     font-family: "Manropelight";
     font-size: 18px;
