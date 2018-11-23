@@ -205,7 +205,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     -webkit-animation: zoomin 15s infinite;
-    animation: zoomin 15s infinite;
+    animation: zoomin 30s infinite;
     height: 100vh;
     width: 100%; }
     @media (max-width: 767px) {
@@ -216,17 +216,29 @@ header {
   0% {
     -webkit-transform: scale(1);
     transform: scale(1); }
-  100% {
+  49% {
     -webkit-transform: scale(1.2);
-    transform: scale(1.2); } }
+    transform: scale(1.2); }
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
 
 @keyframes zoomin {
   0% {
     -webkit-transform: scale(1);
     transform: scale(1); }
-  100% {
+  49% {
     -webkit-transform: scale(1.2);
-    transform: scale(1.2); } }
+    transform: scale(1.2); }
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
   header.container-fluid {
     padding: 0px; }
   header .container {
