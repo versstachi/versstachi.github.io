@@ -1007,10 +1007,16 @@ z-index: 77;}
     .s-5 .row .col-right {
       padding: 120px 8% 120px 15%;
       background-repeat: no-repeat;
-      background-position: center right;
+      background-position: center;
       -webkit-background-size: cover;
               background-size: cover;
-      background-image: url(../img/s-5-bg.png); }
+      background-image: url(../img/s-5-bg-new.png); }
+      @media (max-width: 991px) {
+        .s-5 .row .col-right {
+          min-height: 800px; } }
+      @media (max-width: 767px) {
+        .s-5 .row .col-right {
+          min-height: 600px; } }
 
 .s-6 h2.title {
   margin-bottom: 0px; }
