@@ -108,41 +108,34 @@ $('.slide-main-pic').each(function(key, item) {
 });
 // 
 $( ".menu-btn" ).on( "click", function() { 
-	$("header ul.menu").toggle();
+  $("header ul.menu").toggle();
 }); 
 // youtube-player lazy load
 ( function() {
 
-	var youtube = document.querySelectorAll( ".youtube" );
-	
-	for (var i = 0; i < youtube.length; i++) {
-		
-    var source = "https://img.youtube.com/vi/"+ youtube[i].dataset.embed +"/sddefault.jpg";
-		
-		var image = new Image();
-				image.src = source;
-				image.addEventListener( "load", function() {
-					youtube[ i ].appendChild( image );
-				}( i ) );
-		
-				youtube[i].addEventListener( "click", function() {
+  var youtube = document.querySelectorAll( ".youtube" );
+  
+  for (var i = 0; i < youtube.length; i++) {
+    
+    var source = "img/"+ youtube[i].dataset.embed +".png";
+    
+    var image = new Image();
+        image.src = source;
+        image.addEventListener( "load", function() {
+          youtube[ i ].appendChild( image );
+        }( i ) );
+    
+        youtube[i].addEventListener( "click", function() {
 
-					var iframe = document.createElement( "iframe" );
+          var iframe = document.createElement( "iframe" );
 
-							iframe.setAttribute( "frameborder", "0" );
-							iframe.setAttribute( "allowfullscreen", "" );
-							iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1" );
+              iframe.setAttribute( "frameborder", "0" );
+              iframe.setAttribute( "allowfullscreen", "" );
+              iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1" );
 
-							this.innerHTML = "";
-							this.appendChild( iframe );
-				} );	
-	};
-	
+              this.innerHTML = "";
+              this.appendChild( iframe );
+        } );  
+  };
+  
 } )();
-$(function(){
-$('a[href^="#"]').click(function(){
-var target = $(this).attr('href');
-$('html, body').animate({scrollTop: $(target).offset().top}, 800);//800 - длительность скроллинга в мс
-return false; 
-}); 
-});
