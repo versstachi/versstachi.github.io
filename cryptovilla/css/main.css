@@ -957,6 +957,8 @@ z-index: 77;}
   font-size: 14px;
   line-height: 24px; }
 
+.s-4-5 a:hover {
+  text-decoration: none; }
 .s-5 {
   color: #fff; }
   .s-5 .container-fluid {
