@@ -92,7 +92,7 @@ button {
     line-height: 30px;
     letter-spacing: 0.04em;
     font-size: 16px;
-    padding: 21px 35px;
+    padding: 21px 15px;
     max-width: 370px;
     width: 100%; }
     @media (max-width: 450px) {
