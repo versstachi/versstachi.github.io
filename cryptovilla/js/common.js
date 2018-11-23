@@ -106,10 +106,18 @@ $('.slide-main-pic').each(function(key, item) {
 
 }); 
 });
-// 
-$( ".menu-btn" ).on( "click", function() { 
-  $("header ul.menu").toggle();
+
+$(function(){
+$('a[href^="#"]').click(function(){
+var target = $(this).attr('href');
+$('html, body').animate({scrollTop: $(target).offset().top}, 800);//800 - длительность скроллинга в мс
+return false; 
 }); 
+});
+// 
+// $( ".menu-btn" ).on( "click", function() { 
+//  $("header ul.menu").toggle();
+// }); 
 // youtube-player lazy load
 ( function() {
 
