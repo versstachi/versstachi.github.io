@@ -56,6 +56,12 @@
   -webkit-background-size: contain;
           background-size: contain; }
 
+form.bts-f {
+  padding: 21px 30px;
+  max-width: 400px;
+  width: 100%; }
+
+input[type="submit"],
 button {
   cursor: pointer; }
   button.white-btn {
