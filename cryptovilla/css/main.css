@@ -577,7 +577,7 @@ header {
           display: inline-block;
           top: -12px; } }
       @media (max-width: 767px) {
-        .s-1 h3:after { 
+        .s-1 h3:after {
           display: none; } }
   .s-1 p.position {
     font-family: "Manropelight";
@@ -861,10 +861,10 @@ header {
   cursor: pointer;
   background: #fff;
   padding-bottom: 20px;
-  border-top: 3px solid #259F00; 
   -webkit-box-shadow: 0px 15px 35px rgba(61, 62, 73, 0.06);
           box-shadow: 0px 15px 35px rgba(61, 62, 73, 0.06);
-  margin: 0 auto; }
+  margin: 0 auto;
+  border-top: 3px solid #259F00; }
   .s-4-5 .card-packet:hover {
     -webkit-box-shadow: 0px 5px 35px rgba(61, 62, 73, 0.1);
             box-shadow: 0px 5px 35px rgba(61, 62, 73, 0.1); }
@@ -921,9 +921,9 @@ header {
     padding: 26px 10px; }
   .s-4-5 .card-packet p.text-per {
     font-size: 14px;
-    text-align: left;
+    text-align: justify;
     margin-bottom: 0px;
-    padding: 0px 10%;
+    padding: 0px 15px;
     line-height: 1.6; }
   .s-4-5 .card-packet .packet-price {
     padding: 18px; }
@@ -963,8 +963,7 @@ header {
   -webkit-transform: rotate(-180deg);
       -ms-transform: rotate(-180deg);
           transform: rotate(-180deg);
-  cursor: pointer; 
-z-index: 77;}
+  cursor: pointer; }
   @media (max-width: 1750px) {
     .s-4-5 .left-arrow {
       left: 0; } }
@@ -998,6 +997,7 @@ z-index: 77;}
 
 .s-4-5 a:hover {
   text-decoration: none; }
+
 .s-5 {
   color: #fff; }
   .s-5 .container-fluid {
@@ -1022,9 +1022,9 @@ z-index: 77;}
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
-  @media (max-width: 767px) {
-  .s-5 .row {
-    display: block;} }
+    @media (max-width: 991px) {
+      .s-5 .row {
+        display: block; } }
     .s-5 .row .col-left {
       padding: 200px 8% 200px 17%;
       background-repeat: no-repeat;
@@ -1040,7 +1040,8 @@ z-index: 77;}
       .s-5 .row .col-left p {
         line-height: 31px;
         font-size: 18px;
-        margin: 20px 0px; }
+        margin: 20px 0px;
+        padding: 35px 0px; }
         .s-5 .row .col-left p.under-title {
           line-height: 41px;
           font-size: 24px; }
@@ -1646,3 +1647,55 @@ footer {
     padding: 8px 25px;
     font-size: 14px;
     line-height: 24px; }
+
+body.garet header .block-info h1 {
+  font-size: 56px; }
+  @media (max-width: 991px) {
+    body.garet header .block-info h1 {
+      font-size: 36px; } }
+  @media (max-width: 767px) {
+    body.garet header .block-info h1 {
+      font-size: 32px; } }
+  @media (max-width: 600px) {
+    body.garet header .block-info h1 {
+      font-size: 26px; } }
+
+body.garet .bcg-img {
+  background-image: url(../img/header-garet-bg.png); }
+
+@media (max-width: 991px) {
+  body.garet .s-1 .row.r-2 .img-block {
+    background: url(../img/garet-pic.png);
+    width: 100%;
+    min-height: 450px;
+    height: auto;
+    -webkit-background-size: contain;
+            background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; } }
+
+body.garet .s-1 .row.r-2 .img-block:before {
+  content: "";
+  position: absolute;
+  background: url(../img/garet-pic.png);
+  width: 867px;
+  height: 933px;
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  bottom: -220px;
+  display: block;
+  right: -80px; }
+  @media (max-width: 991px) {
+    body.garet .s-1 .row.r-2 .img-block:before {
+      display: none; } }
+
+body.garet footer .row {
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly; }
+
+body.garet .s-4-5 .card-packet .packet-price .price-us {
+  font-size: 18px; }
