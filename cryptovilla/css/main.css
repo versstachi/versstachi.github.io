@@ -800,6 +800,22 @@ header {
                 background-size: contain;
         background-position: center;
         background-image: url(../img/innovation.svg); }
+       .s-4 .lis-items .icos-block .startup {
+        width: 74px;
+        height: 74px;
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+                background-size: contain;
+        background-position: center;
+        background-image: url(../img/startup.svg); }
+      .s-4 .lis-items .icos-block .seo {
+        width: 74px;
+        height: 74px;
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+                background-size: contain;
+        background-position: center;
+        background-image: url(../img/seo.svg); }
       .s-4 .lis-items .icos-block .winner {
         width: 74px;
         height: 74px;
