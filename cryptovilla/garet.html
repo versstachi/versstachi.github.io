@@ -73,9 +73,9 @@
     </div>
     <div class="row">
       <div class="col-md-5">
-        <h3>Александр перевезенцев</h3>
+        <h3>ГАРРЕТТ ДЖОНСТОН</h3>
         <p class="position">Стратегический джедай BCG.to</p>
-        <p class="anons">На Криптовилле в Ташкенте я предложу тебе особое меню. <br class="hidden-sm"/>Голоден до новых знаний? Наши гуру маркетинга уже надели фартуки.</p>
+        <p class="anons">Гаррет Джонстон - признанный мировой эксперт в области маркетинга. Его “фишка” - растить успешного клиента для успеха бизнеса. </p>
       </div>
       <div class="col-md-6 col-md-offset-1"> 
         <div class="youtube" data-embed="KGZsoJ8OM1I">
@@ -89,9 +89,9 @@
         <div class="img-block"></div> 
       </div>
       <div class="col-md-5 col-md-offset-1">
-        <h3>Александр перевезенцев</h3>
+        <h3>ГАРРЕТТ ДЖОНСТОН</h3>
         <p class="position">Стратегический джедай BCG.to</p>
-        <p class="anons">Криптовилла с восточным колоритом! А ты знаешь, как пахнет успех?<br class="hidden-sm"/> Хочешь попробовать на вкус реальный результат?</p>
+        <p class="anons">Получи уникальные знания из первых рук от человека, который помог построить десятки успешных бизнесов в самых разных сферах.</p>
         <a href="#pacckets"><button class="red-btn">Увеличить прибыль</button> </a>
       </div>
     </div>
@@ -109,19 +109,22 @@
         <div class="icos-block">
           <div class="startup"></div>
         </div>
-        <p>17:00 - Начало программы</p>
+        <h3 class="text-center"><span class="red">~[ </span>17:00<span class="red"> ]~</span></h3>
+        <p>Начало программы</p>
       </div>
       <div class="lis-items">
         <div class="icos-block">
           <div class="seo"></div>
         </div>
-        <p>18:00 - Современный маркетинг</p>
+        <h3 class="text-center"><span class="red">~[ </span>18:00<span class="red"> ]~</span></h3>
+        <p>Современный маркетинг</p>
       </div>
       <div class="lis-items">
         <div class="icos-block">
           <div class="planning"></div>
         </div>
-        <p>20:00 - Пошаговая инструкция для увеличения прибыли</p>
+        <h3 class="text-center"><span class="red">~[ </span>20:00<span class="red"> ]~</span></h3>
+        <p>Пошаговая инструкция для увеличения прибыли</p>
       </div> 
     </div>
     <div class="row text-center">     
@@ -713,27 +716,7 @@
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js"></script>
-  <script src="https://js.stripe.com/v3/"></script>
-  <script src="https://checkout.stripe.com/v2/checkout.js"></script> 
-<script type="text/javascript">
-  Stripe.setPublishableKey('pk_test_Ov8lC537au0mKkinpkPRDMLJ');
-</script>
-<script src="js/common.js"></script>
-        <script>
-        $(document).ready(function() {
-            $('#pacckets :submit').on('click', function(event) {
-                event.preventDefault();
-                var $button = $(this),
-                    $form = $button.parents('form');
-                var opts = $.extend({}, $button.data(), {
-                    token: function(result) {
-                        $form.append($('<input>').attr({ type: 'hidden', name: 'stripeToken', value: result.id })).submit();
-                    }
-                });
-                StripeCheckout.open(opts);
-            });
-        });
-        </script>
+<script src="js/common.js"></script> 
 </body>
 </html>
 
