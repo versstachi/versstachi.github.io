@@ -800,7 +800,7 @@ header {
                 background-size: contain;
         background-position: center;
         background-image: url(../img/innovation.svg); }
-       .s-4 .lis-items .icos-block .startup {
+      .s-4 .lis-items .icos-block .startup {
         width: 74px;
         height: 74px;
         background-repeat: no-repeat;
@@ -1713,5 +1713,82 @@ body.garet footer .row {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly; }
 
+body.garet footer p.descr {
+  margin-left: 5px; }
+
 body.garet .s-4-5 .card-packet .packet-price .price-us {
   font-size: 18px; }
+
+.reveal {
+  position: relative; }
+  .reveal .close-button {
+    position: absolute;
+    border: 0px;
+    font-size: 30px;
+    background: transparent;
+    line-height: 1; }
+  .reveal .form-pay__title {
+    -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+    font-family: "Gilroy-ExtraBold"; }
+  .reveal label {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 100%;
+    margin: 10px 0px;
+    font-weight: 700; }
+    .reveal label input.checkbox {
+      margin-right: 10px; }
+  .reveal .form-pay__card {
+    background: #fff;
+    padding: 10px 5px; }
+  .reveal .form-pay__button-wrapper {
+    margin-top: 1rem;
+    padding: 1rem 0rem; }
+    .reveal .form-pay__button-wrapper .form-pay__button {
+      padding: 21px 30px;
+      margin: 20px auto; }
+  .reveal .form-pay__button input[type="submit"] {
+    display: none; }
+  .reveal .form-pay__button,
+  .reveal input[type="submit"] {
+    border: none;
+    -webkit-border-radius: 0px;
+            border-radius: 0px;
+    background: #259F00;
+    color: #fff;
+    font-family: "Manropebold";
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    font-size: 16px;
+    padding: 21px 30px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    @media (max-width: 767px) {
+      .reveal .form-pay__button,
+      .reveal input[type="submit"] {
+        padding: 21px 15px;
+        max-width: 370px; } }
+    @media (max-width: 450px) {
+      .reveal .form-pay__button,
+      .reveal input[type="submit"] {
+        padding: 10px; } }
+    .reveal .form-pay__button:hover,
+    .reveal input[type="submit"]:hover {
+      opacity: 0.9;
+      -webkit-box-shadow: 0px 15px 35px rgba(61, 62, 73, 0.1);
+              box-shadow: 0px 15px 35px rgba(61, 62, 73, 0.1); }
