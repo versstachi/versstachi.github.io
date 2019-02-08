@@ -8,12 +8,16 @@ $('.sandwich').click(function () {
 	$('.sandwich').toggleClass('closed'); 
 });
 });
+$('.countdown').timeTo({
+    seconds: 259200,
+    displayDays: 2,  
+    captionSize: 14
+});
 
-
-$('.countdown').timeTo(100, function(){ 
-	// alert('Время истекло'); 
-	$('#coumter-modal').modal('show');
-}); 
+// $('.countdown').timeTo(259200, function(){ 
+// 	// alert('Время истекло'); 
+// 	$('#coumter-modal').modal('show');
+// }); 
 // slick - init-resp
 $('.slider-init-resp').slick({
 	slidesToShow: 1,
@@ -32,7 +36,7 @@ $('.slider-init-resp').slick({
   })
   .slick({
   arrows: true, 
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 3000,
   dots: false,
     slidesToShow: 1,
@@ -93,35 +97,46 @@ $('.slider-nav').slick({
     // instead of a settings object
   ]
 });
-// slick - video
-  $('.slider-license').on('init', function(event, slick) {
-    $(this).append('<div class="slick-counter1"><span class="current1"></span><span class="total1"></span></div>');
-    $('.current1').text(slick.currentSlide + 1); 
-     $('.total1').text('/ ' +slick.slideCount); 
-  })
-  .slick({
-  arrows: true, 
-  autoplay: true,
-  autoplaySpeed: 3000,
-  dots: false,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    prevArrow: '<div class="left-arrow"><span class="nav-prev"></span></div>',
-    nextArrow: '<div class="right-arrow"><span class="nav-next"></span></div>',
-  infinite: true,
-  speed: 500,
-  fade: false,
-  adaptiveHeight: true,
-  cssEase: 'linear',   
-  })
-  .on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-    $('.current1').text(nextSlide + 1);
-  });  
+// Set up HTML elements into variables
+var $overlay	= $('<div id="lightboxOverlay"></div>');
+var $image		= $('<img>');
+var $caption	= $('<h3></h3>');
+var $close		= $('<div class="closer-popup"></div>');
 
-// button click-more 
-// $('.click-more').click(function () {
-// 	$('.body-block').toggle('show'); 
-// });
+// Just more variables
+var imageUrl;
+var imageAlt;
+
+// Adding HTML stuff
+$('body').append($overlay);		// Add the overlay to the document
+$overlay.hide();				// Hide the overlay
+
+// When a user clicks on an image
+$('#deadSimpleLightbox img').click(function(){
+	imageUrl = $(this).attr('src');		// Find the image URL
+	imageAlt = $(this).attr('alt');		// Find the image Alt text
+
+	$overlay.append($image);			// Add the image to the overlay
+	$overlay.append($caption);			// Add the image caption to the overlay
+	$overlay.append($close);			// Add the close button to the overlay
+	$image.attr('src', imageUrl);		// Add the link to the image attribute
+	$caption.text(imageAlt);			// Add text to the <p> tag
+	$overlay.fadeIn('1000');			// Show the overlay
+	$image.fadeIn('1000');
+});
+
+// If the users clicks anywhere on the click iccon, hide  the overlay.
+$close.click( function() {
+	$overlay.fadeOut('1000');
+} );
+$(function(){
+$('a[href^="#"]').click(function(){
+var target = $(this).attr('href');
+$('html, body').animate({scrollTop: $(target).offset().top}, 800);//800 - длительность скроллинга в мс
+return false; 
+}); 
+});
+
 });
 ( function() {
 
