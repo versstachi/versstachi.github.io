@@ -116,6 +116,10 @@ header {
   background-size: cover;
   background-position: center;
   color: #FFF; }
+  @media (max-width: 767px) {
+    header {
+      height: 100%;
+      padding: 30px 10px; } }
   header .centered {
     height: 100%;
     display: -webkit-box;
@@ -147,16 +151,23 @@ header {
     font-size: 72px;
     line-height: 1.17;
     font-weight: 600;
-    padding: 10px 0 24px 0;
+    padding: 10px 0 10px 0;
     letter-spacing: 1px;
     margin-top: 0; }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 54px; } }
+  header p.unders {
+    margin-bottom: 50px; }
   header button.green-btn,
   header button.trans-btn {
-    font-size: 20px; }
+    font-size: 20px;
+    margin-right: 10px; }
     @media (max-width: 767px) {
       header button.green-btn,
       header button.trans-btn {
         width: 100%;
+        margin-right: 0;
         max-width: 280px;
         margin-bottom: 10px; } }
 
@@ -273,7 +284,10 @@ header {
     margin-bottom: 40px;
     font-weight: 700; }
   .s-4 h3 {
-    font-weight: 700; }
+    font-weight: 700;
+    margin-top: 0; }
+  .s-4 .img-bloc {
+    margin-bottom: 20px; }
   .s-4 .listers {
     padding-left: 50px; }
     @media (max-width: 600px) {
@@ -415,7 +429,8 @@ header {
 .s-7 .title-block {
   font-size: 18px;
   line-height: 1.35;
-  font-weight: 600; }
+  font-weight: 600;
+  text-transform: uppercase; }
 
 .s-7 .line {
   width: 100%;
@@ -575,11 +590,13 @@ header {
   padding: 40px 0px; }
   .s-8 h2 {
     text-align: center;
-    margin-bottom: 40px; }
+    margin-bottom: 20px; }
   .s-8 .trans-btn {
     color: #ffda24;
     margin: 30px auto;
     display: block; }
+  .s-8 .requzits {
+    margin: 10px 0px 30px; }
   .s-8 input {
     color: #000000;
     border: 1px solid #000000 !important;
@@ -699,3 +716,9 @@ footer {
 .glyphicon {
   float: right;
   color: #ffda24; }
+
+.small-br {
+  display: none; }
+  @media (max-width: 600px) {
+    .small-br {
+      display: block; } }

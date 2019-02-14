@@ -5,33 +5,95 @@
 	<title> </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">  
 	<link rel="shortcut icon" href="img/favico.png" type="image/png"> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/3.1.6/footable.standalone.css"> 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/time-to@1.2.3/timeTo.css"> 
+	<link rel="stylesheet" href="css/timeTo.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 	 <header>
 	 	<div class="container info-col"> 
-	 		<div class="col-6">
-	 			<h1>Индивидуальный коучинг<br/> по решению <span>сексуальных</span> <br/>проблем в паре</h1>
-	 			<p>Измените вашу семейную и сексуальную<br/> жизнь навсегда благодаря древним <br/>знаниям  восточной философии</p>
-	 			<a href="" class="button">Участвовать бесплатно</a> 
+	 		<div class="col-md-6 text-center">
+
+	 			<h1>«Настоящая <span>Тантра»</span></h1>
+	 			<p class="under-title">Трансформация жизни<br/> и отношений через секс</p> 
+	 			<div class="btn-row">
+	 			<a href="#packets" class="button">Варианты участия</a> 
+	 			<img src="img/button-arrow.png" alt="" class="arrow-butt"></div>
 	 	</div>
 	 </div></header>
-	 <section class="table-sec">
+	 <section class="packets-info">
+	 	<div class="container">
+	 			<div class="row packet-container">
+	 		<div class="col-md-3">
+	 			<div class="packet-card  red-border">
+	 			<div class="packet-inf">
+	 			<img src="img/match.png" alt="">
+	 			<h4>Пакет</h4>
+	 			<h3>«Тренинг»</h3>
+	 			<p class="under-title">У вас все хорошо в отношениях, и вы оба просто хотите новых ярких ощущений. Или вы пока одиноки и хотите обучиться и освоить техники на будущее </p> 
+	 		</div>
+	 			<a href=""  data-toggle="modal" data-target="#packet-1">Подробнее</a>
+	 		</div> 
+	 	</div>
+	 		<div class="col-md-3">
+	 			<div class="packet-card orange-border">
+	 			<div class="packet-inf">
+	 			<img src="img/heart.png" alt="">
+	 			<h4>Пакет</h4>
+	 			<h3>«Групповой коучинг»</h3>
+	 			<p class="under-title">Вы уже не первый год вместе и отношения оставляют желать лучшего. Или вы постоянно “обжигаетесь” с неподходящими мужчинами и никак не можете выстроить долговременные отношения</p> 
+	 		</div>
+	 			<a href=""  data-toggle="modal" data-target="#packet-2">Подробнее</a>
+	 		</div> 
+	 	</div>
+	 		<div class="col-md-3">
+	 			<div class="packet-card green-border">
+	 			<div class="packet-inf"> 
+	 			<img src="img/heartbreak.png" alt="">
+	 			<h4>Пакет</h4>
+	 			<h3>«Индивидуально-групповой коучинг»</h3>
+	 			<p class="under-title">Ваши отношения на грани развода, и вы не знаете, что с этим делать</p>
+	 		</div> 
+	 			<a href=""  data-toggle="modal" data-target="#packet-3">Подробнее</a>
+	 		</div> 
+	 	</div>
+	 		<div class="col-md-3">
+	 			<div class="packet-card  blue-border">
+	 			<div class="packet-inf"> 
+	 			<img src="img/girlfriend.png" alt="">
+	 			<h4>Пакет</h4>
+	 			<h3>«Индивидуальный коучинг»</h3>
+	 			<p class="under-title">Групповая работа для вас неприемлема, и вы хотите...</p>
+	 		</div> 
+	 			<a href=""  data-toggle="modal" data-target="#packet-4">Подробнее</a>
+	 		</div>
+	 	</div>
+	 		</div>
+	 	</div>
+	 </section>
+	 <section id="packets" class="table-sec">
 	 	<div class="container">
 	 	<table class="table">
 	<thead>
 		<tr>
-			<th><span class="mob-vis">О С Н О В Н А Я     П Р О Г Р А М М А</span></th>
-			<th data-breakpoints="xs" class="red">«Тренинг»</th>
-			<th data-breakpoints="xs" class="orange">«Групповой коучинг»</th>
-			<th data-breakpoints="xs" class="geen">«Индивидуально-<br/>
+			<th><span class="hid">ОСНОВНАЯ ПРОГРАММА</span></th>
+			<th data-breakpoints="md sm xs" class="red">«Тренинг»</th>
+			<th data-breakpoints="md sm xs" class="orange">«Групповой коучинг»</th>
+			<th data-breakpoints="md sm xs" class="geen">«Индивидуально-<br/>
 групповой коучинг»</th>
-			<th data-breakpoints="xs" class="blue">«Индивидуальный коучинг»</th>  
+			<th data-breakpoints="md sm xs" class="blue">«Индивидуальный коучинг»</th>  
 		</tr>
 	</thead>
-	<tbody>
-		<tr class="program-name"><span class="mob-hid">О С Н О В Н А Я     П Р О Г Р А М М А</span></tr>
+	<tbody> 
+		<tr class="head-panel">
+			<th class="heds"><span class="full-width osnov">ОСНОВНАЯ ПРОГРАММА</span></th>
+			<td></td>
+			<td class="shad-n"></td>
+			<td></td>
+			<td></td>
+		</tr>
 		<tr data-expanded="true">  
 			<td><strong>Продолжительность</strong></td>
 			<td>3 месяца</td>
@@ -43,84 +105,78 @@
 (далее - по необходимости)</td> 
 		</tr>
 		<tr>
-			<td><strong>Кол-во участников</strong></td>
+			<td><strong>Количество участников</strong></td>
 			<td>до 30</td>
 			<td>до 10</td>
-			<td> до 10</td>
+			<td>до 10</td>
 			<td>1-2</td> 
 		</tr>
-		<tr>
-			<td><strong>Модуль-1 </strong>«Проработка блоков»<br/>
-(снятие сознательных, подсознательных,<br/> энергетических и физических блоков)</td>
+		<tr> 
+			<td><strong>Модуль 1. «Проработка блоков»</strong><br/>
+Снятие сознательных, подсознательных, энергетических и физических блоков</td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 		</tr>
 		<tr>
-			<td><strong>Модуль-2 </strong>«Пробуждение чувствительности»<br/> (многократное <br/>повышение чувствительности тела <br/>
-и интимных органов)</td>
+
+			<td><strong>Модуль 2. «Пробуждение чувствительности»</strong><br/>Многократное повышение чувствительности тела и интимных органов</td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 		</tr>
 		<tr>
-			<td><strong>Модуль-3</strong> «Время»<br/>
-(увеличение продолжительности <br/>
-полового акта и освоение техники ""осознанного оргазма"")</td>
+
+			<td><strong>Модуль 3. «Время»</strong><br/>Увеличение продолжительности полового акта и освоение техники «осознанного оргазма»</td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 		</tr>
 		<tr>
-			<td><strong>Модуль-4</strong> «Прелюдия»<br/>
-(специальные техники предварительных<br/> ласк для максимального возбуждения <br/>
-тела и сознания)</td>
+
+			<td><strong>Модуль 4. «Прелюдия»</strong><br/>Специальные техники предварительных ласк для максимального возбуждения тела и сознания</td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 		</tr>
 		<tr>
-			<td><strong>Модуль-5 </strong>«Внедрение»<br/>
-(оттачивании полученных навыков <br/>
-на практике, помощь во внедрении <br/>
-и обратная связь)</td>
+
+			<td><strong>Модуль 5. «Внедрение»</strong><br/>Оттачивании полученных навыков на практике, помощь во внедрении и обратная связь</td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 		</tr>
 		<tr> 
-			<td><strong>Модуль-6</strong> «Докрутка»<br/>
-(“Кама-сутра” или как разнообразить секс,<br/> чтобы каждый раз получать новые эмоции<br/> и ощущения + секретные техники <br/>
-на усиление оргазмичности)</td>
+
+			<td><strong>Модуль 6. «Докрутка»</strong><br/> «Камасутра», или как разнообразить секс, чтобы каждый раз получать новые эмоции и ощущения</td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 		</tr>
 		<tr>
-			<td><strong>Модуль-7 </strong>«Тантрический секс»<br/>
-(освоение техники тантрического секса)</td>
+
+			<td><strong>Модуль 7. «Тантрический секс»</strong><br/>Освоение техники тантрического секса</td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 		</tr>
 		<tr>
-			<td><strong>Модуль-8 </strong>«Эзотерические аспекты<br/> тантрического секса» (секс как<br/> инструмент трансформации сознания<br/> 
-и влияния на жизненные события)</td>
+
+			<td><strong>Модуль 8. «Эзотерические аспекты тантрического секса»</strong><br/>Секс как инструмент трансформации сознания и влияния на жизненные события</td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 		</tr>
 		<tr>
-			<td><strong>Возможность совместного обучения <br/>
-с партнером</strong></td>
+			<td><strong>Возможность совместного обучения с партнером</strong></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
@@ -134,7 +190,7 @@
 			<td><span class="check"></span></td>
 		</tr>
 		<tr>
-			<td><strong>Еженедельные поддерживающие <br/>
+			<td><strong>Еженедельные поддерживающие 
 вебинары с ответами на вопросы</strong></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
@@ -142,7 +198,7 @@
 			<td><span class="check"></span></td>
 		</tr>
 		<tr>
-			<td class="green-bg"><strong>Пожизненный доступ к прохождению<br/> основной программы курса с обратной<br/> связью (чат + поддерживающие вебинары)</strong></td>
+			<td class="green-bg"><strong>Пожизненный доступ к прохождению основной программы курса с обратной связью (чат + поддерживающие вебинары)</strong></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
@@ -155,186 +211,168 @@
 			<td>3 консультации</td>
 			<td>Безлимит<br/>
 (по необходимости)</td> 
-		</tr>
-		<tr>
-			<th class=""><span class="">Д О П О Л Н И Т Е Л Ь Н А Я     П Р О Г Р А М М А</span></th>
+		</tr>	
+		<tr class="head-panel">
+			<th class="heds"><span class="full-width dops">ДОПОЛНИТЕЛЬНАЯ ПРОГРАММА</span></th>
+			<td></td>
+			<td class="shad-n"></td>
+			<td></td>
+			<td></td>
+		</tr> 
+		<tr>  
+			<td><strong>Онлайн-мальчишник</strong><br/>Закрытая встреча с Аджитом для мужчин</td>
+			<td><span class="check"></span></td>
+			<td><span class="check"></span></td>
+			<td><span class="check"></span></td>
+			<td><span class="check"></span></td>
 		</tr>
 		<tr> 
-			<td><strong>Онлайн "мальчишник"</strong>
-(закрытая встреча для мужчин 
-с Аджитом)</td>
+			<td><strong>Онлайн "девичник"</strong><br/>Закрытая встреча  
+с женой Аджита для девушек</td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 		</tr>
-		<tr>
-			<td><strong>Онлайн "девичник"</strong>
-(закрытая встреча для девушек 
-с женой Аджита)</td>
-			<td><span class="check"></span></td>
-			<td><span class="check"></span></td>
-			<td><span class="check"></span></td>
-			<td><span class="check"></span></td>
-		</tr>
-		<tr>
-			<td><strong></strong>Семинар №1
-""Инструкция по эксплуатации 
+		<tr> 
+			<td>
+<strong>Семинар № 1</strong><br/>
+«Инструкция по эксплуатации 
 противиположного пола 
-в домашних условиях""
-*УНИКАЛЬНЫЙ МАТЕРИАЛ - 
-специально для этой программы</td>
+в домашних условиях»<br/>
+<span class="shild"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 		</tr>
 		<tr>
-			<td><strong>Семинар №2
-"Философия отношений"</strong></td>
+			<td>
+<strong>Семинар № 2</strong><br/>
+"Философия отношений"
+<span class="shild"></span></td>
+			<td><span class="check"></span></td>
+			<td><span class="check"></span></td>
+			<td><span class="check"></span></td>
+			<td><span class="check"></span></td>
+		</tr>
+		<tr> 
+			<td>
+<strong>Семинар № 3</strong><br/>
+«Как пробудить в партнере любовь, 
+внимание и заботу»<br/> 
+<span class="shild"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 		</tr>
 		<tr>
-			<td><strong>Семинар №3
-"Как пробудить в партнере любовь, 
-внимание и заботу"
-*УНИКАЛЬНЫЙ МАТЕРИАЛ</strong></td>
+			<td>
+<strong>Семинар №4</strong><br/>
+«Искусство быть счастливой»<br/> 
+<span class="shild"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 		</tr>
 		<tr>
-			<td><strong>Семинар №4
-"Искусство быть счастливой"
-*УНИКАЛЬНЫЙ МАТЕРИАЛ - 
-специально для этой программы</strong></td>
+			<td>
+<strong>Семинар №5</strong><br/>
+«Повышение энергетики и 
+уровня сознания»<br/> 
+<span class="shild"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 		</tr>
 		<tr>
-			<td><strong>Семинар №5
-"Повышение энергетики и 
-уровня сознания"
-*УНИКАЛЬНЫЙ МАТЕРИАЛ - 
-специально для этой программы</strong></td>
+
+			<td><strong>Запись марафона</strong><br/>«Астрологическая совместимость 
+в отношениях» (5 вебинаров)</td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 		</tr>
-		<tr>
-			<td><strong>Семинар №6</strong>
-"Пост и голодание, как способ лечения
- и профилактики заболеваний,
-укрепления тела и психики"</td>
-			<td><span class="check"></span></td>
-			<td><span class="check"></span></td>
-			<td><span class="check"></span></td>
-			<td><span class="check"></span></td>
-		</tr>
-		<tr>
-			<td><strong>Запись марафона по теме</strong>
-"Астрологическая совместимость 
-в отношениях" (5 вебинаров)</td>
-			<td><span class="check"></span></td>
-			<td><span class="check"></span></td>
-			<td><span class="check"></span></td>
-			<td><span class="check"></span></td>
-		</tr>
-		<tr>
-			<th class=""><span class="">В И П - Б И Б Л И О Т Е К А</span></th>
+		<tr class="head-panel">
+			<th class="heds"><span class="full-width vips">ВИП-БИБЛИОТЕКА</span></th>
+			<td></td>
+			<td class="shad-n"></td>
+			<td></td>
+			<td></td>
 		</tr> 
 		<tr>
-			<td><strong>Семинар №7</strong>
-"Мужской клуб" (только для мужчин)
-*УНИКАЛЬНЫЙ МАТЕРИАЛ - 
-специально для этой программы</td>
+			<td><strong>Семинар № 6</strong><br/>
+«Пост и голодание, как способ лечения
+ и профилактики заболеваний,
+укрепления тела и психики»<br/>
+<strong><strike>5 000 руб.</strike></strong></td>
+			<td><span class="minus"></span></td>
+			<td><span class="check"></span></td>
+			<td><span class="check"></span></td>
+			<td><span class="check"></span></td>
+		</tr>
+		<tr>
+			<td>
+<strong>Семинар № 7</strong><br/>
+«Мужской клуб» (только для мужчин)<br/> 
+<strong><strike>5 000 руб.</strike></strong>
+<span class="shild"></span></td>
 			<td><span class="minus"></span></td> 
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 		</tr>
-		<tr>
-			<td><strong>Тренинг №1</strong>
-"Как пробудить в партнере любовь, внимание и заботу"
-                +
-вебинар с обратной связью
-<strong>*УНИКАЛЬНЫЙ МАТЕРИАЛ - 
-специально для этой программы</strong></td>
+		<tr> 
+			<td>
+<strong>Тренинг № 1</strong><br/>
+«Как пробудить в партнере любовь, внимание и заботу»
+<div class="plus">+</div>
+вебинар с обратной связью<br/> 
+<strong><strike>15 000 руб.</strike></strong>
+<span class="shild"></span></td>
 			<td><span class="minus"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 		</tr>
 		<tr>
-			<td class="green-bg"><strong>Тренинг №2</strong>
+			<td>
+<strong>Тренинг № 2</strong><br/>
 "Тантрический массаж"
                <div class="plus">+</div>
-вебинар с оратной связью
-<strong>*УНИКАЛЬНЫЙ МАТЕРИАЛ - 
-специально для этой программы</strong></td>
-			<td class="bonuspay"><span class="pinky">БОНУС ЗА</span>
-предоплату
-<strong>10%</strong> в течении
-3 дней марафона</td>
-			<td><span class="check"></span></td>
-			<td><span class="check"></span></td>
-			<td><span class="check"></span></td>
-		</tr>
-		<tr>
-			<td class="green-bg"><strong>Курс №1</strong>
-"Исцеление отношений"
-               <div class="plus">+</div>
-вебинар с оратной связью
-https://dilam108.ru/kurs_aicelenie
-<strong>9 900 руб. !!!</strong></td>
-			<td class="bonuspay"><span class="pinky">БОНУС ЗА</span>
-предоплату
-<strong>10%</strong> в течении
-3 дней марафона</td>
-			<td><span class="check"></span></td>
-			<td><span class="check"></span></td>
-			<td><span class="check"></span></td>
-		</tr>
-		<tr>
-			<td><strong>Курс №2</strong>
-«Как по дате рождения научиться считывать психотип, особенности характера и сильные/слабые стороны любого человека с точностью 98% 
-за 2 минуты без сложных расчетов и специальных программ»
-               <div class="plus">+</div>
-вебинар с оратной связью
-https://time-academy.ru/master2019/
-<strong>50 000 руб. !!!</strong></td>
+вебинар с обратной связью<br/> 
+<strong><strike>15 000 руб.</strike></strong>
+<span class="shild"></span></td>
 			<td><span class="minus"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 		</tr>
 		<tr>
-			<td><strong>Закрытый вип-чат</strong></td>
+			<td><strong>Закрытый вип-чат «Мастер-группа»</strong></td>
 			<td><span class="minus"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 		</tr>  
 		<tr>
-			<td><strong>Еженедельная обратная связь 
-в мини-группе в формате видео-конференции</strong></td>
+			<td><strong>Еженедельная обратная связь в мини-группе в формате видеоконференции</strong></td>
 			<td><span class="minus"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 		</tr>
-		<tr>
-			<td><strong>Консультация №1</strong>
-(астрологическая консультация
-от Елены - жены Аджита)
-<strong>10 000 руб.</strong></td>
+		<tr> 
+			<td>
+<strong>Консультация № 1</strong><br/>
+Астрологическая консультация
+Елены, жены Аджита <br/>
+<strong><strike>10 000 руб.</strike></strong>
+<span class="shild"></span></td>
 			<td><span class="minus"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
@@ -347,29 +385,27 @@ https://time-academy.ru/master2019/
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 		</tr>
-		<tr>
-			<td><strong>Консультация №2</strong>
-(консультация по хиромантии 
-от Анатолия Шмульского)
-<strong>20 000 руб.</strong></td>
+		<tr> 
+			<td><strong>Консультация № 2</strong><br/>
+Консультация по хиромантии 
+от Анатолия Шмульского<br/>
+<strong><strike>20 000 руб.</strike></strong></td>
 			<td><span class="minus"></span></td>
 			<td><span class="minus"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 		</tr>
-		<tr>
-			<td><strong>Консультация №3</strong>
-(консультация от психолога и женского тренера - Анжелы Дилам)
-<strong>20 000 руб.</strong></td>
+		<tr> 
+			<td><strong>Консультация № 3</strong><br/>Консультация психолога и женского тренера – Анжелы Дилам<br/>
+<strong><strike>20 000 руб.</strike></strong></td>
 			<td><span class="minus"></span></td>
 			<td><span class="minus"></span></td>
 			<td><span class="check"></span></td>
 			<td><span class="check"></span></td>
 		</tr>
-		<tr>
-			<td><strong>Индивидуальное ведение по реабелитации отношений</strong> (для выхода 
-из кризиса и сложных ситуаций)
-<strong>60 000 руб.</strong></td>
+		<tr>  
+			<td><strong>Индивидуальное ведение по реабилитации отношений</strong> (для выхода из кризиса и сложных ситуаций)<br/>
+<strong><strike>60 000 руб.</strike></strong></td>
 			<td><span class="minus"></span></td>
 			<td><span class="minus"></span></td>
 			<td><span class="check"></span></td>
@@ -384,42 +420,40 @@ https://time-academy.ru/master2019/
 			<td><span class="check"></span></td>
 		</tr>
 		<tr>
-			<td><strong>Участие в «Мастер-группе» 
-(годовая пост-поддержка)</strong></td>
+			<td><strong>Индивидуальное обучение</strong></td>
 			<td><span class="minus"></span></td>
 			<td><span class="minus"></span></td>
-			<td><span class="check"></span></td>
+			<td><span class="minus"></span></td>
 			<td><span class="check"></span></td>
 		</tr>
 		<tr>
-			<td><strong>Индивидуальное обучение
-"Индивидуальный 7-дневный 
+			<td><strong>Индивидуальный 7-дневный 
 ретрит на Бали</strong></td>
 			<td><span class="minus"></span></td>
 			<td><span class="minus"></span></td>
 			<td><span class="minus"></span></td>
 			<td><span class="check"></span></td>
-		</tr>
-		<tr>
-			<td><strong>Стоимость</strong></td>
+		</tr> 
+		<tr data-expanded="true">
+			<td class="white-bg"><strong>Стоимость</strong></td>
 			<td class="red"><strike>100 000</strike> <br/>
 <strong>69 000 руб.</strong></td>
-			<td class="orange"><strike>200 000</strike> <br/>
-<strike>129 000 </strike> <br/>
+			<td class="orange"> <strike>200 000</strike> <br/> 
 <strong>108 000 руб.</strong></td>
-			<td class="geen"><strike>300 000</strike> <br/>
+			<td class="geen price"><strike>300 000</strike> <br/>
 <strong>195 000 руб.</strong></td>
 			<td class="blue"><strong>650 000 руб.</strong></td>
 		</tr>
 		<tr> 
-			<td><strong>Рассрочка по оплате</strong></td>
+			<td class="white-bg"><strong>Рассрочка по оплате</strong></td>
 			<td><span class="minus"></span></td>
-			<td><span class="check"></span></td>
+			<td><span class="check inline"></span>
+	 			<a href="" class="details"  data-toggle="modal" data-target="#rasr">Подробнее</a></td>
 			<td><span class="minus"></span></td>
 			<td>индивидуально</td>
 		</tr>
 		<tr>
-			<td><strong>Свободно мест</strong></td>
+			<td class="white-bg"><strong>Свободно мест</strong></td>
 			<td>20 мест</td>
 			<td>6 мест</td>
 			<td>3 места</td>
@@ -427,32 +461,301 @@ https://time-academy.ru/master2019/
 		</tr>
 		<tr data-expanded="true">
 			<td class="mob-hid trsnap">Оплата</td>
-			<td><a href="" class="button red">Оплатить участие</a></td>
-			<td><a href="" class="button orange">Оплатить участие</a></td>
-			<td><a href="" class="button geen">Оплатить участие</a></td>
-			<td><a href="" class="button blue">Оплатить участие</a></td>
+			<td><a href="https://timeacademy.e-autopay.com/buy/403737" target="_blank" class="button red">Оплатить участие</a></td>
+			<td><a href="https://timeacademy.e-autopay.com/buy/403738" target="_blank" class="button orange">Оплатить участие</a></td>
+			<td><a href="https://timeacademy.e-autopay.com/buy/395513" target="_blank" class="button geen">Оплатить участие</a></td>
+			<td><a href="https://timeacademy.e-autopay.com/buy/403739" target="_blank" class="button blue">Оплатить участие</a></td>
 		</tr>
 	</tbody>
 </table>
 <table class="second">
 	<tbody>
 		<tr class="full-row"> 
-			<td class="fulls geen"><strong>10% денег идёт на благотворительность</strong></td>
-		</tr>
-		<tr class="full-row">
-			<td class="fulls">*Рассрочка на 3 равномерных платежа:<br/>
-1) 43 - оплата за 30 дней до начала курса (доступ к первым <br/>
-2-3 занятиям, чтобы уже начинали практиковать
-2) 43 - оплата к началу потока (итого 2/3 на момент старта уже оплачено)<br/>
-3) 43 - спустя 30 дней после старта (открывается уже вся библиотека)</td>
-		</tr>
+			<td class="fulls green-bg"><strong>10% денег идёт на благотворительность</strong></td>
+		</tr> 
 	</tbody>
 </table>
 </div>
 	 </section>
-	
+	<section class="s-3">
+		<div class="container">
+			<div class="row text-center">
+				<div class="bon-block">Бонус №1</div>
+				<p class="upper">Практический онлайн-курс для женщин</p>
+				<h2>«Исцеление Отношений»</h2>
+			</div>
+			<div class="row">
+				<div class="col-md-5 tex-cols">
+					<p>Трансформируйте вашу боль во<br/> внутренний ресурс для создания чистой<br/> 
+и наполненной личной жизни за 14 дней</p>
+					<h3>Благодаря курсу вы узнаете: </h3>
+					<ul class="list-white">
+						<li>Как перестать быть хорошей девочкой для всех</li>
+						<li>Как выгружать негативные чувства?</li>
+						<li>Страдаю и застряла в состоянии жертвы </li>
+						<li>Как успокоить ум и перестать за все переживать? </li>
+						<li>Что делать с низкой самооценкой и зависимостью от чужого мнения? </li>
+						<li>Как поверить в свои силы и начать реализовывать себя?</li>
+					</ul>
+					<p class="link-more">Узнать подробнее о курсе:<br/>
+<a href="https://dilam108.ru/kurs_aicelenie" target="_blank">https://dilam108.ru/kurs_aicelenie</a></p>
+				</div>
+				<div class="col-md-1"></div>
+				<div class="col-md-6"><img src="img/girl.png" alt=""></div>
+			</div>
+		</div>
+	</section>
+	<section class="s-4">
+		<div class="container">
+			<div class="row text-center">
+				<div class="bon-block">Бонус №2</div>
+				<p class="upper">Профессиональный курс диагностики человека по дате рождения</p>
+				<h2>Мастер чтения и коррекции судьбы</h2>
+				<p>Научитесь с легкостью определять особенности характера,<br/> предрасположенности и основные события в своей жизни и жизни <br/>других людей, а также причины и результат любой ситуации <br/>
+в прошлом, настоящем и будущем. </p>
+			</div>
+			<div class="row">
+				<div class="col-md-7"></div>
+				<div class="col-md-5 tex-cols"> 
+					<ul class="list-white">
+					<h3>Если вы хотите: </h3> 
+						<li>Читать себя и других людей, как открытую книгу; </li>
+						<li>Видеть события и причины, которые 
+привели к текущей ситуации; </li>
+						<li>Помогать окружающим становиться 
+успешнее и счастливее;</li>
+						<li>Иметь возможность корректировать проблемы 
+в настоящем и судьбу в будущем;</li>
+						<li>Реализовать свои мечты и желания.</li> 
+					</ul> 
+					<p class="link-more">Узнать подробнее о курсе:<br/>
+<a href="https://time-academy.ru/master" target="_blank">https://time-academy.ru/master</a></p>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<section class="s-5">
+		<div class="container">
+			<div class="row text-center">
+				<div class="counter-block-main">
+				<div class="counter-block">
+					<div class="countdown"></div>
+				</div>
+				</div>
+				<p class="ups">Только оплатив СЕЙЧАС 9000 руб. Вы:</p>
+			</div>
+			<div class="row carts-fac">
+				<div class="col-md-2"></div>
+				<div class="col-md-4 lits">
+				<div class="inf-panel"><img src="img/tag.png" alt=""><p>Получаете скидку -31%</p></div>
+				<div class="numb">1</div>
+			</div>
+</div>
+			<div class="row carts-fac">
+				<div class="col-md-6"></div>
+				<div class="col-md-4 lits">
+				<div class="numb">2</div>
+				<div class="inf-panel"><img src="img/credit-card.png" alt=""><p>Получаете возможность <br/>оплаты обучения в рассрочку</p></div>
+			</div>
+</div>
+			<div class="row carts-fac">
+				<div class="col-md-2"></div>
+				<div class="col-md-4 lits">
+				<div class="inf-panel"><img src="img/secure-shield.png" alt=""><p>Гарантированно ронируете <br/>место в ВИП-группе</p></div>
+				<div class="numb">3</div>
+				</div>
+</div>
+			<div class="row carts-fac">
+				<div class="col-md-6"></div>
+				<div class="col-md-4 lits">
+				<div class="numb">4</div>
+				<div class="inf-panel"><img src="img/order.png" alt=""><p>Дополнительно получаете 2 курса <br/>
+по 30 уроков общей стоимостью <br/>
+41 800 руб. абсолютно БЕСПЛАТНО!</p></div>
+			</div>
+</div>
+<div class="row">
+				<a href="https://timeacademy.e-autopay.com/buy/395926" target="_blank" class="button serern-btn">оплатить бронь - 9000 рублей</a>
+							<div class="row betwwes">
+					
+					<div class="wallets"><img src="img/wallet.png" alt=""><p>Бонусы получают все участники, которые внесут<br/> предоплату 10% за участие в курсе в течение марафона</p></div>
+					</div>
+				</div>
+		</div>
+	</section>
+	<!-- Modal  packet-1 -->
+<div id="packet-1" class="modal fade packet red-bor" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+      	<div class="title-row"><img src="img/match.png" alt="">
+      		<div class="title-pan">
+	 			<h4>Пакет</h4>
+	 			<h3>«Тренинг»</h3>
+	 		</div>
+	 	</div>	 	
+	 	<h3>У вас все хорошо в отношениях, и вы оба просто хотите новых ярких ощущений. <br/>Или вы пока одиноки и хотите обучиться и освоить техники на будущее </h3>
+       <ul class="list-white">
+       	<li>Качественно улучшить вашу сексуальную близость</li>
+       	<li>Придать яркость и глубину вашим чувствам </li>
+       	<li>Выйти на новый уровень физического и духовного взаимопонимания с партнером</li>
+       </ul>
+       <p>При этом вы дисциплинированы и готовы ежедневно работать и выполнять всё, что дается в курсе самостоятельно, полностью взяв ответственность за результат на себя.</p>
+       <p>В качестве поддержки в этом пакете вы получите еженедельную обратную связь и возможность получить ответы на свои вопросы на поддерживающих вебинарах и 2 личные консультации (вводную и финальную, по итогам прохождения курса).</p>
+      </div>
+      <div class="modal-footer"> 
+      </div>
+    </div>
+
+  </div>
+</div>
+	<!-- Modal  packet-2 -->
+<div id="packet-2" class="modal fade packet orange-bor" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button> 
+      </div>
+      <div class="modal-body">
+      	<div class="title-row"><img src="img/heart.png" alt="">
+      		<div class="title-pan">
+	 			<h4>Пакет</h4>
+	 			<h3>«Групповой коучинг»</h3>
+	 		</div>
+	 	</div>	 	
+	 	<h3>Вы уже не первый год вместе и отношения оставляют желать лучшего. 
+Или вы постоянно “обжигаетесь” с неподходящими мужчинами и никак 
+не можете выстроить долговременные отношения </h3>
+       <ul class="list-white"> 
+       	<li>Чувства угасли и вы перестали испытывать интерес и желание друг к другу</li>
+       	<li>Близость практически “сошла на нет” и не приносит удовлетворения </li>
+       	<li>Над ситуацией готов работать один из вас, а другому – все и так хорошо</li>
+       	<li>Появились проблемы со здоровьем, снизилась чувствительность, начались гормональные сбои</li>
+       </ul> 
+       <p>Здесь вы не только решите серьезные сексуальные проблемы (такие, как отсутствие оргазма, непродолжительный половой акт и т.д.) и освоите секс, которого у вас никогда не было, но 
+и глубоко проработаете свои внутренние блоки, научитесь понимать и принимать друг друга, 
+снова почувствуете себя любящими и счастливыми, привлечете в свою жизнь достойного партнера.</p>
+       <p>Также этот пакет прекрасно подойдет тем, кому нужно больше внимания, индивидуальный подход, качественная обратная связь, экспертная поддержка 24/7 и 100%-ная гарантия результата.</p>
+       <p>Если вам нравится обучаться, развиваться и получать новые знания, вы считаете деньги и любите делать покупки, ценность которых многократно превышает их стоимость – этот пакет для вас! Участвовать в нем вы можете в рассрочку.</p>
+      </div>
+      <div class="modal-footer"> 
+      </div>
+    </div>
+
+  </div>
+</div>
+	<!-- Modal  packet-3 -->
+<div id="packet-3" class="modal fade packet green-bor" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button> 
+      </div>
+      <div class="modal-body">
+      	<div class="title-row"><img src="img/heartbreak.png" alt="">
+      		<div class="title-pan">
+	 			<h4>Пакет</h4>
+	 			<h3>«Индивидуально-групповой коучинг»</h3>
+	 		</div>
+	 	</div>	 	
+	 	<h3>Ваши отношения на грани развода, и вы не знаете, что с этим делать</h3>
+       <ul class="list-white"> 
+       	<li>Вы понимаете, что просто  улучшением сексуальных отношений вам не обойтись</li>
+       	<li>Прежде чем приступать к занятиям (совершенствовать свои сексуальные навыки), 
+вам нужно “наладить погоду в доме”</li>
+       	<li>Ситуация сложная, и вам обязательно нужно пристальное внимание 
+и профессиональная помощь, так как самостоятельно вы точно не справитесь</li>
+       </ul> 
+       <p>В рамках данного пакета сначала мы восстановим “под ключ” ваши отношения, 
+а уже потом будем работать над интимной сферой.</p>
+       <p>С этой целью для лучшего результата и полного погружения именно в вашу ситуацию 
+мы включили в пакет консультации лучших экспертов и индивидуальное ведение 
+по реабилитации отношений для выхода из кризиса и сложных ситуаций.</p>
+      </div>
+      <div class="modal-footer"> 
+      </div>
+    </div>
+
+  </div>
+</div>
+	<!-- Modal  packet-4 -->
+<div id="packet-4" class="modal fade packet blue-bor" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button> 
+      </div>
+      <div class="modal-body">
+      	<div class="title-row"><img src="img/girlfriend.png" alt="">
+      		<div class="title-pan">
+	 			<h4>Пакет</h4>
+	 			<h3>«Индивидуальный 
+коучинг»</h3>
+	 		</div>
+	 	</div>	 	
+	 	<h3>Групповая работа для вас неприемлема, и вы хотите...</h3>
+       <ul class="list-white">  
+       	<li>Работать строго в индивидуальном формате</li>
+       	<li>Максимально проработать и улучшить все сферы вашей жизни</li>
+       	<li>Получить неограниченную экспертную поддержку</li>
+       </ul>  
+       <p>Данный пакет отлично подойдет тем, кто хочет  хочет сохранить полную анонимность 
+и конфиденциальность, привык получать максимальные результаты и  пользоваться сервисом премиум-класса. </p>
+       <p>Помимо основной обучающей программы и полного доступа ко всем материалам, здесь предусмотрено прохождение уникального ретрита на Бали и индивидуальное годовое сопровождение.</p>
+      </div>
+      <div class="modal-footer"> 
+      </div>
+    </div>
+
+  </div>
+</div>
+	<!-- Modal  rasr -->
+<div id="rasr" class="modal fade rasr" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h4 class="modal-title">Условия рассрочки</h4>
+        <p class="italic">Рассрочка доступна только для участников, которые внесли предооплату — 9000 рублей в течение марафона.</p>
+        <p><strong>Стоимость программы в рассрочку:</strong> <br/>
+129 000 руб. (9 000 руб. + 3*40 000 руб.)</p>
+<ul>
+	<li>Первая часть оплаты (40 000 руб.) вносится за 30 дней 
+до начала курса и открывает доступ к предварительным занятиям, чтобы Вы уже могли начать обучаться и выполнять практические задания. </li>
+	<li>Вторая часть оплаты (40 000 руб.) — перед началом потока.</li>
+	<li>Третья часть оплаты (40 000 руб.) — спустя 30 дней 
+после старта. После финальной оплаты открывается доступ 
+к вип-библиотеке и бонусам.</li>
+</ul>
+				
+      </div>
+      <div class="modal-footer"> <a href="https://timeacademy.e-autopay.com/buy/395926" target="_blank" class="button orange-btn">оплатить бронь - 9000 рублей</a>
+					<div class="counts"><img src="img/clock.png" alt=""><div class="countdown"></div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/3.1.6/footable.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/3.1.6/footable.min.js"></script>
+    <script src="js/jquery.time-to.js"></script>
 <script src="js/common.js"></script> 
 
 </body>
