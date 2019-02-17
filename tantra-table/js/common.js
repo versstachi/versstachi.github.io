@@ -11,13 +11,25 @@ return false;
 });
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
-})
-$('.countdown').timeTo({
-    seconds: 176400,
-    displayDays: 2,
-    theme: "black",
-    displayCaptions: false,
-    fontSize: 48,
-    captionSize: 14
-}); 
+}) 
+ $(function(){
+$('.countdown').countdowntimer({
+    hours : 48,
+    minutes :0,
+    seconds : 0,
+    size : "lg", 
+});
+});
+
+$(document).ready(function(){
+    $(window).scroll(function(){
+        $('.packet-card').each(function(){
+            if( $(this).offset().top<$(window).scrollTop()+600){ 
+                $(this).addClass('active');
+            }
+            else{ 
+            }
+        });
+    });
+});
 });
