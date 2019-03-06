@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Medini</title>  
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="description" content=" " />
+	<meta name="keywords"  content=" " />
+	<meta name="Resource-type" content="Document" />
+	<link rel="icon" type="image/png" sizes="64x64" href="img/favico.png">
+	<meta property="og:title" content=" " /> 
+	<meta property="og:url" content="" />
+	<meta property="og:image" content="img/ogg.jpg" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+  <link rel="stylesheet" type="text/css" href="css/slick.css">
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/3.1.6/footable.bootstrap.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/3.1.6/footable.bootstrap.min.css"> 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+<body class="type-page">
+<header>
+<div class="row-info">
+        <button type="button" class="close"><img src="img/close.png" alt=""></button>
+        <div class="container">
+        	<div class="row">
+        		<div class="col-sm-3"><a href="delivery.html"><img src="img/delivery-truck.svg" alt="">Бесплатная доставка по Украине</a></div>
+        		<div class="col-sm-3"><a href=""><img src="img/refresh.svg" alt="">Возврат товара в течение 14 дней</a></div>
+        		<div class="col-sm-3"><a href="response.html"><img src="img/best-seller.svg" alt="">7 лет на рынке / отзывы</a></div>
+        		<div class="col-sm-3"><a href=""><img src="img/star.svg" alt="">Celebrity в одежде Medini</a></div>
+        	</div>
+        </div>
+</div>
+	<div class="container-fluid navs"> 
+<nav class="navbar navbar-default navbar-static">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".js-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+		<a href="front-page.html" class="logo">Medini</a>
+    </div>
+    <div class="collapse navbar-collapse js-navbar">
+    	<div class="mobile-menu-row"></div>
+      <ul class="nav navbar-nav hiden-menu">
+        <li class="dropdown" onclick="javascript:location.href='catalog.html'"  ><a id="drop1" href="catalog.html" class="dropdown-toggle" data-toggle="dropdown">Коллекции</a>
+          <div class="dropdown-menu full-menu container-fluid">
+          	<div class="container">
+          		<div class="row">
+          	<div class="col-sm-3">
+          	<ul> 
+	            <li class="active"><a href="" class="menu" id="menu1">Medini</a></li>
+	            <li><a href="" class="menu" id="menu2">Favoritti</a></li> 
+	            <li><a href="" class="menu" id="menu3">Exclusive</a></li> 
+	            <li><a href="" class="menu" id="menu4">Vision</a></li>
+	            <li><a href="" class="menu" id="menu5">Arani</a></li>
+	            <li><a href="" class="menu" id="menu6">Ожидается</a></li>
+          	</ul>
+          </div>
+          	<div class="col-sm-3">
+          	<ul> 
+	            <li><a href="" class="menu" id="menu7">Космические скидки <span class="red">-50% -33%</span></a></li>
+	            <li><a href="" class="menu" id="menu8">Деловой стиль</a></li> 
+	            <li class="active"><a href="" class="menu" id="menu9">Стильный спорт</a></li> 
+	            <li><a href="" class="menu" id="menu10">Платья на каждый день</a></li>
+	            <li><a href="" class="menu" id="menu11">Выпускной вечер 2018</a></li>
+	            <li><a href="" class="menu" id="menu12">Новинки</a></li> 
+	            <li><a href="" class="menu" id="menu13">Звёздные коллекции</a></li> 
+	            <li><a href="" class="menu" id="menu14">ТОП продаж</a></li>
+          	</ul>
+          </div>
+          	<div class="col-sm-3">
+          	<ul>  
+	            <li class="active"><a href="" class="menu" id="menu15">Верхняя одежда</a></li>
+	            <li><a href="" class="menu" id="menu16">Платья</a></li> 
+	            <li><a href="" class="menu" id="menu17">Костюмы и комплекты</a></li> 
+	            <li><a href="" class="menu" id="menu18">Комбинезоны</a></li>
+	            <li><a href="" class="menu" id="menu19">Юбки</a></li> 
+	            <li><a href="" class="menu" id="menu20">Спортивные костюмы</a></li> 
+	            <li><a href="" class="menu" id="menu21">Купальники, пляжные туники</a></li>
+          	</ul>
+          </div>
+          	<div class="col-sm-3 img_menu_hover" id="img-menu-block" > 
+				<img src="img/menu_pic/1.png" id="img" alt="" />
+          	</div>
+          </div>
+          	</div>
+          </div>
+        </li>
+        <li class="dropdown" onclick="javascript:location.href='page-about-us.html'" >
+          <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Компания 
+          </a>
+         
+          <div class="dropdown-menu full-menu container-fluid">
+          	<div class="container">
+          		<div class="row">
+          	<div class="col-sm-3"> 
+          	<ul>
+	            <li class="active"><a href="page-about-us.html">О нас</a></li>
+	            <li><a href="destribution.html">Дистрибюторы</a></li> 
+	            <li><a href="shops.html">Магазины</a></li> 
+	            <li><a href="gallery.html">Look Book</a></li>
+	            <li><a href="">Видео</a></li>
+	            <li><a href="response.html">Отзывы</a></li>
+          	</ul>
+          </div>
+          	<div class="col-sm-9"><img src="img/menu-company-pic.png" alt="" class="img-responsive"></div>
+          </div>
+          	</div>
+          </div>
+        </li>
+        <li class="dropdown" onclick="javascript:location.href='faq.html'">
+          <a id="drop3" href="faq.html" class="dropdown-toggle" data-toggle="dropdown">
+            Помощь
+          </a>
+         
+          <div class="dropdown-menu full-menu container-fluid">
+          	<div class="container">
+          		<div class="row">
+          	<div class="col-sm-2">
+          	<ul> 
+	            <li class="active"><a href="payment.html">Оплата</a></li>
+	            <li><a href="delivery.html">Доставка</a></li> 
+	            <li><a href="sizes.html">Выбрать размер</a></li> 
+	            <li><a href="faq.html">Частые вопросы</a></li>
+	            <li><a href="download.html">Скачать</a></li>
+	            <li><a href="contacts.html">Контакты</a></li>
+          	</ul>
+          </div>
+          	<div class="col-sm-4"><img src="img/menu-help-pic.png" alt="" title="" class="img-responsive"></div>
+          	<div class="col-sm-3 "><h4><strong>Телефоны:</strong></h4>
+          		<a href="tel:+380991744324">+380 (99) 174-43-24</a>
+							<a href="tel:+380974965971">+380 (97) 496-59-71</a>
+							<a href="tel:+380633523623">+380 (63) 352-36-23</a>
+							<a href="tel:+380661620861">+380 (66) 162-08-61 <span>(viber, whatsapp)</span></a>
+							<h4><strong>Email:</strong></h4>
+							<a href="mailto:medinioroginal@yahoo.com">medinioroginal@yahoo.com</a> 
+							<h4><strong>Skype</strong></h4>
+							<a href="mailto:medinioroginal@yahoo.com">medinioroginal@yahoo.com</a> 
+						</div>
+          	<div class="col-sm-3">
+          		<h3><strong>Обратная связь</strong></h3>
+          		<form>
+          			<input name="name" type="text" placeholder="Введите Ваше Имя">
+          			<input name="mail" type="text" placeholder="Введите Ваш Email">
+          			<textarea name="text" cols="30" rows="3" placeholder="Введите сообщение"></textarea>
+          			<button>Отправить</button>
+          		</form>
+          	</div></div>
+          	</div>
+          </div>
+        </li>
+        <li><a href="blog.html">Блог</a></li>
+		<li><a href="contacts.html">Контакты</a></li>
+		<li>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown user-menu">
+          <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown"> 
+					<div class="humb">
+					<span class="lines"></span>
+					<span class="lines"></span>
+					<span class="lines"></span></div>
+          </a>
+          <ul class="dropdown-menu profile-menu"> 
+						<li><a href="profile-edit.html">Личные данные</a></li>
+						<li><a href="profile-payment.html">Баланс</a></li>
+						<li><a href="profile.html">Мои заказы</a></li>
+						<li><a href="download.html">Скачать</a></li>
+						<li><a href="#">Выйти</a></li>
+          </ul>
+        </li>
+        <li>
+			<div class="user-block"> 
+				<div class="login"><a href="login.html">Войти</a>
+			</div>
+			</div>
+		</li>
+        <li>
+	      <ul class="nav navbar-nav search">
+	        <li class="dropdown">
+	          <a id="drop5" href="#" class="dropdown-toggle" data-toggle="dropdown">  
+						<div class="search-ico"></div> 
+	          </a>
+	          <ul class="dropdown-menu"> 
+	          	<li>
+							<form class="search-head" method="post">
+								<input type="text" name="search_product" class="sb-search-input-js h-search-input" placeholder="Поиск" autocomplete="off" autofocus="">
+								<button type="submit" value="" class="sb-search-submit sb-search-submit-js trans-btn">Найти</button>
+							</form>
+							</li>
+	          </ul>
+	        </li>
+	      </ul> 
+	    </li>
+        <li>
+	      <ul class="nav navbar-nav favorite">
+	        <li class="dropdown">
+	          <a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown">  
+	            <div class="counter">0</div>
+	            <div class="heart"></div>
+	          </a>
+	         </li>
+	       </ul> 
+	    </li> 
+	    <li>
+		      <ul class="nav navbar-nav ship-cart">
+		        <li class="dropdown">
+		          <a id="drop7" href="#" class="dropdown-toggle" data-toggle="dropdown">  
+		                <div class="counter">0</div>
+		                <div class="bag-ico"></div> 
+		          </a>
+		          <div class="dropdown-menu"> 
+		          	<h2>Ваша корзина</h2>
+		          	<ul class="ship-cart-list"> 
+						<li class="row">
+						<div class="col-sm-3 col-xs-12">
+						<a href="#"><img src="img/cart-thumb-1.png" alt=""></a></div>
+						<div class="col-sm-6 col-xs-6">
+						<div class="product-info"><h4><a href="#">Платье "Мальвина" В2</a></h4>
+						<div class="input-group spinner ">
+						<div class="input-group-btn-vertical">
+						<button class="btn btn-default" type="button"><i class="fa fa-minus"></i></button> 
+						</div>
+						<input type="text" class="form-control spin-input" value="3" readonly />
+						<div class="input-group-btn-vertical">
+						<button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
+						</div>
+						</div>
+						<p class="count-cell">шт х 750 грн</p>
+						<p class="size-cell"><strong>Размер: М</strong></p>
+						</div>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+						<div class="remove-product col-xs-12 text-right"><a href=""><i class="fas fa-times"></i></a></div>
+						<div class="price col-xs-12 text-right"><strong>750грн</strong></div>
+						</div>
+						</li>
+						<li class="row">
+						<div class="col-sm-3 col-xs-12">
+						<a href="#"><img src="img/cart-thumb-1.png" alt=""></a></div>
+						<div class="col-sm-6 col-xs-6">
+						<div class="product-info"><h4><a href="#">Платье "Мальвина" В2</a></h4>
+						<div class="input-group spinner ">
+						<div class="input-group-btn-vertical">
+						<button class="btn btn-default" type="button"><i class="fa fa-minus"></i></button> 
+						</div>
+						<input type="text" class="form-control spin-input" value="3" readonly />
+						<div class="input-group-btn-vertical">
+						<button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
+						</div>
+						</div>
+						<p class="count-cell">шт х 750 грн</p>
+						<p class="size-cell"><strong>Размер: М</strong></p>
+						</div>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+						<div class="remove-product col-xs-12 text-right"><a href=""><i class="fas fa-times"></i></a></div>
+						<div class="price col-xs-12 text-right"><strong>750грн</strong></div>
+						</div>
+						</li>
+						<li class="row">
+						<div class="col-sm-3 col-xs-12">
+						<a href="#"><img src="img/cart-thumb-1.png" alt=""></a></div>
+						<div class="col-sm-6 col-xs-6">
+						<div class="product-info"><h4><a href="#">Платье "Мальвина" В2</a></h4>
+						<div class="input-group spinner ">
+						<div class="input-group-btn-vertical">
+						<button class="btn btn-default" type="button"><i class="fa fa-minus"></i></button> 
+						</div>
+						<input type="text" class="form-control spin-input" value="3" readonly />
+						<div class="input-group-btn-vertical">
+						<button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
+						</div>
+						</div>
+						<p class="count-cell">шт х 750 грн</p>
+						<p class="size-cell"><strong>Размер: М</strong></p>
+						</div>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+						<div class="remove-product col-xs-12 text-right"><a href=""><i class="fas fa-times"></i></a></div>
+						<div class="price col-xs-12 text-right"><strong>750грн</strong></div>
+						</div>
+						</li>
+						<li class="row">
+						<div class="col-sm-3 col-xs-12">
+						<a href="#"><img src="img/cart-thumb-1.png" alt=""></a></div>
+						<div class="col-sm-6 col-xs-6">
+						<div class="product-info"><h4><a href="#">Платье "Мальвина" В2</a></h4>
+						<div class="input-group spinner ">
+						<div class="input-group-btn-vertical">
+						<button class="btn btn-default" type="button"><i class="fa fa-minus"></i></button> 
+						</div>
+						<input type="text" class="form-control spin-input" value="3" readonly />
+						<div class="input-group-btn-vertical">
+						<button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
+						</div>
+						</div>
+						<p class="count-cell">шт х 750 грн</p>
+						<p class="size-cell"><strong>Размер: М</strong></p>
+						</div>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+						<div class="remove-product col-xs-12 text-right"><a href=""><i class="fas fa-times"></i></a></div>
+						<div class="price col-xs-12 text-right"><strong>750грн</strong></div>
+						</div>
+						</li>						 
+		          </ul>
+			<div class="row button-row">
+			<span class="col-xs-12 col-sm-6 text-center"><button class="black-btn">Оформить заказ</button></span>
+			<span class="col-xs-12 col-sm-6 text-center"><strong>Цена: 750грн</strong></span>
+				</div></div>
+         </li>
+       </ul>
+	  </li>
+	  <li>
+      <ul class="nav navbar-nav curense">
+        <li class="dropdown">
+          <a id="drop8" href="#" class="dropdown-toggle" data-toggle="dropdown"> 
+						UAH
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu"> 
+						<li><a href="#">USD</a></li>
+						<li><a href="#">RUB</a></li>
+						<li><a href="#">EUR</a></li> 
+          </ul>
+	    </li>
+      </ul>
+	  </li> 
+      </ul>
+      </li>
+      </ul>
+    </div>
+  </div>
+</nav>  
+	</div>
+</header>
+<section class="content">
+	<div id="page-overlay" class="page-overlay"></div>
+		<div class="container head-row">
+			<div class="row">
+				<h1 class="head-title"><span>Типовая страница</span></h1>
+				<p class="head-title-under"><span>Medini</span></p>
+			</div>
+		<div class="row breadcrumbs">
+			<p>
+				<span>Текст</span>
+				<span class="grey">Текст</span>
+				<span class="text-upper">Текст</span>
+				<span><a href="" class="col-blue">Ссылка</a></span>
+				<span><a href="" class="col-red">Ссылка</a></span>
+				<span><a href="" class="col-underline">Ссылка</a></span>
+				<span class="bold">Жирный</span>
+				<span class="strike">Перечеркнутый</span>
+			</p>
+		</div>
+		</div>
+	<div class="container">
+		<div class="row"> 
+				<h1>Заголовок H1 - 36pix (Regular)</h1>
+				<h2>Заголовок H2 - 24pix (Regular)</h2>
+				<h3>Текст H3 - 16pix (Regular)</h3>
+				<h4>текст H4 - 14pix (Regular)</h4> 
+		</div>
+		<div class="row">
+				<h1 class="text-center">Заголовок H1 - 36pix (Regular)</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium facere vel dicta ab voluptate consequuntur. Suscipit, sequi minima nulla asperiores, voluptatibus qui, quos rem eligendi temporibus culpa quaerat ducimus ipsa.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium facere vel dicta ab voluptate consequuntur. Suscipit, sequi minima nulla asperiores, voluptatibus qui, quos rem eligendi temporibus culpa quaerat ducimus ipsa.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium facere vel dicta ab voluptate consequuntur. Suscipit, sequi minima nulla asperiores, voluptatibus qui, quos rem eligendi temporibus culpa quaerat ducimus ipsa.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium facere vel dicta ab voluptate consequuntur. Suscipit, sequi minima nulla asperiores, voluptatibus qui, quos rem eligendi temporibus culpa quaerat ducimus ipsa.</p>
+		</div>
+		<div class="row">
+				<h2 class="text-center">Заголовок H2 - 24pix (Regular)</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium facere vel dicta ab voluptate consequuntur. Suscipit, sequi minima nulla asperiores, voluptatibus qui, quos rem eligendi temporibus culpa quaerat ducimus ipsa.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium facere vel dicta ab voluptate consequuntur. Suscipit, sequi minima nulla asperiores, voluptatibus qui, quos rem eligendi temporibus culpa quaerat ducimus ipsa.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium facere vel dicta ab voluptate consequuntur. Suscipit, sequi minima nulla asperiores, voluptatibus qui, quos rem eligendi temporibus culpa quaerat ducimus ipsa.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium facere vel dicta ab voluptate consequuntur. Suscipit, sequi minima nulla asperiores, voluptatibus qui, quos rem eligendi temporibus culpa quaerat ducimus ipsa.</p>
+				<p class="text-cols-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium facere vel dicta ab voluptate consequuntur. Suscipit, sequi minima nulla asperiores, voluptatibus qui, quos rem eligendi temporibus culpa quaerat ducimus ipsa.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium facere vel dicta ab voluptate consequuntur. Suscipit, sequi minima nulla asperiores, voluptatibus qui, quos rem eligendi temporibus culpa quaerat ducimus ipsa.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium facere vel dicta ab voluptate consequuntur. Suscipit, sequi minima nulla asperiores, voluptatibus qui, quos rem eligendi temporibus culpa quaerat ducimus ipsa.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium facere vel dicta ab voluptate consequuntur. Suscipit, sequi minima nulla asperiores, voluptatibus qui, quos rem eligendi temporibus culpa quaerat ducimus ipsa.</p>
+				<p class="text-cols-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium facere vel dicta ab voluptate consequuntur. Suscipit, sequi minima nulla asperiores, voluptatibus qui, quos rem eligendi temporibus culpa quaerat ducimus ipsa.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium facere vel dicta ab voluptate consequuntur. Suscipit, sequi minima nulla asperiores, voluptatibus qui, quos rem eligendi temporibus culpa quaerat ducimus ipsa.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium facere vel dicta ab voluptate consequuntur. Suscipit, sequi minima nulla asperiores, voluptatibus qui, quos rem eligendi temporibus culpa quaerat ducimus ipsa.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium facere vel dicta ab voluptate consequuntur. Suscipit, sequi minima nulla asperiores, voluptatibus qui, quos rem eligendi temporibus culpa quaerat ducimus ipsa.</p> 
+					<div class="col-md-8"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium facere vel dicta ab voluptate consequuntur. Suscipit, sequi minima nulla asperiores, voluptatibus qui, quos rem eligendi temporibus culpa quaerat ducimus ipsa.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium facere vel dicta ab voluptate consequuntur. Suscipit, sequi minima nulla asperiores, voluptatibus qui, quos rem eligendi temporibus culpa quaerat ducimus ipsa.</p></div>
+					<div class="col-md-4"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium facere vel dicta ab voluptate consequuntur. Suscipit, sequi minima nulla asperiores, voluptatibus qui, quos rem eligendi temporibus culpa quaerat ducimus ipsa. </p>   </div>
+					<div class="col-md-4"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium facere vel dicta ab voluptate consequuntur. Suscipit, sequi minima nulla asperiores, voluptatibus qui, quos rem eligendi temporibus culpa quaerat ducimus ipsa.</p></div>
+					<div class="col-md-8"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium facere vel dicta ab voluptate consequuntur. Suscipit, sequi minima nulla asperiores, voluptatibus qui, quos rem eligendi temporibus culpa quaerat ducimus ipsa.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium facere vel dicta ab voluptate consequuntur. Suscipit, sequi minima nulla asperiores, voluptatibus qui, quos rem eligendi temporibus culpa quaerat ducimus ipsa.</p></div> 
+				</div> 
+				<div class="row row-button">
+					<div class="col-md-4">
+						<button class="black-btn">Подробнее</button></div>
+					<div class="col-md-4">
+						<button class="gold-btn">Подробнее</button> </div>
+					<div class="col-md-4 text-left"> 
+							<ul class="nav nav-tabs">
+							  <li class="active"><a data-toggle="tab" href="#1">Советы</a></li>
+							  <li><a data-toggle="tab" href="#2">Колекции</a></li> 
+							</ul> 			 
+							  <div class="input-group spinner ">
+						    <div class="input-group-btn-vertical">
+						      <button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
+						    </div>
+						    <input type="text" class="form-control spin-input" value="3" readonly />
+						    <div class="input-group-btn-vertical">
+						      <button class="btn btn-default" type="button"><i class="fa fa-minus"></i></button> 
+						  </div>
+						</div>
+						</div>		
+						</div>
+				<div class="row row-button">
+					<div class="col-md-4"><button class="trans-btn">Подробнее</button> </div>
+					<div class="col-md-4"><button class="gray-btn">Подробнее</button> </div>
+					<div class="col-md-4">
+							<ul class="blog-menu">
+							  <li class="active"><a href="">Советы</a></li>
+							  <li><a href="">Колекции</a></li> 
+							</ul> </div>
+				</div>
+				<div class="row high-row">
+					<div class="col-md-3">
+					<p>
+				    <input type="radio" id="test1" name="radio-group" checked>
+				    <label for="test1">Согласен на зачисление денежных средств на третье лицо.</label>
+				  </p></div>
+					<div class="col-md-3">
+				  <p>
+				    <input type="radio" id="test2" name="radio-group">
+				    <label for="test2">Согласен на зачисление денежных средств на третье лицо.</label>
+				  </p></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-5">
+				  		<label for="email1">Email:</label>
+				  	<div class="input-group"> 
+					    <input id="email1" type="text" class="form-control mail-allone-gray" name="email" placeholder="Введите Ваш Email">
+					  </div> </div>
+					<div class="col-sm-5">
+				  		<label for="email2">Email:</label>
+				  	<div class="input-group">
+					    <input id="email2" type="text" class="form-control mail-allone-gray" name="email" placeholder="Введите Ваш Email">
+					    <span class="input-group-addon"><i class="glyphicon glyphicon-triangle-bottom"></i></span>
+					  </div> 
+					</div>
+				</div>
+				<div class="row high-row"> 
+					<div class="col-sm-5">
+				  		<label for="email3">Email:</label>
+				  	<div class="input-group"> 
+					    <input id="email3" type="text" class="form-control" name="email" placeholder="Введите Ваш Email">
+					  </div> </div>
+				</div>
+				<div class="row high-row">
+					<div class="col-sm-3">
+						<ul class="nav nav-pills nav-stacked">
+						  <li class="active"><a href="#woomen-size"><img src="img/smiling-girl.png" alt="">Женские размеры</a></li>
+						  <li><a href="#men-size"><img src="img/boy-smiling.png" alt="">Мужские размеры</a></li>
+						  <li><a href="#children-size"><img src="img/baby1.png" alt="">Детские размеры</a></li>
+						  <li><a href="#shoes-size"><img src="img/runner.png" alt="">Размеры обуви</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-3">
+						<div class="panel-group user-bar" id="accordion"> 
+						  <div class="panel panel-default">
+						    <div class="panel-heading user-block"> 
+						    	<div class="user-pic">
+										<img src="img/user-pic.png" alt="">
+									</div>
+										<h4 class="user-name panel-title">Анастасия Петрова</h4>
+										<p>Розничный покупатель</p>
+						    </div> 
+						  </div>
+						  <div class="panel panel-default">
+						    <div class="panel-heading">
+						      <h4 class="panel-title">
+						        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+						        <span class="glyphicon glyphicon-menu-down"></span>Личные данные</a>
+						      </h4>
+						    </div>
+						    <div id="collapse1" class="panel-collapse collapse">
+						      <div class="panel-body">
+						      	<div class="list-group">
+										  <a href="#" class="list-group-item active">Кошелек UAH</a>
+										  <a href="#" class="list-group-item">Кошелек RUB</a>
+										  <a href="#" class="list-group-item">Кошелек USD</a>
+										  <a href="#" class="list-group-item">Бонусные деньги</a>
+										</div> </div>
+						    </div>
+						  </div>
+						  <div class="panel panel-default">
+						    <div class="panel-heading">
+						      <h4 class="panel-title">
+						        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+						        <span class="glyphicon glyphicon-menu-down"></span>Баланс</a>
+						      </h4>
+						    </div>
+						    <div id="collapse2" class="panel-collapse collapse in">
+						      <div class="panel-body">
+						      	<div class="list-group">
+										  <a href="#" class="list-group-item active">Кошелек UAH</a>
+										  <a href="#" class="list-group-item">Кошелек RUB</a>
+										  <a href="#" class="list-group-item">Кошелек USD</a>
+										  <a href="#" class="list-group-item">Бонусные деньги</a>
+										</div> 
+						      </div>
+						    </div>
+						  </div>
+						  <div class="panel panel-default">
+						    <div class="panel-heading">
+						      <h4 class="panel-title">
+						        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+						        <span class="glyphicon glyphicon-menu-down"></span>Мои заказы</a>
+						      </h4>
+						    </div>
+						    <div id="collapse3" class="panel-collapse collapse">
+						      <div class="panel-body">
+						      	<div class="list-group">
+										  <a href="#" class="list-group-item active">Кошелек UAH</a>
+										  <a href="#" class="list-group-item">Кошелек RUB</a>
+										  <a href="#" class="list-group-item">Кошелек USD</a>
+										  <a href="#" class="list-group-item">Бонусные деньги</a>
+										</div> </div>
+						    </div>
+						  </div>
+						  <div class="panel panel-default">
+						    <div class="panel-heading">
+						      <h4 class="panel-title">
+						        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+						        <span class="glyphicon glyphicon-menu-down"></span>Обновление товаров</a>
+						      </h4>
+						    </div>
+						    <div id="collapse4" class="panel-collapse collapse">
+						      <div class="panel-body">
+						      	<div class="list-group">
+										  <a href="#" class="list-group-item active">Кошелек UAH</a>
+										  <a href="#" class="list-group-item">Кошелек RUB</a>
+										  <a href="#" class="list-group-item">Кошелек USD</a>
+										  <a href="#" class="list-group-item">Бонусные деньги</a>
+										</div> </div>
+						    </div>
+						  </div>
+						  <div class="panel panel-default">
+						    <div class="panel-heading">
+						      <h4 class="panel-title">
+						        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+						        <span class="glyphicon glyphicon-menu-down"></span>Скачать</a>
+						      </h4>
+						    </div>
+						    <div id="collapse5" class="panel-collapse collapse">
+						      <div class="panel-body">
+						      	<div class="list-group">
+										  <a href="#" class="list-group-item active">Кошелек UAH</a>
+										  <a href="#" class="list-group-item">Кошелек RUB</a>
+										  <a href="#" class="list-group-item">Кошелек USD</a>
+										  <a href="#" class="list-group-item">Бонусные деньги</a>
+										</div> </div>
+						    </div>
+						  </div>
+						</div>
+					</div>
+					<div class="col-sm-5 col-sm-offset-1">
+						<div class="panel-group user-faq" id="accordion-faq">   
+						  <div class="panel panel-default">
+						    <div class="panel-heading">
+						      <h4 class="panel-title">
+						        <a data-toggle="collapse" data-parent="#accordion-faq" href="#collapse2-faq">
+						        <span class="glyphicon glyphicon-menu-down"></span>Баланс</a>
+						      </h4>
+						    </div>
+						    <div id="collapse2-faq" class="panel-collapse collapse in">
+						      <div class="panel-body">
+						      	<div class="list-group">
+										  <a href="#" class="list-group-item active">
+										  <span class="glyphicon glyphicon-menu-right"></span>Статус наличия товара на сайте  </a>
+										  <a href="#" class="list-group-item">
+										  	<span class="glyphicon glyphicon-menu-right"></span>Узнать, когда товар появится на сайте</a>
+										  <a href="#" class="list-group-item">
+										  	<span class="glyphicon glyphicon-menu-right"></span>Как оформить заказ на сайте?</a>
+										  <a href="#" class="list-group-item">
+										  	<span class="glyphicon glyphicon-menu-right"></span>Актуальный курс валют</a>
+										  <a href="#" class="list-group-item">
+										  	<span class="glyphicon glyphicon-menu-right"></span>Как изменить заказ на сайте</a>
+										  <a href="#" class="list-group-item">
+										  	<span class="glyphicon glyphicon-menu-right"></span>Сроки сборки заказа для Украины</a>
+										  <a href="#" class="list-group-item">
+										  	<span class="glyphicon glyphicon-menu-right"></span>Как оформить закаа по системе дропшипинг</a> 
+										</div> 
+						      </div>
+						    </div>
+						  </div>
+						  <div class="panel panel-default">
+						    <div class="panel-heading">
+						      <h4 class="panel-title">
+						        <a data-toggle="collapse" data-parent="#accordion-faq" href="#collapse3-faq">
+						        <span class="glyphicon glyphicon-menu-down"></span>Мои заказы</a>
+						      </h4>
+						    </div>
+						    <div id="collapse3-faq" class="panel-collapse collapse">
+						      <div class="panel-body">
+						      	<div class="list-group">
+										  <a href="#" class="list-group-item active">
+										  <span class="glyphicon glyphicon-menu-right"></span>Статус наличия товара на сайте  </a>
+										  <a href="#" class="list-group-item">
+										  	<span class="glyphicon glyphicon-menu-right"></span>Узнать, когда товар появится на сайте</a>
+										  <a href="#" class="list-group-item">
+										  	<span class="glyphicon glyphicon-menu-right"></span>Как оформить заказ на сайте?</a>
+										  <a href="#" class="list-group-item">
+										  	<span class="glyphicon glyphicon-menu-right"></span>Актуальный курс валют</a>
+										  <a href="#" class="list-group-item">
+										  	<span class="glyphicon glyphicon-menu-right"></span>Как изменить заказ на сайте</a>
+										  <a href="#" class="list-group-item">
+										  	<span class="glyphicon glyphicon-menu-right"></span>Сроки сборки заказа для Украины</a>
+										  <a href="#" class="list-group-item">
+										  	<span class="glyphicon glyphicon-menu-right"></span>Как оформить закаа по системе дропшипинг</a> 
+										</div></div>
+						    </div>
+						  </div>
+						  <div class="panel panel-default">
+						    <div class="panel-heading">
+						      <h4 class="panel-title">
+						        <a data-toggle="collapse" data-parent="#accordion-faq" href="#collapse4-faq">
+						        <span class="glyphicon glyphicon-menu-down"></span>Обновление товаров</a>
+						      </h4>
+						    </div>
+						    <div id="collapse4-faq" class="panel-collapse collapse">
+						      <div class="panel-body">
+						      	<div class="list-group">
+										  <a href="#" class="list-group-item active">
+										  <span class="glyphicon glyphicon-menu-right"></span>Статус наличия товара на сайте  </a>
+										  <a href="#" class="list-group-item">
+										  	<span class="glyphicon glyphicon-menu-right"></span>Узнать, когда товар появится на сайте</a>
+										  <a href="#" class="list-group-item">
+										  	<span class="glyphicon glyphicon-menu-right"></span>Как оформить заказ на сайте?</a>
+										  <a href="#" class="list-group-item">
+										  	<span class="glyphicon glyphicon-menu-right"></span>Актуальный курс валют</a>
+										  <a href="#" class="list-group-item">
+										  	<span class="glyphicon glyphicon-menu-right"></span>Как изменить заказ на сайте</a>
+										  <a href="#" class="list-group-item">
+										  	<span class="glyphicon glyphicon-menu-right"></span>Сроки сборки заказа для Украины</a>
+										  <a href="#" class="list-group-item">
+										  	<span class="glyphicon glyphicon-menu-right"></span>Как оформить закаа по системе дропшипинг</a> 
+										</div></div>
+						    </div>
+						  </div>
+						  <div class="panel panel-default">
+						    <div class="panel-heading">
+						      <h4 class="panel-title">
+						        <a data-toggle="collapse" data-parent="#accordion-faq" href="#collapse5-faq">
+						        <span class="glyphicon glyphicon-menu-down"></span>Скачать</a>
+						      </h4>
+						    </div>
+						    <div id="collapse5-faq" class="panel-collapse collapse">
+						      <div class="panel-body">
+						      	<div class="list-group">
+										  <a href="#" class="list-group-item active">
+										  <span class="glyphicon glyphicon-menu-right"></span>Статус наличия товара на сайте  </a>
+										  <a href="#" class="list-group-item">
+										  	<span class="glyphicon glyphicon-menu-right"></span>Узнать, когда товар появится на сайте</a>
+										  <a href="#" class="list-group-item">
+										  	<span class="glyphicon glyphicon-menu-right"></span>Как оформить заказ на сайте?</a>
+										  <a href="#" class="list-group-item">
+										  	<span class="glyphicon glyphicon-menu-right"></span>Актуальный курс валют</a>
+										  <a href="#" class="list-group-item">
+										  	<span class="glyphicon glyphicon-menu-right"></span>Как изменить заказ на сайте</a>
+										  <a href="#" class="list-group-item">
+										  	<span class="glyphicon glyphicon-menu-right"></span>Сроки сборки заказа для Украины</a>
+										  <a href="#" class="list-group-item">
+										  	<span class="glyphicon glyphicon-menu-right"></span>Как оформить закаа по системе дропшипинг</a> 
+										</div></div>
+						    </div>
+						  </div>
+						</div></div>
+				</div>
+				<div class="row">
+					<table class="table delivery">
+						<thead>
+							<tr>
+								<th>Компания</th>
+								<th data-breakpoints="xs">Официальный сайт</th>
+								<th data-breakpoints="xs">Время доставки</th>
+								<th data-breakpoints="xs">Стоимость доставки</th> 
+							</tr>
+						</thead>
+						<tbody>
+							<tr data-expanded="true">
+								<td><img src="img/curier.png" alt="">
+									<p>Курьер по Одессе</p></td>
+								<td>Нет</td>
+								<td>от 1-го дня</td>
+								<td>Бесплатно</td> 
+							</tr>
+							<tr>
+								<td><img src="img/nova-poshta-logo.png" alt="">
+									<p>Новая почта</p></td>
+								<td><a href="https://novaposhta.ua/ru" target="_blank">https://novaposhta.ua/ru</a></td>
+								<td>от 1-го дня</td>
+								<td>Бесплатно</td> 
+							</tr> 
+							<tr>
+								<td><img src="img/intaime-logo.png" alt="">
+									<p>Интайм</p></td>
+								<td><a href="http://www.intime.ua" target="_blank">http://www.intime.ua</a></td>
+								<td>от 1-го дня</td>
+								<td>Бесплатно</td> 
+							</tr> 
+						</tbody>
+					</table>
+				</div>	
+				<div class="row">
+					<table class="table sizers">
+						<thead>
+							<tr>
+								<th>-</th>
+								<th data-breakpoints="xs">Евро</th>
+								<th >Украина/Россия</th>
+								<th data-breakpoints="xs">Грудь</th> 
+								<th data-breakpoints="xs">Обхват бедер копия 11</th> 
+								<th data-breakpoints="xs">Обхват талии</th> 
+							</tr>
+						</thead>
+						<tbody>
+							<tr data-expanded="true">
+								<td>XS</td>
+								<td>34</td>
+								<td>40</td>
+								<td>85-88</td> 
+								<td>88-92</td> 
+								<td>68-72</td> 
+							</tr>
+							<tr>
+								<td>S</td>
+								<td>36</td>
+								<td>42</td>
+								<td>90-94</td> 
+								<td>92-96</td> 
+								<td>72-76</td> 
+							</tr>
+							<tr>
+								<td>S-M</td>
+								<td>-</td>
+								<td>-</td>
+								<td>94-98</td> 
+								<td>92-100</td> 
+								<td>72-80</td> 
+							</tr>
+							<tr>
+								<td>M</td>
+								<td>38</td>
+								<td>44</td>
+								<td>96-100</td> 
+								<td>96-102</td> 
+								<td>76-82</td> 
+							</tr>
+							<tr>
+								<td>M-L</td>
+								<td>-</td>
+								<td>-</td>
+								<td>96-102</td> 
+								<td>96-104</td> 
+								<td>77-84</td> 
+							</tr>
+							<tr>
+								<td>L</td>
+								<td>40</td>
+								<td>46</td>
+								<td>100-104</td> 
+								<td>100-104</td> 
+								<td>84-88</td> 
+							</tr>
+							<tr>
+								<td>XL</td>
+								<td>42</td>
+								<td>48</td>
+								<td>104-108</td> 
+								<td>104-108</td> 
+								<td>88-92</td> 
+							</tr>
+							<tr>
+								<td>2XL</td>
+								<td>44</td>
+								<td>50</td>
+								<td>108-112</td> 
+								<td>108-112</td> 
+								<td>92-96</td> 
+							</tr>
+							<tr>
+								<td>3XL</td>
+								<td>46</td>
+								<td>52</td>
+								<td>112-114</td> 
+								<td>112-116</td> 
+								<td>96-100</td> 
+							</tr>
+							<tr>
+								<td>5XL</td>
+								<td>-</td> 
+								<td>56</td>
+								<td>118-122</td>
+								<td>120-124</td> 
+								<td>104-108</td> 
+							</tr>
+							<tr>
+								<td>6XL</td>
+								<td>-</td>
+								<td>58</td>
+								<td>122-126</td> 
+								<td>124-128</td> 
+								<td>108-112</td> 
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="row">
+					<ul class="pagination">
+					  <li class="active"><a href="#">1</a></li>
+					  <li><a href="#">2</a></li>
+					  <li><a href="#">3</a></li>
+					  <li><a href="#">4</a></li>
+					  <li>...</li>
+					  <li><a href="#">9</a></li>
+					</ul>
+				</div>
+	</div>
+</section>
+
+<!-- footer-->
+<footer>
+	<div class="container-fluid">
+	<div class="row">
+		<div class="colums">
+		<h3>Наша Компания</h3>
+		<a href="" class="logo">Medini</a>
+		<p class="copyright">© 2018 “Medini” - Производство брендовой женской одежды. Все права защищены в соотвествии с законом Украины.</p>
+	</div>
+	<div class="colums">
+		<h3>ПОКУПАЙ С МОБИЛЬНОГО</h3>
+		<p>Установите наше мобильное приложение Medini и делайте покупки прямо с вашего мобильного телефона или планшета</p>
+		<p>
+		<a href="" class="addons"><img src="img/addons-pic.png" alt="">Приложение Medini для iOS и Android</a></p>
+	</div>
+	<div class="colums">
+		<h3>OFFICIAL STORE</h3>
+		<a href="tel:+380991744324" class="tel-num">+380 (99) 174-43-24</a>
+		<a href="tel:+380974965971" class="tel-num">+380 (97) 496-59-71</a>
+		<a href="tel:+380633523623" class="tel-num">+380 (63) 352-36-23</a>
+		<a href="tel:+380661620861" class="tel-num">+380 (66) 162-08-61 <span>(viber, whatsapp)</span></a>
+		<a href="mailto:medinioroginal@yahoo.com" class="mail-link">medinioroginal@yahoo.com</a>
+	</div>
+	<div class="colums">
+		<h3>ПОДПИСКА НА РАССЫЛКУ</h3>
+		<p>Установи наше приложение и делай покупки</p>
+		<form  >
+			<input type="text" class="form-control" name="your-mail" placeholder="Введите ваш Email">
+			<button class="gray-btn" type="submit">Подписаться</button>
+		</form>
+	</div>
+	<div class="colums">
+		<h3>МЫ В СОЦИАЛЬНЫХ СЕТЯХ</h3>
+		<p class="soc-icons"><a href=""><i class="fab fa-vk"></i></a>
+		<a href=""><i class="fab fa-facebook-f"></i></a>
+	<a href=""><i class="fab fa-instagram"></i></a>
+<a href=""><i class="fab fa-odnoklassniki"></i></a>
+<a href=""><i class="google-plus"></i></a></p>
+<p>Используйте мобильную версию сайта</p>
+<button class="mobile-version">Мобильная версия</button>		
+	</div></div>
+</div>
+</footer>
+	<script  src="https://code.jquery.com/jquery-1.12.4.min.js"  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="  crossorigin="anonymous"></script>  
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/slick.js" ></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/3.1.6/footable.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/3.1.6/footable.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery.equalheights@1.5.3/jquery.equalheights.min.js"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Medini</title>  
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="description" content=" " />
+	<meta name="keywords"  content=" " />
+	<meta name="Resource-type" content="Document" />
+	<link rel="icon" type="image/png" sizes="64x64" href="img/favico.png">
+	<meta property="og:title" content=" " /> 
+	<meta property="og:url" content="" />
+	<meta property="og:image" content="img/ogg.jpg" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+  <link rel="stylesheet" type="text/css" href="css/slick.css">
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/3.1.6/footable.bootstrap.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/3.1.6/footable.bootstrap.min.css"> 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+<body class="cart-page">
+<header>
+<div class="row-info">
+        <button type="button" class="close"><img src="img/close.png" alt=""></button>
+        <div class="container">
+        	<div class="row">
+        		<div class="col-sm-3"><a href="delivery.html"><img src="img/delivery-truck.svg" alt="">Бесплатная доставка по Украине</a></div>
+        		<div class="col-sm-3"><a href=""><img src="img/refresh.svg" alt="">Возврат товара в течение 14 дней</a></div>
+        		<div class="col-sm-3"><a href="response.html"><img src="img/best-seller.svg" alt="">7 лет на рынке / отзывы</a></div>
+        		<div class="col-sm-3"><a href=""><img src="img/star.svg" alt="">Celebrity в одежде Medini</a></div>
+        	</div>
+        </div>
+</div>
+	<div class="container-fluid navs"> 
+<nav class="navbar navbar-default navbar-static">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".js-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+		<a href="front-page.html" class="logo">Medini</a>
+    </div>
+    <div class="collapse navbar-collapse js-navbar">
+    	<div class="mobile-menu-row"></div>
+      <ul class="nav navbar-nav hiden-menu">
+        <li class="dropdown" onclick="javascript:location.href='catalog.html'"  ><a id="drop1" href="catalog.html" class="dropdown-toggle" data-toggle="dropdown">Коллекции</a>
+          <div class="dropdown-menu full-menu container-fluid">
+          	<div class="container">
+          		<div class="row">
+          	<div class="col-sm-3">
+          	<ul> 
+	            <li class="active"><a href="" class="menu" id="menu1">Medini</a></li>
+	            <li><a href="" class="menu" id="menu2">Favoritti</a></li> 
+	            <li><a href="" class="menu" id="menu3">Exclusive</a></li> 
+	            <li><a href="" class="menu" id="menu4">Vision</a></li>
+	            <li><a href="" class="menu" id="menu5">Arani</a></li>
+	            <li><a href="" class="menu" id="menu6">Ожидается</a></li>
+          	</ul>
+          </div>
+          	<div class="col-sm-3">
+          	<ul> 
+	            <li><a href="" class="menu" id="menu7">Космические скидки <span class="red">-50% -33%</span></a></li>
+	            <li><a href="" class="menu" id="menu8">Деловой стиль</a></li> 
+	            <li class="active"><a href="" class="menu" id="menu9">Стильный спорт</a></li> 
+	            <li><a href="" class="menu" id="menu10">Платья на каждый день</a></li>
+	            <li><a href="" class="menu" id="menu11">Выпускной вечер 2018</a></li>
+	            <li><a href="" class="menu" id="menu12">Новинки</a></li> 
+	            <li><a href="" class="menu" id="menu13">Звёздные коллекции</a></li> 
+	            <li><a href="" class="menu" id="menu14">ТОП продаж</a></li>
+          	</ul>
+          </div>
+          	<div class="col-sm-3">
+          	<ul>  
+	            <li class="active"><a href="" class="menu" id="menu15">Верхняя одежда</a></li>
+	            <li><a href="" class="menu" id="menu16">Платья</a></li> 
+	            <li><a href="" class="menu" id="menu17">Костюмы и комплекты</a></li> 
+	            <li><a href="" class="menu" id="menu18">Комбинезоны</a></li>
+	            <li><a href="" class="menu" id="menu19">Юбки</a></li> 
+	            <li><a href="" class="menu" id="menu20">Спортивные костюмы</a></li> 
+	            <li><a href="" class="menu" id="menu21">Купальники, пляжные туники</a></li>
+          	</ul>
+          </div>
+          	<div class="col-sm-3 img_menu_hover" id="img-menu-block" > 
+				<img src="img/menu_pic/1.png" id="img" alt="" />
+          	</div>
+          </div>
+          	</div>
+          </div>
+        </li>
+        <li class="dropdown" onclick="javascript:location.href='page-about-us.html'" >
+          <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Компания 
+          </a>
+         
+          <div class="dropdown-menu full-menu container-fluid">
+          	<div class="container">
+          		<div class="row">
+          	<div class="col-sm-3"> 
+          	<ul>
+	            <li class="active"><a href="page-about-us.html">О нас</a></li>
+	            <li><a href="destribution.html">Дистрибюторы</a></li> 
+	            <li><a href="shops.html">Магазины</a></li> 
+	            <li><a href="gallery.html">Look Book</a></li>
+	            <li><a href="">Видео</a></li>
+	            <li><a href="response.html">Отзывы</a></li>
+          	</ul>
+          </div>
+          	<div class="col-sm-9"><img src="img/menu-company-pic.png" alt="" class="img-responsive"></div>
+          </div>
+          	</div>
+          </div>
+        </li>
+        <li class="dropdown" onclick="javascript:location.href='faq.html'">
+          <a id="drop3" href="faq.html" class="dropdown-toggle" data-toggle="dropdown">
+            Помощь
+          </a>
+         
+          <div class="dropdown-menu full-menu container-fluid">
+          	<div class="container">
+          		<div class="row">
+          	<div class="col-sm-2">
+          	<ul> 
+	            <li class="active"><a href="payment.html">Оплата</a></li>
+	            <li><a href="delivery.html">Доставка</a></li> 
+	            <li><a href="sizes.html">Выбрать размер</a></li> 
+	            <li><a href="faq.html">Частые вопросы</a></li>
+	            <li><a href="download.html">Скачать</a></li>
+	            <li><a href="contacts.html">Контакты</a></li>
+          	</ul>
+          </div>
+          	<div class="col-sm-4"><img src="img/menu-help-pic.png" alt="" title="" class="img-responsive"></div>
+          	<div class="col-sm-3 "><h4><strong>Телефоны:</strong></h4>
+          		<a href="tel:+380991744324">+380 (99) 174-43-24</a>
+							<a href="tel:+380974965971">+380 (97) 496-59-71</a>
+							<a href="tel:+380633523623">+380 (63) 352-36-23</a>
+							<a href="tel:+380661620861">+380 (66) 162-08-61 <span>(viber, whatsapp)</span></a>
+							<h4><strong>Email:</strong></h4>
+							<a href="mailto:medinioroginal@yahoo.com">medinioroginal@yahoo.com</a> 
+							<h4><strong>Skype</strong></h4>
+							<a href="mailto:medinioroginal@yahoo.com">medinioroginal@yahoo.com</a> 
+						</div>
+          	<div class="col-sm-3">
+          		<h3><strong>Обратная связь</strong></h3>
+          		<form>
+          			<input name="name" type="text" placeholder="Введите Ваше Имя">
+          			<input name="mail" type="text" placeholder="Введите Ваш Email">
+          			<textarea name="text" cols="30" rows="3" placeholder="Введите сообщение"></textarea>
+          			<button>Отправить</button>
+          		</form>
+          	</div></div>
+          	</div>
+          </div>
+        </li>
+        <li><a href="blog.html">Блог</a></li>
+		<li><a href="contacts.html">Контакты</a></li>
+		<li>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown user-menu">
+          <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown"> 
+					<div class="humb">
+					<span class="lines"></span>
+					<span class="lines"></span>
+					<span class="lines"></span></div>
+          </a>
+          <ul class="dropdown-menu profile-menu"> 
+						<li><a href="profile-edit.html">Личные данные</a></li>
+						<li><a href="profile-payment.html">Баланс</a></li>
+						<li><a href="profile.html">Мои заказы</a></li>
+						<li><a href="download.html">Скачать</a></li>
+						<li><a href="#">Выйти</a></li>
+          </ul>
+        </li>
+        <li>
+			<div class="user-block"> 
+				<div class="login"><a href="login.html">Войти</a>
+			</div>
+			</div>
+		</li>
+        <li>
+	      <ul class="nav navbar-nav search">
+	        <li class="dropdown">
+	          <a id="drop5" href="#" class="dropdown-toggle" data-toggle="dropdown">  
+						<div class="search-ico"></div> 
+	          </a>
+	          <ul class="dropdown-menu"> 
+	          	<li>
+							<form class="search-head" method="post">
+								<input type="text" name="search_product" class="sb-search-input-js h-search-input" placeholder="Поиск" autocomplete="off" autofocus="">
+								<button type="submit" value="" class="sb-search-submit sb-search-submit-js trans-btn">Найти</button>
+							</form>
+							</li>
+	          </ul>
+	        </li>
+	      </ul> 
+	    </li>
+        <li>
+	      <ul class="nav navbar-nav favorite">
+	        <li class="dropdown">
+	          <a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown">  
+	            <div class="counter">0</div>
+	            <div class="heart"></div>
+	          </a>
+	         </li>
+	       </ul> 
+	    </li> 
+	    <li>
+		      <ul class="nav navbar-nav ship-cart">
+		        <li class="dropdown">
+		          <a id="drop7" href="#" class="dropdown-toggle" data-toggle="dropdown">  
+		                <div class="counter">0</div>
+		                <div class="bag-ico"></div> 
+		          </a>
+		          <div class="dropdown-menu"> 
+		          	<h2>Ваша корзина</h2>
+		          	<ul class="ship-cart-list"> 
+						<li class="row">
+						<div class="col-sm-3 col-xs-12">
+						<a href="#"><img src="img/cart-thumb-1.png" alt=""></a></div>
+						<div class="col-sm-6 col-xs-6">
+						<div class="product-info"><h4><a href="#">Платье "Мальвина" В2</a></h4>
+						<div class="input-group spinner ">
+						<div class="input-group-btn-vertical">
+						<button class="btn btn-default" type="button"><i class="fa fa-minus"></i></button> 
+						</div>
+						<input type="text" class="form-control spin-input" value="3" readonly />
+						<div class="input-group-btn-vertical">
+						<button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
+						</div>
+						</div>
+						<p class="count-cell">шт х 750 грн</p>
+						<p class="size-cell"><strong>Размер: М</strong></p>
+						</div>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+						<div class="remove-product col-xs-12 text-right"><a href=""><i class="fas fa-times"></i></a></div>
+						<div class="price col-xs-12 text-right"><strong>750грн</strong></div>
+						</div>
+						</li>
+						<li class="row">
+						<div class="col-sm-3 col-xs-12">
+						<a href="#"><img src="img/cart-thumb-1.png" alt=""></a></div>
+						<div class="col-sm-6 col-xs-6">
+						<div class="product-info"><h4><a href="#">Платье "Мальвина" В2</a></h4>
+						<div class="input-group spinner ">
+						<div class="input-group-btn-vertical">
+						<button class="btn btn-default" type="button"><i class="fa fa-minus"></i></button> 
+						</div>
+						<input type="text" class="form-control spin-input" value="3" readonly />
+						<div class="input-group-btn-vertical">
+						<button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
+						</div>
+						</div>
+						<p class="count-cell">шт х 750 грн</p>
+						<p class="size-cell"><strong>Размер: М</strong></p>
+						</div>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+						<div class="remove-product col-xs-12 text-right"><a href=""><i class="fas fa-times"></i></a></div>
+						<div class="price col-xs-12 text-right"><strong>750грн</strong></div>
+						</div>
+						</li>
+						<li class="row">
+						<div class="col-sm-3 col-xs-12">
+						<a href="#"><img src="img/cart-thumb-1.png" alt=""></a></div>
+						<div class="col-sm-6 col-xs-6">
+						<div class="product-info"><h4><a href="#">Платье "Мальвина" В2</a></h4>
+						<div class="input-group spinner ">
+						<div class="input-group-btn-vertical">
+						<button class="btn btn-default" type="button"><i class="fa fa-minus"></i></button> 
+						</div>
+						<input type="text" class="form-control spin-input" value="3" readonly />
+						<div class="input-group-btn-vertical">
+						<button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
+						</div>
+						</div>
+						<p class="count-cell">шт х 750 грн</p>
+						<p class="size-cell"><strong>Размер: М</strong></p>
+						</div>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+						<div class="remove-product col-xs-12 text-right"><a href=""><i class="fas fa-times"></i></a></div>
+						<div class="price col-xs-12 text-right"><strong>750грн</strong></div>
+						</div>
+						</li>
+						<li class="row">
+						<div class="col-sm-3 col-xs-12">
+						<a href="#"><img src="img/cart-thumb-1.png" alt=""></a></div>
+						<div class="col-sm-6 col-xs-6">
+						<div class="product-info"><h4><a href="#">Платье "Мальвина" В2</a></h4>
+						<div class="input-group spinner ">
+						<div class="input-group-btn-vertical">
+						<button class="btn btn-default" type="button"><i class="fa fa-minus"></i></button> 
+						</div>
+						<input type="text" class="form-control spin-input" value="3" readonly />
+						<div class="input-group-btn-vertical">
+						<button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
+						</div>
+						</div>
+						<p class="count-cell">шт х 750 грн</p>
+						<p class="size-cell"><strong>Размер: М</strong></p>
+						</div>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+						<div class="remove-product col-xs-12 text-right"><a href=""><i class="fas fa-times"></i></a></div>
+						<div class="price col-xs-12 text-right"><strong>750грн</strong></div>
+						</div>
+						</li>						 
+		          </ul>
+			<div class="row button-row">
+			<span class="col-xs-12 col-sm-6 text-center"><button class="black-btn">Оформить заказ</button></span>
+			<span class="col-xs-12 col-sm-6 text-center"><strong>Цена: 750грн</strong></span>
+				</div></div>
+         </li>
+       </ul>
+	  </li>
+	  <li>
+      <ul class="nav navbar-nav curense">
+        <li class="dropdown">
+          <a id="drop8" href="#" class="dropdown-toggle" data-toggle="dropdown"> 
+						UAH
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu"> 
+						<li><a href="#">USD</a></li>
+						<li><a href="#">RUB</a></li>
+						<li><a href="#">EUR</a></li> 
+          </ul>
+	    </li>
+      </ul>
+	  </li> 
+      </ul>
+      </li>
+      </ul>
+    </div>
+  </div>
+</nav>  
+	</div>
+</header>
+<section class="content">
+	<!-- Ovrlay  menu -->
+	<div id="page-overlay" class="page-overlay"></div>
+		<div class="container head-row">
+		<!--breadcrumbs-->
+		<div class="row breadcrumbs text-center"> 
+				<span class="grey"><a href="front-page.html">Medini</a> / <a href="cart.html">Корзина</a></span>  
+		</div>
+		<!-- Page title row-->
+			<div class="row">
+				<h1 class="head-title"><span>Корзина</span></h1>
+				<p class="head-title-under"><span>Medini</span></p>
+			</div>
+		</div> 
+		<!-- Content Body -->
+		<div class="container main-body">
+			<div class="col-md-6">
+				<h2>Ваш заказ</h2>
+				<ul class="ship-cart-list">
+				<li class="row"> 
+							<div class="col-sm-3 col-xs-12 text-center">
+							<img src="img/cart-thumb-1.png" alt=""></div>
+							<div class="col-sm-6 col-xs-6">
+							<div class="product-info"><h4>Платье "Мальвина" В2</h4> 
+							  <div class="input-group spinner ">
+						    <div class="input-group-btn-vertical">
+						      <button class="btn btn-default" type="button"><i class="fa fa-minus"></i></button> 
+						    </div>
+						    <input type="text" class="form-control spin-input" value="3" readonly />
+						    <div class="input-group-btn-vertical">
+						      <button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
+						  </div>
+						</div>
+						<p class="count-cell">шт х 750 грн</p>
+						<p class="size-cell"><strong>Размер: М</strong></p></div> 
+						</div> 
+						<div class="col-sm-3 col-xs-6">
+						<div class="remove-product col-xs-12 text-right"> <i class="fas fa-times"></i></div>
+						<div class="price col-xs-12 text-right"><strong>750грн</strong></div>
+						</div> 
+				</li> 
+				
+				<li class="row"> 
+							<div class="col-sm-3 col-xs-12 text-center">
+							<img src="img/cart-thumb-1.png" alt=""></div>
+							<div class="col-sm-6 col-xs-6">
+							<div class="product-info"><h4>Платье "Мальвина" В2</h4> 
+							  <div class="input-group spinner ">
+						    <div class="input-group-btn-vertical">
+						      <button class="btn btn-default" type="button"><i class="fa fa-minus"></i></button> 
+						    </div>
+						    <input type="text" class="form-control spin-input" value="3" readonly />
+						    <div class="input-group-btn-vertical">
+						      <button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
+						  </div>
+						</div>
+						<p class="count-cell">шт х 750 грн</p>
+						<p class="size-cell"><strong>Размер: М</strong></p></div> 
+						</div> 
+						<div class="col-sm-3 col-xs-6">
+						<div class="remove-product col-xs-12 text-right"> <i class="fas fa-times"></i></div>
+						<div class="price col-xs-12 text-right"><strong>750грн</strong></div>
+						</div> 
+				</li> 
+				<li class="row"> 
+							<div class="col-sm-3 col-xs-12 text-center">
+							<img src="img/cart-thumb-1.png" alt=""></div>
+							<div class="col-sm-6 col-xs-6">
+							<div class="product-info"><h4>Платье "Мальвина" В2</h4> 
+							  <div class="input-group spinner ">
+						    <div class="input-group-btn-vertical">
+						      <button class="btn btn-default" type="button"><i class="fa fa-minus"></i></button> 
+						    </div>
+						    <input type="text" class="form-control spin-input" value="3" readonly />
+						    <div class="input-group-btn-vertical">
+						      <button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
+						  </div>
+						</div>
+						<p class="count-cell">шт х 750 грн</p>
+						<p class="size-cell"><strong>Размер: М</strong></p></div> 
+						</div> 
+						<div class="col-sm-3 col-xs-6">
+						<div class="remove-product col-xs-12 text-right"> <i class="fas fa-times"></i></div>
+						<div class="price col-xs-12 text-right"><strong>750грн</strong></div>
+						</div> 
+				</li> 
+				<li class="row"> 
+							<div class="col-sm-3 col-xs-12 text-center">
+							<img src="img/cart-thumb-1.png" alt=""></div>
+							<div class="col-sm-6 col-xs-6">
+							<div class="product-info"><h4>Платье "Мальвина" В2</h4> 
+							  <div class="input-group spinner ">
+						    <div class="input-group-btn-vertical">
+						      <button class="btn btn-default" type="button"><i class="fa fa-minus"></i></button> 
+						    </div>
+						    <input type="text" class="form-control spin-input" value="3" readonly />
+						    <div class="input-group-btn-vertical">
+						      <button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
+						  </div>
+						</div>
+						<p class="count-cell">шт х 750 грн</p>
+						<p class="size-cell"><strong>Размер: М</strong></p></div> 
+						</div> 
+						<div class="col-sm-3 col-xs-6">
+						<div class="remove-product col-xs-12 text-right"> <i class="fas fa-times"></i></div>
+						<div class="price col-xs-12 text-right"><strong>750грн</strong></div>
+						</div> 
+				</li> 
+			</ul>
+			<p class="text-right">4 товара на сумму:</p>
+			<p class="text-right"><strong>Цена:    3000 грн</strong></p>
+			</div>
+			<div class="col-md-6">
+				<h2>Шаг 1. Данные получателя</h2> 
+			<div class="form-enter">
+				<ul class="nav nav-tabs"> 
+				  <li class="active col-sm-6"><a data-toggle="tab" href="#login">Вход</a></li>
+				  <li class=" col-sm-6"><a data-toggle="tab" href="#register">Регистрация</a></li>
+				</ul>
+				<div class="tab-content"> 
+				  <div id="login" class="tab-pane fade in active">
+				  	<h3>Регистрационные данные:</h3>
+				    <form class="login">
+				  		<label for="email">Email:</label>
+				  	<div class="input-group"> 
+					    <input id="email" type="text" class="form-control" name="email" placeholder="Введите Ваш Email"></div>
+				  		<p><label for="pass">Пароль:</label><a href="" class="forgot-pass">Забыли пароль?</a></p>
+				  	<div class="input-group"> 
+					    <input id="pass" type="text" class="form-control" name="pass" placeholder="Введите Ваш Пароль"></div> 
+				    <p class="align-center">
+						<button class="trans-btn">Продолжить покупки</button><button class="black-btn">Войти</button></p>
+					  </form>
+				  </div>
+				  <div id="register" class="tab-pane fade">
+				  	<h3>Регистрационные данные:</h3>
+				    <form class="register">
+				  		<label for="name">Ваше Имя:</label>
+				  	<div class="input-group"> 
+					    <input id="name" type="text" class="form-control" name="name" placeholder="Введите Ваше Имя"></div>
+				  		<label for="email1">Email:</label>
+				  	<div class="input-group"> 
+					    <input id="email1" type="text" class="form-control" name="email" placeholder="Введите Ваш Email"></div>
+				  		<label for="country">Страна:</label>
+				  	<div class="input-group"><div id="mainselection">
+					  <select name="country" id="country" >
+					    <option value="AX">AALAND ISLANDS</option>
+						<option value="AF">AFGHANISTAN</option>
+						<option value="AL">ALBANIA</option>
+						<option value="DZ">ALGERIA</option>
+						<option value="AS">AMERICAN SAMOA</option>
+						<option value="AD">ANDORRA</option>
+						<option value="AO">ANGOLA</option>
+						<option value="AI">ANGUILLA</option>
+						<option value="AQ">ANTARCTICA</option>
+						<option value="AG">ANTIGUA AND BARBUDA</option>
+						<option value="AR">ARGENTINA</option>
+						<option value="AM">ARMENIA</option>
+						<option value="AW">ARUBA</option>
+						<option value="AU">AUSTRALIA</option>
+						<option value="AT">AUSTRIA</option>
+						<option value="AZ">AZERBAIJAN</option>
+						<option value="BS">BAHAMAS</option>
+						<option value="BH">BAHRAIN</option>
+						<option value="BD">BANGLADESH</option>
+						<option value="BB">BARBADOS</option>
+						<option value="BY">BELARUS</option>
+						<option value="BE">BELGIUM</option>
+						<option value="BZ">BELIZE</option>
+						<option value="BJ">BENIN</option>
+						<option value="BM">BERMUDA</option>
+						<option value="BT">BHUTAN</option>
+						<option value="BO">BOLIVIA</option>
+						<option value="BA">BOSNIA AND HERZEGOWINA</option>
+						<option value="BW">BOTSWANA</option>
+						<option value="BV">BOUVET ISLAND</option>
+						<option value="BR">BRAZIL</option>
+						<option value="IO">BRITISH INDIAN OCEAN TERRITORY</option>
+						<option value="BN">BRUNEI DARUSSALAM</option>
+						<option value="BG">BULGARIA</option>
+						<option value="BF">BURKINA FASO</option>
+						<option value="BI">BURUNDI</option>
+						<option value="KH">CAMBODIA</option>
+						<option value="CM">CAMEROON</option>
+						<option value="CA">CANADA</option>
+						<option value="CV">CAPE VERDE</option>
+						<option value="KY">CAYMAN ISLANDS</option>
+						<option value="CF">CENTRAL AFRICAN REPUBLIC</option>
+						<option value="TD">CHAD</option>
+						<option value="CL">CHILE</option>
+						<option value="CN">CHINA</option>
+						<option value="CX">CHRISTMAS ISLAND</option>
+						<option value="CO">COLOMBIA</option>
+						<option value="KM">COMOROS</option>
+						<option value="CK">COOK ISLANDS</option>
+						<option value="CR">COSTA RICA</option>
+						<option value="CI">COTE D'IVOIRE</option>
+						<option value="CU">CUBA</option>
+						<option value="CY">CYPRUS</option>
+						<option value="CZ">CZECH REPUBLIC</option>
+						<option value="DK">DENMARK</option>
+						<option value="DJ">DJIBOUTI</option>
+						<option value="DM">DOMINICA</option>
+						<option value="DO">DOMINICAN REPUBLIC</option>
+						<option value="EC">ECUADOR</option>
+						<option value="EG">EGYPT</option>
+						<option value="SV">EL SALVADOR</option>
+						<option value="GQ">EQUATORIAL GUINEA</option>
+						<option value="ER">ERITREA</option>
+						<option value="EE">ESTONIA</option>
+						<option value="ET">ETHIOPIA</option>
+						<option value="FO">FAROE ISLANDS</option>
+						<option value="FJ">FIJI</option>
+						<option value="FI">FINLAND</option>
+						<option value="FR">FRANCE</option>
+						<option value="GF">FRENCH GUIANA</option>
+						<option value="PF">FRENCH POLYNESIA</option>
+						<option value="TF">FRENCH SOUTHERN TERRITORIES</option>
+						<option value="GA">GABON</option>
+						<option value="GM">GAMBIA</option>
+						<option value="GE">GEORGIA</option>
+						<option value="DE">GERMANY</option>
+						<option value="GH">GHANA</option>
+						<option value="GI">GIBRALTAR</option>
+						<option value="GR">GREECE</option>
+						<option value="GL">GREENLAND</option>
+						<option value="GD">GRENADA</option>
+						<option value="GP">GUADELOUPE</option>
+						<option value="GU">GUAM</option>
+						<option value="GT">GUATEMALA</option>
+						<option value="GN">GUINEA</option>
+						<option value="GW">GUINEA-BISSAU</option>
+						<option value="GY">GUYANA</option>
+						<option value="HT">HAITI</option>
+						<option value="HM">HEARD AND MC DONALD ISLANDS</option>
+						<option value="HN">HONDURAS</option>
+						<option value="HK">HONG KONG</option>
+						<option value="HU">HUNGARY</option>
+						<option value="IS">ICELAND</option>
+						<option value="IN">INDIA</option>
+						<option value="ID">INDONESIA</option>
+						<option value="IQ">IRAQ</option>
+						<option value="IE">IRELAND</option>
+						<option value="IL">ISRAEL</option>
+						<option value="IT">ITALY</option>
+						<option value="JM">JAMAICA</option>
+						<option value="JP">JAPAN</option>
+						<option value="JO">JORDAN</option>
+						<option value="KZ">KAZAKHSTAN</option>
+						<option value="KE">KENYA</option>
+						<option value="KI">KIRIBATI</option>
+						<option value="KW">KUWAIT</option>
+						<option value="KG">KYRGYZSTAN</option>
+						<option value="LA">LAO PEOPLE'S DEMOCRATIC REPUBLIC</option>
+						<option value="LV">LATVIA</option>
+						<option value="LB">LEBANON</option>
+						<option value="LS">LESOTHO</option>
+						<option value="LR">LIBERIA</option>
+						<option value="LY">LIBYAN ARAB JAMAHIRIYA</option>
+						<option value="LI">LIECHTENSTEIN</option>
+						<option value="LT">LITHUANIA</option>
+						<option value="LU">LUXEMBOURG</option>
+						<option value="MO">MACAU</option>
+						<option value="MG">MADAGASCAR</option>
+						<option value="MW">MALAWI</option>
+						<option value="MY">MALAYSIA</option>
+						<option value="MV">MALDIVES</option>
+						<option value="ML">MALI</option>
+						<option value="MT">MALTA</option>
+						<option value="MH">MARSHALL ISLANDS</option>
+						<option value="MQ">MARTINIQUE</option>
+						<option value="MR">MAURITANIA</option>
+						<option value="MU">MAURITIUS</option>
+						<option value="YT">MAYOTTE</option>
+						<option value="MX">MEXICO</option>
+						<option value="MC">MONACO</option>
+						<option value="MN">MONGOLIA</option>
+						<option value="MS">MONTSERRAT</option>
+						<option value="MA">MOROCCO</option>
+						<option value="MZ">MOZAMBIQUE</option>
+						<option value="MM">MYANMAR</option>
+						<option value="NA">NAMIBIA</option>
+						<option value="NR">NAURU</option>
+						<option value="NP">NEPAL</option>
+						<option value="NL">NETHERLANDS</option>
+						<option value="AN">NETHERLANDS ANTILLES</option>
+						<option value="NC">NEW CALEDONIA</option>
+						<option value="NZ">NEW ZEALAND</option>
+						<option value="NI">NICARAGUA</option>
+						<option value="NE">NIGER</option>
+						<option value="NG">NIGERIA</option>
+						<option value="NU">NIUE</option>
+						<option value="NF">NORFOLK ISLAND</option>
+						<option value="MP">NORTHERN MARIANA ISLANDS</option>
+						<option value="NO">NORWAY</option>
+						<option value="OM">OMAN</option>
+						<option value="PK">PAKISTAN</option>
+						<option value="PW">PALAU</option>
+						<option value="PA">PANAMA</option>
+						<option value="PG">PAPUA NEW GUINEA</option>
+						<option value="PY">PARAGUAY</option>
+						<option value="PE">PERU</option>
+						<option value="PH">PHILIPPINES</option>
+						<option value="PN">PITCAIRN</option>
+						<option value="PL">POLAND</option>
+						<option value="PT">PORTUGAL</option>
+						<option value="PR">PUERTO RICO</option>
+						<option value="QA">QATAR</option>
+						<option value="RE">REUNION</option>
+						<option value="RO">ROMANIA</option>
+						<option selected value="RU">RUSSIAN FEDERATION</option>
+						<option value="RW">RWANDA</option>
+						<option value="SH">SAINT HELENA</option>
+						<option value="KN">SAINT KITTS AND NEVIS</option>
+						<option value="LC">SAINT LUCIA</option>
+						<option value="PM">SAINT PIERRE AND MIQUELON</option>
+						<option value="VC">SAINT VINCENT AND THE GRENADINES</option>
+						<option value="WS">SAMOA</option>
+						<option value="SM">SAN MARINO</option>
+						<option value="ST">SAO TOME AND PRINCIPE</option>
+						<option value="SA">SAUDI ARABIA</option>
+						<option value="SN">SENEGAL</option>
+						<option value="CS">SERBIA AND MONTENEGRO</option>
+						<option value="SC">SEYCHELLES</option>
+						<option value="SL">SIERRA LEONE</option>
+						<option value="SG">SINGAPORE</option>
+						<option value="SK">SLOVAKIA</option>
+						<option value="SI">SLOVENIA</option>
+						<option value="SB">SOLOMON ISLANDS</option>
+						<option value="SO">SOMALIA</option>
+						<option value="ZA">SOUTH AFRICA</option>
+						<option value="GS">SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS</option>
+						<option value="ES">SPAIN</option>
+						<option value="LK">SRI LANKA</option>
+						<option value="SD">SUDAN</option>
+						<option value="SR">SURINAME</option>
+						<option value="SJ">SVALBARD AND JAN MAYEN ISLANDS</option>
+						<option value="SZ">SWAZILAND</option>
+						<option value="SE">SWEDEN</option>
+						<option value="CH">SWITZERLAND</option>
+						<option value="SY">SYRIAN ARAB REPUBLIC</option>
+						<option value="TW">TAIWAN</option>
+						<option value="TJ">TAJIKISTAN</option>
+						<option value="TH">THAILAND</option>
+						<option value="TL">TIMOR-LESTE</option>
+						<option value="TG">TOGO</option>
+						<option value="TK">TOKELAU</option>
+						<option value="TO">TONGA</option>
+						<option value="TT">TRINIDAD AND TOBAGO</option>
+						<option value="TN">TUNISIA</option>
+						<option value="TR">TURKEY</option>
+						<option value="TM">TURKMENISTAN</option>
+						<option value="TC">TURKS AND CAICOS ISLANDS</option>
+						<option value="TV">TUVALU</option>
+						<option value="UG">UGANDA</option>
+						<option value="UA">UKRAINE</option>
+						<option value="AE">UNITED ARAB EMIRATES</option>
+						<option value="GB">UNITED KINGDOM</option>
+						<option value="US">UNITED STATES</option>
+						<option value="UM">UNITED STATES MINOR OUTLYING ISLANDS</option>
+						<option value="UY">URUGUAY</option>
+						<option value="UZ">UZBEKISTAN</option>
+						<option value="VU">VANUATU</option>
+						<option value="VE">VENEZUELA</option>
+						<option value="VN">VIET NAM</option>
+						<option value="WF">WALLIS AND FUTUNA ISLANDS</option>
+						<option value="EH">WESTERN SAHARA</option>
+						<option value="YE">YEMEN</option>
+						<option value="ZM">ZAMBIA</option>
+						<option value="ZW">ZIMBABWE</option>
+					  </select>
+					</div></div>
+				  		<p><label for="pass1">Пароль:</label><a href="" class="forgot-pass">Забыли пароль?</a></p>
+				  	<div class="input-group"> 
+					    <input id="pass1" type="text" class="form-control" name="pass1" placeholder="Введите Ваш Пароль"></div>
+				    <input type="radio" id="user1" name="radio-group" >
+				    <label for="user1">Я оптовый покупатель</label>
+				    <input type="radio" id="user2" name="radio-group" >
+				    <label for="user2">Я розничный покупатель</label>
+					<p class="red">Если вы выбираете опт то вы больше не сможете покупать менее 5 товаров</p>
+						<button class="black-btn">Зарегистрироватся</button>
+					<p class="iflogin">Уже есть аккаунт? Тогда <a href="" class="col-blue">Войдите</a></p>
+					  </form>
+				  </div>
+				</div>
+				</div>
+			</div>
+				</div>
+</section>
+
+<!-- footer-->
+<footer>
+	<div class="container-fluid">
+	<div class="row">
+		<div class="colums">
+		<h3>Наша Компания</h3>
+		<a href="" class="logo">Medini</a>
+		<p class="copyright">© 2018 “Medini” - Производство брендовой женской одежды. Все права защищены в соотвествии с законом Украины.</p>
+	</div>
+	<div class="colums">
+		<h3>ПОКУПАЙ С МОБИЛЬНОГО</h3>
+		<p>Установите наше мобильное приложение Medini и делайте покупки прямо с вашего мобильного телефона или планшета</p>
+		<p>
+		<a href="" class="addons"><img src="img/addons-pic.png" alt="">Приложение Medini для iOS и Android</a></p>
+	</div>
+	<div class="colums">
+		<h3>OFFICIAL STORE</h3>
+		<a href="tel:+380991744324" class="tel-num">+380 (99) 174-43-24</a>
+		<a href="tel:+380974965971" class="tel-num">+380 (97) 496-59-71</a>
+		<a href="tel:+380633523623" class="tel-num">+380 (63) 352-36-23</a>
+		<a href="tel:+380661620861" class="tel-num">+380 (66) 162-08-61 <span>(viber, whatsapp)</span></a>
+		<a href="mailto:medinioroginal@yahoo.com" class="mail-link">medinioroginal@yahoo.com</a>
+	</div>
+	<div class="colums">
+		<h3>ПОДПИСКА НА РАССЫЛКУ</h3>
+		<p>Установи наше приложение и делай покупки</p>
+		<form  >
+			<input type="text" class="form-control" name="your-mail" placeholder="Введите ваш Email">
+			<button class="gray-btn" type="submit">Подписаться</button>
+		</form>
+	</div>
+	<div class="colums">
+		<h3>МЫ В СОЦИАЛЬНЫХ СЕТЯХ</h3>
+		<p class="soc-icons"><a href=""><i class="fab fa-vk"></i></a>
+		<a href=""><i class="fab fa-facebook-f"></i></a>
+	<a href=""><i class="fab fa-instagram"></i></a>
+<a href=""><i class="fab fa-odnoklassniki"></i></a>
+<a href=""><i class="google-plus"></i></a></p>
+<p>Используйте мобильную версию сайта</p>
+<button class="mobile-version">Мобильная версия</button>		
+	</div></div>
+</div>
+</footer>
+	<script  src="https://code.jquery.com/jquery-1.12.4.min.js"  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="  crossorigin="anonymous"></script>  
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/slick.js" ></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/3.1.6/footable.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/3.1.6/footable.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery.equalheights@1.5.3/jquery.equalheights.min.js"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>
