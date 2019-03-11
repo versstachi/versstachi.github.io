@@ -37,7 +37,11 @@ $('.slider-exemple').slick({
     // instead of a settings object
   ]
 });
-
+ $('.s-projj .nav-pills > li > a').on('shown.bs.tab', function(e) {
+     e.target
+     e.relatedTarget
+     $('.slider-exemple').slick('setPosition');
+ });
 if ($(window).width() < 1200) {
   $(".menu").appendTo(".menu-mobile-row");
 $('.menu-hum').click(function(){

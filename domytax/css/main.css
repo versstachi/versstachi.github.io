@@ -171,7 +171,8 @@ header {
       -webkit-box-pack: space-evenly;
           -ms-flex-pack: space-evenly;
               justify-content: space-evenly;
-      padding-left: 0; }
+      padding-left: 0;
+      margin-bottom: 0; }
       @media (max-width: 1200px) {
         header nav ul {
           display: none; } }
@@ -409,7 +410,7 @@ header {
     left: 0; }
   .s-projj .price-row .price {
     display: inline-block;
-    background-color: #FFF;
+    background-color: #fff;
     padding: 10px;
     font-size: 15px;
     color: #4f4f4f;
@@ -487,11 +488,24 @@ header {
             filter: brightness(100%); }
   .s-projj .prog-content h4 {
     font-family: "OpenSans-Bold";
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    color: #FFF;
+    position: relative;
+    margin: 0;
+    padding: 10px 0px 15px; }
+    .s-projj .prog-content h4:before {
+      position: absolute;
+      content: "";
+      width: 15px;
+      height: 3px;
+      background-color: #FFF;
+      bottom: 0; }
   .s-projj .prog-content a {
     color: #FFF;
     font-size: 10px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin: 0;
+    padding: 10px 0px; }
     .s-projj .prog-content a:hover {
       color: #FFF; }
 
@@ -555,9 +569,15 @@ header {
 
 .s-2 {
   background-color: #F9F9F9; }
+  .s-2.s-projj .price-row .price {
+    display: inline-block;
+    background-color: #F9F9F9; }
 
 .s-4 {
   background-color: #F9F9F9; }
+  .s-4.s-projj .price-row .price {
+    display: inline-block;
+    background-color: #F9F9F9; }
 
 .s-6 {
   padding: 100px 10px;
@@ -668,6 +688,35 @@ footer {
         margin: 10px; } }
   footer .timeswork span {
     color: #fe6192; }
+
+.modal .close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  z-index: 999999; }
+
+.modal h4 {
+  font-family: "OpenSans-Bold";
+  font-size: 36px;
+  margin-top: 20px; }
+
+.modal form {
+  width: 320px;
+  display: block;
+  margin: 40px auto 20px; }
+  .modal form input {
+    min-width: 272px;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 10px; }
+
+.modal .modal-header {
+  border-bottom: 0px solid #fff;
+  padding: 0; }
+
+.modal .modal-footer {
+  border-top: 0px solid #fff; }
 
 .checkbox {
   position: absolute;

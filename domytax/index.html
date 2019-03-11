@@ -9,8 +9,8 @@
 <meta property="og:url" content="https://versstachi.github.io/" />
 <meta property="og:image" content="img/Ogg.png" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css">  
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick-theme.min.css">  
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body> 
@@ -115,8 +115,8 @@
 								<li><span>+</span>создание логотипа для сайта + 15 Є</li> 
 							</ul>
 						</div>
-						<button class="btn-bir" type="send">Заказать сайт визитку</button>
 		    		</form>
+						<button class="btn-bir" type="send" data-toggle="modal" data-target="#myModal">Заказать сайт визитку</button>
 		  		</div>
 		  	</div>
 		  	<div class="row slide-project">
@@ -199,8 +199,8 @@
 								<li><span>+</span>создание логотипа для сайта + 15 Є</li> 
 							</ul>
 						</div>
-						<button class="btn-bir" type="send">Заказать корпоративный сайт</button>
 		    		</form>
+						<button class="btn-bir" type="send" data-toggle="modal" data-target="#myModal">Заказать корпоративный сайт</button>
 		  		</div>
 		  	</div>
 		  	<div class="row slide-project">
@@ -300,8 +300,8 @@
 								<li><span>+</span>создание логотипа для сайта + 15 Є</li> 
 							</ul>
 						</div>
-						<button class="btn-bir" type="send">Заказать Landing page</button>
 		    		</form>
+						<button class="btn-bir" type="send" data-toggle="modal" data-target="#myModal">Заказать Landing page</button>
 		  		</div>
 		  	</div>
 		  	<div class="row slide-project">
@@ -384,8 +384,8 @@
 								<li><span>+</span>создание логотипа для сайта + 15 Є</li> 
 							</ul>
 						</div>
-						<button class="btn-bir" type="send">Заказать Landing page под ключ</button>
 		    		</form>
+						<button class="btn-bir" type="send" data-toggle="modal" data-target="#myModal">Заказать Landing page под ключ</button>
 		  		</div>
 		  	</div>
 		  	<div class="row slide-project">
@@ -485,8 +485,8 @@
 								<li><span>+</span>создание логотипа для сайта + 15 Є</li> 
 							</ul>
 						</div>
-						<button class="btn-bir" type="send">Заказать интернет магазин</button>
 		    		</form>
+						<button class="btn-bir" type="send" data-toggle="modal" data-target="#myModal">Заказать интернет магазин</button>
 		  		</div>
 		  	</div>
 		  	<div class="row slide-project">
@@ -569,8 +569,8 @@
 								<li><span>+</span>создание логотипа для сайта + 15 Є</li> 
 							</ul>
 						</div>
-						<button class="btn-bir" type="send">Заказать интернет каталог</button>
 		    		</form>
+						<button class="btn-bir" type="send" data-toggle="modal" data-target="#myModal">Заказать интернет каталог</button>
 		  		</div>
 		  	</div>
 		  	<div class="row slide-project">
@@ -664,8 +664,8 @@
 								<li><span>+</span>создание логотипа для сайта + 15 Є</li> 
 							</ul>
 						</div>
-						<button class="btn-bir" type="send">Заказать рекламу</button>
 		    		</form>
+						<button class="btn-bir" type="send" data-toggle="modal" data-target="#myModal">Заказать рекламу</button>
 		  		</div>
 		  	</div>
 		  	<div class="row slide-project">
@@ -729,7 +729,7 @@
 			<div class="lin-gor"></div>
 			<p>Оставьте заявку и получите консультацию о том, какой <br/>
 сайт лучше подходит вашему бизнесу.</p>
-			<button class="btn-bir">Оставить заявку</button>
+			<button class="btn-bir" data-toggle="modal" data-target="#myModal">Оставить заявку</button>
 		</div>
 	</div>
 </div>
@@ -761,16 +761,41 @@ Vinohrady<br/><br/>
 					<a href="tel:+420 776 449 056">+420 776 449 056</a>
 				</div> 
 				<div class="col-md conts"> 
-			<button class="btn-bir">Обратный звонок</button>
+			<button class="btn-bir" data-toggle="modal" data-target="#myModal">Обратный звонок</button>
 						<a href="" target="_blank"><img src="img/teleg-footer.png" alt=""></a> 
 				</div>
 			</div>
 		</div>
 	</footer>
-<script src="http://code.jquery.com/jquery-1.7.js" ></script>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body text-center">
+        <h4 class="modal-title">Заполните форму</h4>
+        <p>менеджер вам перезвонит</p>
+      	<form action="">
+      		<input type="text" name="name" placeholder="Ваше имя">
+      		<input type="text" name="tel" placeholder="Ваш телефон">
+      		<input type="text" name="mail" placeholder="Ваш mail">
+      		<button class="btn-bir" >Отправить</button>
+      	</form>
+      </div>
+      <div class="modal-footer"> 
+      </div>
+    </div>
+
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js"></script>   
-<script src="js/common.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js"></script>   
+<script src="/js/common.js"></script> 
 
 </body>
 </html>
