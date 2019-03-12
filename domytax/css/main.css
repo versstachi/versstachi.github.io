@@ -263,15 +263,17 @@ header {
     @media (max-width: 991px) {
       header .img-big {
         display: none; } }
-  @media (max-width: 991px) {
-    header .img-mobs {
-      display: block; } }
-  header .img-mobs img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    z-index: 6;
-    position: relative; }
+  header .img-mobs {
+    display: none; }
+    @media (max-width: 991px) {
+      header .img-mobs {
+        display: block; } }
+    header .img-mobs img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      z-index: 6;
+      position: relative; }
   header .orbit {
     position: absolute;
     right: 0;
@@ -282,6 +284,10 @@ header {
     @media (max-width: 767px) {
       header .orbit {
         display: none; } }
+  header button {
+    z-index: 2;
+    position: relative;
+    margin-top: 15px; }
 
 .s-projj h2 {
   margin-bottom: 20px;
@@ -424,7 +430,7 @@ header {
       position: relative;
       display: inline-block; }
 
-.s-projj form button {
+.s-projj button {
   display: block;
   margin: 30px auto; }
 
