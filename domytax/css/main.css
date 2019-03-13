@@ -123,6 +123,8 @@ header {
       height: 100%; } }
   header .container {
     padding: 0px 0px; }
+  header #box {
+    left: 20%; }
   header nav {
     position: absolute;
     left: 0;
@@ -587,6 +589,7 @@ header {
 
 .s-6 {
   padding: 100px 10px;
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -609,6 +612,8 @@ header {
   @media (max-width: 767px) {
     .s-6 {
       padding: 50px 10px; } }
+  .s-6 #bigBox {
+    left: 10%; }
   .s-6 .lin-gor {
     margin: 30px auto; }
   .s-6 h2 {
@@ -859,3 +864,86 @@ footer {
     -webkit-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg); } }
+
+#bigBox {
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  top: 22%;
+  left: 30%;
+  margin: -100px 0 0 -120px;
+  -webkit-animation: bigBoxAnimation 6s linear infinite;
+          animation: bigBoxAnimation 6s linear infinite; }
+
+#box {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  -webkit-animation: boxAnimation 2.95s cubic-bezier(0.02, 0.01, 0.31, 1) infinite;
+          animation: boxAnimation 2.95s cubic-bezier(0.02, 0.01, 0.31, 1) infinite; }
+
+#box2 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  -webkit-animation: boxAnimation 2.95s cubic-bezier(0.02, 0.01, 0.31, 1) infinite;
+          animation: boxAnimation 2.95s cubic-bezier(0.02, 0.01, 0.31, 1) infinite;
+  -webkit-animation: boxAnimation 3.2s cubic-bezier(0.02, 0.01, 0.31, 1) infinite;
+          animation: boxAnimation 3.2s cubic-bezier(0.02, 0.01, 0.31, 1) infinite;
+  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+      -ms-transform: matrix(-1, 0, 0, 1, 0, 0);
+          transform: matrix(-1, 0, 0, 1, 0, 0); }
+
+#box::after, #box2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+  -webkit-animation: spanAnimation 3s cubic-bezier(0.3, 0.27, 0.07, 1.64) infinite;
+          animation: spanAnimation 3s cubic-bezier(0.3, 0.27, 0.07, 1.64) infinite;
+  -webkit-box-shadow: 0 0 20px 2px white;
+          box-shadow: 0 0 20px 2px white; }
+
+#box2::after {
+  background: #fe6192; }
+
+@-webkit-keyframes bigBoxAnimation {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes bigBoxAnimation {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@-webkit-keyframes boxAnimation {
+  50% {
+    -webkit-transform: translateY(-150px);
+            transform: translateY(-150px); } }
+
+@keyframes boxAnimation {
+  50% {
+    -webkit-transform: translateY(-150px);
+            transform: translateY(-150px); } }
+
+@-webkit-keyframes spanAnimation {
+  50% {
+    -webkit-transform: translate;
+            transform: translate; } }
+
+@keyframes spanAnimation {
+  50% {
+    -webkit-transform: translate;
+            transform: translate; } }
