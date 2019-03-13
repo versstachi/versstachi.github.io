@@ -95,7 +95,18 @@ button.btn-bir {
   color: #FFF;
   border: none;
   font-size: 15px;
-  font-family: "OpenSans-Bold"; }
+  font-family: "OpenSans-Bold";
+  opacity: 0.95;
+  -webkit-transition: 0.2s all;
+  -o-transition: 0.2s all;
+  transition: 0.2s all; }
+  button.btn-bir:hover {
+    -webkit-box-shadow: 2.099px 10.798px 10px 2px rgba(62, 194, 150, 0.45);
+            box-shadow: 2.099px 10.798px 10px 2px rgba(62, 194, 150, 0.45);
+    opacity: 1;
+    -webkit-transition: 0.2s all;
+    -o-transition: 0.2s all;
+    transition: 0.2s all; }
 
 header {
   display: -webkit-box;
@@ -379,10 +390,7 @@ header {
       list-style-type: none;
       font-size: 15px;
       color: #4f4f4f;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
+      display: none;
       font-family: "OpenSans-Regular";
       -webkit-align-items: center;
       -webkit-box-align: center;
@@ -392,6 +400,16 @@ header {
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start; }
+      .s-projj .addition-block ul li.flexy {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; }
+      .s-projj .addition-block ul li:nth-child(-n+10) {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; }
       @media (max-width: 991px) {
         .s-projj .addition-block ul li {
           margin-bottom: 10px; } }
@@ -403,6 +421,11 @@ header {
         @media (max-width: 767px) {
           .s-projj .addition-block ul li span {
             font-size: 30px; } }
+
+.s-projj .lookall {
+  cursor: pointer;
+  margin-top: 15px;
+  color: blue; }
 
 .s-projj .price-row {
   position: relative; }
@@ -947,3 +970,23 @@ footer {
   50% {
     -webkit-transform: translate;
             transform: translate; } }
+
+.flip-vertical-fwd {
+  -webkit-animation: flip-vertical-fwd 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  animation: flip-vertical-fwd 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+
+@-webkit-keyframes flip-vertical-fwd {
+  0% {
+    -webkit-transform: translateZ(160px) rotateY(180deg);
+    transform: translateZ(160px) rotateY(180deg); }
+  100% {
+    -webkit-transform: translateZ(0) rotateY(0);
+    transform: translateZ(0) rotateY(0); } }
+
+@keyframes flip-vertical-fwd {
+  0% {
+    -webkit-transform: translateZ(160px) rotateY(180deg);
+    transform: translateZ(160px) rotateY(180deg); }
+  100% {
+    -webkit-transform: translateZ(0) rotateY(0);
+    transform: translateZ(0) rotateY(0); } }
