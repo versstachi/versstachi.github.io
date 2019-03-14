@@ -43,7 +43,7 @@ $('.slider-exemple').slick({
      $('.slider-exemple').slick('setPosition');
  });
  $('.lookall').click(function(){
-  $('.s-projj .addition-block ul li').toggleClass("flexy");
+  $(this).parent('.s-projj .addition-block ul').find('li').toggleClass("flexy");
 }); 
 if ($(window).width() < 1200) {
   $(".menu").appendTo(".menu-mobile-row");
