@@ -4,7 +4,7 @@ $('.slider-exemple').slick({
   infinite: false,
   arrows: true,
   speed: 300,
-  slidesToShow: 4,
+  slidesToShow: 3,
   slidesToScroll: 1,
   prevArrow: '<div class="slider-left-arrow"> <span class="glyphicon glyphicon-chevron-left"></span></div>',
   nextArrow: '<div class="slider-right-arrow"> <span class="glyphicon glyphicon-chevron-right"></span></div>',
