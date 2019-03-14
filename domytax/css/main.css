@@ -144,7 +144,8 @@ header {
     display: block;
     background-color: #4e4491;
     color: #fff;
-    padding: 20px 0px; }
+    padding: 20px 0px;
+    z-index: 5; }
     @media (max-width: 991px) {
       header nav {
         position: relative; } }
