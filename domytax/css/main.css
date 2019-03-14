@@ -55,6 +55,8 @@ body {
   @media (max-width: 991px) {
     .menu-mobile-row {
       display: block; } }
+  .menu-mobile-row .menu {
+    margin-top: 20px; }
 
 h1 {
   font-family: "OpenSans-ExtraBold"; }
@@ -137,7 +139,7 @@ header {
   header #box {
     left: 20%; }
   header nav {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0px;
     width: 100%;
@@ -145,10 +147,7 @@ header {
     background-color: #4e4491;
     color: #fff;
     padding: 20px 0px;
-    z-index: 5; }
-    @media (max-width: 991px) {
-      header nav {
-        position: relative; } }
+    z-index: 88; }
     header nav .col-md-8 {
       position: static; }
     header nav .row {
@@ -241,9 +240,13 @@ header {
     @media (max-width: 1240px) {
       header h1 {
         font-size: 45px; } }
+    @media (max-width: 991px) {
+      header h1 {
+        margin-top: 100px; } }
     @media (max-width: 767px) {
       header h1 {
-        font-size: 32px; } }
+        font-size: 32px;
+        margin-top: 140px; } }
     header h1 span {
       color: #fff;
       font-size: 45px; }
@@ -282,6 +285,9 @@ header {
     @media (max-width: 991px) {
       header .img-mobs {
         display: block; } }
+    @media (max-width: 767px) {
+      header .img-mobs {
+        margin-top: 30px; } }
     header .img-mobs img {
       display: block;
       max-width: 100%;
