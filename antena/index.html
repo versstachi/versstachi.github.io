@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+	<link rel="shortcut icon" href="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/Favicon.png" type="image/png">
+	<title></title> 
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script> 
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.5.5/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.5.5/slick-theme.css">  
+  <link rel="stylesheet" href="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/font/Gilroy.css">
+
+  <script src="https://cdn.jsdelivr.net/jquery.slick/1.5.5/slick.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+
+</head>
+<body>
+	<style>
+
+@font-face {
+  font-family: 'Gilroy-SemiBold';
+  src: url(//www.av-tool.ru/_antenny_assets_DO_NOT_DELETE/font/Gilroy-SemiBold.eot);
+  src: url(//www.av-tool.ru/_antenny_assets_DO_NOT_DELETE/font/Gilroy-SemiBold.woff);
+  src: url(//www.av-tool.ru/_antenny_assets_DO_NOT_DELETE/font/Gilroy-SemiBold.ttf); }
+
+@font-face {
+  font-family: 'Gilroy-Regular';
+  src: url(//www.av-tool.ru/_antenny_assets_DO_NOT_DELETE/font/Gilroy-Regular.eot);
+  src: url(//www.av-tool.ru/_antenny_assets_DO_NOT_DELETE/font/Gilroy-Regular.woff);
+  src: url(//www.av-tool.ru/_antenny_assets_DO_NOT_DELETE/font/Gilroy-Regular.ttf); }
+
+@font-face {
+  font-family: 'Gilroy-Light';
+  src: url(//www.av-tool.ru/_antenny_assets_DO_NOT_DELETE/font/Gilroy-Light.eot);
+  src: url(//www.av-tool.ru/_antenny_assets_DO_NOT_DELETE/font/Gilroy-Light.woff);
+  src: url(//www.av-tool.ru/_antenny_assets_DO_NOT_DELETE/font/Gilroy-Light.ttf); }
+
+@font-face {
+  font-family: 'Gilroy-Medium';
+  src: url(//www.av-tool.ru/_antenny_assets_DO_NOT_DELETE/font/Gilroy-Medium.eot);
+  src: url(//www.av-tool.ru/_antenny_assets_DO_NOT_DELETE/font/Gilroy-Medium.woff);
+  src: url(//www.av-tool.ru/_antenny_assets_DO_NOT_DELETE/font/Gilroy-Medium.ttf); }
+
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: url(//www.av-tool.ru/_antenny_assets_DO_NOT_DELETE/font/Gilroy-Bold.eot);
+  src: url(//www.av-tool.ru/_antenny_assets_DO_NOT_DELETE/font/Gilroy-Bold.woff);
+  src: url(//www.av-tool.ru/_antenny_assets_DO_NOT_DELETE/font/Gilroy-Bold.ttf); }  
+
+/* body {
+  color: #3f3f3f; }  */
+.s-1 .container {
+  max-width: 1200px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 50px 10px;
+  position: relative; }
+
+.s-1 .slide-image,
+.s-1 .slide-content {
+  width: 50%;
+  display: inline-block;
+  float: left; }
+  @media (max-width: 767px) {
+    .s-1 .slide-image,
+    .s-1 .slide-content {
+      width: 100%; } }
+  .s-1 .slide-image img,
+  .s-1 .slide-content img {
+    max-width: 100%;
+    height: auto;
+    display: block; }
+
+.s-1 .slide-content {
+  padding-top: 80px; }
+
+.s-1 .slider-item {
+  width: 100%; }
+
+.s-1 h3 {
+  font-size: 24px;
+  font-family: "Gilroy-SemiBold";
+  line-height: 1.297;
+  color: #32325d;
+  text-align: left;
+  padding-left: 10px; }
+  @media (max-width: 991px) {
+    .s-1 h3 {
+      font-size: 20px; } }
+
+.s-1 p {
+  font-size: 18px;
+  font-family: "Gilroy-Regular";
+  color: #32325d;
+  line-height: 1.729;
+  text-align: left;
+  padding-left: 10px; }
+  @media (max-width: 991px) {
+    .s-1 p {
+      font-size: 16px; } }
+
+.s-1 .s-1-slider .slider-right-arrow .nav-next {
+  display: none; }
+
+.s-1 .s-1-slider .slider-left-arrow .nav-prev {
+  display: none; }
+
+.s-1 .arrow-box {
+  position: absolute;
+  width: 50%;
+  bottom: 100px;
+  right: 0; }
+  @media (max-width: 767px) {
+    .s-1 .arrow-box {
+      position: relative;
+      width: 100%;
+      bottom: 0; } }
+
+.s-1 .slick-counter1 {
+  float: left;
+  font-size: 25px;
+  font-family: "Gilroy-Light";
+  color: #aaaaaa;
+  line-height: 1.245;
+  text-align: center;
+  margin-right: 20px; }
+  @media (max-width: 767px) {
+    .s-1 .slick-counter1 {
+      float: none; } }
+
+.s-1 .current1 {
+  font-size: 60px;
+  color: #32325d;
+  line-height: 0.9;
+  text-align: center;
+  font-family: "Gilroy-SemiBold";
+  display: inline-block;
+  margin-right: 10px; }
+  @media (max-width: 991px) {
+    .s-1 .current1 {
+      font-size: 50px; } }
+
+.s-1 .total1 {
+  font-size: 25px;
+  font-family: "Gilroy-Light";
+  color: #aaaaaa;
+  line-height: 1.245;
+  text-align: center;
+  display: inline-block;
+  top: -22px;
+  position: relative; }
+  @media (max-width: 991px) {
+    .s-1 .total1 {
+      font-size: 21px; } }
+
+.s-1 .heads {
+  margin-right: 10px; }
+
+@media (max-width: 767px) {
+  .s-1 .mob-block {
+    width: 100%; } }
+
+.slider-left-arrow {
+  cursor:  pointer;
+  position: relative;
+  display: inline-block;
+  left: 0px;
+  bottom: 0;
+  z-index: 5;
+  background: #fff;
+  border-width: 1px;
+  border-color: white;
+  border-style: solid;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  margin-right: 20px;
+  color: #3f3f3f;
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15); }
+  @media (max-width: 767px) {
+    .slider-left-arrow {
+      position: absolute;
+      bottom: -70px;
+      left: 30%; } }
+  .slider-left-arrow:hover {
+    background-color: #32325d;
+    color: #FFF;
+    border-width: 1px;
+    border-color: #32325d;
+    border-style: solid; }
+  .slider-left-arrow .nav-prev {
+    font-size: 45px;
+    line-height: 1;
+    text-align: center;
+    font-family: "Gilroy-Light";
+    width: 50px;
+    height: 50px;
+    display: block; }
+
+.slider-right-arrow {
+  cursor:  pointer;
+  position: relative;
+  display: inline-block;
+  right: 0px;
+  bottom: 0;
+  z-index: 5;
+  border-width: 1px;
+  border-color: white;
+  border-style: solid;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background: #fff;
+  color: #3f3f3f;
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15); }
+  @media (max-width: 767px) {
+    .slider-right-arrow {
+      position: absolute;
+      bottom: -70px;
+      right: 30%; } }
+  .slider-right-arrow:hover {
+    background-color: #32325d;
+    color: #FFF;
+    border-width: 1px;
+    border-color: #32325d;
+    border-style: solid; }
+  .slider-right-arrow .nav-next {
+    font-size: 45px;
+    line-height: 1;
+    text-align: center;
+    font-family: "Gilroy-Light";
+    width: 50px;
+    height: 50px;
+    display: block; }
+
+.s-2 .container {
+  max-width: 1200px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 50px 10px;
+  position: relative; }
+
+.modal input[type=radio],
+.s-2 input[type=radio] {
+  position: absolute;
+  visibility: hidden;
+  display: none; } 
+.modal label,
+.s-2 label {
+  color: #9a929e;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px 20px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  font-family: "Gilroy-Light";
+  background: #f2f2f2;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  font-size: 14px;
+  /* display: none; */
+  display: inline-block;
+   }
+  @media (max-width: 991px) {
+.modal label,
+.s-2 label {
+      font-size: 12px;
+      padding: 5px 10px; } } 
+.modal input[type=radio]:checked + label,
+.s-2 input[type=radio]:checked + label {
+  color: #ccc8ce;
+  background: #32325d;
+  display: inline-block; }
+
+.modal .radio-group {
+  display: inline-block;
+  overflow: hidden;
+  text-align: center; } 
+.s-2 .radio-group {
+  display: inline-block;
+  overflow: hidden; }
+
+.modal .row-product{
+	padding-left: 20px;
+}
+.modal .row-product,
+.s-2 .row-product {
+  margin: 30px 0;
+  display: block;
+  float: left;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  @media (max-width: 767px) {
+    .modal .row-product,
+    .s-2 .row-product {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-justify-content: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin: 0; } }
+
+.s-2 .product-item {
+  padding: 20px 10px;
+  min-height: 174px;
+  border-radius: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0);
+          box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0); }
+  @media (max-width: 767px) {
+    .s-2 .product-item {
+      min-height: 100%; } }
+  .s-2 .product-item:hover {
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(50, 50, 93, 0.84);
+            box-shadow: 0px 0px 8px 0px rgba(50, 50, 93, 0.84); }
+    .s-2 .product-item:hover label {
+      display: inline-block; }
+  @media (max-width: 767px) {
+    .s-2 .product-item.hid-mob {
+      display: none; } }
+  .s-2 .product-item h4 {
+    font-family: "Gilroy-Medium";
+    font-size: 24px;
+    color: #32325d;
+    text-align: left;
+    margin: 0px; }
+    @media (max-width: 991px) {
+      .s-2 .product-item h4 {
+        font-size: 20px; } }
+  .s-2 .product-item p {
+    font-size: 16px;
+    font-family: "Gilroy-Light";
+    color: #32325d;
+    text-align: left;
+    margin: 5px 0px 20px; }
+    @media (max-width: 991px) {
+      .s-2 .product-item p {
+        font-size: 13px; } }
+  .s-2 .product-item .product-img {
+    width: 40%;
+    float: left;
+    display: inline-block; }
+    .s-2 .product-item .product-img img {
+      margin-right: 20px; 
+          max-width: 100%;
+          height: auto;}
+      @media (max-width: 991px) {
+        .s-2 .product-item .product-img img {
+          max-width: 100%;
+          height: auto;
+          display: block; } }
+  .s-2 .product-item .show-mob {
+    display: none; }
+    @media (max-width: 767px) {
+      .s-2 .product-item .show-mob {
+        display: block; } }
+  .s-2 .product-item .product-content {
+    width: 60%;
+    float: left;
+    display: inline-block; }
+
+.s-2 .cols-2 {
+  width: 16.66666667%;
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  @media (max-width: 767px) {
+    .s-2 .cols-2 {
+      width: 100%;
+      max-width: 400px;
+      margin: 0px auto; } }
+
+.s-2 .cols-3 {
+  width: 25%;
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  @media (max-width: 767px) {
+    .s-2 .cols-3 {
+      width: 100%;
+      max-width: 400px;
+      margin: 0px auto; } }
+
+.s-2 .cols-4 {
+  width: 33.33333333%;
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  @media (max-width: 767px) {
+    .s-2 .cols-4 {
+      width: 100%;
+      max-width: 400px;
+      margin: 0px auto; } }
+.modal h3,
+.s-2 h3 {
+  font-size: 32px;
+  font-family: "Gilroy-Regular";
+  color: #32325d;
+  line-height: 1.938;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0; }
+  @media (max-width: 1099px) {
+    .s-2 h3 {
+      font-size: 27px;
+      margin-top: 20px;
+      margin-bottom: 20px; } }
+  @media (max-width: 991px) {
+    .s-2 h3 {
+      font-size: 22px; } }
+  @media (max-width: 767px) {
+    .s-2 h3 {
+      text-align: center; } }
+  @media (max-width: 1099px) {
+    .s-2 h3 {
+      font-size: 27px;
+      margin-top: 20px;
+      margin-bottom: 20px; } }
+  @media (max-width: 991px) {
+    .s-2 h3 {
+      font-size: 22px; } }
+  @media (max-width: 767px) {
+    .s-2 h3 {
+      text-align: center; } }
+
+.modal button.button,
+.modal a.ant-button,
+.s-2 a.ant-button {
+  border-width: 1px;
+  border-color: #32325d;
+  border-style: solid;
+  -webkit-border-radius: 28px;
+          border-radius: 28px;
+  padding: 18px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Gilroy-Regular";
+  color: #32325d !important;
+  font-size: 16px;
+  display: block;
+  margin: 0px auto 10px; }
+  @media (max-width: 1099px) {
+.modal button.button,
+.modal a.ant-button,
+    .s-2 a.ant-button {
+      font-size: 12px;
+      padding: 13px; } }
+
+.modal button.button-blue,
+.modal a.ant-button-blue,
+.s-2 a.ant-button-blue {
+  border-width: 1px;
+  border-color: #32325d;
+  border-style: solid;
+  -webkit-border-radius: 28px;
+          border-radius: 28px;
+  background-color: #32325d;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(50, 50, 93, 0.004);
+          box-shadow: 0px 0px 7px 0px rgba(50, 50, 93, 0.004);
+  padding: 18px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Gilroy-Regular";
+  color: #fff !important;
+  font-size: 16px;
+  display: block;
+  margin: 0px auto 10px; }
+  @media (max-width: 1099px) {
+.modal button.button-blue,
+.modal a.ant-button-blue,
+    .s-2 a.ant-button-blue {
+      font-size: 12px;
+      padding: 13px; } }
+
+.modal .true-price,
+.s-2 .true-price {
+  font-size: 46.729px;
+  font-family: "Gilroy-SemiBold";
+  color: #181818;
+  line-height: 1.327;
+  text-align: center;
+  -moz-transform: matrix(1.021, 0, 0, 1.02719, 0, 0);
+  -webkit-transform: matrix(1.021, 0, 0, 1.02719, 0, 0);
+  -ms-transform: matrix(1.021, 0, 0, 1.02719, 0, 0); }
+.modal .true-price{
+  font-size: 40px;
+}
+  @media (max-width: 1099px) {
+.modal .true-price,
+.s-2 .true-price {
+      font-size: 40px; } }
+  @media (max-width: 991px) {
+.modal .true-price,
+.s-2 .true-price {
+      font-size: 36px; } }
+  @media (max-width: 900px) {
+.modal .true-price,
+.s-2 .true-price {
+      font-size: 32px; } }
+  @media (max-width: 767px) {
+.modal .true-price,
+.s-2 .true-price {
+      font-size: 40px;
+      margin-bottom: 20px; } }
+
+.modal .true-price{
+	text-align: left;
+}
+.modal .old-price, 
+.s-2 .old-price {
+  font-size: 16px;
+  font-family: "Gilroy-Regular";
+  color: #181818;
+  line-height: 3.875;
+  text-align: center;
+  -moz-transform: matrix(1.021, 0, 0, 1.02719, 0, 0);
+  -webkit-transform: matrix(1.021, 0, 0, 1.02719, 0, 0);
+  -ms-transform: matrix(1.021, 0, 0, 1.02719, 0, 0); }
+  @media (max-width: 1099px) {
+.modal .old-price, 
+.s-2 .old-price {
+      font-size: 14px; } }
+
+.modal .sale, 
+.s-2 .sale {
+  background-color: #FEF138;
+  -webkit-border-radius: 15px;
+    -webkit-border-radius-border-radius: 15px;
+  font-size: 16px;
+  font-family: "Gilroy-Bold";
+  color: #aea308;
+  font-weight: bold;
+  line-height: 1.875;
+  margin-right: 10px;
+  padding: 3px 7px;
+  text-align: center;
+  -moz-transform: matrix(1.021, 0, 0, 1.02719, 0, 0);
+  -webkit-transform: matrix(1.021, 0, 0, 1.02719, 0, 0);
+  -ms-transform: matrix(1.021, 0, 0, 1.02719, 0, 0); }
+  @media (max-width: 1099px) {
+.modal .sale, 
+.s-2 .sale {
+      font-size: 14px; } }
+ 
+.s-2 .price-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.modal .price-row{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+          -webkit-justify-content: flex-start;
+                  justify-content: flex-start;
+}
+.s-2 .align {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+.modal .align {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; 
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;}
+
+/* ++GODLIN++ */
+
+.s-1 .slide-image
+{
+    opacity: 0;
+}
+
+.slider-box
+{
+      background-image: url(https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/s-1pic-1.png);
+    background-position: left top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.montag_item img
+{
+  width:  100%;
+}
+.ant-button
+{
+  transition: all 0.2s ease;
+}
+
+.s-2 a.ant-button:hover
+{
+  background-color:  #32325d;
+  color:  white !important;
+}
+
+.modal button.close
+{
+    z-index: 1;
+    position: absolute;
+    right: 5px;
+}
+
+.modal .consult button.close
+{ 
+    width: auto;
+}
+.product-content h4, .product-img
+{
+  cursor:  pointer;
+}
+
+.modal-slider
+{
+    margin-left: 25px;
+    margin-right: 25px;
+    font-family: "Gilroy-Light";
+}
+
+.modal-slider .slide-image
+{
+    /* max-width: 300px; */
+    /* min-width: 40%; */
+    
+    max-width: 200px;
+    min-width: 30%;    
+    
+    float: left;
+    height: 100%;
+    /* padding-top: 35px; */
+    /* padding-bottom: 35px; */
+    margin-top: 25px;
+
+}
+
+.modal-slider .slide-image img{
+  width: 90%;
+  margin: auto;
+}
+
+.slick-prev:before, .slick-next:before
+{
+    color: #a09c9c !important;
+    font-size: 26px !important;
+}
+.modal .modal-footer{
+	border-top: none; 
+}
+.modal .rasroch .modal-footer{
+	border-top: none;
+	padding: 0;
+}
+.modal .radio-group{
+	display: block;
+	margin-top: 30px;
+}
+.read-more
+{
+    color: #32325d;
+  font-size: 16px;
+  font-family: "Gilroy-Bold";
+  cursor: pointer;
+  padding-left: 10px;
+}
+.modal-lg .modal-content{ 
+	overflow: hidden;
+}
+.modal-lg  .old-price{
+	line-height: 1.8;
+} 
+.modal input{
+  border-width: 1px;
+  border-color: #32325d;
+  border-style: solid;
+  -webkit-border-radius: 28px;
+          border-radius: 28px;
+  padding: 18px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Gilroy-Regular";
+  color: #32325d;
+  font-size: 16px;
+  display: block; 
+  margin: 0px auto 10px; 
+  width: 50%;}
+
+.modal button.button-blue{  
+  padding: 18px 20px;
+  width: 50%;
+}
+.modal .modal-lg .row-product h3{
+	margin-bottom: 10px;
+	text-align: left;
+  font-family: "Gilroy-Bold";
+}
+.modal .modal-lg .row-product h3.rasr{
+	font-size: 26px;
+}
+.modal .consult  h3{ 
+	text-align: center;
+}
+.modal form{
+	max-width: 320px;
+	display: block;
+  margin: 30px auto 10px;
+}
+.modal .modal-lg form{
+	display: block;
+	margin: 20px 0px 10px;
+	display: flex;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	max-width: 100%;	
+}
+.modal .consult form{
+	max-width: 320px;
+	display: block;
+  margin: 20px auto 10px;
+}
+.modal .consult form input{
+	width: 100%;
+}
+.modal .consult button{
+	width: 100%;
+}
+.list-buy-product {
+  font-size: 16px; 
+  font-family: "Gilroy-Regular";
+  color: rgb(24, 24, 24);
+  line-height: 1.5;
+  text-align: left; 
+}
+.modal h5{
+  font-family: "Gilroy-Bold";}
+.modal-lg form button{
+  width: 50%;}
+a.mod-tel{ 
+  font-family: "Gilroy-Regular";
+  color: #32325d !important; 
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 36px; 
+  color: rgb(50, 50, 93);
+  line-height: 0.667; 
+  }
+  .call-us{ 
+  font-size: 16px;
+  font-family: "Gilroy-Regular";
+  color: rgba(24, 24, 24, 0.349);
+  line-height: 1.5;
+  text-align: left;
+  }
+  .call-us a{
+  	margin-top: 20px;
+  	display: block;
+  	margin-bottom: 30px;
+  }
+.big-circle{
+    width: 425px;
+    height: 425px;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+	background: #ffe40a;
+	position: absolute;
+	right: 0;
+	top: -20%;
+}
+.img-box{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.img-box img{ 
+}
+.modal-body {
+    position: relative;
+    padding-bottom: 0;
+}
+/** SPINNER CREATION **/
+.loader {
+  position: relative;
+  text-align: center;
+  margin: 15px auto 35px auto;
+  z-index: 9999;
+  display: block;
+  width: 80px;
+  height: 80px;
+  border: 10px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  border-top-color: #000;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+.modal-full {
+    min-width: 100%;
+    margin: 0;
+}
+#loadMe{
+	padding: 0;
+	padding-right: 0!important;
+}
+.modal-full .modal-content {
+    min-height: 100vh;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: center;
+            justify-content: center;
+}
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+/* media ---------------------------*/
+@media (min-width: 768px){
+.modal-lg.modal-dialog{
+    width: 100%;
+    margin: 30px auto;
+}
+.modal-dialog.consult{
+    width: 600px;
+    margin: 30px auto;
+}
+.consult .modal-body {
+    position: relative;
+    padding-bottom: 15px;
+}
+}
+@media (min-width: 992px){
+.modal-lg.modal-dialog {
+    width: 920px;
+}
+}
+@media (min-width: 1240px){
+.modal-lg.modal-dialog {
+    width: 1200px;
+    }
+}
+@media (max-width: 991px){
+	.img-box img{
+    max-width: 80%;
+    float: right;
+    }
+.big-circle{
+    top: -5%; 
+    right: -5%; 
+    width: 425px;
+    height: 425px;
+}
+}
+@media (max-width: 767px){
+	.modal .modal-lg .row-product h3{
+		font-size: 24px;
+	}
+	.img-box img{
+    max-width: 100%;
+    float: left;
+    }
+	.modal .modal-lg form{
+		display: block;
+	}
+	.modal .price-row{
+		-webkit-justify-content: center;
+		        justify-content: center;
+	}
+	.modal .true-price{
+		text-align: center;
+	}
+	a.mod-tel{
+		font-size: 24px;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	.modal input,
+	.modal button.button-blue{
+		width: 100%;
+	}
+.modal-lg .modal-content{
+	background:  #fff;
+	background-position: right bottom;
+	background-repeat: no-repeat; 
+}
+.img-box{
+	position: relative;
+	bottom: 0;
+	right: 0;
+}
+.big-circle{
+    top: unset;
+    left: -5%;
+    bottom: -28%;
+    width: 110%;
+    height: 81%;
+}
+}
+@media (max-width: 640px){ 
+.modal button.button-blue{ 
+width: 100%;	 }
+.modal input{
+width: 100%;	}
+}
+@media (max-width: 640px){ 
+.big-circle{
+    top: unset;
+    left: -5%;
+    bottom: -22%;
+    width: 110%;
+    height: 61%;
+}
+.modal .modal-lg .row-product h3.rasr{
+	font-size: 24px;
+}
+}
+@media (max-width: 540px){ 
+.big-circle{
+    top: unset;
+    left: -5%;
+    bottom: -28%;
+    width: 110%;
+    height: 51%;
+}
+}
+
+.modal-slider .slide-content p
+{
+  overflow-y: auto;
+  height:  200px;
+  max-height: 20vh;
+}
+
+.modal-slider h5
+{
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 19px;
+}
+
+.slide-price {
+    background-color: #32325d;
+    display: inline-block;
+    color: white;
+    padding: 3px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.s-2 h3
+{
+  font-size: 27px;
+}
+
+.slick-next {
+    right: -35px;
+}
+
+.slick-prev {
+    left: -35px;
+}
+
+/* /++GODLIN++ */
+</style>
+
+
+
+	<section class="s-1">
+		<div class="container">
+			<div class="slider-box">
+				<div class="s-1-slider">
+					<div class="slider-item">
+						<div class="slide-image">
+							<img src="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/s-1pic-1.png" alt="">
+						</div>
+						<div class="slide-content">
+							<h3>Антенна панельная принимает 
+сигнал от базовой станции</h3>
+							<p>Направленная антенна позволяет стабилизировать сигнал и увеличить скорость 4G-интернета, а также установить соединение в зонах слабого приема</p>
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slide-image">
+							<img src="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/s-1pic-1.png" alt="">
+						</div>
+						<div class="slide-content">
+							<h3>4G-модем принимает сигнал 
+и передает его на Wi-Fi роутер</h3>
+							<p>Модем обеспечивает доступ в интернет и передает его на Wi-Fi роутер, к которому подключаются все ваши устройства</p>
+						</div>
+					</div>
+					<div class="slider-item">
+						<div class="slide-image">
+							<img src="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/s-1pic-1.png" alt="">
+						</div>
+						<div class="slide-content">
+							<h3>Наслаждайтесь стабильным 
+быстрым интернетом</h3>
+							<p>При любой погоде, 24 часа в сутки «Интернет на дачу» обеспечивает вас непрерывным высокоскоростным доступом в интернет на всех ваших устройствах</p>
+						</div>
+					</div>
+				</div>
+				<div class="arrow-box">
+					<div class="slider-left-arrow">
+						<span class="nav-prev">&lsaquo;</span>
+					</div>
+					<div class="slider-right-arrow">
+						<span class="nav-next">&rsaquo;</span> 
+					</div>					
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="s-2">
+		<div class="container">   
+			<div class="row-product">
+
+				<div class="product-item cols-4">
+					<div class="product-img"  data-toggle="modal" data-target="#myModalItem" data-item="0">
+						<img src="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/rour-zbt.png" alt="">
+					</div>
+					<div class="product-content">
+						<h4  data-toggle="modal" data-target="#myModalItem" data-item="0">Роутер</h4>
+						<p class="brand" data-toggle="modal" data-target="#myModalItem" data-item="0">ZBT</p>
+						<div class="radio-group">
+							<input type="radio" id="router-one" name="router-selector"value="Без роутера" >
+							<label for="router-one">Без роутера</label>
+
+							<input type="radio" id="router-two" name="router-selector"value="2000₽" checked="checked" data-item="0">
+							<label for="router-two">2000₽</label>
+
+							<input type="radio" id="router-three" name="router-selector"value="3200₽" data-item="1">
+							<label for="router-three">3200₽</label>
+
+							<input type="radio" id="router-four" name="router-selector"value="7500₽" data-item="2">
+							<label for="router-four">7500₽</label>
+						</div>
+					</div>
+				</div>
+
+        <div class="product-item cols-4">
+          <div class="product-img"  data-toggle="modal" data-target="#myModalItem" data-item="3">
+            <img src="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/antena-antex.png" alt="">
+          </div>
+          <div class="product-content">
+            <h4  data-toggle="modal" data-target="#myModalItem" data-item="3">Антенна</h4>
+            <p class="brand" data-toggle="modal" data-target="#myModalItem" data-item="3">PETRA BB MIMO - 15 дБ</p>
+            <div class="radio-group">
+              <input type="radio" id="antena-antex-one" name="antena-antex-selector" value="2800₽" checked="checked" data-item="3">
+              <label for="antena-antex-one">2800₽</label>
+              <input type="radio" id="antena-antex-two" name="antena-antex-selector" value="5600₽" data-item="4">
+              <label for="antena-antex-two">5600₽</label>
+              <input type="radio" id="antena-antex-three" name="antena-antex-selector" value="9600₽" data-item="5">
+              <label for="antena-antex-three">9600₽</label> 
+            </div>
+          </div>
+        </div>
+
+
+        <div class="product-item cols-4">
+          <div class="product-img"  data-toggle="modal" data-target="#myModalItem" data-item="6">
+            <img src="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/cronshtein.png" alt="">
+          </div>
+          <div class="product-content">
+            <h4  data-toggle="modal" data-target="#myModalItem" data-item="6">Кронштейн</h4>
+            <p class="brand" data-toggle="modal" data-target="#myModalItem" data-item="6">Для антенны</p>
+            <div class="radio-group"> 
+              <input type="radio" id="cronshtein-two" name="cronshtein-selector" value="800₽" checked="checked" data-item="6">
+              <label for="cronshtein-two">800₽</label> 
+            </div>
+          </div>
+        </div>
+
+			</div>
+
+			<div class="row-product">
+
+        <div class="product-item cols-3">
+          <div class="product-img"  data-toggle="modal" data-target="#myModalItem" data-item="7">
+            <img src="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/pigtail.png" alt="">
+          </div>
+          <div class="product-content">
+            <h4  data-toggle="modal" data-target="#myModalItem" data-item="7">Пигтейлы</h4>
+            <p class="brand" data-toggle="modal" data-target="#myModalItem" data-item="7">Переходник</p>
+            <div class="radio-group"> 
+              <input type="radio" id="pigtail-two" name="pigtail-selector" value="1000₽" checked="checked" data-item="7">
+              <label for="pigtail-two">1000₽</label> 
+            </div>
+          </div>
+        </div>
+
+				<div class="product-item cols-3">
+					<div class="product-img"  data-toggle="modal" data-target="#myModalItem" data-item="8">
+						<img src="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/sim-card.png" alt="">
+					</div>
+					<div class="product-content">
+						<h4  data-toggle="modal" data-target="#myModalItem" data-item="8">Сим-карта</h4>
+						<p class="brand" data-toggle="modal" data-target="#myModalItem" data-item="8">Безлимит</p>
+						<div class="radio-group"> 
+							<input type="radio" id="sim-card-two" name="sim-card-selector" value="1500₽" checked="checked" data-item="8">
+							<label for="sim-card-two">1500₽</label> 
+						</div>
+					</div>
+				</div>
+
+
+        <div class="product-item cols-3">
+          <div class="product-img"  data-toggle="modal" data-target="#myModalItem" data-item="9">
+            <img src="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/modem.png" alt="">
+          </div>
+          <div class="product-content">
+            <h4  data-toggle="modal" data-target="#myModalItem" data-item="9">Модем</h4>
+            <p class="brand" data-toggle="modal" data-target="#myModalItem" data-item="9">4G</p>
+            <div class="radio-group"> 
+              <input type="radio" id="modem-two" name="modem-selector" value="2900₽"checked="checked" data-item="9">
+              <label for="modem-two">2900₽</label> 
+            </div>
+          </div>
+        </div>
+
+<!--         <div class="product-item cols-2 hid-mob montag">
+            <img src="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/montag.png" alt=""> 
+        </div>
+ -->	
+  			<div class="product-item cols-3 montag_item"> 
+					<div class="product-img"  data-toggle="modal" data-target="#myModalItem" data-item="10">
+						<img src="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/montag.png" alt=""> 
+					</div>
+					<div class="product-content">
+						<h4  data-toggle="modal" data-target="#myModalItem" data-item="10">Монтаж</h4>
+						<p class="brand" data-toggle="modal" data-target="#myModalItem" data-item="10">2 часа</p>
+						<div class="radio-group"> 
+							<input type="radio" id="montag-two" name="montag-selector"  value="2990₽"checked="checked" data-item="10">
+							<label for="montag-two">2990₽</label> 
+						</div>
+					</div>
+				</div>
+			</div> 
+
+			<div class="row-product align">
+				<div class="cols-4"> 
+					<h3>Не знаете, что выбрать?</h3>
+				</div>
+				<div class="cols-3"> 
+					<a href="" class="ant-button" data-toggle="modal" data-target="#myModalConsult">Заказать консультацию</a>
+				</div>
+				<div class="cols-2"> 
+					<div class="price-row"><div class="sale"><span>-30%</span></div>
+					<div class="old-price"><strike><span>27 390</span> ₽</strike></div>
+				</div>
+					<div class="true-price"><span>18 990</span> ₽</div>
+				</div>
+				<div class="cols-3 ">
+					<a href="" class="ant-button" data-toggle="modal" data-target="#myModalOrder">Заказать этот комплект</a>
+					<a href="" class="ant-button-blue rassrochka" data-toggle="modal" data-target="#myModalRassrochka">В рассрочку от <span>3490</span> р. / мес.</a>  
+				</div>
+			</div> 
+		</div>
+	</section>
+
+<!-- Modal Order -->
+<div id="myModalOrder" class="modal fade" role="dialog">
+  <div class="modal-dialog  modal-lg rasroch">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+    	<div class="big-circle"></div>
+        <button type="button" class="close" data-dismiss="modal" style="z-index: 10;">&times;</button> 
+      <div class="modal-body">
+      	<div class="row">
+      		<div class="col-sm-6">
+			<div class="row-product ">
+				<div class="cols-4"> 
+					<h3>Заказ комплекта</h3>
+				</div> 
+				<div class="row">
+				<div class="col-md-5"> 
+					<div class="price-row">
+						<div class="sale"><span>-30%</span></div>
+					<div class="old-price"><strike><span>0</span> ₽</strike></div>
+				</div>
+					<div class="true-price"><span>0</span> ₽</div> </div>
+				<div class="col-md-7 list-buy-product">
+					<p>НИЧЕГО НЕ ВЫБРАНО</p>
+				</div>
+			</div>
+				<div class="cols-3 "> 
+					<form class="antenna-form" method="POST" action="http://xn--e1agikdbpi.xn--p1ai/_antenny_assets_DO_NOT_DELETE/mail.php">
+						<input type="tel" name="tel"
+						placeholder="+7(  )   -  -  -" required>
+					  <button class="button-blue " >Оформить заказ</button>
+            <div class="antenna-utm"></div>
+            <input class="antenna_input" type="hidden" name="form" value="Обычный заказ">
+            <input class="antenna_input" type="hidden" name="items" value="">
+            <input class="antenna_input" type="hidden" name="price" value="">
+				  </form>  
+				</div>
+				<div class="call-us">или вы можете сами связаться с нами по телефону:<br/>
+					<a href="tel:+7 (495) 018-25-11" class="mod-tel">+7 (495) 018-25-11</a></div>
+			</div>
+		</div> 
+		<div class="col-md-6 img-box">
+			<img src="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/delivery-boy1.png" alt="">
+		</div>
+      	</div>  
+      </div>
+      <div class="modal-footer"> 
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Modal Consult -->
+<div id="myModalConsult" class="modal fade" role="dialog">
+  <div class="modal-dialog consult">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" style="z-index: 10;">&times;</button> 
+      <div class="modal-body text-center"> 
+					<h3 class=" text-center">Заказать выезд монтажника</h3>
+					<p>Оставьте свой номер и мы назначим дату выезда монтажника</p>
+					<form class="antenna-form" method="POST" action="http://xn--e1agikdbpi.xn--p1ai/_antenny_assets_DO_NOT_DELETE/mail.php">
+						<input type="tel" name="tel"
+						placeholder="+7(  )   -  -  -"  required>
+					  <button class="button-blue " >Отправить</button>
+            
+            <div class="antenna-utm"></div>
+            <input class="antenna_input" type="hidden" name="form" value="Заказ выезда монтажника">
+            <input class="antenna_input" type="hidden" name="price" value="">
+				  </form>   
+		</div>
+      <div class="modal-footer"> 
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Modal Rassrochka -->
+<div id="myModalRassrochka" class="modal fade" role="dialog">
+  <div class="modal-dialog  modal-lg rasroch">
+
+    <!-- Modal content-->
+    <div class="modal-content ">
+    	<div class="big-circle"></div>
+        <button type="button" class="close" data-dismiss="modal" style="z-index: 10;">&times;</button> 
+      <div class="modal-body">
+      	<div class="row">
+      		<div class="col-sm-6">
+			<div class="row-product ">
+				<div class="cols-4"> 
+					<h3>Заказ комплекта</h3>
+				</div> 
+				<div class="row">
+				<div class="col-md-5"> 
+					<div class="price-row">
+						<div class="sale"><span>-30%</span></div>
+					<div class="old-price"><strike><span>0</span> ₽</strike></div>
+				</div>
+					<div class="true-price"><span>0</span> ₽</div> </div>
+				<div class="col-md-7 list-buy-product">
+					<p>НИЧЕГО НЕ ВЫБРАНО</p>
+				</div>
+			</div>
+				<div class="cols-3 ">
+					<h3 class="rasr">В рассрочку от <span>0</span> ₽ / мес</h3>
+					<form class="antenna-form" method="POST" action="http://xn--e1agikdbpi.xn--p1ai/_antenny_assets_DO_NOT_DELETE/mail.php">
+						<input type="tel" name="tel"
+						placeholder="+7(  )   -  -  -"  required>
+					  <button class="button-blue " >Оформить заказ</button>
+
+            <div class="antenna-utm"></div>
+            <input class="antenna_input" type="hidden" name="form" value="Заказ в рассрочку">
+            <input class="antenna_input" type="hidden" name="items" value="">
+            <input class="antenna_input" type="hidden" name="price" value="">
+            <input class="antenna_input" type="hidden" name="rassrochka" value="">
+				  </form>  
+				</div>
+				<div class="call-us">или вы можете сами связаться с нами по телефону:<br/>
+					<a href="tel:+7 (495) 018-25-11" class="mod-tel">+7 (495) 018-25-11</a></div>
+			</div>
+		</div> 
+		<div class="col-md-6 img-box">
+			<img src="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/delivery-boy1.png" alt="">
+		</div>
+      	</div>  
+      </div>
+      <div class="modal-footer"> 
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Modal Item -->
+<div id="myModalItem" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" style="z-index: 10;">&times;</button> 
+      <div class="modal-body">
+
+        <div class="modal-slider">
+          <div class="slider-item">
+            <div class="slide-image">
+              <img src="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/rour-zbt.png" alt="" >
+            </div>
+            <div class="slide-content">
+              <h4>Комплект «Интернет на дачу»</h4>
+              <h3>Роутер</h3>
+              <h5>ZBT</h5>
+              <div class="slide-price">2000₽</div>
+              <p>Роутер выполнен в простом, но элегантном корпусе белого цвета. На задней панели расположены Ethernet-порты, кнопка перезагрузки и разъем питания. USB-порт вынесен на переднюю панель. Светодиодная индикация расположена сверху.
+              <br>
+              Маршрутизатор оснащен модулем WiFi, работающим на частоте 2,4 ГГц и поддерживающим наиболее распространенные стандарты 802.11b/g/n. Максимальная скорость передачи данных по беспроводной сети составляет 300 Мбит/с.
+              </p>              
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="slide-image">
+              <img src="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/route-cinet.jpg" alt="" >
+            </div>
+            <div class="slide-content">
+              <h4>Комплект «Интернет на дачу»</h4>
+              <h3>Роутер</h3>
+              <h5>ZyXEL Keenetic 4G</h5>
+              <div class="slide-price">3200₽</div>
+              <p>Работает без сбоев и зависания в паре с Антеннами и усилителями интернет сигнала. Он умеет перезагружать зависший модем и усилитель интернет сигнала по питанию, что позволяет самостоятельно восстанавливать канал связи без участия специалиста.
+              <br>
+              Это особенно важно, если речь идет об удаленном объекте (офисе, складе, даче). Две мощные антенны дают максимально широкую зону покрытия и высокое качество связи на скорости до 300 Мбит/с.</p>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="slide-image">
+              <img src="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/huawei-rout.png" alt="" >
+            </div>
+            <div class="slide-content">
+              <h4>Комплект «Интернет на дачу»</h4>
+              <h3>Роутер</h3>
+              <h5>Huawei B525 </h5>
+              <div class="slide-price">7500₽</div>
+              <p>Wi-Fi-роутер Huawei B525 отличается высокой скоростью передачи и приёма данных (до 1300 Мбит/сек) для стабильной работы в интернете. Он выполнен в стильном лаконичном дизайне и оснащён двумя вращающимися антеннами с коэффициентом усиления 2x1 dBi для улучшения качества сигнала. 
+              <br>
+              Разъёмы для SIM-карты и USB-накопителя позволят раздавать интернет на даче или в загородном доме. Есть и выход для подсоединения телефонии RJ-11. Надёжное шифрование данных предотвратит утечку конфиденциальной информации и хакерские атаки.  </p>
+            </div>
+          </div>
+          <div class="slider-item">
+            <div class="slide-image">
+              <img src="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/ant-1.png" alt="" >
+            </div>
+            <div class="slide-content">
+              <h4>Комплект «Интернет на дачу»</h4>
+              <h3>Антенна</h3>
+              <h5>PETRA BB MIMO - 15 дБ</h5>
+              <div class="slide-price">2800₽</div>
+              <p>Для мест с неуверенным уровнем сигнала. Идеальный вариант для онлайн игр, просмотра фильмов.</p>
+            </div> 
+          </div> 
+          <div class="slider-item">
+            <div class="slide-image">
+              <img src="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/ant-2.png" alt="" >
+            </div>
+            <div class="slide-content">
+              <h4>Комплект «Интернет на дачу»</h4>
+              <h3>Антенна</h3>
+              <h5>AGATA MIMO - 18 дБ</h5>
+              <div class="slide-price">5600₽</div>
+              <p>Для удаленных объектов, где сигнал полностью отсутствует или для желающих бить рекорды по скорости.</p>
+            </div> 
+          </div> 
+          <div class="slider-item">
+            <div class="slide-image">
+              <img src="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/ant-3.png" alt="" >
+            </div>
+            <div class="slide-content">
+              <h4>Комплект «Интернет на дачу»</h4>
+              <h3>Антенна</h3>
+              <h5>Krocs MIMO - 24дб</h5>
+              <div class="slide-price">9600₽</div>
+              <p>С помощью этой антенны можно обеспечить уверенную связь с базовой станцией на расстоянии до 25 км в условиях прямой видимости.</p>
+            </div> 
+          </div> 
+
+          <div class="slider-item">
+            <div class="slide-image">
+              <img src="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/cronshtein.png" alt="" >
+            </div>
+            <div class="slide-content">
+              <h4>Комплект «Интернет на дачу»</h4>
+              <h3>Кронштейн</h3>
+              <h5>Для антенны</h5>
+              <div class="slide-price">800₽</div>
+              <p>Кронштейн служит креплением легких антенн весом до 2 кг на внешнюю сторону здания или внутри помещения. Подходит для панельных антенн. Надежно крепится на 4 болта.</p> 
+            </div>
+          </div>
+
+          <div class="slider-item">
+            <div class="slide-image">
+              <img src="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/pigtail.png" alt="" >
+            </div>
+            <div class="slide-content">
+              <h4>Комплект «Интернет на дачу»</h4>
+              <h3>Пигтейлы</h3>
+              <h5>Переходник</h5>
+              <div class="slide-price">1020₽</div>
+              <p>Переходник, необходимый для подключения любой внешней антенны к модему.</p>  
+            </div> 
+          </div>
+
+          <div class="slider-item">
+            <div class="slide-image">
+              <img src="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/sim-card.png" alt="" >
+            </div>
+            <div class="slide-content">
+              <h4>Комплект «Интернет на дачу»</h4>
+              <h3>Сим-карта</h3>
+              <h5>Безлимит</h5>
+              <div class="slide-price">Бесплатно</div>
+              <p>Сим-карта с уникальным безлимитным тарифом.</p> 
+            </div>
+          </div>
+
+          <div class="slider-item">
+            <div class="slide-image">
+              <img src="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/modem.png" alt="" >
+            </div>
+            <div class="slide-content">
+              <h4>Комплект «Интернет на дачу»</h4>
+              <h3>Модем</h3>
+              <h5>4G</h5>
+              <div class="slide-price">2900₽</div>
+              <p>Huawei E3372 — очередное USB-решение от мирового лидера по производству устройств передачи данных. Миниатюрный USB-модем, способный работать на скорости до 150 Мбит/сек, поддерживающий все российские 4G LTE и 3G частоты, обладающий антенными разъемами MIMO и зарекомендованным качеством Huawei.
+              <br>
+              Работает с любой сим-картой любого провайдера беспроводного интернета в стандартах 2G/3G/4G.</p>
+            </div>
+          </div>
+
+          <div class="slider-item">
+            <div class="slide-image">
+              <img src="https://av-tool.ru/_antenny_assets_DO_NOT_DELETE/img/montag.png" alt="" >
+            </div>
+            <div class="slide-content">
+              <h4>Комплект «Интернет на дачу»</h4>
+              <h3>Монтаж</h3>
+              <h5>2 часа</h5>
+              <div class="slide-price">2990₽</div>
+              <p>Специалисты приезжают к Вам и замеряют уровень сигнала, предлагают вам варианты подключения и способы монтажа снаружи дома, без повреждения отделки, устанавливается антенна и направляется на вышку, в дом проводится кабель. В доме устанавливается роутер и настраивается Wi-Fi.</p> 
+            </div>
+          </div>
+
+        </div>
+ 
+    
+      </div>
+      <div class="modal-footer"> 
+      </div>
+    </div>
+
+  </div>
+</div> 
+
+	<script> 
+  $('.s-1-slider').on('init', function(event, slick) {
+    $('.arrow-box').append('<div class="slick-counter1"><span class="mob-block"><span class="heads">ШАГ</span><span class="current1"></span></span><span class="total1"> / 0</span></div>');
+    $('.current1 ').append(slick.currentSlide + 1); 
+    $('.total1').append(slick.slideCount);
+  })
+  .slick({
+  arrows: true,
+  dots: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: '<div class="slider-left-arrow"><span class="nav-prev"></span></div>',
+    nextArrow: '<div class="slider-right-arrow"><span class="nav-next"></span></div>',
+  infinite: false,
+  speed: 500,
+  fade: false,
+  adaptiveHeight: true,
+  cssEase: 'linear'
+  })
+  .on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+    $('.current1').text(nextSlide + 1);
+  }); 
+
+$('.s-1 .slider-left-arrow span, .s-1 .slider-left-arrow ').click(function(){
+  $('.s-1-slider').slick('slickPrev');
+});
+
+$('.s-1 .slider-right-arrow span, .s-1 .slider-right-arrow').click(function(){
+  $('.s-1-slider').slick('slickNext');
+});
+ 
+ $('.modal-slider').slick({
+  arrows: true,
+  dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    // prevArrow: '<div class="slider-left-arrow"><span class="nav-prev"></span></div>',
+    // nextArrow: '<div class="slider-right-arrow"><span class="nav-next"></span></div>',
+  infinite: true,
+  speed: 500,
+  fade: false,
+  adaptiveHeight: false,
+  cssEase: 'linear',
+  initialSlide: 1,
+  lazyLoad: 'progressive',
+  }); 
+  
+  $(function(){
+      $('[data-target="#myModalItem"]').click(function(event) {
+          $('.modal-slider').slick('slickGoTo', parseInt($(this).data('item') ));  
+          $('.modal-slider').css({opacity: 0});
+          setTimeout(function(){
+            $('.modal-slider').animate({opacity: 1}, 1000);
+          }, 500);
+          
+      });
+
+  /* Calculator */
+    function forman_num(num)
+    {
+      num+='';
+      if(num.length > 3)
+      {
+        num = num.substr(0, num.length - 3) + ' '+ num.substr(-3);
+      }
+
+      return num;
+    }
+    function calculate()
+    {
+      var items = [];
+      var sum = 0;
+      $('.s-2 input:checked').each(function(){
+        sum += (parseInt(this.value) || 0); 
+        if($(this).data('item') !== undefined)
+          items.push(
+              $(this).parents('.product-content').find('h4').text() 
+            + ' ('+$(this).parents('.product-content').find('.brand').text()+')'
+            );
+      });
+
+      // items = items.join(', ');
+
+      var sum1 = Math.ceil(sum*0.7);
+      
+      var sum_old = forman_num(sum);
+      var sum_new = forman_num(sum1);
+      var sum_rass = forman_num(forman_num(Math.floor(sum1/6)));
+
+      $('.old-price span').text(sum_old);
+      $('.true-price span').text(sum_new);
+      $('.rassrochka span').text(sum_rass);
+
+      $('#myModalOrder .old-price span').text(sum_old);
+      $('#myModalOrder .true-price span').text(sum_new);
+      $('#myModalOrder .list-buy-product p').text(items.join(', '));
+
+      $('#myModalRassrochka .old-price span').text(sum_old);
+      $('#myModalRassrochka .true-price span').text(sum_new);
+      $('#myModalRassrochka .rasr span').text(sum_rass);
+      $('#myModalRassrochka .list-buy-product p').text(items.join(', '));
+
+      $('input.antenna_input[name=items]').val(items.join('\n'));
+      $('input.antenna_input[name=price]').val(sum_new);
+      $('input.antenna_input[name=rassrochka]').val(sum_rass);
+
+    }
+    $('.s-2 input[type=radio]').change(calculate);
+
+    calculate();
+
+    $('.product-content input[type=radio]').click(function(event) {
+        var $item = $(this);
+
+        if($item.data('item') !== undefined)
+        {
+          var item = parseInt($item.data('item'));
+          var $slide = $('.modal-slider .slider-item[data-slick-index='+item+']');
+          var title = $slide.find('h5').text();
+          var img = $slide.find('.slide-image img')[0].src;
+          var $prod = $item.parents('.product-item');
+
+          $prod.find('.product-img img')[0].src = img;
+          $prod.find('.brand').text(title);          
+
+          $prod.find('.product-img').data('item', item);
+          $prod.find('h4').data('item', item);
+          $prod.find('.brand').data('item', item);
+        }
+    });
+
+    // $('form.antenna-form').submit(function(event) {
+      
+    // });
+
+   /* PARSE UTMs */
+
+      var namekey = ['added','utm_campaign','utm_source','utm_medium','utm_term','source'], //Ключи какие будем парсить 
+      div_class = '.antenna-utm', // Куда будем выводить результат 
+      input_hide = 'hidden'; //hidden  
+
+      function parseGET(url){ 
+        if(!url || url == '') url = decodeURI(document.location.search); 
+        if(url.indexOf('?') < 0) return Array(); 
+
+        url = url.split('?'); 
+        url = url[1]; 
+
+        var GET = [], 
+            params = [], 
+            key = []; 
+
+        if(url.indexOf('#')!=-1){ url = url.substr(0,url.indexOf('#')); } 
+        if(url.indexOf('&') > -1){ params = url.split('&');} else {params[0] = url; } 
+
+        for (r=0; r<params.length; r++){ 
+          for (z=0; z<namekey.length; z++){ 
+            if(params[r].indexOf(namekey[z]+'=') > -1){ 
+              if(params[r].indexOf('=') > -1) { 
+                key = params[r].split('='); 
+                GET[key[0]]=key[1]; 
+              } 
+            } 
+          } 
+        } 
+        return (GET); 
+      }; 
+
+      function input(){ 
+
+        var $_GET = parseGET(); 
+
+        for(z=0; z<namekey.length; z++){ 
+          if(!!$_GET[namekey[z]]){ 
+            $(div_class).append('<input name="'+namekey[z]+'" type="'+input_hide+'" value="'+$_GET[namekey[z]]+'">'); 
+          } 
+        } 
+
+      }
+    input(); 
+
+  });  
+
+	</script>
+</body>
+</html>
