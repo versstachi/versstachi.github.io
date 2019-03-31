@@ -8,6 +8,9 @@ $(function() {
         // $(this).parent().addClass("green-col");
         $('input:radio[name=view]').parent().find('.switch-label-on, .switch-label-off, .switch-selection').removeClass("green-col blue-col yel-col");
         $(this).parent().find('.switch-label-on, .switch-label-off, .switch-selection').addClass("green-col");
+        $('#button-blue-col').hide();
+        $('#button-yel-col').hide();
+        $('#button-green-col').show();
         }
         else if (this.value == 'partneron') {
     	$("body").find(".change-color").removeClass("green-col yel-col").addClass("blue-col");
@@ -16,12 +19,18 @@ $(function() {
         // $(this).parent().addClass("blue-col");
         $('input:radio[name=view]').parent().find('.switch-label-on, .switch-label-off, .switch-selection').removeClass("green-col blue-col yel-col");
         $(this).parent().find('.switch-label-on, .switch-label-off, .switch-selection').addClass("blue-col");
+        $('#button-green-col').hide();
+        $('#button-yel-col').hide();
+        $('#button-blue-col').show();
         }
         else if (this.value == 'bizneson') {
     	$("body").find(".change-color").removeClass("green-col blue-col").addClass("yel-col");
         $('input:radio[name=view]').removeClass("green-col blue-col yel-col"); 
         $('input:radio[name=view]').parent().find('.switch-label-on, .switch-label-off, .switch-selection').removeClass("green-col blue-col yel-col");
         $(this).parent().find('.switch-label-on, .switch-label-off, .switch-selection').addClass("yel-col");
+        $('#button-blue-col').hide();
+        $('#button-green-col').hide();
+        $('#button-yel-col').show();
         }
     });
     $('.munu-box').click(function () {
