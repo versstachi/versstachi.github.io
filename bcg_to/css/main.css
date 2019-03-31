@@ -120,7 +120,7 @@ button,
   cursor: pointer; }
   .button-white:hover {
     text-decoration: none;
-    color: #FFF;
+    color: #3f3f3f;
     opacity: 0.85; }
 
 .button-blue {
@@ -973,6 +973,9 @@ header {
     @media (max-width: 991px) {
       header .main-head-pic {
         padding-right: 15px; } }
+    @media (max-width: 450px) {
+      header .main-head-pic {
+        max-height: 100px; } }
     header .main-head-pic img {
       max-width: 100%;
       height: auto;
@@ -1002,6 +1005,9 @@ header {
       @media (max-width: 1700px) {
         header .main-head-pic:after {
           right: 0; } }
+      @media (max-width: 991px) {
+        header .main-head-pic:after {
+          display: none; } }
 
 footer {
   padding: 50px 5%; }
@@ -1513,7 +1519,7 @@ footer {
     text-transform: uppercase; }
     .user-page .s-1 h2 span {
       color: #25c27a; }
-  .user-page .s-1 button {
+  .user-page .s-1 .button {
     margin-right: 10px; }
 
 .user-page .s-2 {
@@ -1983,7 +1989,7 @@ footer {
     text-transform: uppercase; }
     .partner-page .s-1 h2 span {
       color: #2b4a7e; }
-  .partner-page .s-1 button {
+  .partner-page .s-1 .button {
     margin-right: 10px; }
   .partner-page .s-1 ul.check-list li:before {
     background: url(../img/checked-blue.png); }
@@ -2510,7 +2516,7 @@ footer {
     text-transform: uppercase; }
     .biznes-page .s-1 h2 span {
       color: #fead26; }
-  .biznes-page .s-1 button {
+  .biznes-page .s-1 .button {
     margin-right: 10px; }
   .biznes-page .s-1 ul.check-list li:before {
     background: url(../img/checked-yellow.png); }
