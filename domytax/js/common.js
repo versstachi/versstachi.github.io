@@ -1,9 +1,11 @@
 $(function() { 
 $('.slider-exemple').slick({
   dots: false,
-  infinite: false,
+  infinite: true,
   arrows: true,
-  speed: 300,
+  speed: 500,
+  centerMode: true,
+  centerPadding: '40px',
   slidesToShow: 3,
   slidesToScroll: 1,
   prevArrow: '<div class="slider-left-arrow"> <span class="glyphicon glyphicon-chevron-left"></span></div>',
@@ -15,21 +17,28 @@ $('.slider-exemple').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
         infinite: true,
-        dots: false
+        dots: false,
+        centerMode: false,
+        centerPadding: '0px',
       }
     },
     {
       breakpoint: 600,
       settings: {
+        infinite: false,
         slidesToShow: 2,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        centerMode: false,
+        centerPadding: '0px',
       }
     },
     {
       breakpoint: 480,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        centerMode: false,
+        centerPadding: '0px',
       }
     }
     // You can unslick at a given breakpoint now by adding:
@@ -55,5 +64,5 @@ else {
 $('.menu-hum').click(function(){
   $('.menu').toggle("show");
 });
-}
+} 
 });
