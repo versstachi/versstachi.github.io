@@ -1,0 +1,12 @@
+[
+    { "name" : "Airpods,1/2",       "image": "img/airpod.png",      "chance": 250  }
+,   { "name" : "Чашка|кофе",        "image": "img/coffe.png",       "chance": 2    }
+,   { "name" : "Магнит",            "image": "img/magnet.png",      "chance": 250  }
+,   { "name" : "Airpods,2/2",       "image": "img/airpod.png",      "chance": 0    }
+,   { "name" : "Секретный|подарок", "image": "img/secret-gift.png", "chance": 250  }
+,   { "name" : "Кружка",            "image": "img/cup.png",         "chance": 1    }
+,   { "name" : "Секретный|подарок", "image": "img/secret-gift.png", "chance": 250  }
+,   { "name" : "Билет к|енотам",    "image": "img/ticket.png",      "chance": 1   }
+,   { "name" : "2 билета|к енотам", "image": "img/two-ticket.png",  "chance": 1   }
+,   { "name" : "Билет|в кино",      "image": "img/film.png",        "chance": 1   }
+]
