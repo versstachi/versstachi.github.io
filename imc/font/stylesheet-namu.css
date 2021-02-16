@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'NAMU';
+    src: url('NAMU-1990.eot');
+    src: local('NAMU-1990'), local('NAMU-1990'),
+        url('NAMU-1990.eot') format('embedded-opentype'),
+        url('NAMU-1990.woff2') format('woff2'),
+        url('NAMU-1990.woff') format('woff')
+        url('NAMU-1990.ttf') format('truetype');
+    font-weight: 900;
+}
+@font-face {
+    font-family: 'NAMU';
+    src: url('NAMU-1960.eot');
+    src: local('NAMU-1960'), local('NAMU-1960'),
+        url('NAMU-1960.eot') format('embedded-opentype'),
+        url('NAMU-1960.woff2') format('woff2'),
+        url('NAMU-1960.woff') format('woff')
+        url('NAMU-1960.ttf') format('truetype'); 
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'NAMU';
+    src: url('NAMU-1930.eot');
+    src: local('NAMU-1930'), local('NAMU-1930'),
+        url('NAMU-1930.eot') format('embedded-opentype'),
+        url('NAMU-1930.woff2') format('woff2'),
+        url('NAMU-1930.woff') format('woff')
+        url('NAMU-1930.ttf') format('truetype'); 
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'NAMU-1600';
+    src: url('NAMU-1600.eot');
+    src: local('NAMU-1600'), local('NAMU-1600'),
+        url('NAMU-1600.eot') format('embedded-opentype'),
+        url('NAMU-1600.woff2') format('woff2'),
+        url('NAMU-1600.woff') format('woff')
+        url('NAMU-1600.ttf') format('truetype'); 
+    font-weight: 800;
+}
