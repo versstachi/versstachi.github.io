@@ -74,7 +74,8 @@ var marker = L.marker([51.63015157454955, 2.6431482992641033], {
       html: "<div class='marker__image'><img src='img/marker-icon.png' alt=''></div>MSC SEASIDE<div class='popup'>Catanzaro<img src='img/arrow-forward-poup.svg' alt=''>Taranto<div class='popup_status'>Normal</div></div>",
       className: 'text-below-marker',
     })
-}).addTo(map).bindTooltip("Marker 1");
+  }).addTo(map);
+// }).addTo(map).bindTooltip("<img src='img/marker-icon.png' alt=''>");
 
 // // zoom in function
 var zoomIn = document.getElementById('in');
