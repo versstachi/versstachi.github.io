@@ -59,7 +59,8 @@ body {
   padding-left: 21px; }
 
 #mapid {
-  height: 100vh; }
+  height: 100vh;
+  z-index: 44; }
 
 .popup {
   display: none; }
