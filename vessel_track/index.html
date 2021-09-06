@@ -14,19 +14,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/perliedman-leaflet-control-geocoder/1.5.5/Control.Geocoder.min.css" /> -->
  
 </head> 
-<body>
-<!-- <div class="overlay">
-    <div class="form-input"></div>
-        <input type="text" id="input-before" >
-    </div>
-    <div class="form-input">
-        <input type="text" id="input-after" >
-    </div>
-    <div class="form-input">
-        <button id="button">Check</button>
-    </div>
-</div>
-<div class="popup"></div> -->
+<body>  
 <div class="main_content">
     <div class="left_panel">
         <div class="top_ico">
@@ -38,7 +26,7 @@
             <a href="">
                 <img src="img/map-ico.svg" alt="">
             </a>
-            <a href="">
+            <a href="#" class="voyage_link_open">
                 <img src="img/book-ico.svg" alt="">
             </a>
         </div>
@@ -85,11 +73,61 @@
                 </div>
             </div>
         </div>
+        <div class="voyage_panel">
+            <div class="voyage_panel_top">
+                Voyage Planner
+            </div>
+            <div class="center_ico">
+                <div class="voyage_form_select">
+                    <label for="cars">From</label> 
+                    <div class="custom-select">
+                        <select name="cars" id="cars">
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="mercedes">Mercedes</option>
+                          <option value="audi">Audi</option>
+                        </select>
+                    </div>  
+                </div>  
+                <div class="voyage_form_select">
+                    <label for="cars">To</label> 
+                    <div class="custom-select">
+                        <select name="cars" id="cars">
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="mercedes">Mercedes</option>
+                          <option value="audi">Audi</option>
+                        </select>
+                    </div>  
+                </div>  
+                <div class="voyage_form_select">
+                    <label for="cars">Date</label> 
+                    <input type="date" id="date" name="date">
+                </div>  
+                <div class="voyage_form_select">
+                    <label for="cars">Vessel</label> 
+                    <div class="custom-select">
+                        <select name="cars" id="cars">
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="mercedes">Mercedes</option>
+                          <option value="audi">Audi</option>
+                        </select>
+                    </div>  
+                </div>   
+                <div class="voyage_check_result">See results</div>   
+            </div> 
+        </div>
         <div class="notification_panel">
             <div class="notification_box">
                 <div class="sidebar__vessel_notification_text">
                     <div class="sidebar__vessel_notification_date">20.07.21 at 09:00</div>
-                    <div class="sidebar__vessel_notification_text">Storm near Palermo may affect the vessel</div>
+                    <div class="sidebar__vessel_notification_desrip">Storm near Palermo</div>
+                    <div class="sidebar__vessel_notification_risk">At risk</div>
+                    <div class="sidebar__vessel_notification_tags">
+                        <div class="sidebar__vessel_notification_tag_item move">CRUISE  AUSONIA</div>
+                        <div class="sidebar__vessel_notification_tag_item stay">GIANO</div>
+                    </div>
                 </div>
                 <div class="sidebar__vessel_notification_status">
                     <img src="img/thunder-circle.svg" alt="">
@@ -98,7 +136,11 @@
             <div class="notification_box">
                 <div class="sidebar__vessel_notification_text">
                     <div class="sidebar__vessel_notification_date">20.07.21 at 09:00</div>
-                    <div class="sidebar__vessel_notification_text">Storm near Palermo may affect the vessel</div>
+                    <div class="sidebar__vessel_notification_desrip">Error in the control system</div>
+                    <div class="sidebar__vessel_notification_tags">
+                        <div class="sidebar__vessel_notification_tag_item active-move">PALMAROLA</div>
+                        <div class="sidebar__vessel_notification_tag_item stay">LADY G</div>
+                    </div>
                 </div>
                 <div class="sidebar__vessel_notification_status">
                     <img src="img/warning-circle.svg" alt="">
@@ -107,7 +149,10 @@
             <div class="notification_box">
                 <div class="sidebar__vessel_notification_text">
                     <div class="sidebar__vessel_notification_date">20.07.21 at 09:00</div>
-                    <div class="sidebar__vessel_notification_text">Storm near Palermo may affect the vessel</div>
+                    <div class="sidebar__vessel_notification_desrip">Arrived at the port Lipari</div>
+                    <div class="sidebar__vessel_notification_tags"> 
+                        <div class="sidebar__vessel_notification_tag_item active-move">PALMAROLA</div>
+                    </div>
                 </div>
                 <div class="sidebar__vessel_notification_status">
                     <img src="img/info-circle.svg" alt="">
@@ -321,7 +366,7 @@
             </div>
             <nav>
                 <ul class="sidebar_tabs">
-                  <li class="sidebar__li" data-tab-id="tab1">overview</li>
+                  <li class="sidebar__li active" data-tab-id="tab1">overview</li>
                   <li class="sidebar__li" data-tab-id="tab2">itinerary</li>
                   <li class="sidebar__li" data-tab-id="tab3">notifications</li> 
                 </ul>
@@ -524,9 +569,11 @@
 </div> 
 
  
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" ></script>  
 <script src="https://cdn.jsdelivr.net/npm/leaflet-providers@1.12.0/leaflet-providers.js"></script>  
 <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+<script src="js/weather.js"></script>
 <script src="js/curve.js"></script>
 <script src="js/astar.js"></script>
 <script src="js/route.js"></script>
