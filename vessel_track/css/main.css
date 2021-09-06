@@ -729,7 +729,7 @@ ul.sidebar_tabs {
   border: 0.5px solid rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: blur(300px);
           backdrop-filter: blur(300px);
-  padding-top: 10%;
+  padding-top: 6%;
   -webkit-transition: 0.2s all;
   -o-transition: 0.2s all;
   transition: 0.2s all;
@@ -741,6 +741,14 @@ ul.sidebar_tabs {
     transition: 0.2s all;
     bottom: 0;
     left: 0; }
+  .voyage_panel .voyage_panel_top {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 50px; }
   .voyage_panel .voyage_form_select {
     margin-bottom: 20px;
     display: -webkit-box;
