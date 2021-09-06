@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"> 
+	<meta name="lookport" content="width=device-width, initial-scale=1.0">   
+<title>Versstachi - Web Design Frontend Developers</title>
+<meta property="og:title" content="Versstachi - Web Design Frontend Developers" />  
+<meta property="og:image" content="img/Ogg.png" /> 
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" /> 
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.5/leaflet-routing-machine.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/perliedman-leaflet-control-geocoder/1.5.5/Control.Geocoder.min.css" /> -->
+<style> 
+#mapid { height: 100vh; } 
+</style> 
+</head> 
+<body>
+
+<div id="mapid"></div>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" ></script>  
+<!-- <script src="https://raw.githubusercontent.com/leaflet-extras/leaflet-providers/master/leaflet-providers.js"></script> -->
+<script> 
+var mymap = L.map('mapid').setView([20, -11.09], 4);
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidmVyc3N0YWNoaSIsImEiOiJja3Q1bjI1OG0wYTB1MndwaG0wZTI0eG0yIn0.KW23CHoSsSdBk52ntlTaRA', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'your.mapbox.access.token'
+}).addTo(mymap);
+var marker = L.marker([20, -11.09]).addTo(mymap);
+</script> 
+</body> 
+</html> 
