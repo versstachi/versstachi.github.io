@@ -16,6 +16,8 @@
 </head> 
 <body>  
 <div class="main_content">
+
+    <!-- left_panel -->
     <div class="left_panel">
         <div class="top_ico">
             <a href="">
@@ -36,7 +38,11 @@
             </a>
         </div>
     </div>
+    <!-- left_panel -->
+    
     <div class="main_row">
+
+        <!-- right_panel -->
         <div class="right_panel">
             <div class="top_ico">
                 <div class="right_panel_link notification_link_open">
@@ -73,11 +79,14 @@
                 </div>
             </div>
         </div>
+        <!-- right_panel -->
+
+        <!-- voyage_panel -->
         <div class="voyage_panel">
-            <div class="voyage_panel_top">
-                Voyage Planner
-            </div>
-            <div class="center_ico">
+            <div class="voyage_form" style="display: none;">
+                <div class="voyage_panel_top">
+                    Voyage Planner
+                </div>
                 <div class="voyage_form_select">
                     <label for="cars">From</label> 
                     <div class="custom-select">
@@ -115,9 +124,106 @@
                         </select>
                     </div>  
                 </div>   
-                <div class="voyage_check_result">See results</div>   
+                <div class="voyage_check_result btn-gray">See results</div>   
+            </div> 
+            <div class="voyage_form voyage_form_flex" >  
+                <div class="voyage_form_container" >  
+                    <div class="voyage_way">Catanzaro <img src="img/arrow-forward.svg" alt="">Taranto</div>
+                    <div class="voyage_vessel_info">
+                        <div class="voyage_vessel_date">
+                            <div class="voyage_vessel_date_label">Date
+                            </div>
+                            <div class="voyage_vessel_date_text">05 Sep 2021
+                            </div>
+                        </div>
+                        <div class="voyage_vessel_type">
+                            <div class="voyage_vessel_type_label">Vessel
+                            </div>
+                            <div class="voyage_vessel_type_text">Bungalo Lotus
+                            </div>
+                        </div>
+                    </div>
+                    <div class="voyage_way__card "> 
+                        <div class="voyage_way__card_header">
+                            <div class="voyage_way__card_header_item">
+                                <div class="voyage_way__card_header_label">ETA Forecast
+                                </div>
+                                <div class="voyage_way__card_header_text">07 Sep 2021, 07:15
+                                </div>
+                            </div>
+                            <div class="voyage_way__card_header_status">Economical
+                            </div>
+                        </div>
+                        <div class="voyage_way__card_body">
+                            <div class="voyage_way__card_body_item">
+                                <div class="voyage_way__card_body_label">Fuel saved 
+                                </div>
+                                <div class="voyage_way__card_body_text">40 MT
+                                </div>
+                            </div>
+                            <div class="voyage_way__card_body_item">
+                                <div class="voyage_way__card_body_label">Total Savings 
+                                </div>
+                                <div class="voyage_way__card_body_text">$13 000
+                                </div>
+                            </div>
+                            <div class="voyage_way__card_body_item">
+                                <div class="voyage_way__card_body_label">CO2 Emission control 
+                                </div>
+                                <div class="voyage_way__card_body_text">120 MT
+                                </div>
+                            </div>
+                        </div>
+                        <div class="voyage_way__card_footer">
+                            <div class="voyage_way__card_time">
+                                <img src="img/time-ico.svg" alt="">~30 hours will be saved
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="voyage_way__card "> 
+                        <div class="voyage_way__card_header">
+                            <div class="voyage_way__card_header_item">
+                                <div class="voyage_way__card_header_label">ETA Forecast
+                                </div>
+                                <div class="voyage_way__card_header_text">07 Sep 2021, 00:20
+                                </div>
+                            </div>
+                            <div class="voyage_way__card_header_status">Fast
+                            </div>
+                        </div>
+                        <div class="voyage_way__card_body">
+                            <div class="voyage_way__card_body_item">
+                                <div class="voyage_way__card_body_label">Fuel saved 
+                                </div>
+                                <div class="voyage_way__card_body_text">20 MT
+                                </div>
+                            </div>
+                            <div class="voyage_way__card_body_item">
+                                <div class="voyage_way__card_body_label">Total Savings 
+                                </div>
+                                <div class="voyage_way__card_body_text">$8 000
+                                </div>
+                            </div>
+                            <div class="voyage_way__card_body_item">
+                                <div class="voyage_way__card_body_label">CO2 Emission control 
+                                </div>
+                                <div class="voyage_way__card_body_text">90 MT
+                                </div>
+                            </div>
+                        </div>
+                        <div class="voyage_way__card_footer">
+                            <div class="voyage_way__card_time">
+                                <img src="img/time-ico.svg" alt="">~37 hours will be saved
+                            </div>
+                        </div> 
+                    </div>
+                </div> 
+                <div class="btn-blue">start the itinerary</div> 
             </div> 
         </div>
+        <!-- voyage_panel -->
+
+        <!-- notification_panel -->
         <div class="notification_panel">
             <div class="notification_box">
                 <div class="sidebar__vessel_notification_text">
@@ -159,6 +265,9 @@
                 </div>
             </div>
         </div>
+        <!-- notification_panel -->
+
+        <!-- all_vessel_tab -->
         <div class="all_vessel_tab">  
             <div class="all_vessel_tab__header">
                 <div class="all_vessel_tab__controls all_vessel_tab__col">
@@ -360,6 +469,9 @@
                 </table> 
             </div>
         </div>
+        <!-- all_vessel_tab -->
+
+        <!-- sidebar -->
         <div id="sidebar"  class="sidebar">
             <div class="vessel_img">
                 <img src="img/default_vessel.png" alt="">
@@ -564,7 +676,12 @@
                 </div> 
               </div>  
         </div>
+        <!-- sidebar -->
+
+        <!-- map -->
         <div id="mapid"></div>
+        <!-- map -->
+
     </div>
 </div> 
 

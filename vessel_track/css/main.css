@@ -36,6 +36,68 @@ body {
   font-style: normal;
   margin: 0; }
 
+.btn-gray {
+  width: 523px;
+  height: 64px;
+  background: #C4C4C4;
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: 0.2s all;
+  -o-transition: 0.2s all;
+  transition: 0.2s all; }
+  .btn-gray:hover {
+    opacity: 0.8;
+    -webkit-transition: 0.2s all;
+    -o-transition: 0.2s all;
+    transition: 0.2s all; }
+
+.btn-blue {
+  width: 523px;
+  height: 64px;
+  background: #3C87FC;
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: 0.2s all;
+  -o-transition: 0.2s all;
+  transition: 0.2s all; }
+  .btn-blue:hover {
+    opacity: 0.8;
+    -webkit-transition: 0.2s all;
+    -o-transition: 0.2s all;
+    transition: 0.2s all; }
+
 .main_content {
   display: -webkit-box;
   display: -webkit-flex;
@@ -729,7 +791,7 @@ ul.sidebar_tabs {
   border: 0.5px solid rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: blur(300px);
           backdrop-filter: blur(300px);
-  padding-top: 6%;
+  padding-top: 5%;
   -webkit-transition: 0.2s all;
   -o-transition: 0.2s all;
   transition: 0.2s all;
@@ -814,6 +876,141 @@ ul.sidebar_tabs {
     color: #FFFFFF;
     text-align: center;
     cursor: pointer; }
+  .voyage_panel .voyage_form.voyage_form_flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%; }
+  .voyage_panel .voyage_form_container {
+    width: 100%; }
+  .voyage_panel .voyage_way {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    margin-bottom: 29px; }
+  .voyage_panel .voyage_vessel_info {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding-bottom: 26px; }
+  .voyage_panel .voyage_vessel_date {
+    margin-right: 44px; }
+  .voyage_panel .voyage_vessel_date_label,
+  .voyage_panel .voyage_vessel_type_label {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    opacity: 0.5; }
+  .voyage_panel .voyage_vessel_date_text,
+  .voyage_panel .voyage_vessel_type_text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF; }
+  .voyage_panel .voyage_way__card {
+    color: #FFF;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 27px 27px 21px;
+    background: #181819;
+    border-radius: 20px;
+    margin: 23px 0; }
+    .voyage_panel .voyage_way__card:hover {
+      background: #3C87FC; }
+      .voyage_panel .voyage_way__card:hover .voyage_way__card_header_status {
+        color: #FFFFFF;
+        border: 1px solid #FFFFFF; }
+  .voyage_panel .voyage_way__card_header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .voyage_panel .voyage_way__card_header_status {
+    border-radius: 20px;
+    border: 1px solid #3C87FC;
+    padding: 3px 8px;
+    color: #3C87FC; }
+  .voyage_panel .voyage_way__card_header_label {
+    margin-bottom: 7px; }
+  .voyage_panel .voyage_way__card_body {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 32px 0; }
+  .voyage_panel .voyage_way__card_body_label {
+    opacity: 0.8;
+    margin-bottom: 8px; }
+  .voyage_panel .voyage_way__card_footer {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px; }
+  .voyage_panel .voyage_way__card_time {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    .voyage_panel .voyage_way__card_time img {
+      width: 20px;
+      height: 20px;
+      display: block;
+      margin-right: 9px; }
 
 .notification_panel {
   position: absolute;

@@ -89,7 +89,7 @@ zoomOut.addEventListener('click',function zoomInFunc() {
   map.setZoom(map.getZoom() - 1)
 }, false); 
    
-
+//  map sidebar
 var sidebar = L.control.sidebar('sidebar', {
     closeButton: true,
     position: 'left',
@@ -102,7 +102,8 @@ var sidebar = L.control.sidebar('sidebar', {
     document.querySelector(".all_vessel_tab").classList.remove('active'); 
   document.querySelector(".voyage_panel").classList.remove('active');  
 });
- 
+// end map sidebar
+
 var curve1 = L.pathCurve([6.0190194670789925, -85.9360786885477], [51.63015157454955, 2.6431482992641033]).addTo(map);
      
 
@@ -111,53 +112,55 @@ curve1 = L.pathCurve([e.latlng.lat,e.latlng.lng], [51.63015157454955, 2.64314829
   
 });
 
-  var d = document,
-      tabs = d.querySelector('.sidebar_tabs'),
-      tab = d.querySelectorAll('.sidebar__li'),
-      contents = d.querySelectorAll('.tabs__content');
-  tabs.addEventListener('click', function(e) {
-      if (e.target && e.target.nodeName === 'LI') {
-        // change tabs
-        for (var i = 0; i < tab.length; i++) {
-          tab[i].classList.remove('active');
-        }
-        e.target.classList.toggle('active');
+// custom Tabs
+var d = document,
+    tabs = d.querySelector('.sidebar_tabs'),
+    tab = d.querySelectorAll('.sidebar__li'),
+    contents = d.querySelectorAll('.tabs__content');
+tabs.addEventListener('click', function(e) {
+    if (e.target && e.target.nodeName === 'LI') {
+      // change tabs
+      for (var i = 0; i < tab.length; i++) {
+        tab[i].classList.remove('active');
+      }
+      e.target.classList.toggle('active');
 
 
-        // change content
-        for (i = 0; i < contents.length; i++) {
-          contents[i].classList.remove('active');
-        }
-        
-        var tabId = '#' + e.target.dataset.tabId;
- d.querySelector(tabId).classList.toggle('active'); 
-      }  
-  });  
+      // change content
+      for (i = 0; i < contents.length; i++) {
+        contents[i].classList.remove('active');
+      }
+      
+      var tabId = '#' + e.target.dataset.tabId;
+d.querySelector(tabId).classList.toggle('active'); 
+    }  
+});  
 
-  var d = document,
-      tabs = d.querySelector('.tabs'),
-      tab = d.querySelectorAll('li'),
-      contents = d.querySelectorAll('.tabs__content');
-  tabs.addEventListener('click', function(e) {
-      if (e.target && e.target.nodeName === 'LI') {
-        // change tabs
-        for (var i = 0; i < tab.length; i++) {
-          tab[i].classList.remove('open');
-        }
-        e.target.classList.toggle('open');
-
-
-        // change content
-        for (i = 0; i < contents.length; i++) {
-          contents[i].classList.remove('open');
-        }
-        
-        var tabId = '#' + e.target.dataset.tabId;
- d.querySelector(tabId).classList.toggle('open'); 
-      }  
-  });
+var d = document,
+    tabs = d.querySelector('.tabs'),
+    tab = d.querySelectorAll('li'),
+    contents = d.querySelectorAll('.tabs__content');
+tabs.addEventListener('click', function(e) {
+    if (e.target && e.target.nodeName === 'LI') {
+      // change tabs
+      for (var i = 0; i < tab.length; i++) {
+        tab[i].classList.remove('open');
+      }
+      e.target.classList.toggle('open');
 
 
+      // change content
+      for (i = 0; i < contents.length; i++) {
+        contents[i].classList.remove('open');
+      }
+      
+      var tabId = '#' + e.target.dataset.tabId;
+d.querySelector(tabId).classList.toggle('open'); 
+    }  
+});
+//end  custom Tabs
+
+// panel open
 var notificationOpen = document.querySelector(".voyage_link_open");
 notificationOpen.addEventListener('click', function notificationOpenFucn () {
   document.querySelector(".voyage_panel").classList.toggle('active');  
@@ -178,9 +181,10 @@ allVesselTabOpen.addEventListener('click', function allVesselTabOpenFunc () {
 var allVesselTabClose = document.querySelector(".all_vessel_tab_close");
 allVesselTabClose.addEventListener('click', function allVesselTabCloseFunc () {
   document.querySelector(".all_vessel_tab").classList.toggle('active'); 
-}, false);  
+}, false);   
+// end panel open
 
-
+// custom sortTable 
 function sortTable() {
   var table, rows, switching, i, x, y, shouldSwitch;
   table = document.querySelector(".custom_table");
@@ -215,8 +219,10 @@ function sortTable() {
     }
   }
 } 
-// custom-select
+// end custom sortTable 
 
+
+// custom-select 
 var x, i, j, l, ll, selElmnt, a, b, c;
 /* Look for any elements with the class "custom-select": */
 x = document.getElementsByClassName("custom-select");
@@ -297,3 +303,4 @@ function closeAllSelect(elmnt) {
 /* If the user clicks anywhere outside the select box,
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
+// end custom Select
