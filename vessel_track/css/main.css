@@ -324,12 +324,15 @@ ul.sidebar_tabs {
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
-    color: #000000;
-    background: #18D3FC;
-    border-radius: 100px;
+    color: #3C87FC;
+    background: transparent;
     display: inline-block;
     padding: 3px 12px;
-    margin: 0; }
+    margin: 0;
+    border: 1px solid #3C87FC;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-radius: 100px; }
 
 .sidebar__content_section .sidebar__vessel_info_type {
   display: -webkit-box;
@@ -1373,7 +1376,8 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  border: 0.5px solid rgba(255, 255, 255, 0.5); }
+  border: 0.5px solid rgba(255, 255, 255, 0.5);
+  display: none; }
   .weather_panel .weather_box {
     width: 100%; }
   .weather_panel .weather_info_col_weather {
