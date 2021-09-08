@@ -83,15 +83,16 @@
 
         <!-- voyage_panel -->
         <div class="voyage_panel">
-            <div class="voyage_form">
+            <div id="voyage_form_back_link" class="voyage_form_back_link"><img src="img/arrow-forward.svg" alt=""></div>
+            <div id="voyage_way_form" class="voyage_form voyage_way_form">
                 <div class="voyage_panel_top">
                     Voyage Planner
                 </div>
                 <div class="voyage_form_select">
                     <label for="cars">From</label> 
-                    <div class="custom-select">
-                        <select name="cars" id="cars">
-                          <option value="0">Choose</option>
+                    <div class="custom-select"  onclick="voyage_check_result();">
+                        <select name="cars" id="way_from" class="custom_select_check" >
+                          <option value="">Choose</option>
                           <option value="volvo">Volvo</option>
                           <option value="saab">Saab</option>
                           <option value="mercedes">Mercedes</option>
@@ -101,10 +102,9 @@
                 </div>  
                 <div class="voyage_form_select">
                     <label for="cars">To</label> 
-                    <div class="custom-select">
-                        <select name="cars" id="cars">
-                          <option value="0">Choose</option>
-                          <option value="volvo">Volvo</option>
+                    <div class="custom-select"  onclick="voyage_check_result();">
+                        <select name="cars" id="way_to" class="custom_select_check">
+                          <option value="">Choose</option> 
                           <option value="volvo">Volvo</option>
                           <option value="saab">Saab</option>
                           <option value="mercedes">Mercedes</option>
@@ -118,9 +118,9 @@
                 </div>  
                 <div class="voyage_form_select">
                     <label for="cars">Vessel</label> 
-                    <div class="custom-select">
-                        <select name="cars" id="cars">
-                          <option value="0">Choose</option>
+                    <div class="custom-select" onclick="voyage_check_result();">
+                        <select name="cars" id="way_vessel" class="custom_select_check">
+                          <option value="">Choose</option>
                           <option value="volvo">Volvo</option>
                           <option value="saab">Saab</option>
                           <option value="mercedes">Mercedes</option>
@@ -128,11 +128,11 @@
                         </select>
                     </div>  
                 </div>   
-                <div class="voyage_check_result btn-gray">See results</div>   
+                <div id="voyage_check_result_btn" class="voyage_check_result btn-gray" onclick="waySearchFunc();">See results</div>   
             </div> 
-            <div class="voyage_form voyage_form_flex"  style="display: none;">  
+            <div id="voyage_way_result" class="voyage_form voyage_form_flex voyage_way_result" >  
                 <div class="voyage_form_container" >  
-                    <div class="voyage_way">Catanzaro <img src="img/arrow-forward.svg" alt="">Taranto</div>
+                    <div class="voyage_way"><span id="voyage_way_result_from">Catanzaro</span> <img src="img/arrow-forward.svg" alt=""><span id="voyage_way_result_to">Taranto</span></div>
                     <div class="voyage_vessel_info">
                         <div class="voyage_vessel_date">
                             <div class="voyage_vessel_date_label">Date
@@ -222,7 +222,7 @@
                         </div> 
                     </div>
                 </div> 
-                <div class="btn-blue">start the itinerary</div> 
+                <div class="btn-blue" onclick="waySearchSnipetFunc();">start the itinerary</div> 
             </div> 
         </div>
         <!-- voyage_panel -->
@@ -272,7 +272,7 @@
         <!-- notification_panel -->
 
         <!-- weather_panel -->
-        <div class="weather_panel d-none">
+        <div id="weather_panel" class="weather_panel">
             <div class="weather_box"> 
                 <div class="weather_info_col">
                     <div class="weather_info_label">Weather at Catanzaro port</div> 

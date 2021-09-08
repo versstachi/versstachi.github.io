@@ -16,7 +16,7 @@ var markerIcon = L.divIcon(
   {
   html: `
   <div class='marker__image'><img src='img/marker-icon.png' alt=''></div>
-  <div class='marker__image_container'>
+  <div class='marker__image_container normal'>
     <div class='marker__image_label'>
       <div class='marker__image_title'>MSC SEASIDE</div>
       <div class='marker__label__status'>Under way</div>  
@@ -28,7 +28,11 @@ var markerIcon = L.divIcon(
 });
 
 var marker = L.marker([23.135044427508504, -82.42811672821004],
- {icon: markerIcon}).addTo(map);
+ {icon: markerIcon}).addTo(map).on('click', clickZoom);
+
+function clickZoom(e) {
+    map.setView(e.target.getLatLng(),4);
+}
 
 map.on('popupopen', function(e) {
     // find the pixel location on the map where the popup anchor is
@@ -156,11 +160,12 @@ d.querySelector(tabId).classList.toggle('open');
 //end  custom Tabs
 
 // panel open
-var notificationOpen = document.querySelector(".voyage_link_open");
-notificationOpen.addEventListener('click', function notificationOpenFucn () {
+var voyagePanelOpen = document.querySelector(".voyage_link_open");
+voyagePanelOpen.addEventListener('click', function voyagePanelOpenFucn () {
   document.querySelector(".voyage_panel").classList.toggle('active');  
     sidebar.hide(); 
 }, false);  
+
 var notificationOpen = document.querySelector(".notification_link_open");
 notificationOpen.addEventListener('click', function notificationOpenFucn () {
   document.querySelector(".notification_panel").classList.toggle('active');  
@@ -315,8 +320,46 @@ function lonkHoverActive(elem) {
     for (i = 0; i < a.length; i++) {
         a[i].classList.remove('active')
     }
-    elem.classList.add('active');
+    elem.classList.toggle('active');
 }
+
 
 // set today date to input date
 document.getElementById('date').value = new Date().toISOString().slice(0, 10);
+ 
+function waySearchFunc(){
+  var wayFrom = document.getElementById('way_from').value;
+  var wayTo = document.getElementById('way_to').value;
+  var wayVessel = document.getElementById('way_vessel').value; 
+  if(!wayFrom == 0 && !wayTo == 0 && !wayVessel == 0){ 
+    // console.log('test'); //[array with valid inputs]
+
+    document.getElementById('voyage_way_form').classList.add("voyage_form_close");
+    document.getElementById('voyage_way_result').classList.add("voyage_form_open");
+    document.getElementById('voyage_form_back_link').classList.add("voyage_form_back_link_open"); 
+    document.getElementById('weather_panel').classList.add("weather_panel_open");
+  }
+}
+
+function waySearchSnipetFunc(){
+  document.querySelector(".voyage_panel").classList.remove('active');  
+    document.getElementById('weather_panel').classList.remove("weather_panel_open");
+  sidebar.show(); 
+} 
+function voyage_check_result(){
+  var wayFrom = document.getElementById('way_from').value;
+  var wayTo = document.getElementById('way_to').value;
+  var wayVessel = document.getElementById('way_vessel').value; 
+  if(!wayFrom == '0' && !wayTo == '0' && !wayVessel == '0'){   
+    document.getElementById('voyage_check_result_btn').classList.add("voyage_check_result_btn_true");  
+  }
+ };
+
+
+var voyageFormBackLink = document.getElementById("voyage_form_back_link");
+voyageFormBackLink.addEventListener('click', function voyageFormBackLinkFunc () {  
+    document.getElementById('voyage_way_form').classList.remove("voyage_form_close");
+    document.getElementById('voyage_way_result').classList.remove("voyage_form_open");
+    document.getElementById('voyage_form_back_link').classList.remove("voyage_form_back_link_open");
+    document.getElementById('weather_panel').classList.remove("weather_panel_open");
+}, false); 
