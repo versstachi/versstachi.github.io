@@ -1,81 +1,43 @@
-var testData = {
-  max: 8,
-  data: [
-          {lat: 51.75, lng:-13.55, count: 3},{lat: 50.75, lng:-1.55, count: 1},
-          {lat: 58.75, lng:-1.55, count: 3},{lat: 58.75, lng:-21.55, count: 1},
-          {lat: 53.75, lng:-11.55, count: 1},{lat: 59.75, lng:-21.55, count: 3},
-        ]
-}; 
-
-// var map = L.map('mapid').setView([50.80925310310907, -0.1361937699561519], 3);
-// L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidmVyc3N0YWNoaSIsImEiOiJja3Q1bjI1OG0wYTB1MndwaG0wZTI0eG0yIn0.KW23CHoSsSdBk52ntlTaRA', {
-//     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-//     maxZoom: 20,
-//     id: 'mapbox/dark-v10',
-//     tileSize: 256,
-//     zoomControl: false,
-//     accessToken: 'pk.eyJ1IjoidmVyc3N0YWNoaSIsImEiOiJja3Q1bjI1OG0wYTB1MndwaG0wZTI0eG0yIn0.KW23CHoSsSdBk52ntlTaRA',
-//     style: 'mapbox://styles/mapbox/dark-v10',
-//     layers: [baseLayer, heatmapLayer]
-// }).addTo(map); 
-
-var baseLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidmVyc3N0YWNoaSIsImEiOiJja3Q1bjI1OG0wYTB1MndwaG0wZTI0eG0yIn0.KW23CHoSsSdBk52ntlTaRA', {
+ 
+var map = L.map('mapid').setView([50.80925310310907, -0.1361937699561519], 3);
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidmVyc3N0YWNoaSIsImEiOiJja3Q1bjI1OG0wYTB1MndwaG0wZTI0eG0yIn0.KW23CHoSsSdBk52ntlTaRA', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 20,
     id: 'mapbox/dark-v10',
     tileSize: 256,
-    zoomControl: -1,
+    zoomControl: false,
     accessToken: 'pk.eyJ1IjoidmVyc3N0YWNoaSIsImEiOiJja3Q1bjI1OG0wYTB1MndwaG0wZTI0eG0yIn0.KW23CHoSsSdBk52ntlTaRA',
-    style: 'mapbox://styles/mapbox/dark-v10',
-    layers: [baseLayer, heatmapLayer]
+    style: 'mapbox://styles/mapbox/dark-v10', 
+}).addTo(map); 
+
+map.removeControl(map.zoomControl);  
+
+var markerIcon = L.divIcon(
+  {
+  html: `
+  <div class='marker__image'><img src='img/marker-icon.png' alt=''></div>
+  <div class='marker__image_container'>
+    <div class='marker__image_label'>
+      <div class='marker__image_title'>MSC SEASIDE</div>
+      <div class='marker__label__status'>Under way</div>  
+    </div>
+    <div class='popup'>Catanzaro<img src='img/arrow-forward-poup.svg' alt=''>Taranto<div class='popup_status'>Normal</div></div>
+  </div>
+  `,
+  className: 'marker-label',
 });
 
-var cfg = {
-  // radius should be small ONLY if scaleRadius is true (or small radius is intended)
-  // if scaleRadius is false it will be the constant radius used in pixels
-  "radius": 2,
-  "maxOpacity": .8,
-  // scales the radius based on map zoom
-  "scaleRadius": true,
-  // if set to false the heatmap uses the global maximum for colorization
-  // if activated: uses the data maximum within the current map boundaries
-  //   (there will always be a red spot with useLocalExtremas true)
-  "useLocalExtrema": true,
-  // which field name in your data represents the latitude - default "lat"
-  latField: 'lat',
-  // which field name in your data represents the longitude - default "lng"
-  lngField: 'lng',
-  // which field name in your data represents the data value - default "value"
-  valueField: 'count'
-}; 
+var marker = L.marker([23.135044427508504, -82.42811672821004],
+ {icon: markerIcon}).addTo(map);
 
-var heatmapLayer = new HeatmapOverlay(cfg); 
-
-var map = new L.Map('mapid', {
-  center: new L.LatLng(25.6586, -80.3568),
-  zoom: 3,
-  layers: [baseLayer, heatmapLayer]
+map.on('popupopen', function(e) {
+    // find the pixel location on the map where the popup anchor is
+    var px = map.project(e.popup._latlng);
+   // find the height of the popup container, divide by 2 to centre, subtract from the Y axis of marker location
+    px.y -= e.popup._container.clientHeight/2;
+    // pan to new center
+    map.panTo(map.unproject(px),{animate: true});
 });
-
-map.removeControl(map.zoomControl); 
-
-heatmapLayer.setData(testData);
-map.on('zoomend', function () {
-    if (map.getZoom() > 5 && map.hasLayer(heatmapLayer)) {
-        map.removeLayer(heatmapLayer);
-    }
-    if (map.getZoom() < 5 && map.hasLayer(heatmapLayer) == false)
-    {
-        map.addLayer(heatmapLayer);
-    }   
-});
-var marker = L.marker([51.63015157454955, 2.6431482992641033], {
-  icon: L.divIcon({
-      html: "<div class='marker__image'><img src='img/marker-icon.png' alt=''></div>MSC SEASIDE<div class='popup'>Catanzaro<img src='img/arrow-forward-poup.svg' alt=''>Taranto<div class='popup_status'>Normal</div></div>",
-      className: 'text-below-marker',
-    })
-  }).addTo(map);
-// }).addTo(map).bindTooltip("<img src='img/marker-icon.png' alt=''>");
 
 // // zoom in function
 var zoomIn = document.getElementById('in');
@@ -95,22 +57,55 @@ var sidebar = L.control.sidebar('sidebar', {
     position: 'left',
     container: 'sidebar',
 });
-    map.addControl(sidebar);
-    marker.addTo(map).on('click', function () {
-    sidebar.toggle(); 
-    document.querySelector(".notification_panel").classList.remove('active');  
-    document.querySelector(".all_vessel_tab").classList.remove('active'); 
+map.addControl(sidebar);
+marker.addTo(map).on('click', function () {
+  sidebar.toggle(); 
+  document.querySelector(".notification_panel").classList.remove('active');  
+  document.querySelector(".all_vessel_tab").classList.remove('active'); 
   document.querySelector(".voyage_panel").classList.remove('active');  
 });
 // end map sidebar
 
-var curve1 = L.pathCurve([6.0190194670789925, -85.9360786885477], [51.63015157454955, 2.6431482992641033]).addTo(map);
+// var markers = [
+//     {
+//         coords:[52.3680678593176, 5.026515440336008],
+//         country:'Amsterdam',
+//         label:'Amsterdam',
+//     },
+//     {
+//         coords:[42.33975833769053, -70.98629466906411],
+//         country:'Boston',
+//         label:'Boston',
+//     }, 
+// ];
+// // Edit marker icons
+// var myIcon = L.icon({
+//     iconUrl: 'marker-icon.png',
+//     iconSize: [40, 40], // size of the icon
+//     // iconAnchor: [],
+//     // popupAnchor: [],
+// });
+// // Loop through markers
+// for(var i = 0; i<markers.length; i++){
+//     addMarker(markers[i]);
+// }
+// // To add the marker coordinates
+// function addMarker(props){
+//     var marker = L.marker(props.coords, {icon: myIcon}).bindTooltip(props.country, {permanent: true, direction : 'bottom'}).addTo(map);
+//      marker.on('mouseover', function(e){
+//         marker.openPopup(); 
+//     });
+//     marker.on('mouseout', function(e){
+//         marker.closePopup();
+//     }); 
+// }
+// var curve1 = L.pathCurve([6.0190194670789925, -85.9360786885477], [51.63015157454955, 2.6431482992641033]).addTo(map);
      
 
-map.on('click', function(e) { 
-curve1 = L.pathCurve([e.latlng.lat,e.latlng.lng], [51.63015157454955, 2.6431482992641033]).addTo(map);
+// map.on('click', function(e) { 
+// curve1 = L.pathCurve([e.latlng.lat,e.latlng.lng], [51.63015157454955, 2.6431482992641033]).addTo(map);
   
-});
+// });
 
 // custom Tabs
 var d = document,
@@ -182,6 +177,15 @@ var allVesselTabClose = document.querySelector(".all_vessel_tab_close");
 allVesselTabClose.addEventListener('click', function allVesselTabCloseFunc () {
   document.querySelector(".all_vessel_tab").classList.toggle('active'); 
 }, false);   
+
+var allTabClose = document.querySelector(".voyage_link_map");
+allTabClose.addEventListener('click', function allTabCloseFunc () {
+  document.querySelector(".all_vessel_tab").classList.remove('active'); 
+  document.querySelector(".all_vessel_tab").classList.remove('active'); 
+  document.querySelector(".notification_panel").classList.remove('active');  
+  document.querySelector(".voyage_panel").classList.remove('active');  
+  sidebar.hide(); 
+}, false);  
 // end panel open
 
 // custom sortTable 
@@ -304,3 +308,15 @@ function closeAllSelect(elmnt) {
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
 // end custom Select
+ 
+// hover link right panel
+function lonkHoverActive(elem) {
+    var a = document.getElementsByClassName("left_panel__link")
+    for (i = 0; i < a.length; i++) {
+        a[i].classList.remove('active')
+    }
+    elem.classList.add('active');
+}
+
+// set today date to input date
+document.getElementById('date').value = new Date().toISOString().slice(0, 10);

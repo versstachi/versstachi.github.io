@@ -8,7 +8,7 @@
 <meta property="og:image" content="img/Ogg.png" /> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" /> 
 <link rel="stylesheet" href="css/L.Control.Sidebar.css" /> 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css"> -->
 <link rel="stylesheet" href="css/main.css" /> 
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.5/leaflet-routing-machine.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/perliedman-leaflet-control-geocoder/1.5.5/Control.Geocoder.min.css" /> -->
@@ -25,21 +25,21 @@
             </a>
         </div>
         <div class="center_ico">
-            <a href="">
+            <a href="#" class="left_panel__link voyage_link_map"  onclick="lonkHoverActive(this)">
                 <img src="img/map-ico.svg" alt="">
             </a>
-            <a href="#" class="voyage_link_open">
+            <a href="#" class="voyage_link_open left_panel__link"  onclick="lonkHoverActive(this)">
                 <img src="img/book-ico.svg" alt="">
             </a>
         </div>
         <div class="bottom_ico">
-            <a href="">
+            <a href="#" class="left_panel__link"  onclick="lonkHoverActive(this)">
                 <img src="img/user-ico.svg" alt="">
             </a>
         </div>
     </div>
     <!-- left_panel -->
-    
+
     <div class="main_row">
 
         <!-- right_panel -->
@@ -83,7 +83,7 @@
 
         <!-- voyage_panel -->
         <div class="voyage_panel">
-            <div class="voyage_form" style="display: none;">
+            <div class="voyage_form">
                 <div class="voyage_panel_top">
                     Voyage Planner
                 </div>
@@ -91,6 +91,7 @@
                     <label for="cars">From</label> 
                     <div class="custom-select">
                         <select name="cars" id="cars">
+                          <option value="0">Choose</option>
                           <option value="volvo">Volvo</option>
                           <option value="saab">Saab</option>
                           <option value="mercedes">Mercedes</option>
@@ -102,6 +103,8 @@
                     <label for="cars">To</label> 
                     <div class="custom-select">
                         <select name="cars" id="cars">
+                          <option value="0">Choose</option>
+                          <option value="volvo">Volvo</option>
                           <option value="volvo">Volvo</option>
                           <option value="saab">Saab</option>
                           <option value="mercedes">Mercedes</option>
@@ -111,12 +114,13 @@
                 </div>  
                 <div class="voyage_form_select">
                     <label for="cars">Date</label> 
-                    <input type="date" id="date" name="date">
+                    <input type="date" id="date" name="date"  lang="en-EN">
                 </div>  
                 <div class="voyage_form_select">
                     <label for="cars">Vessel</label> 
                     <div class="custom-select">
                         <select name="cars" id="cars">
+                          <option value="0">Choose</option>
                           <option value="volvo">Volvo</option>
                           <option value="saab">Saab</option>
                           <option value="mercedes">Mercedes</option>
@@ -126,7 +130,7 @@
                 </div>   
                 <div class="voyage_check_result btn-gray">See results</div>   
             </div> 
-            <div class="voyage_form voyage_form_flex" >  
+            <div class="voyage_form voyage_form_flex"  style="display: none;">  
                 <div class="voyage_form_container" >  
                     <div class="voyage_way">Catanzaro <img src="img/arrow-forward.svg" alt="">Taranto</div>
                     <div class="voyage_vessel_info">
@@ -267,6 +271,43 @@
         </div>
         <!-- notification_panel -->
 
+        <!-- weather_panel -->
+        <div class="weather_panel">
+            <div class="weather_box"> 
+                <div class="weather_info_col">
+                    <div class="weather_info_label">Weather at Catanzaro port</div> 
+                </div> 
+                <div class="weather_info_col_weather">
+                    <div class="weather_info_info_weather weather_info_info_temp">+20°</div> 
+                    <div class="weather_info_info_weather">
+                        <div class="weather_ico"><img src="img/weather-icos/sun-ico.svg" alt=""></div>
+                        <div class="weather_value">Stormy</div>
+                    </div> 
+                    <div class="weather_info_info_weather">
+                        <div class="weather_ico"><img src="img/weather-icos/windy-ico.svg" alt=""></div>
+                        <div class="weather_value">10m/s</div>
+                    </div> 
+                    <div class="weather_info_info_weather">
+                        <div class="weather_ico"><img src="img/weather-icos/rain-ico.svg" alt=""></div>
+                        <div class="weather_value">66%</div>
+                    </div> 
+                    <div class="weather_info_info_weather">
+                        <div class="weather_ico"><img src="img/weather-icos/cloudy-ico.svg" alt=""></div>
+                        <div class="weather_value">11%</div>
+                    </div> 
+                    <div class="weather_info_info_weather">
+                        <div class="weather_ico"><img src="img/weather-icos/visible-ico.svg" alt=""></div>
+                        <div class="weather_value">10km</div>
+                    </div> 
+                    <div class="weather_info_info_weather">
+                        <div class="weather_ico"><img src="img/weather-icos/horizontal-ico.svg" alt=""></div>
+                        <div class="weather_value">600m</div>
+                    </div> 
+                </div>  
+            </div>
+        </div>
+        <!-- weather_panel -->
+
         <!-- all_vessel_tab -->
         <div class="all_vessel_tab">  
             <div class="all_vessel_tab__header">
@@ -288,25 +329,25 @@
                 <table id="tableLive" class="custom_table">
                   <tr>
                     <th>Vessel name</th>
-                    <th>Speed through water</th>
-                    <th>Speed over ground</th>
-                    <th>Engine Speed</th> 
+                    <th>Speed <br>through water</th>
+                    <th>Speed<br> over ground</th>
+                    <th>Engine<br> Speed</th> 
                     <th>ME RPM</th>
                     <th>ME Load</th>
                     <th>Slip</th>
                     <th>Fouling</th>
-                    <th>FO consumption</th>
+                    <th>FO<br> consumption</th>
                     <th>Emission </th>
-                    <th>Projected ETA</th>
+                    <th>Projected<br> ETA</th>
                   </tr>
                   <tr>
                     <td>PALMAROLA</td>
-                    <td>100</td>
+                    <td>13,1 Kts</td>
                     <td>13,1 Kts</td>
                     <td>10 Kts</td>
                     <td>100 rpm</td>
                     <td>80%</td>
-                    <td>20%</td>
+                    <td class="green">20%</td>
                     <td>80%</td>
                     <td>68 MT/d</td>
                     <td>68 MT/d</td>
@@ -314,12 +355,12 @@
                   </tr>
                   <tr>
                     <td>CRUISE  AUSONIA</td>
-                    <td>100</td>
+                    <td>10,1 Kts</td>
                     <td>13,1 Kts</td>
                     <td>10 Kts</td>
                     <td>100 rpm</td>
                     <td>80%</td>
-                    <td>20%</td>
+                    <td class="red">20%</td>
                     <td>80%</td>
                     <td>68 MT/d</td>
                     <td>68 MT/d</td>
@@ -327,12 +368,12 @@
                   </tr>
                   <tr>
                     <td>MSC SEASIDE</td>
-                    <td>100</td>
+                    <td>5 Kts</td>
                     <td>13,1 Kts</td>
                     <td>10 Kts</td>
                     <td>100 rpm</td>
                     <td>80%</td>
-                    <td>20%</td>
+                    <td class="green">20%</td>
                     <td>80%</td>
                     <td>68 MT/d</td>
                     <td>68 MT/d</td>
@@ -340,12 +381,12 @@
                   </tr>
                   <tr>
                     <td>LADY G</td>
-                    <td>100</td>
+                    <td>13,1 Kts</td>
                     <td>13,1 Kts</td>
                     <td>10 Kts</td>
                     <td>100 rpm</td>
                     <td>80%</td>
-                    <td>20%</td>
+                    <td class="green">20%</td>
                     <td>80%</td>
                     <td>68 MT/d</td>
                     <td>68 MT/d</td>
@@ -353,12 +394,12 @@
                   </tr> 
                   <tr>
                     <td>PALMAROLA</td>
-                    <td>100</td>
+                    <td>10,1 Kts</td>
                     <td>13,1 Kts</td>
                     <td>10 Kts</td>
                     <td>100 rpm</td>
                     <td>80%</td>
-                    <td>20%</td>
+                    <td class="green">20%</td>
                     <td>80%</td>
                     <td>68 MT/d</td>
                     <td>68 MT/d</td>
@@ -366,12 +407,12 @@
                   </tr>
                   <tr>
                     <td>PALMAROLA</td>
-                    <td>100</td>
+                    <td>5 Kts</td>
                     <td>13,1 Kts</td>
                     <td>10 Kts</td>
                     <td>100 rpm</td>
                     <td>80%</td>
-                    <td>20%</td>
+                    <td class="red">20%</td>
                     <td>80%</td>
                     <td>68 MT/d</td>
                     <td>68 MT/d</td>
@@ -384,14 +425,14 @@
                  
                   <tr>
                     <th>Vessel name</th>
-                    <th>Distance made good</th>
-                    <th>Speed through water</th>
-                    <th>Speed over ground</th>
+                    <th>Distance made <br>good</th>
+                    <th>Speed <br>through water</th>
+                    <th>Speed <br>over ground</th>
                     <th>ME RPM</th>
                     <th>ME Load</th>
                     <th>Avg Slip</th>
                     <th>Avg Fouling</th>
-                    <th>Avg FO  Consumption</th>
+                    <th>Avg FO <br>Consumption</th>
                     <th>Emission </th> 
                   </tr>
                   <tr>
@@ -401,7 +442,7 @@
                     <td>10 Kts</td>
                     <td>100 rpm</td>
                     <td>80%</td>
-                    <td>20%</td>
+                    <td class="green">20%</td>
                     <td>80%</td>
                     <td>68 MT/d</td>
                     <td>68 MT/d</td>
@@ -413,7 +454,7 @@
                     <td>10 Kts</td>
                     <td>100 rpm</td>
                     <td>80%</td>
-                    <td>20%</td>
+                    <td class="green">20%</td>
                     <td>80%</td>
                     <td>68 MT/d</td>
                     <td>68 MT/d</td>
@@ -425,7 +466,7 @@
                     <td>10 Kts</td>
                     <td>100 rpm</td>
                     <td>80%</td>
-                    <td>20%</td>
+                    <td class="red">20%</td>
                     <td>80%</td>
                     <td>68 MT/d</td>
                     <td>68 MT/d</td>
@@ -437,7 +478,7 @@
                     <td>10 Kts</td>
                     <td>100 rpm</td>
                     <td>80%</td>
-                    <td>20%</td>
+                    <td class="green">20%</td>
                     <td>80%</td>
                     <td>68 MT/d</td>
                     <td>68 MT/d</td>
@@ -450,7 +491,7 @@
                     <td>100 rpm</td>
                     <td>80%</td>
                     <td>20%</td>
-                    <td>80%</td>
+                    <td class="green">80%</td>
                     <td>68 MT/d</td>
                     <td>68 MT/d</td>
                   </tr>
@@ -461,7 +502,7 @@
                     <td>10 Kts</td>
                     <td>100 rpm</td>
                     <td>80%</td>
-                    <td>20%</td>
+                    <td class="green">20%</td>
                     <td>80%</td>
                     <td>68 MT/d</td>
                     <td>68 MT/d</td>
@@ -673,9 +714,9 @@
                             <img src="img/info-circle.svg" alt="">
                         </div>
                     </div>
-                </div> 
               </div>  
         </div>
+                </div> 
         <!-- sidebar -->
 
         <!-- map -->
@@ -686,17 +727,16 @@
 </div> 
 
  
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" ></script>  
-<script src="https://cdn.jsdelivr.net/npm/leaflet-providers@1.12.0/leaflet-providers.js"></script>  
-<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
-<script src="js/weather.js"></script>
-<script src="js/curve.js"></script>
-<script src="js/astar.js"></script>
-<script src="js/route.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/leaflet-providers@1.12.0/leaflet-providers.js"></script>    -->
+<!-- <script src="js/weather.js"></script> -->
+<!-- <script src="js/curve.js"></script> -->
+<!-- <script src="js/astar.js"></script> -->
+<!-- <script src="js/route.js"></script> -->
 <script src="js/L.Control.Sidebar.js"></script>
-<script src="js/heatmap.js"></script>
-<script src="js/leaflet-heatmap.js"></script>
+<!-- <script src="js/heatmap.js"></script> -->
+<!-- <script src="js/leaflet-heatmap.js"></script> -->
 <script src="js/common.js"></script> 
 </body> 
 </html> 
