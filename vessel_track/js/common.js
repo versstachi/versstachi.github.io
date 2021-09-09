@@ -31,7 +31,7 @@ var marker = L.marker([23.135044427508504, -82.42811672821004],
  {icon: markerIcon}).addTo(map).on('click', clickZoom);
 
 function clickZoom(e) {
-    map.setView(e.target.getLatLng(),4);
+    map.setView(e.target.getLatLng(),5);
 }
 
 map.on('popupopen', function(e) {
@@ -163,19 +163,22 @@ d.querySelector(tabId).classList.toggle('open');
 var voyagePanelOpen = document.querySelector(".voyage_link_open");
 voyagePanelOpen.addEventListener('click', function voyagePanelOpenFucn () {
   document.querySelector(".voyage_panel").classList.toggle('active');  
-    sidebar.hide(); 
+  sidebar.hide(); 
+  document.getElementById('weather_panel').classList.remove("weather_panel_open");
+  document.getElementById('voyage_way_form').classList.remove("voyage_form_close");
+  document.getElementById('voyage_way_result').classList.remove("voyage_form_open");
 }, false);  
 
 var notificationOpen = document.querySelector(".notification_link_open");
 notificationOpen.addEventListener('click', function notificationOpenFucn () {
   document.querySelector(".notification_panel").classList.toggle('active');  
-    sidebar.hide(); 
+  sidebar.hide(); 
 }, false);  
 
 var allVesselTabOpen = document.querySelector(".all_vessel_tab_open");
 allVesselTabOpen.addEventListener('click', function allVesselTabOpenFunc () {
   document.querySelector(".all_vessel_tab").classList.toggle('active'); 
-    sidebar.hide(); 
+  sidebar.hide(); 
 }, false);  
 
 var allVesselTabClose = document.querySelector(".all_vessel_tab_close");
@@ -188,7 +191,8 @@ allTabClose.addEventListener('click', function allTabCloseFunc () {
   document.querySelector(".all_vessel_tab").classList.remove('active'); 
   document.querySelector(".all_vessel_tab").classList.remove('active'); 
   document.querySelector(".notification_panel").classList.remove('active');  
-  document.querySelector(".voyage_panel").classList.remove('active');  
+  document.querySelector(".voyage_panel").classList.remove('active'); 
+  document.getElementById('weather_panel').classList.remove("weather_panel_open"); 
   sidebar.hide(); 
 }, false);  
 // end panel open
