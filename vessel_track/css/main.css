@@ -30,7 +30,16 @@
 .leaflet-sidebar.left {
   left: -628px; }
   .leaflet-sidebar.left .close {
-    display: none; }
+    border-radius: 16px;
+    width: 48px;
+    height: 48px;
+    right: 24px;
+    top: 24px;
+    color: #FFFFFF;
+    font-size: 0;
+    background: url("../img/sidebar-decline.svg"), #000000;
+    background-position: center;
+    background-repeat: no-repeat; }
 
 @media (min-width: 1200px) {
   .leaflet-sidebar {
@@ -75,7 +84,7 @@ body {
 
 .btn-blue {
   width: 523px;
-  height: 64px;
+  min-height: 64px;
   background: #3C87FC;
   border-radius: 16px;
   display: -webkit-box;
@@ -95,14 +104,10 @@ body {
   color: #FFFFFF;
   text-align: center;
   cursor: pointer;
-  -webkit-transition: 0.2s all;
-  -o-transition: 0.2s all;
-  transition: 0.2s all; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
   .btn-blue:hover {
-    opacity: 0.8;
-    -webkit-transition: 0.2s all;
-    -o-transition: 0.2s all;
-    transition: 0.2s all; }
+    opacity: 0.8; }
 
 .main_content {
   display: -webkit-box;
@@ -922,7 +927,9 @@ ul.sidebar_tabs {
   -o-transition: 0.5s all;
   transition: 0.5s all;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+  -ms-overflow-y: scroll;
+  overflow-y: scroll; }
   .voyage_panel.active {
     -webkit-transition: 0.5s all;
     -o-transition: 0.5s all;
@@ -1021,51 +1028,53 @@ ul.sidebar_tabs {
       pointer-events: auto; }
       .voyage_panel .voyage_check_result.voyage_check_result_btn_true:before {
         display: none; }
-  .voyage_panel .voyage_form.voyage_form_flex {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-direction: column;
-    -webkit-justify-content: space-between;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 100%;
-    -webkit-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    transition: 0.5s all; }
-  .voyage_panel .voyage_form.voyage_way_result {
-    display: none;
-    -webkit-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    transition: 0.5s all; }
-  .voyage_panel .voyage_form.voyage_way_form {
-    display: block;
-    -webkit-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    transition: 0.5s all; }
-  .voyage_panel .voyage_form.voyage_form_close {
-    display: none !important;
-    -webkit-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    transition: 0.5s all; }
-  .voyage_panel .voyage_form.voyage_form_open {
-    display: -webkit-box !important;
-    display: -webkit-flex !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    transition: 0.5s all; }
+  .voyage_panel .voyage_form {
+    padding-bottom: 20px; }
+    .voyage_panel .voyage_form.voyage_form_flex {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
+      -webkit-justify-content: space-between;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      height: 100%;
+      -webkit-transition: 0.5s all;
+      -o-transition: 0.5s all;
+      transition: 0.5s all; }
+    .voyage_panel .voyage_form.voyage_way_result {
+      display: none;
+      -webkit-transition: 0.5s all;
+      -o-transition: 0.5s all;
+      transition: 0.5s all; }
+    .voyage_panel .voyage_form.voyage_way_form {
+      display: block;
+      -webkit-transition: 0.5s all;
+      -o-transition: 0.5s all;
+      transition: 0.5s all; }
+    .voyage_panel .voyage_form.voyage_form_close {
+      display: none !important;
+      -webkit-transition: 0.5s all;
+      -o-transition: 0.5s all;
+      transition: 0.5s all; }
+    .voyage_panel .voyage_form.voyage_form_open {
+      display: -webkit-box !important;
+      display: -webkit-flex !important;
+      display: -ms-flexbox !important;
+      display: flex !important;
+      -webkit-transition: 0.5s all;
+      -o-transition: 0.5s all;
+      transition: 0.5s all; }
   .voyage_panel .voyage_form_container {
     width: 100%; }
   .voyage_panel .voyage_way {
@@ -1117,9 +1126,9 @@ ul.sidebar_tabs {
     background: #181819;
     border-radius: 20px;
     margin: 23px 0; }
-    .voyage_panel .voyage_way__card:hover {
+    .voyage_panel .voyage_way__card.avtive {
       background: #3C87FC; }
-      .voyage_panel .voyage_way__card:hover .voyage_way__card_header_status {
+      .voyage_panel .voyage_way__card.avtive .voyage_way__card_header_status {
         color: #FFFFFF;
         border: 1px solid #FFFFFF; }
   .voyage_panel .voyage_way__card_header {
@@ -1188,7 +1197,7 @@ ul.sidebar_tabs {
   top: 102px;
   right: -587px;
   width: 550px;
-  height: calc( 100vh - 102px);
+  height: auto;
   z-index: 55;
   padding-right: 37px;
   display: block;

@@ -2,14 +2,15 @@
 var map = L.map('mapid').setView([50.80925310310907, -0.1361937699561519], 3);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidmVyc3N0YWNoaSIsImEiOiJja3Q1bjI1OG0wYTB1MndwaG0wZTI0eG0yIn0.KW23CHoSsSdBk52ntlTaRA', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 20,
     id: 'mapbox/dark-v10',
-    tileSize: 256,
+    // tileSize: 256,
     zoomControl: false,
     accessToken: 'pk.eyJ1IjoidmVyc3N0YWNoaSIsImEiOiJja3Q1bjI1OG0wYTB1MndwaG0wZTI0eG0yIn0.KW23CHoSsSdBk52ntlTaRA',
     style: 'mapbox://styles/mapbox/dark-v10', 
 }).addTo(map); 
 
+map.options.maxZoom = 20;
+map.options.minZoom = 3;
 map.removeControl(map.zoomControl);  
 
 var markerIcon = L.divIcon(
