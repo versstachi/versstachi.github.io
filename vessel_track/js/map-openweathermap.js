@@ -305,8 +305,8 @@ function initMap() {
 	}));
 
 	var baseMaps = {
-		"OSM Standard": standard
-		, "OSM Humanitarian": humanitarian
+		// "OSM Standard": standard
+		// , "OSM Humanitarian": humanitarian
 	//	, "ESRI Aerial": esri
 	};
 
