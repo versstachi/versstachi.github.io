@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/main.css" /> 
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.5/leaflet-routing-machine.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/perliedman-leaflet-control-geocoder/1.5.5/Control.Geocoder.min.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/leaflet-openweathermap.css" />
  
 </head> 
 <body>  
@@ -735,8 +736,22 @@
 <!-- <script src="js/astar.js"></script> -->
 <!-- <script src="js/route.js"></script> -->
 <script src="js/L.Control.Sidebar.js"></script>
+    <script src="js/Permalink.js"></script>
+    <script src="js/Permalink.Layer.js"></script>
+    <script src="js/Permalink.Overlay.js"></script>
+    <script src="js/leaflet-openweathermap.js"></script>
+    <script src="js/leaflet-openweathermap.js"></script>
+    <script src="js/leaflet-languageselector.js"></script>
+    <script src="js/map_i18n.js"></script>
+    <script src="js/map-openweathermap.js"></script>
 <!-- <script src="js/heatmap.js"></script> -->
 <!-- <script src="js/leaflet-heatmap.js"></script> -->
 <script src="js/common.js"></script> 
+    <script>
+        initMap();
+        if (!confirm("Please not that this page is only a demonstration for an OpenWeatherMap leaflet plugin.\nIt is not intended for productive use.\n\nVisit https://github.com/buche/leaflet-openweathermap for more information.\n\nClick OK to proceed with the map or click Cancel to visit Github.")) {
+            window.location.href = "https://github.com/buche/leaflet-openweathermap";
+        }
+    </script>
 </body> 
 </html> 
