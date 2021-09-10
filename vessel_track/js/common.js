@@ -63,6 +63,9 @@ var sidebar = L.control.sidebar('sidebar', {
     container: 'sidebar',
 });
 map.addControl(sidebar);
+map.on('click', function () {
+    sidebar.hide();
+});
 marker.addTo(map).on('click', function () {
   sidebar.toggle(); 
   document.querySelector(".notification_panel").classList.remove('active');  
