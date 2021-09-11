@@ -74,39 +74,49 @@ marker.addTo(map).on('click', function () {
 });
 // end map sidebar
 
-// var markers = [
-//     {
-//         coords:[52.3680678593176, 5.026515440336008],
-//         country:'Amsterdam',
-//         label:'Amsterdam',
-//     },
-//     {
-//         coords:[42.33975833769053, -70.98629466906411],
-//         country:'Boston',
-//         label:'Boston',
-//     }, 
-// ];
-// // Edit marker icons
+var markers = [
+    {
+        coords:[52.3680678593176, 5.026515440336008],
+      },
+    {
+        coords:[42.33975833769053, -70.98629466906411],
+      }, 
+];
+// Edit marker icons
 // var myIcon = L.icon({
-//     iconUrl: 'marker-icon.png',
+//     iconUrl: 'img/marker-icon.png',
 //     iconSize: [40, 40], // size of the icon
 //     // iconAnchor: [],
 //     // popupAnchor: [],
 // });
-// // Loop through markers
-// for(var i = 0; i<markers.length; i++){
-//     addMarker(markers[i]);
-// }
-// // To add the marker coordinates
-// function addMarker(props){
-//     var marker = L.marker(props.coords, {icon: myIcon}).bindTooltip(props.country, {permanent: true, direction : 'bottom'}).addTo(map);
-//      marker.on('mouseover', function(e){
-//         marker.openPopup(); 
-//     });
-//     marker.on('mouseout', function(e){
-//         marker.closePopup();
-//     }); 
-// }
+var myIcon = L.divIcon(
+  {
+  html: `
+  <div class='marker__image'><img src='img/marker-icon-1.png' alt=''></div>
+  <div class='marker__image_container normal'>
+    <div class='marker__image_label'>
+      <div class='marker__image_title'>BUNGA LOTUS</div>
+      <div class='marker__label__status'>Under way</div>  
+    </div>
+    <div class='popup'>Catanzaro<img src='img/arrow-forward-poup.svg' alt=''>Taranto<div class='popup_status'>Normal</div></div>
+  </div>
+  `,
+  className: 'marker-label',
+});
+// Loop through markers
+for(var i = 0; i<markers.length; i++){
+    addMarker(markers[i]);
+}
+// To add the marker coordinates
+function addMarker(props){
+    var marker = L.marker(props.coords, {icon: myIcon}).addTo(map);
+     marker.on('mouseover', function(e){
+        marker.openPopup(); 
+    });
+    marker.on('mouseout', function(e){
+        marker.closePopup();
+    }); 
+}
 // var curve1 = L.pathCurve([6.0190194670789925, -85.9360786885477], [51.63015157454955, 2.6431482992641033]).addTo(map);
      
 
@@ -371,3 +381,59 @@ voyageFormBackLink.addEventListener('click', function voyageFormBackLinkFunc () 
     document.getElementById('voyage_form_back_link').classList.remove("voyage_form_back_link_open");
     document.getElementById('weather_panel').classList.remove("weather_panel_open");
 }, false); 
+
+
+
+var yourApiKey = '06aac0fd4ba239a20d824ef89602f311';
+  
+var clouds = L.OWM.clouds({showLegend: true, opacity: 0.5, appId: yourApiKey}); 
+var cloudscls = L.OWM.cloudsClassic({showLegend: true,opacity: 0.5,appId: yourApiKey});
+var precipitation = L.OWM.precipitation({appId: 'YOUR_OWN_APPID'});
+var precipitationcls = L.OWM.precipitationClassic({opacity: 0.5,appId: yourApiKey});
+var rain = L.OWM.rain({appId: 'YOUR_OWN_APPID'});
+var raincls = L.OWM.rainClassic({opacity: 0.5,appId: yourApiKey});
+var snow = L.OWM.snow({opacity: 0.5,appId: yourApiKey});
+var pressure = L.OWM.pressure({appId: 'YOUR_OWN_APPID'});
+var pressurecntr = L.OWM.pressureContour({opacity: 0.5,appId: yourApiKey});
+var temp = L.OWM.temperature({opacity: 0.5,appId: yourApiKey});
+var wind = L.OWM.wind({opacity: 0.5,appId: yourApiKey});
+
+
+var weatherCloudsPanel = document.getElementById("weather_clouds_panel");
+weatherCloudsPanel.addEventListener('click', function weatherCloudsPanelFunc () {   
+  if(weatherCloudsPanel.classList.contains('open')){
+    weatherCloudsPanel.classList.remove('open')
+    cloudscls.remove(map); 
+  }
+  else{
+    weatherCloudsPanel.classList.add('open')
+    cloudscls.addTo(map);  
+  }
+}, false);
+
+var weatherWindPanel = document.getElementById("weather_wind_panel");
+weatherWindPanel.addEventListener('click', function weatherWindPanelFunc () {   
+  wind.addTo(map);   
+  if(weatherWindPanel.classList.contains('open')){
+    weatherWindPanel.classList.remove('open')
+    wind.remove(map); 
+  }
+  else{
+    weatherWindPanel.classList.add('open')
+    wind.addTo(map);  
+  }
+}, false);
+
+var weatherTempPanel = document.getElementById("weather_temp_panel");
+weatherTempPanel.addEventListener('click', function weatherTempPanelFunc () {   
+  temp.addTo(map);   
+  if(weatherTempPanel.classList.contains('open')){
+    weatherTempPanel.classList.remove('open')
+    temp.remove(map); 
+  }
+  else{
+    weatherTempPanel.classList.add('open')
+    temp.addTo(map);  
+  }
+}, false);
+ 
