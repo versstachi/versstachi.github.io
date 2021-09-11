@@ -437,3 +437,28 @@ weatherTempPanel.addEventListener('click', function weatherTempPanelFunc () {
   }
 }, false);
  
+
+
+
+    fetch('http://api.openweathermap.org/data/2.5/onecall/timemachine?lat=60.99&lon=30.9&dt=1631189031&appid=06aac0fd4ba239a20d824ef89602f311')
+    // fetch('https://api.openweathermap.org/data/2.5/onecall/timemachine?lat=52&lon=5&dt=1586468027&appid=06aac0fd4ba239a20d824ef89602f311')
+    // fetch('http://api.openweathermap.org/data/2.5/onecall/timemachine?lat=60.99&lon=30.9&dt=1631361893&appid=06aac0fd4ba239a20d824ef89602f311')
+    // fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + 52 + '&lon=' + 5 + '&appid=' + yourApiKey)
+        .then(r => r.json()) 
+        .then(data => {  
+            console.log(data); 
+        }) 
+    fetch('https://raw.githubusercontent.com/kaklin/sea-routes/master/PUB151_distances.json')
+        .then(r => r.json()) 
+        .then(data => { 
+            // Change this line to show exactly the info you need
+            // popup.setContent(data.weather.map(w => w.description).join(", "))
+            console.log(data);
+            // console.log(data.current.clouds);  
+            // for(let i = 0; i<data.lenth; i++){
+            //   console.log(data[i]);
+            // }
+              console.log(data[0].value);
+        })
+
+        
