@@ -254,10 +254,13 @@ body {
       .marker-label .marker__image_container:hover .marker__image_title,
       .marker-label .leaflet-tooltip-pane:hover .marker__image_title {
         padding: 0; }
-      .text-below-marker .marker__image_container:hover.normal:before,
+      .text-below-marker .marker__image_container:hover.normal:before, .text-below-marker .marker__image_container:hover.stay:before,
       .text-below-marker .leaflet-tooltip-pane:hover.normal:before,
+      .text-below-marker .leaflet-tooltip-pane:hover.stay:before,
       .marker-label .marker__image_container:hover.normal:before,
-      .marker-label .leaflet-tooltip-pane:hover.normal:before {
+      .marker-label .marker__image_container:hover.stay:before,
+      .marker-label .leaflet-tooltip-pane:hover.normal:before,
+      .marker-label .leaflet-tooltip-pane:hover.stay:before {
         display: none; }
     .text-below-marker .marker__image_container.normal,
     .text-below-marker .leaflet-tooltip-pane.normal,
