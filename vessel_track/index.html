@@ -7,12 +7,12 @@
 <meta property="og:title" content="Versstachi - Web Design Frontend Developers" />  
 <meta property="og:image" content="img/Ogg.png" /> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" /> 
+    <link rel="stylesheet" type="text/css" href="css/leaflet-openweathermap.css" />
 <link rel="stylesheet" href="css/L.Control.Sidebar.css" /> 
 <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css"> -->
 <link rel="stylesheet" href="css/main.css" /> 
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.5/leaflet-routing-machine.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/perliedman-leaflet-control-geocoder/1.5.5/Control.Geocoder.min.css" /> -->
-    <link rel="stylesheet" type="text/css" href="css/leaflet-openweathermap.css" />
  
 </head> 
 <body>  
@@ -55,22 +55,22 @@
                     <div id="in" class="custom_zoom_button zoom_button_in">+</div>
                     <div id="out" class="custom_zoom_button zoom_button_out">-</div> 
                 </div>
-                <a href="" class="right_panel_link">
+                <a href="#" id="weather_clouds_panel" class="right_panel_link">
                     <img src="img/weather-iico.svg" alt="">
                 </a>
-                <a href="" class="right_panel_link">
+                <a href="#" id="weather_temp_panel" class="right_panel_link">
                     <img src="img/wave-ico.svg" alt="">
                 </a>
-                <a href="" class="right_panel_link">
+                <a href="#" id="weather_wind_panel" class="right_panel_link">
                     <img src="img/wind-ico.svg" alt="">
                 </a>
-                <a href="" class="right_panel_link">
+                <a href="#" class="right_panel_link">
                     <img src="img/routes-ico.svg" alt="">
                 </a>
-                <a href="" class="right_panel_link">
+                <a href="#" class="right_panel_link">
                     <img src="img/PSSA-ico.svg" alt="">
                 </a>
-                <a href="" class="right_panel_link">
+                <a href="#" class="right_panel_link">
                     <img src="img/ECA-ico.svg" alt="">
                 </a>
             </div>
@@ -90,26 +90,20 @@
                     Voyage Planner
                 </div>
                 <div class="voyage_form_select">
-                    <label for="cars">From</label> 
+                    <label for="way_from">From</label> 
                     <div class="custom-select"  onclick="voyage_check_result();">
                         <select name="cars" id="way_from" class="custom_select_check" >
                           <option value="">Choose</option>
-                          <option value="volvo">Volvo</option>
-                          <option value="saab">Saab</option>
-                          <option value="mercedes">Mercedes</option>
-                          <option value="audi">Audi</option>
+                          <option value="volvo">Catanzaro</option> 
                         </select>
                     </div>  
                 </div>  
                 <div class="voyage_form_select">
-                    <label for="cars">To</label> 
+                    <label for="way_to">To</label> 
                     <div class="custom-select"  onclick="voyage_check_result();">
                         <select name="cars" id="way_to" class="custom_select_check">
                           <option value="">Choose</option> 
-                          <option value="volvo">Volvo</option>
-                          <option value="saab">Saab</option>
-                          <option value="mercedes">Mercedes</option>
-                          <option value="audi">Audi</option>
+                          <option value="volvo">Taranto</option> 
                         </select>
                     </div>  
                 </div>  
@@ -118,14 +112,11 @@
                     <input type="date" id="date" name="date"  lang="en-EN">
                 </div>  
                 <div class="voyage_form_select">
-                    <label for="cars">Vessel</label> 
+                    <label for="way_vessel">Vessel</label> 
                     <div class="custom-select" onclick="voyage_check_result();">
                         <select name="cars" id="way_vessel" class="custom_select_check">
                           <option value="">Choose</option>
-                          <option value="volvo">Volvo</option>
-                          <option value="saab">Saab</option>
-                          <option value="mercedes">Mercedes</option>
-                          <option value="audi">Audi</option>
+                          <option value="volvo">MSC SEASIDE</option> 
                         </select>
                     </div>  
                 </div>   
@@ -730,28 +721,16 @@
  
 <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" ></script>  
-<!-- <script src="https://cdn.jsdelivr.net/npm/leaflet-providers@1.12.0/leaflet-providers.js"></script>    -->
-<!-- <script src="js/weather.js"></script> -->
-<!-- <script src="js/curve.js"></script> -->
-<!-- <script src="js/astar.js"></script> -->
-<!-- <script src="js/route.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/leaflet-providers@1.12.0/leaflet-providers.js"></script>    --> 
 <script src="js/L.Control.Sidebar.js"></script>
-    <script src="js/Permalink.js"></script>
-    <script src="js/Permalink.Layer.js"></script>
-    <script src="js/Permalink.Overlay.js"></script>
-    <script src="js/leaflet-openweathermap.js"></script>
-    <script src="js/leaflet-openweathermap.js"></script>
-    <script src="js/leaflet-languageselector.js"></script>
-    <script src="js/map_i18n.js"></script>
-    <script src="js/map-openweathermap.js"></script>
-<!-- <script src="js/heatmap.js"></script> -->
+    <!-- <script src="js/Permalink.js"></script> -->
+    <!-- <script src="js/Permalink.Layer.js"></script> -->
+    <!-- <script src="js/Permalink.Overlay.js"></script> -->
+    <script src="js/leaflet-openweathermap.js"></script> 
+    <!-- <script src="js/leaflet-languageselector.js"></script> -->
+    <!-- <script src="js/map_i18n.js"></script> -->
+    <!-- <script src="js/map-openweathermap.js"></script>  -->
 <!-- <script src="js/leaflet-heatmap.js"></script> -->
-<script src="js/common.js"></script> 
-    <script>
-        initMap();
-        if (!confirm("Please not that this page is only a demonstration for an OpenWeatherMap leaflet plugin.\nIt is not intended for productive use.\n\nVisit https://github.com/buche/leaflet-openweathermap for more information.\n\nClick OK to proceed with the map or click Cancel to visit Github.")) {
-            window.location.href = "https://github.com/buche/leaflet-openweathermap";
-        }
-    </script>
+<script src="js/common.js"></script>  
 </body> 
 </html> 
