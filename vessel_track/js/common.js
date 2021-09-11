@@ -93,7 +93,7 @@ var myIcon = L.divIcon(
   {
   html: `
   <div class='marker__image'><img src='img/marker-icon-1.png' alt=''></div>
-  <div class='marker__image_container normal'>
+  <div class='marker__image_container stay'>
     <div class='marker__image_label'>
       <div class='marker__image_title'>BUNGA LOTUS</div>
       <div class='marker__label__status'>Under way</div>  

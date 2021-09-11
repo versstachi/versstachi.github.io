@@ -294,6 +294,42 @@ body {
           height: 8px;
           background: #26DD9B;
           border-radius: 50%; }
+    .text-below-marker .marker__image_container.stay,
+    .text-below-marker .leaflet-tooltip-pane.stay,
+    .marker-label .marker__image_container.stay,
+    .marker-label .leaflet-tooltip-pane.stay {
+      position: relative;
+      background: #A36DFE; }
+      .text-below-marker .marker__image_container.stay:before,
+      .text-below-marker .leaflet-tooltip-pane.stay:before,
+      .marker-label .marker__image_container.stay:before,
+      .marker-label .leaflet-tooltip-pane.stay:before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        right: -3px;
+        width: 8px;
+        height: 8px;
+        background: #A36DFE;
+        border-radius: 50%;
+        border: 2px solid #070708; }
+      .text-below-marker .marker__image_container.stay .popup_status,
+      .text-below-marker .leaflet-tooltip-pane.stay .popup_status,
+      .marker-label .marker__image_container.stay .popup_status,
+      .marker-label .leaflet-tooltip-pane.stay .popup_status {
+        position: relative; }
+        .text-below-marker .marker__image_container.stay .popup_status:before,
+        .text-below-marker .leaflet-tooltip-pane.stay .popup_status:before,
+        .marker-label .marker__image_container.stay .popup_status:before,
+        .marker-label .leaflet-tooltip-pane.stay .popup_status:before {
+          content: '';
+          position: absolute;
+          top: 6px;
+          left: 0px;
+          width: 8px;
+          height: 8px;
+          background: #FABB19;
+          border-radius: 50%; }
   .text-below-marker .marker__label__status,
   .marker-label .marker__label__status {
     display: none;
