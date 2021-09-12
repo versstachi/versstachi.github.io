@@ -16,60 +16,98 @@ map.options.maxZoom = 20;
 map.options.minZoom = 3;
 map.removeControl(map.zoomControl);  
 
-// markers
-var markerIcon = L.divIcon(
-  {
-  html: `
-  <div class='marker__image'><img src='img/marker-icon.png' alt=''></div>
-  <div class='marker__image_container normal'>
-    <div class='marker__image_label'>
-      <div class='marker__image_title'>MSC SEASIDE</div>
-      <div class='marker__label__status'>Under way</div>  
-    </div>
-    <div class='popup'>Catanzaro<img src='img/arrow-forward-poup.svg' alt=''>Taranto<div class='popup_status'>Normal</div></div>
-  </div>
-  `,
-  className: 'marker-label',
-});
+// // markers
+// var markerIcon = L.divIcon(
+//   {
+//   html: `
+//   <div class='marker__image'><img src='img/marker-icon.png' alt=''></div>
+//   <div class='marker__image_container normal'>
+//     <div class='marker__image_label'>
+//       <div class='marker__image_title'>MSC SEASIDE</div>
+//       <div class='marker__label__status'>Under way</div>  
+//     </div>
+//     <div class='popup'>Catanzaro<img src='img/arrow-forward-poup.svg' alt=''>Taranto<div class='popup_status'>Normal</div></div>
+//   </div>
+//   `,
+//   className: 'marker-label',
+// });
 
-var marker = L.marker([23.135044427508504, -82.42811672821004],
- {icon: markerIcon}).addTo(map).on('click', clickZoom);
+// var marker = L.marker([23.135044427508504, -82.42811672821004],
+//  {icon: markerIcon}).addTo(map).on('click', clickZoom);
  
-var markerAnchorIcon = L.divIcon(
-  {
-  html: `
-  <div class='marker__image'><img src='img/marker-icon-1.png' alt=''></div>
-  <div class='marker__image_container anchor'>
-    <div class='marker__image_label'>
-      <div class='marker__image_title'>BUNGA LOTUS</div>
-      <div class='marker__label__status'>Under way</div>  
-    </div>
-    <div class='popup'>Catanzaro<img src='img/arrow-forward-poup.svg' alt=''>Taranto<div class='popup_status'>Normal</div></div>
-  </div>
-  `,
-  className: 'marker-label',
-});
-var markerAnchor = L.marker([53.54799600616597, 9.790965060430668], {icon: markerAnchorIcon}).addTo(map).on('click', clickZoom);; 
+// var markerAnchorIcon = L.divIcon(
+//   {
+//   html: `
+//   <div class='marker__image'><img src='img/marker-icon-1.png' alt=''></div>
+//   <div class='marker__image_container anchor'>
+//     <div class='marker__image_label'>
+//       <div class='marker__image_title'>CRUISE  AUSONIA</div>
+//       <div class='marker__label__status'>Under way</div>  
+//     </div>
+//     <div class='popup'>Catanzaro<img src='img/arrow-forward-poup.svg' alt=''>Taranto<div class='popup_status'>Normal</div></div>
+//   </div>
+//   `,
+//   className: 'marker-label',
+// });
+// var markerAnchor = L.marker([53.54799600616597, 9.790965060430668], {icon: markerAnchorIcon}).addTo(map).on('click', clickZoom);; 
  
-var markerStayIcon = L.divIcon(
-  {
-  html: `
-  <div class='marker__image'><img src='img/marker-icon-2.png' alt=''></div>
-  <div class='marker__image_container stay'>
-    <div class='marker__image_label'>
-      <div class='marker__image_title'>BUNGA LOTUS</div>
-      <div class='marker__label__status'>Under way</div>  
-    </div>
-    <div class='popup'>Catanzaro<img src='img/arrow-forward-poup.svg' alt=''>Taranto<div class='popup_status'>Normal</div></div>
-  </div>
-  `,
-  className: 'marker-label',
-}); 
-var markerStay = L.marker([42.33975833769053, -70.98629466906411], {icon: markerStayIcon}).addTo(map).on('click', clickZoom);; 
+// var markerStayIcon = L.divIcon(
+//   {
+//   html: `
+//   <div class='marker__image'><img src='img/marker-icon-2.png' alt=''></div>
+//   <div class='marker__image_container stay'>
+//     <div class='marker__image_label'>
+//       <div class='marker__image_title'>BUNGA LOTUS</div>
+//       <div class='marker__label__status'>Under way</div>  
+//     </div>
+//     <div class='popup'>Catanzaro<img src='img/arrow-forward-poup.svg' alt=''>Taranto<div class='popup_status'>Normal</div></div>
+//   </div>
+//   `,
+//   className: 'marker-label',
+// }); 
+// var markerStay = L.marker([42.33975833769053, -70.98629466906411], {icon: markerStayIcon}).addTo(map).on('click', clickZoom);; 
 
 function clickZoom(e) {
     map.setView(e.target.getLatLng(),5);
 }
+
+
+
+ var markers = [
+    [ 23.135044427508504, -82.42811672821004, "MSC SEASIDE", "normal", "notification_warning","3"],
+    [ 53.54799600616597, 9.790965060430668, "CRUISE  AUSONIA", "stay", "notification_alert","2" ],
+    [ 42.33975833769053, -70.98629466906411, "BUNGA LOTUS", "anchor", "notification_status","1" ] 
+ ];
+ 
+ //Loop through the markers array
+ for (var i=0; i<markers.length; i++) { 
+  var lon = markers[i][0];
+  var lat = markers[i][1]; 
+  var marker;
+  var markerIcon = L.divIcon(
+    {
+    html: `
+    <div class='marker__image ${markers[i][3]}'><img src='img/marker-icon-${markers[i][5]}.png' alt=''></div>
+    <div class='marker__image_container ${markers[i][3]} ${markers[i][4]}'>
+      <div class='marker__image_label'>
+        <div class='marker__image_title'>${markers[i][2]}</div>
+        <div class='marker__label__status'>Under way</div>  
+      </div>
+      <div class='popup'>Catanzaro<img src='img/arrow-forward-poup.svg' alt=''>Taranto<div class='popup_status'>Normal</div></div>
+    </div>
+    `,
+    className: 'marker-label',
+  }); 
+  var markerLocation = new L.LatLng( lon, lat);
+    marker = new L.marker(markerLocation, {icon: markerIcon}).addTo(map).on('click', clickZoom); 
+    map.addLayer(marker); 
+    marker.addTo(map).on('click', function () {
+      sidebar.toggle(); 
+      document.querySelector(".notification_panel").classList.remove('active');  
+      document.querySelector(".all_vessel_tab").classList.remove('active'); 
+      document.querySelector(".voyage_panel").classList.remove('active');   
+    }); 
+ }
 
 // map.on('popupopen', function(e) {
 //     // find the pixel location on the map where the popup anchor is
@@ -102,24 +140,24 @@ map.addControl(sidebar);
 map.on('click', function () {
     sidebar.hide();
 });
-marker.addTo(map).on('click', function () {
-  sidebar.toggle(); 
-  document.querySelector(".notification_panel").classList.remove('active');  
-  document.querySelector(".all_vessel_tab").classList.remove('active'); 
-  document.querySelector(".voyage_panel").classList.remove('active');   
-});
-markerAnchor.addTo(map).on('click', function () {
-  sidebar.toggle(); 
-  document.querySelector(".notification_panel").classList.remove('active');  
-  document.querySelector(".all_vessel_tab").classList.remove('active'); 
-  document.querySelector(".voyage_panel").classList.remove('active');   
-});
-markerStay.addTo(map).on('click', function () {
-  sidebar.toggle(); 
-  document.querySelector(".notification_panel").classList.remove('active');  
-  document.querySelector(".all_vessel_tab").classList.remove('active'); 
-  document.querySelector(".voyage_panel").classList.remove('active');   
-});
+// marker.addTo(map).on('click', function () {
+//   sidebar.toggle(); 
+//   document.querySelector(".notification_panel").classList.remove('active');  
+//   document.querySelector(".all_vessel_tab").classList.remove('active'); 
+//   document.querySelector(".voyage_panel").classList.remove('active');   
+// });
+// markerAnchor.addTo(map).on('click', function () {
+//   sidebar.toggle(); 
+//   document.querySelector(".notification_panel").classList.remove('active');  
+//   document.querySelector(".all_vessel_tab").classList.remove('active'); 
+//   document.querySelector(".voyage_panel").classList.remove('active');   
+// });
+// markerStay.addTo(map).on('click', function () {
+//   sidebar.toggle(); 
+//   document.querySelector(".notification_panel").classList.remove('active');  
+//   document.querySelector(".all_vessel_tab").classList.remove('active'); 
+//   document.querySelector(".voyage_panel").classList.remove('active');   
+// });
 // end map sidebar
 
 // var curve1 = L.pathCurve([6.0190194670789925, -85.9360786885477], [51.63015157454955, 2.6431482992641033]).addTo(map);
