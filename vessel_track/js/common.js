@@ -1,4 +1,4 @@
- 
+ // Layer map
 var map = L.map('mapid').setView([50.80925310310907, -0.1361937699561519], 3);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidmVyc3N0YWNoaSIsImEiOiJja3Q1bjI1OG0wYTB1MndwaG0wZTI0eG0yIn0.KW23CHoSsSdBk52ntlTaRA', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -7,12 +7,16 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     zoomControl: false,
     accessToken: 'pk.eyJ1IjoidmVyc3N0YWNoaSIsImEiOiJja3Q1bjI1OG0wYTB1MndwaG0wZTI0eG0yIn0.KW23CHoSsSdBk52ntlTaRA',
     style: 'mapbox://styles/mapbox/dark-v10', 
+// L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//   maxZoom: 18, attribution: '[insert correct attribution here!]'  
 }).addTo(map); 
+  
 
 map.options.maxZoom = 20;
 map.options.minZoom = 3;
 map.removeControl(map.zoomControl);  
 
+// markers
 var markerIcon = L.divIcon(
   {
   html: `
@@ -30,19 +34,51 @@ var markerIcon = L.divIcon(
 
 var marker = L.marker([23.135044427508504, -82.42811672821004],
  {icon: markerIcon}).addTo(map).on('click', clickZoom);
+ 
+var markerAnchorIcon = L.divIcon(
+  {
+  html: `
+  <div class='marker__image'><img src='img/marker-icon-1.png' alt=''></div>
+  <div class='marker__image_container anchor'>
+    <div class='marker__image_label'>
+      <div class='marker__image_title'>BUNGA LOTUS</div>
+      <div class='marker__label__status'>Under way</div>  
+    </div>
+    <div class='popup'>Catanzaro<img src='img/arrow-forward-poup.svg' alt=''>Taranto<div class='popup_status'>Normal</div></div>
+  </div>
+  `,
+  className: 'marker-label',
+});
+var markerAnchor = L.marker([53.54799600616597, 9.790965060430668], {icon: markerAnchorIcon}).addTo(map).on('click', clickZoom);; 
+ 
+var markerStayIcon = L.divIcon(
+  {
+  html: `
+  <div class='marker__image'><img src='img/marker-icon-2.png' alt=''></div>
+  <div class='marker__image_container stay'>
+    <div class='marker__image_label'>
+      <div class='marker__image_title'>BUNGA LOTUS</div>
+      <div class='marker__label__status'>Under way</div>  
+    </div>
+    <div class='popup'>Catanzaro<img src='img/arrow-forward-poup.svg' alt=''>Taranto<div class='popup_status'>Normal</div></div>
+  </div>
+  `,
+  className: 'marker-label',
+}); 
+var markerStay = L.marker([42.33975833769053, -70.98629466906411], {icon: markerStayIcon}).addTo(map).on('click', clickZoom);; 
 
 function clickZoom(e) {
     map.setView(e.target.getLatLng(),5);
 }
 
-map.on('popupopen', function(e) {
-    // find the pixel location on the map where the popup anchor is
-    var px = map.project(e.popup._latlng);
-   // find the height of the popup container, divide by 2 to centre, subtract from the Y axis of marker location
-    px.y -= e.popup._container.clientHeight/2;
-    // pan to new center
-    map.panTo(map.unproject(px),{animate: true});
-});
+// map.on('popupopen', function(e) {
+//     // find the pixel location on the map where the popup anchor is
+//     var px = map.project(e.popup._latlng);
+//    // find the height of the popup container, divide by 2 to centre, subtract from the Y axis of marker location
+//     px.y -= e.popup._container.clientHeight/2;
+//     // pan to new center
+//     map.panTo(map.unproject(px),{animate: true});
+// });
 
 // // zoom in function
 var zoomIn = document.getElementById('in');
@@ -70,53 +106,22 @@ marker.addTo(map).on('click', function () {
   sidebar.toggle(); 
   document.querySelector(".notification_panel").classList.remove('active');  
   document.querySelector(".all_vessel_tab").classList.remove('active'); 
-  document.querySelector(".voyage_panel").classList.remove('active');  
+  document.querySelector(".voyage_panel").classList.remove('active');   
+});
+markerAnchor.addTo(map).on('click', function () {
+  sidebar.toggle(); 
+  document.querySelector(".notification_panel").classList.remove('active');  
+  document.querySelector(".all_vessel_tab").classList.remove('active'); 
+  document.querySelector(".voyage_panel").classList.remove('active');   
+});
+markerStay.addTo(map).on('click', function () {
+  sidebar.toggle(); 
+  document.querySelector(".notification_panel").classList.remove('active');  
+  document.querySelector(".all_vessel_tab").classList.remove('active'); 
+  document.querySelector(".voyage_panel").classList.remove('active');   
 });
 // end map sidebar
 
-var markers = [
-    {
-        coords:[52.3680678593176, 5.026515440336008],
-      },
-    {
-        coords:[42.33975833769053, -70.98629466906411],
-      }, 
-];
-// Edit marker icons
-// var myIcon = L.icon({
-//     iconUrl: 'img/marker-icon.png',
-//     iconSize: [40, 40], // size of the icon
-//     // iconAnchor: [],
-//     // popupAnchor: [],
-// });
-var myIcon = L.divIcon(
-  {
-  html: `
-  <div class='marker__image'><img src='img/marker-icon-1.png' alt=''></div>
-  <div class='marker__image_container stay'>
-    <div class='marker__image_label'>
-      <div class='marker__image_title'>BUNGA LOTUS</div>
-      <div class='marker__label__status'>Under way</div>  
-    </div>
-    <div class='popup'>Catanzaro<img src='img/arrow-forward-poup.svg' alt=''>Taranto<div class='popup_status'>Normal</div></div>
-  </div>
-  `,
-  className: 'marker-label',
-});
-// Loop through markers
-for(var i = 0; i<markers.length; i++){
-    addMarker(markers[i]);
-}
-// To add the marker coordinates
-function addMarker(props){
-    var marker = L.marker(props.coords, {icon: myIcon}).addTo(map);
-     marker.on('mouseover', function(e){
-        marker.openPopup(); 
-    });
-    marker.on('mouseout', function(e){
-        marker.closePopup();
-    }); 
-}
 // var curve1 = L.pathCurve([6.0190194670789925, -85.9360786885477], [51.63015157454955, 2.6431482992641033]).addTo(map);
      
 
@@ -384,81 +389,94 @@ voyageFormBackLink.addEventListener('click', function voyageFormBackLinkFunc () 
 
 
 
-var yourApiKey = '06aac0fd4ba239a20d824ef89602f311';
-  
-var clouds = L.OWM.clouds({showLegend: true, opacity: 0.5, appId: yourApiKey}); 
-var cloudscls = L.OWM.cloudsClassic({showLegend: true,opacity: 0.5,appId: yourApiKey});
-var precipitation = L.OWM.precipitation({appId: 'YOUR_OWN_APPID'});
-var precipitationcls = L.OWM.precipitationClassic({opacity: 0.5,appId: yourApiKey});
-var rain = L.OWM.rain({appId: 'YOUR_OWN_APPID'});
-var raincls = L.OWM.rainClassic({opacity: 0.5,appId: yourApiKey});
-var snow = L.OWM.snow({opacity: 0.5,appId: yourApiKey});
-var pressure = L.OWM.pressure({appId: 'YOUR_OWN_APPID'});
-var pressurecntr = L.OWM.pressureContour({opacity: 0.5,appId: yourApiKey});
-var temp = L.OWM.temperature({opacity: 0.5,appId: yourApiKey});
-var wind = L.OWM.wind({opacity: 0.5,appId: yourApiKey});
+var yourApiKey = 'faeeb9b8701d5f1c36c00e9f016cc027';
+   
+// var time = 1630915395;
+// var time = 1630926195;
+// var time = 1630929795;
+// var time = 1630933395;
+// var time = 1631088195;
+var time = 1631311395;
 
-
+var cloudsLayer = L.tileLayer('http://maps.openweathermap.org/maps/2.0/weather/CL/{z}/{x}/{y}?date='+time+'&appid=faeeb9b8701d5f1c36c00e9f016cc027', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    id: 'mapbox/dark-v10',
+    // tileSize: 256,
+    zoomControl: false,
+    accessToken: 'pk.eyJ1IjoidmVyc3N0YWNoaSIsImEiOiJja3Q1bjI1OG0wYTB1MndwaG0wZTI0eG0yIn0.KW23CHoSsSdBk52ntlTaRA',
+    style: 'mapbox://styles/mapbox/dark-v10', 
+});  
+var windLayer = L.tileLayer('http://maps.openweathermap.org/maps/2.0/weather/WND/{z}/{x}/{y}?date='+time+'&appid=faeeb9b8701d5f1c36c00e9f016cc027', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    id: 'mapbox/dark-v10',
+    // tileSize: 256,
+    zoomControl: false,
+    accessToken: 'pk.eyJ1IjoidmVyc3N0YWNoaSIsImEiOiJja3Q1bjI1OG0wYTB1MndwaG0wZTI0eG0yIn0.KW23CHoSsSdBk52ntlTaRA',
+    style: 'mapbox://styles/mapbox/dark-v10', 
+}); 
+var tempLayer = L.tileLayer('http://maps.openweathermap.org/maps/2.0/weather/TA2/{z}/{x}/{y}?date='+time+'&appid=faeeb9b8701d5f1c36c00e9f016cc027', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    id: 'mapbox/dark-v10',
+    // tileSize: 256,
+    zoomControl: false,
+    accessToken: 'pk.eyJ1IjoidmVyc3N0YWNoaSIsImEiOiJja3Q1bjI1OG0wYTB1MndwaG0wZTI0eG0yIn0.KW23CHoSsSdBk52ntlTaRA',
+    style: 'mapbox://styles/mapbox/dark-v10', 
+}); 
+var rainLayer = L.tileLayer('http://maps.openweathermap.org/maps/2.0/weather/PAC0/{z}/{x}/{y}?date='+time+'&appid=faeeb9b8701d5f1c36c00e9f016cc027', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    id: 'mapbox/dark-v10',
+    // tileSize: 256,
+    zoomControl: false,
+    accessToken: 'pk.eyJ1IjoidmVyc3N0YWNoaSIsImEiOiJja3Q1bjI1OG0wYTB1MndwaG0wZTI0eG0yIn0.KW23CHoSsSdBk52ntlTaRA',
+    style: 'mapbox://styles/mapbox/dark-v10', 
+}); 
+    
 var weatherCloudsPanel = document.getElementById("weather_clouds_panel");
 weatherCloudsPanel.addEventListener('click', function weatherCloudsPanelFunc () {   
   if(weatherCloudsPanel.classList.contains('open')){
     weatherCloudsPanel.classList.remove('open')
-    cloudscls.remove(map); 
+    cloudsLayer.remove(map); 
   }
   else{
     weatherCloudsPanel.classList.add('open')
-    cloudscls.addTo(map);  
+    cloudsLayer.addTo(map);  
   }
 }, false);
 
 var weatherWindPanel = document.getElementById("weather_wind_panel");
 weatherWindPanel.addEventListener('click', function weatherWindPanelFunc () {   
-  wind.addTo(map);   
   if(weatherWindPanel.classList.contains('open')){
     weatherWindPanel.classList.remove('open')
-    wind.remove(map); 
+    windLayer.remove(map); 
   }
   else{
     weatherWindPanel.classList.add('open')
-    wind.addTo(map);  
+    windLayer.addTo(map);  
   }
 }, false);
 
 var weatherTempPanel = document.getElementById("weather_temp_panel");
-weatherTempPanel.addEventListener('click', function weatherTempPanelFunc () {   
-  temp.addTo(map);   
+weatherTempPanel.addEventListener('click', function weatherTempPanelFunc () {  
   if(weatherTempPanel.classList.contains('open')){
     weatherTempPanel.classList.remove('open')
-    temp.remove(map); 
+    tempLayer.remove(map); 
   }
   else{
     weatherTempPanel.classList.add('open')
-    temp.addTo(map);  
+    tempLayer.addTo(map);  
+  }
+}, false);
+
+var weatherRainPanel = document.getElementById("weather_rain_panel");
+weatherRainPanel.addEventListener('click', function weatherRainPanelFunc () {  
+  if(weatherRainPanel.classList.contains('open')){
+    weatherRainPanel.classList.remove('open')
+    rainLayer.remove(map); 
+  }
+  else{
+    weatherRainPanel.classList.add('open')
+    rainLayer.addTo(map);  
   }
 }, false);
  
 
-
-
-    fetch('http://api.openweathermap.org/data/2.5/onecall/timemachine?lat=60.99&lon=30.9&dt=1631189031&appid=06aac0fd4ba239a20d824ef89602f311')
-    // fetch('https://api.openweathermap.org/data/2.5/onecall/timemachine?lat=52&lon=5&dt=1586468027&appid=06aac0fd4ba239a20d824ef89602f311')
-    // fetch('http://api.openweathermap.org/data/2.5/onecall/timemachine?lat=60.99&lon=30.9&dt=1631361893&appid=06aac0fd4ba239a20d824ef89602f311')
-    // fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + 52 + '&lon=' + 5 + '&appid=' + yourApiKey)
-        .then(r => r.json()) 
-        .then(data => {  
-            console.log(data); 
-        }) 
-    fetch('https://raw.githubusercontent.com/kaklin/sea-routes/master/PUB151_distances.json')
-        .then(r => r.json()) 
-        .then(data => { 
-            // Change this line to show exactly the info you need
-            // popup.setContent(data.weather.map(w => w.description).join(", "))
-            console.log(data);
-            // console.log(data.current.clouds);  
-            // for(let i = 0; i<data.lenth; i++){
-            //   console.log(data[i]);
-            // }
-              console.log(data[0].value);
-        })
-
-        

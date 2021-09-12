@@ -254,13 +254,16 @@ body {
       .marker-label .marker__image_container:hover .marker__image_title,
       .marker-label .leaflet-tooltip-pane:hover .marker__image_title {
         padding: 0; }
-      .text-below-marker .marker__image_container:hover.normal:before, .text-below-marker .marker__image_container:hover.stay:before,
+      .text-below-marker .marker__image_container:hover.normal:before, .text-below-marker .marker__image_container:hover.stay:before, .text-below-marker .marker__image_container:hover.anchor:before,
       .text-below-marker .leaflet-tooltip-pane:hover.normal:before,
       .text-below-marker .leaflet-tooltip-pane:hover.stay:before,
+      .text-below-marker .leaflet-tooltip-pane:hover.anchor:before,
       .marker-label .marker__image_container:hover.normal:before,
       .marker-label .marker__image_container:hover.stay:before,
+      .marker-label .marker__image_container:hover.anchor:before,
       .marker-label .leaflet-tooltip-pane:hover.normal:before,
-      .marker-label .leaflet-tooltip-pane:hover.stay:before {
+      .marker-label .leaflet-tooltip-pane:hover.stay:before,
+      .marker-label .leaflet-tooltip-pane:hover.anchor:before {
         display: none; }
     .text-below-marker .marker__image_container.normal,
     .text-below-marker .leaflet-tooltip-pane.normal,
@@ -302,7 +305,7 @@ body {
     .marker-label .marker__image_container.stay,
     .marker-label .leaflet-tooltip-pane.stay {
       position: relative;
-      background: #A36DFE; }
+      background: #F24ED8; }
       .text-below-marker .marker__image_container.stay:hover,
       .text-below-marker .leaflet-tooltip-pane.stay:hover,
       .marker-label .marker__image_container.stay:hover,
@@ -339,6 +342,56 @@ body {
         .text-below-marker .leaflet-tooltip-pane.stay .popup_status:before,
         .marker-label .marker__image_container.stay .popup_status:before,
         .marker-label .leaflet-tooltip-pane.stay .popup_status:before {
+          content: '';
+          position: absolute;
+          top: 6px;
+          left: 0px;
+          width: 8px;
+          height: 8px;
+          background: #FABB19;
+          border-radius: 50%; }
+    .text-below-marker .marker__image_container.anchor,
+    .text-below-marker .leaflet-tooltip-pane.anchor,
+    .marker-label .marker__image_container.anchor,
+    .marker-label .leaflet-tooltip-pane.anchor {
+      position: relative;
+      background: #A36DFE; }
+      .text-below-marker .marker__image_container.anchor:hover,
+      .text-below-marker .leaflet-tooltip-pane.anchor:hover,
+      .marker-label .marker__image_container.anchor:hover,
+      .marker-label .leaflet-tooltip-pane.anchor:hover {
+        display: block;
+        width: 221px !important;
+        display: block;
+        background: rgba(255, 255, 255, 0.2);
+        border: 0.5px solid rgba(255, 255, 255, 0.5);
+        -webkit-backdrop-filter: blur(100px);
+                backdrop-filter: blur(100px);
+        border-radius: 20px;
+        color: #fff;
+        padding: 16px 17px 0px; }
+      .text-below-marker .marker__image_container.anchor:before,
+      .text-below-marker .leaflet-tooltip-pane.anchor:before,
+      .marker-label .marker__image_container.anchor:before,
+      .marker-label .leaflet-tooltip-pane.anchor:before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        right: -3px;
+        width: 8px;
+        height: 8px;
+        background: #FABB19;
+        border-radius: 50%;
+        border: 2px solid #070708; }
+      .text-below-marker .marker__image_container.anchor .popup_status,
+      .text-below-marker .leaflet-tooltip-pane.anchor .popup_status,
+      .marker-label .marker__image_container.anchor .popup_status,
+      .marker-label .leaflet-tooltip-pane.anchor .popup_status {
+        position: relative; }
+        .text-below-marker .marker__image_container.anchor .popup_status:before,
+        .text-below-marker .leaflet-tooltip-pane.anchor .popup_status:before,
+        .marker-label .marker__image_container.anchor .popup_status:before,
+        .marker-label .leaflet-tooltip-pane.anchor .popup_status:before {
           content: '';
           position: absolute;
           top: 6px;
