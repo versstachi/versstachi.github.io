@@ -992,6 +992,14 @@ ul.sidebar_tabs {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     z-index: 99; }
+    @media (max-width: 1440px) {
+      .right_panel .right_panel_link {
+        width: 40px;
+        height: 40px; }
+        .right_panel .right_panel_link img {
+          max-width: 100%;
+          height: auto;
+          display: block; } }
   .right_panel .custom_zoom_controls {
     margin-bottom: 15px; }
 
@@ -1025,6 +1033,14 @@ ul.sidebar_tabs {
   cursor: pointer;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
+  @media (max-width: 1440px) {
+    .custom_zoom_button {
+      width: 40px;
+      height: 40px; }
+      .custom_zoom_button img {
+        max-width: 100%;
+        height: auto;
+        display: block; } }
   .custom_zoom_button.zoom_button_in {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
