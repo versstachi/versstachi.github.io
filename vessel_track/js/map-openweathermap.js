@@ -245,7 +245,7 @@ function initMap() {
 
 	// Get your own free OWM API key at https://www.openweathermap.org/appid - please do not re-use mine!
 	// You don't need an API key for this to work at the moment, but this will change eventually.
-	var OWM_API_KEY = '06aac0fd4ba239a20d824ef89602f311';
+	var OWM_API_KEY = 'faeeb9b8701d5f1c36c00e9f016cc027';
 
 	var clouds = L.OWM.clouds({opacity: 0.8, legendImagePath: 'img/NT2.png', appId: OWM_API_KEY});
 	var cloudscls = L.OWM.cloudsClassic({opacity: 0.5, appId: OWM_API_KEY});
@@ -305,8 +305,8 @@ function initMap() {
 	}));
 
 	var baseMaps = {
-		// "OSM Standard": standard
-		// , "OSM Humanitarian": humanitarian
+		"OSM Standard": standard
+		, "OSM Humanitarian": humanitarian
 	//	, "ESRI Aerial": esri
 	};
 
