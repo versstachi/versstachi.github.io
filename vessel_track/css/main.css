@@ -1692,3 +1692,394 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
       width: 40px;
       height: 40px;
       display: block; }
+
+.metric_content {
+  background: #070708;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+  .metric_content .main_row {
+    width: 100%; }
+  .metric_content .sidebar {
+    position: relative;
+    top: 0;
+    left: 0px;
+    display: block;
+    opacity: 1;
+    width: 100%;
+    max-width: 571px; }
+  .metric_content .main_row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+  .metric_content .sidebar_panel {
+    max-width: 645px;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    .metric_content .sidebar_panel .tabs__conftent {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.6); }
+      .metric_content .sidebar_panel .tabs__conftent.open {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: #FFFFFF; }
+  .metric_content .vessel_progress_bar {
+    margin-bottom: 22px; }
+    .metric_content .vessel_progress_bar .vessel_progress_bar_input {
+      width: 100%;
+      display: block;
+      position: relative;
+      z-index: 67; }
+    .metric_content .vessel_progress_bar .vessel_progress_box {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: flex-start;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      -webkit-justify-content: space-between;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      position: relative;
+      top: -5px; }
+    .metric_content .vessel_progress_bar .vessel_progress_sector {
+      width: 30%;
+      background: #183563;
+      border-radius: 10px;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
+      -webkit-justify-content: flex-end;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      -webkit-align-items: flex-start;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      color: #FFFFFF;
+      height: 49px;
+      padding-bottom: 8px;
+      padding-left: 10px; }
+      .metric_content .vessel_progress_bar .vessel_progress_sector:nth-child(2) {
+        margin: 0 10px; }
+      .metric_content .vessel_progress_bar .vessel_progress_sector img {
+        margin-right: 5px; }
+    .metric_content .vessel_progress_bar .country_name {
+      width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: space-between;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: #FFFFFF;
+      margin-bottom: 24px; }
+      .metric_content .vessel_progress_bar .country_name .country_start,
+      .metric_content .vessel_progress_bar .country_name .country_end {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-justify-content: flex-start;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start; }
+      .metric_content .vessel_progress_bar .country_name img {
+        margin-right: 10px; }
+  .metric_content .vessel_info_tab__col .tabs {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+    max-width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+    .metric_content .vessel_info_tab__col .tabs li {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      list-style-type: none;
+      color: rgba(255, 255, 255, 0.6);
+      cursor: pointer;
+      margin-right: 20px; }
+      .metric_content .vessel_info_tab__col .tabs li.open {
+        color: #FFFFFF; }
+  .metric_content .content_panel {
+    width: calc( 100% - 645px);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  .metric_content .top_content_col {
+    background: #181819;
+    padding: 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-radius: 20px;
+    margin: 0px 0 50px; }
+    .metric_content .top_content_col .top_content_col_l {
+      width: 50%;
+      padding-left: 15px;
+      padding-right: 15px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
+      -webkit-justify-content: space-between;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      min-height: 100%; }
+    .metric_content .top_content_col .top_content_col_r {
+      width: 50%;
+      padding-left: 15px;
+      padding-right: 15px; }
+    .metric_content .top_content_col #mapid {
+      height: 300px;
+      border-radius: 20px; }
+    .metric_content .top_content_col .content_col_title {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      color: #FFFFFF;
+      margin-bottom: 30px; }
+    .metric_content .top_content_col .content_curent_location {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: flex-start;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      width: 100%; }
+    .metric_content .top_content_col .content_curent_location_label {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: #FFFFFF;
+      opacity: 0.5;
+      margin-right: 10px; }
+    .metric_content .top_content_col .content_curent_location_text {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: #FFFFFF; }
+  .metric_content .content_vessel_notification_box {
+    width: 100%;
+    max-width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    overflow-x: auto;
+    margin-bottom: 50px; }
+    .metric_content .content_vessel_notification_box::-webkit-scrollbar {
+      width: 1px; }
+  .metric_content .notification_box {
+    min-width: 368px; }
+  .metric_content .content_vessel_notification_title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    margin-bottom: 20px; }
+  .metric_content .charts_content_row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .metric_content .charts_content_col_r {
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px; }
+  .metric_content .charts_content_col_l {
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px; }
+  .metric_content .content_vessel_weathwer_title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    margin-bottom: 20px; }
+  .metric_content .content_vessel_weathwer_box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-bottom: 50px; }
+    .metric_content .content_vessel_weathwer_box .weathwer_box_col {
+      width: 32%;
+      background: #181819;
+      border-radius: 20px;
+      position: relative;
+      margin-right: 1%;
+      padding: 20px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-justify-content: flex-start;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      margin-bottom: 30px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box; }
+    .metric_content .content_vessel_weathwer_box.normal {
+      position: relative; }
+      .metric_content .content_vessel_weathwer_box.normal:before {
+        content: '';
+        position: absolute;
+        top: 6px;
+        left: 0px;
+        width: 8px;
+        height: 8px;
+        background: #26DD9B;
+        border-radius: 50%; }
+    .metric_content .content_vessel_weathwer_box.warning {
+      position: relative; }
+      .metric_content .content_vessel_weathwer_box.warning:before {
+        content: '';
+        position: absolute;
+        top: 6px;
+        left: 0px;
+        width: 8px;
+        height: 8px;
+        background: #FABB19;
+        border-radius: 50%; }
+    .metric_content .content_vessel_weathwer_box.alert:before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 0px;
+      width: 8px;
+      height: 8px;
+      background: #FABB19;
+      border-radius: 50%; }
+    .metric_content .content_vessel_weathwer_box .weathwer_box_info {
+      margin-left: 20px; }
+      .metric_content .content_vessel_weathwer_box .weathwer_box_info .weathwer_box_info_label {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #FFFFFF;
+        opacity: 0.5;
+        margin-bottom: 20px; }
+      .metric_content .content_vessel_weathwer_box .weathwer_box_info .weathwer_box_info_text {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: -1px;
+        color: #FFFFFF; }
