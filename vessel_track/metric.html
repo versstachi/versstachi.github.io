@@ -31,7 +31,7 @@
                     </a>
                 </div>
                 <div class="center_ico">
-                    <a href="#" class="left_panel__link voyage_link_map active"  onclick="lonkHoverActive(this)">
+                    <a href="/" class="left_panel__link voyage_link_map active">
                         <img src="img/map-ico.svg" alt="">
                     </a>
                     <a href="#" class="voyage_link_open left_panel__link"  onclick="lonkHoverActive(this)">
@@ -48,7 +48,7 @@
             <!-- sidebar -->
             <div id="sidebar"  class="sidebar">
                 <div class="vessel_img">
-                    <img src="img/default_vessel.png" alt="">
+                    <img src="img/dashbord_vessel.png" alt="">
                 </div> 
                   
                   <div class="sidebar__content_section">
@@ -124,23 +124,7 @@
                                 <div class="sidebar__vessel_info_label">Loading condition</div>
                                 <div class="sidebar__vessel_info_text">In Ballast</div>
                             </div> 
-                        </div>
-                        <div class="sidebar__vessel_speed_advice">
-                            <div class="sidebar__vessel_speed_advice_col">
-                                <div class="speed_advice_label">
-                                    <span>Speed advice</span>
-                                    <img src="img/arrow-top.svg" alt="">
-                                </div>
-                                <div class="speed_advice_text">Increase the speed up to 14,4kts</div>
-                            </div>
-                            <div class="sidebar__vessel_speed_advice_col">
-                                <div class="speed_advice_label">
-                                    <span>Speed advice</span>
-                                    <img src="img/arrow-top.svg" alt="">
-                                </div>
-                                <div class="speed_advice_text">Increase the speed up to 14,4kts</div>
-                            </div>
-                        </div>
+                        </div> 
                     </div>
                     <div  class="tabs__content tabs__itinerary"> 
                         <div class="vessel_progress_bar">
@@ -253,11 +237,11 @@
                       <li data-tab-id="tabdaily">Digital Twin</li> 
                     </ul> 
                     <div class="updated_info">
-                        <div class="text">Last update 10 sec ago</div>
-                        <div class="updated_button"><img src="img/updated-ico.svg" alt="">Update</div>
+                        <div class="updated_info_text">Last update 10 sec ago</div>
+                        <div class="updated_info_button"><img src="img/updated-ico.svg" alt="">Update</div>
                     </div>
                 </div>
-            <div id="tabLive" class="tabs__content">
+            <div id="tabLive" class="tabs__content open">
                 <div class="top_content_col">
                     <div class="top_content_col_l">
                         <div class="vessel_progress_bar">
@@ -337,7 +321,7 @@
                             </div>
                         </div> 
                 </div>
-                <div class="content_vessel_weathwer_title">Notifications</div>
+                <div class="content_vessel_weathwer_title">Weather</div>
                 <div class="content_vessel_weathwer_box"> 
                     <div class="weathwer_box_col">
                         <img src="img/weathwer_box_wind.svg" alt="">
@@ -368,7 +352,7 @@
                         </div>
                     </div>
                     <div class="weathwer_box_col">
-                        <img src="img/weathwer_box_current.svg" alt="">
+                        <img src="img/weathwer_box_current.png" alt="">
                         <div class="weathwer_box_info">
                             <div class="weathwer_box_info_label">Current</div>
                             <div class="weathwer_box_info_text">6.0 m</div>
@@ -383,205 +367,106 @@
                     </div> 
                 </div>
                 <div class="charts_content_row">
-                  <div class="charts_content_col_l">
-                    <canvas id="myChart"></canvas>
+                  <div class="charts_col charts_content_col_l">
+                            <div class="content_col_title">ME performance</div>
+                    <!-- HTML -->
+                    <div id="chartdiv" class="chart_container"></div>
                   </div>
-                  <div class="charts_content_col_r">
-                      <canvas id="myChart2"></canvas>
+                  <div class="charts_col charts_content_col_r">
+                            <div class="content_col_title">AE Performance</div>
+                    <!-- HTML -->
+                    <div id="chartdiv2" class="chart_container"></div>
                     </div>
                 </div>
+                    <div class="charts_content_row"> 
+                        <div class="charts_col charts_content_col_full">
+                            <div class="content_col_title">Daily fuel consumption</div>
+                            <div id="chartdiv10" class="chart_container"></div>
+                        </div>
+                    </div>
 
             </div>
-            <div id="tabdaily" class="tabs__content open">
+            <div id="tabdaily" class="tabs__content ">
                 <div class="water_tank_row">
-                    <div class="content_col_title">Ballast water tanks</div>
-                    <div class="ballast_water_tanks">
-                        <div class="ballast_water_tanks_col " >
-                            <div class="water_tank_a water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
+                    <div class="water_tank_row_head">
+                        <div class="content_col_title">Ballast water tanks</div>
+                        <div class="water_tank_row_head_info"> 
+                            <div class="water_tank_row_head_info_box">
+                                <div class="water_tank_info_label">List</div>
+                                <div class="water_tank_info_text">0.01 deg</div>
                             </div>
-                            <div class="water_tank_d water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max:<br>100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_a water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max:<br>100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_c water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max:<br>100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_c water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div> 
-                            <div class="water_tank_c water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_c water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_e water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_c water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_c water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_a water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_a water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_d water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_c water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_c water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_c water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_c water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_e water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_a water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_d water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max:<br>100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_a water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max:<br>100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_c water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max:<br>100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_c water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div> 
-                            <div class="water_tank_c water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_c water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_e water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_c water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_c water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_a water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_a water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_d water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_c water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_c water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_c water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_c water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
-                            </div>
-                            <div class="water_tank_e water_tank">
-                                <div class="water_tank_marker">P10</div>
-                                <div class="water_tank_text">
-                                <div class="water_tank_label">Max: 100 kg</div>20%</div>
+                            <div class="water_tank_row_head_info_box">
+                                <div class="water_tank_info_label">Trim</div>
+                                <div class="water_tank_info_text">1.87 m</div>
                             </div>
                         </div>
- 
-
-
                     </div>
+
+                    <div class="ballast_water_tanks"><iframe src="balast.html" width="1100" height="460" frameBorder="0" scrolling="no"></iframe>  
+                    </div> 
+                </div> 
+
+                <div class="charts_tank_row">
+                    <div class="charts_content_row"> 
+                        <div class="charts_col charts_content_col_full">
+                            <div class="content_col_title">Fuel tanks condition</div>
+                            <div id="chartdiv1" class="chart_container"></div>
+                        </div>
+                    </div>
+                    <div class="charts_content_row">
+                      <div class="charts_col charts_content_col_l">
+                        <!-- HTML -->
+                            <div class="content_col_title">ME1</div>
+                        <div id="chartdiv3" class="chart_container"></div>
+                      </div>
+                      <div class="charts_col charts_content_col_r">
+                        <!-- HTML -->
+                            <div class="content_col_title">ME2</div>
+                        <div id="chartdiv4" class="chart_container"></div>
+                        </div>
+                    </div>
+                    <div class="charts_content_row">
+                      <div class="charts_col charts_content_col_l">
+                            <div class="content_col_title">ME1</div>
+                        <!-- HTML -->
+                        <div id="chartdiv5" class="chart_container"></div>
+                      </div>
+                      <div class="charts_col charts_content_col_r">
+                            <div class="content_col_title">ME1</div>
+                        <!-- HTML -->
+                        <div id="chartdiv6" class="chart_container"></div>
+                        </div>
+                    </div>
+                    <div class="charts_content_row">
+                      <div class="charts_col charts_content_col_l">
+                            <div class="content_col_title">AE Performance</div>
+                        <!-- HTML -->
+                        <div id="chartdiv7" class="chart_container"></div>
+                      </div>
+                      <div class="charts_col charts_content_col_r">
+                            <div class="content_col_title">Boiler load</div>
+                            <div class="content_col_title">Fuel consumption</div>
+                        <!-- HTML -->
+                        <div id="chartdivBoiler" class="chart_container"></div> 
+                        </div>
+                    </div>
+                    <div class="charts_content_row"> 
+                        <div class="charts_col charts_content_col_full">
+                            <div class="content_col_title">Speed log</div>
+                            <div id="chartdiv9" class="chart_container"></div>
+                        </div>
+                    </div>
+                    <div class="charts_content_row">
+                      <div class="charts_col charts_content_col_l">
+                            <div class="content_col_title">Wind</div>
+                        <!-- HTML -->
+                        <div id="chartdiv8" class="chart_container"></div>
+                      </div>
+                      <div class="charts_col charts_content_col_r">
+                            <div class="content_col_title">Echo Sounder</div>
+                        <!-- HTML -->
+                        <div id="chartEcho" class="chart_container"></div> 
+                        </div>
                     </div>
                 </div>
             </div>
@@ -593,135 +478,12 @@
 </div> 
 
  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> 
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" ></script>  
-<script src="js/L.Control.Sidebar.js"></script> 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
-<script src="js/freewall.js"></script> 
-<script src="js/common_metric.js"></script>  
-<script >
-
- 
-var chartColors = {
-  red: 'rgb(255, 99, 132)',
-  orange: 'rgb(255, 159, 64)',
-  yellow: 'rgb(255, 205, 86)',
-  green: 'rgb(75, 192, 192)',
-  blue: 'rgb(54, 162, 235)',
-  purple: 'rgb(153, 102, 255)',
-  grey: 'rgb(231,233,237)'
-};
-
-var randomScalingFactor = function() {
-  return (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100);
-}
-var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-var config = {
-  type: 'line',
-  data: {
-    labels: ["January", "February", "March", "April", "May", "June", "July"],
-    datasets: [{
-      label: "My First dataset",
-      backgroundColor: chartColors.red,
-      borderColor: chartColors.red,
-      data: [
-        randomScalingFactor(),
-        randomScalingFactor(),
-        randomScalingFactor(),
-        randomScalingFactor(),
-        randomScalingFactor(),
-        randomScalingFactor(),
-        randomScalingFactor()
-      ],
-      fill: false,
-    }, {
-      label: "My Second dataset",
-      fill: false,
-      backgroundColor: chartColors.blue,
-      borderColor: chartColors.blue,
-      data: [
-        randomScalingFactor(),
-        randomScalingFactor(),
-        randomScalingFactor(),
-        randomScalingFactor(),
-        randomScalingFactor(),
-        randomScalingFactor(),
-        randomScalingFactor()
-      ],
-    }]
-  },
-  options: {
-    responsive: true,
-    title: {
-      display: true,
-      text: 'Chart.js Line Chart'
-    },
-    tooltips: {
-      mode: 'label',
-    },
-    hover: {
-      mode: 'nearest',
-      intersect: true
-    },
-    scales: {
-      xAxes: [{
-        display: true,
-        scaleLabel: {
-          display: true,
-          labelString: 'Month'
-        }
-      }],
-      yAxes: [{
-        display: true,
-        scaleLabel: {
-          display: true,
-          labelString: 'Value'
-        }
-      }]
-    }
-  }
-};
-
-
-var ctx = document.getElementById("myChart").getContext("2d");
-window.myLine = new Chart(ctx, config);
-
-// 'myChart2'
-var ctx = document.getElementById('myChart2');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
-</script>  
+<script src="js/L.Control.Sidebar.js"></script>  
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+<script src="js/common_metric.js"></script>   
 </body> 
 </html> 

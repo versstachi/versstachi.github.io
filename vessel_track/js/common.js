@@ -23,8 +23,7 @@ function clickZoom(e) {
 
 
  var markers = [
-    [ 23.135044427508504, -82.42811672821004, "MSC SEASIDE", "normal", "notification_warning","3"],
-    [ 53.54799600616597, 9.790965060430668, "CRUISE  AUSONIA", "stay", "notification_alert","2" ],
+    [ 23.135044427508504, -82.42811672821004, "MSC SEASIDE", "normal", "notification_warning","2"], 
     [ 42.33975833769053, -70.98629466906411, "BUNGA LOTUS", "anchor", "notification_status","1" ] 
  ];
  
@@ -421,8 +420,7 @@ function onPlaybackTimeChange(event) {
 function callback() {  
 }
 const playbackOptions = {
-    playControl: true, 
-    sliderControl: true,
+    playControl: true,
     orientIcons: true,
     speed: 5,
     marker: function () {
@@ -435,9 +433,8 @@ const playbackOptions = {
 new L.Playback(map, [demoRoute], onPlaybackTimeChange, playbackOptions);
 
 const controls = document.querySelectorAll('.leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control');
-const gpsTracksControl = controls[0];
-const playControl = controls[2];
-[gpsTracksControl, playControl].forEach(control => {
+
+controls.forEach(control => {
     control.style.marginRight = '5rem';
 });
 const observer = new MutationObserver((mutations) => {
@@ -449,7 +446,7 @@ const observer = new MutationObserver((mutations) => {
     });
 })
 
-const target = document.querySelector('.leaflet-marker-icon.marker-label.leaflet-zoom-animated.leaflet-interactive:nth-child(4)');
+const target = document.querySelector('.leaflet-marker-icon.marker-label.leaflet-zoom-animated.leaflet-interactive:nth-child(3)');
 target.lastElementChild.style.transform = 'rotate(48.14deg)';
 target.lastElementChild.style.marginLeft = '11rem';
 observer.observe(target, { attributes : true, attributeFilter : ['style'] });

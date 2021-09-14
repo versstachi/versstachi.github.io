@@ -1746,7 +1746,12 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
     -webkit-justify-content: flex-start;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
-            justify-content: flex-start; }
+            justify-content: flex-start;
+    min-height: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0; }
     .metric_content .sidebar_panel .tabs__conftent {
       font-style: normal;
       font-weight: 600;
@@ -1856,37 +1861,98 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
                 justify-content: flex-start; }
       .metric_content .vessel_progress_bar .country_name img {
         margin-right: 10px; }
-  .metric_content .vessel_info_tab__col .tabs {
+  .metric_content .vessel_info_tab__col {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-justify-content: flex-start;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    width: 100%;
-    max-width: 100%;
+    -webkit-justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-right: 30px;
+    margin-bottom: 36px; }
+    .metric_content .vessel_info_tab__col .tabs {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: flex-start;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box; }
+      .metric_content .vessel_info_tab__col .tabs li {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        list-style-type: none;
+        color: rgba(255, 255, 255, 0.6);
+        cursor: pointer;
+        margin-right: 20px; }
+        .metric_content .vessel_info_tab__col .tabs li.open {
+          color: #FFFFFF; }
+  .metric_content .updated_info {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .metric_content .updated_info_text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-right: 30px; }
+  .metric_content .updated_info_button {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    background: #3C87FC;
+    border-radius: 12px;
+    width: 123px;
+    height: 40px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box; }
-    .metric_content .vessel_info_tab__col .tabs li {
-      font-style: normal;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      color: #FFFFFF;
-      list-style-type: none;
-      color: rgba(255, 255, 255, 0.6);
-      cursor: pointer;
-      margin-right: 20px; }
-      .metric_content .vessel_info_tab__col .tabs li.open {
-        color: #FFFFFF; }
+            box-sizing: border-box;
+    padding: 5px 10px; }
+    .metric_content .updated_info_button img {
+      margin-right: 8px; }
   .metric_content .content_panel {
     width: calc( 100% - 645px);
     -webkit-box-sizing: border-box;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    padding-top: 31px; }
   .metric_content .top_content_col {
     background: #181819;
     padding: 20px;
@@ -1924,7 +1990,10 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
       padding-right: 15px; }
     .metric_content .top_content_col #mapid {
       height: 300px;
-      border-radius: 20px; }
+      border-radius: 20px;
+      width: 494px;
+      float: right;
+      display: block; }
     .metric_content .top_content_col .content_col_title {
       font-style: normal;
       font-weight: 500;
@@ -1964,12 +2033,17 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
     display: -ms-flexbox;
     display: flex;
     overflow: hidden;
-    overflow-x: auto;
-    margin-bottom: 50px; }
-    .metric_content .content_vessel_notification_box::-webkit-scrollbar {
-      width: 1px; }
+    overflow-x: hidden;
+    margin-bottom: 25px; }
   .metric_content .notification_box {
-    min-width: 368px; }
+    min-width: 368px;
+    background: #181819;
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-radius: 20px;
+    padding: 18px;
+    margin-right: 15px; }
   .metric_content .content_vessel_notification_title {
     font-style: normal;
     font-weight: 500;
@@ -1994,6 +2068,29 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
     width: 50%;
     padding-left: 15px;
     padding-right: 15px; }
+  .metric_content .charts_content_col_full {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px; }
+  .metric_content .charts_col {
+    background: #181819;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 15px; }
+    .metric_content .charts_col:first-child {
+      margin-right: 10px; }
+    .metric_content .charts_col:last-child {
+      margin-left: 10px; }
+    .metric_content .charts_col .content_col_title {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      color: #FFFFFF;
+      margin-bottom: 30px; }
+  .metric_content .chart_container {
+    width: 100%;
+    height: 500px; }
   .metric_content .content_vessel_weathwer_title {
     font-style: normal;
     font-weight: 500;
@@ -2033,7 +2130,7 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start;
-      margin-bottom: 30px;
+      margin-bottom: 22px;
       -webkit-box-sizing: border-box;
               box-sizing: border-box; }
     .metric_content .content_vessel_weathwer_box.normal {
@@ -2087,11 +2184,18 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
         color: #FFFFFF; }
   .metric_content .water_tank_row {
     background: #181819;
-    padding: 20px;
+    padding: 25px;
     border-radius: 20px;
     margin: 0px 0 50px;
     color: #FFF; }
-  .metric_content .ballast_water_tanks .water_tank {
+    .metric_content .water_tank_row .content_col_title {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      color: #FFFFFF;
+      margin-bottom: 30px; }
+  .metric_content .water_tank {
     float: left;
     margin: 2px;
     display: -webkit-box;
@@ -2107,50 +2211,51 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
-  .metric_content .ballast_water_tanks .water_tank_a {
+  .metric_content .water_tank_a {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background: #464647;
     padding: 10px;
     border-radius: 20px; }
-  .metric_content .ballast_water_tanks .water_tank_b {
+  .metric_content .water_tank_b {
+    width: 120px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background: #464647;
     padding: 10px;
     border-radius: 20px; }
-  .metric_content .ballast_water_tanks .water_tank_c {
+  .metric_content .water_tank_c {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background: #464647;
     padding: 10px;
     border-radius: 20px; }
-  .metric_content .ballast_water_tanks .water_tank_d {
+  .metric_content .water_tank_d {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background: #464647;
     padding: 10px;
     border-radius: 20px; }
-  .metric_content .ballast_water_tanks .water_tank_e {
+  .metric_content .water_tank_e {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background: #464647;
     padding: 10px;
     border-radius: 20px; }
-  .metric_content .ballast_water_tanks .water_tank_marker {
+  .metric_content .water_tank_marker {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
     color: #FFFFFF; }
-  .metric_content .ballast_water_tanks .water_tank_label {
+  .metric_content .water_tank_label {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
     color: #FFFFFF;
     opacity: 0.5; }
-  .metric_content .ballast_water_tanks .water_tank_text {
+  .metric_content .water_tank_text {
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -2162,5 +2267,69 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
     padding: 20px;
     border-radius: 20px;
     margin: 0 2px;
-    height: 90%;
-    height: 480px; }
+    width: 1150px;
+    height: 600px;
+    overflow: hidden; }
+  .metric_content .ballast_water_tanks {
+    background: url(../img/balast-bg.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+    padding: 15px 15px 0px; }
+  .metric_content .water_tank_row_head {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 25px; }
+    .metric_content .water_tank_row_head .content_col_title {
+      margin-bottom: 0; }
+  .metric_content .water_tank_row_head_info {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 40px; }
+    .metric_content .water_tank_row_head_info .water_tank_row_head_info_box {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: flex-start;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .metric_content .water_tank_row_head_info .water_tank_info_label {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: #FFFFFF;
+      opacity: 0.5;
+      margin-right: 10px; }
+    .metric_content .water_tank_row_head_info .water_tank_info_text {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: #FFFFFF; }
