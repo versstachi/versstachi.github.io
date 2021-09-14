@@ -58,14 +58,23 @@ function clickZoom(e) {
     }); 
  }
 
-// map.on('popupopen', function(e) {
-//     // find the pixel location on the map where the popup anchor is
-//     var px = map.project(e.popup._latlng);
-//    // find the height of the popup container, divide by 2 to centre, subtract from the Y axis of marker location
-//     px.y -= e.popup._container.clientHeight/2;
-//     // pan to new center
-//     map.panTo(map.unproject(px),{animate: true});
-// });
+var markerIconOne = L.divIcon(
+  {
+  html: `
+  <div class='marker__image'><img src='img/marker-icon-3.png' alt=''></div>
+  <div class='marker__image_container normal'>
+    <div class='marker__image_label'>
+      <div class='marker__image_title'>MSC SEASIDE</div>
+      <div class='marker__label__status'>Under way</div>  
+    </div>
+    <div class='popup'>Catanzaro<img src='img/arrow-forward-poup.svg' alt=''>Taranto<div class='popup_status'>Normal</div></div>
+  </div>
+  `,
+  className: 'marker-label',
+  iconAnchor: [53.5, 9.9]
+});
+// var markerOne = L.marker([53.5, 9.9],
+//  {icon: markerIconOne}).addTo(map).on('click', clickZoom);
 
 // // zoom in function
 var zoomIn = document.getElementById('in');
@@ -288,6 +297,13 @@ weatherRainPanel.addEventListener('click', function weatherRainPanelFunc () {
   }
 }, false);
  
+var removeAllPanel = document.getElementById("remove_all_panel");
+removeAllPanel.addEventListener('click', function removeAllPanelFunc () {   
+    rainLayer.remove(map); 
+    tempLayer.remove(map);  
+    windLayer.remove(map);  
+    cloudsLayer.remove(map);  
+}, false);
  
 
 // PLAYBACK START
@@ -401,21 +417,40 @@ function onPlaybackTimeChange(event) {
 function callback() {  
 }
 const playbackOptions = {
-    playControl: true,
-    dateControl: true,
+    playControl: true, 
     sliderControl: true,
     orientIcons: true,
     speed: 5,
+    marker: function () {
+        return {
+            icon: markerIconOne,
+        };
+    }
 };
 
 new L.Playback(map, [demoRoute], onPlaybackTimeChange, playbackOptions);
 
 const controls = document.querySelectorAll('.leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control');
 const gpsTracksControl = controls[0];
-const playControl = controls[3];
+const playControl = controls[2];
 [gpsTracksControl, playControl].forEach(control => {
     control.style.marginRight = '5rem';
 });
+const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutationRecord) => {
+        const { target } = mutationRecord;
+        const currentRotateStyle = target.style.transform.split(' ').find(item => item.includes('rotate'));
+        const currentRotateDegree = parseFloat(/\(([^)]+)\)/.exec(currentRotateStyle)[1]);
+        target.lastElementChild.style.transform = `rotate(${360 - Math.abs(currentRotateDegree)}deg)`;
+    });
+})
+
+const target = document.querySelector('.leaflet-marker-icon.marker-label.leaflet-zoom-animated.leaflet-interactive:nth-child(4)');
+target.lastElementChild.style.transform = 'rotate(48.14deg)';
+target.lastElementChild.style.marginLeft = '11rem';
+observer.observe(target, { attributes : true, attributeFilter : ['style'] });
+ 
+  
 // PLAYBACK FINISH
  
 

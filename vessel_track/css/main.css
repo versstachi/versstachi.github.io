@@ -1000,6 +1000,8 @@ ul.sidebar_tabs {
           max-width: 100%;
           height: auto;
           display: block; } }
+    .right_panel .right_panel_link.panel_open {
+      border: 1px solid #fff; }
   .right_panel .custom_zoom_controls {
     margin-bottom: 15px; }
 
@@ -2083,3 +2085,82 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
         text-align: center;
         letter-spacing: -1px;
         color: #FFFFFF; }
+  .metric_content .water_tank_row {
+    background: #181819;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 0px 0 50px;
+    color: #FFF; }
+  .metric_content .ballast_water_tanks .water_tank {
+    float: left;
+    margin: 2px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .metric_content .ballast_water_tanks .water_tank_a {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #464647;
+    padding: 10px;
+    border-radius: 20px; }
+  .metric_content .ballast_water_tanks .water_tank_b {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #464647;
+    padding: 10px;
+    border-radius: 20px; }
+  .metric_content .ballast_water_tanks .water_tank_c {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #464647;
+    padding: 10px;
+    border-radius: 20px; }
+  .metric_content .ballast_water_tanks .water_tank_d {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #464647;
+    padding: 10px;
+    border-radius: 20px; }
+  .metric_content .ballast_water_tanks .water_tank_e {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #464647;
+    padding: 10px;
+    border-radius: 20px; }
+  .metric_content .ballast_water_tanks .water_tank_marker {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF; }
+  .metric_content .ballast_water_tanks .water_tank_label {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+    opacity: 0.5; }
+  .metric_content .ballast_water_tanks .water_tank_text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF; }
+  .metric_content .ballast_water_tanks_col {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 0 2px;
+    height: 90%;
+    height: 480px; }
