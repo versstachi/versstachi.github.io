@@ -299,6 +299,10 @@ weatherRainPanel.addEventListener('click', function weatherRainPanelFunc () {
  
 var removeAllPanel = document.getElementById("remove_all_panel");
 removeAllPanel.addEventListener('click', function removeAllPanelFunc () {   
+    weatherRainPanel.classList.remove('panel_open');
+    weatherTempPanel.classList.remove('panel_open');
+    weatherCloudsPanel.classList.remove('panel_open');
+    weatherWindPanel.classList.remove('panel_open');
     rainLayer.remove(map); 
     tempLayer.remove(map);  
     windLayer.remove(map);  
