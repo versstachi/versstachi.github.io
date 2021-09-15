@@ -60,7 +60,7 @@ function clickZoom(e) {
 var markerIconOne = L.divIcon(
   {
   html: `
-  <div class='marker__image'><img src='img/marker-icon-3.png' alt=''></div>
+  <div class='marker__image' style="margin-top: -28px;"><img src='img/marker-icon-3.png' alt=''></div>
   <div class='marker__image_container normal'>
     <div class='marker__image_label'>
       <div class='marker__image_title'>MSC SEASIDE</div>
