@@ -259,6 +259,7 @@ am4core.ready(function() {
 
 // Themes begin
 am4core.useTheme(am4themes_animated);
+am4core.addLicense("ch-custom-attribution");
 // Themes end
 
 // Create chart instance
@@ -287,6 +288,7 @@ valueAxis.renderer.grid.template.strokeOpacity = 1;
 
 // Create series
 var series = chart.series.push(new am4charts.LineSeries());
+series.name = "Power";
 series.dataFields.valueY = "value1";
 series.dataFields.dateX = "date";
 series.stroke = am4core.color("#EEFF88");  
@@ -297,6 +299,7 @@ series.tooltip.pointerOrientation = "vertical";
 
 // Create series
 var series2 = chart.series.push(new am4charts.LineSeries());
+series2.name = "Torque";
 series2.dataFields.valueY = "value2";
 series2.dataFields.dateX = "date";
 series2.strokeWidth = 2;
@@ -308,6 +311,9 @@ series2.stroke = am4core.color("#629FFF");
 chart.cursor = new am4charts.XYCursor();
 chart.cursor.xAxis = dateAxis;
 
+chart.legend = new am4charts.Legend();
+chart.legend.position = "top";
+chart.legend.labels.template.text = "[bold {color}]{name}[/]";
  
 
 
@@ -364,6 +370,7 @@ valueAxis.extraMax = 0.1;
 var series = chart1.series.push(new am4charts.ColumnSeries());
 series.dataFields.categoryX = "country";
 series.dataFields.valueY = "visits";
+series.name = "FOC Boiler";
 series.tooltipText = "{valueY.value}"; 
 series.stroke = am4core.color("#629FFF");  
 series.columns.template.strokeOpacity = 1;
@@ -374,9 +381,12 @@ series.columns.template.column.cornerRadiusTopLeft = 0;
 chart1.zoomOutButton.disabled = true;
 
  
+chart1.legend = new am4charts.Legend();
+chart1.legend.position = "top";
+chart1.legend.labels.template.text = "[bold {color}]{name}[/]";
  
 
-
+ 
 
 
 // -----------------------------
@@ -443,8 +453,7 @@ valueAxis.cursorTooltipEnabled = false;
 // goal guides
 var axisRange = valueAxis.axisRanges.create();
 axisRange.value = 6000;
-axisRange.grid.strokeOpacity = 0.1;
-axisRange.label.text = "Goal";
+axisRange.grid.strokeOpacity = 0.1; 
 axisRange.label.align = "right";
 axisRange.label.verticalCenter = "bottom";
 axisRange.label.fillOpacity = 0.8;
@@ -463,6 +472,7 @@ valueAxis.renderer.labels.template.fill = am4core.color("#fff");
 var series = chart2.series.push(new am4charts.ColumnSeries);
 series.dataFields.valueY = "steps";
 series.dataFields.dateX = "date";
+series.name = "FOC Boiler";
 series.tooltipText = "{valueY.value}";
 series.tooltip.pointerOrientation = "vertical";
 series.tooltip.hiddenState.properties.opacity = 1;
@@ -495,16 +505,7 @@ cursor.lineX.disabled = true;
 chart2.events.on("datavalidated", function () {
     dateAxis.zoomToDates(new Date(2018, 0, 21), new Date(2018, 1, 1), false, true);
 });
-
-var middleLine = chart2.plotContainer.createChild(am4core.Line);
-middleLine.strokeOpacity = 1;
-middleLine.stroke = am4core.color("#fff");
-middleLine.strokeDasharray = "2,2";
-middleLine.align = "center";
-middleLine.zIndex = 1;
-middleLine.adapter.add("y2", function (y2, target) {
-    return target.parent.pixelHeight;
-})
+ 
 
 cursor.events.on("cursorpositionchanged", updateTooltip);
 dateAxis.events.on("datarangechanged", updateTooltip);
@@ -516,6 +517,9 @@ function updateTooltip() {
 }
 
  
+chart2.legend = new am4charts.Legend();
+chart2.legend.position = "top";
+chart2.legend.labels.template.text = "[bold {color}]{name}[/]";
 
 
 
@@ -551,7 +555,8 @@ var series = chart3.series.push(new am4charts.LineSeries());
 series.dataFields.valueY = "value";
 series.dataFields.dateX = "date";
 series.tooltipText = "{value}"
-series.stroke = am4core.color("#629FFF");  
+series.stroke = am4core.color("#629FFF"); 
+series.name = "Power/speed"; 
 
 series.tooltip.pointerOrientation = "vertical";
 
@@ -563,6 +568,9 @@ chart3.cursor.xAxis = dateAxis;
 // chart3.scrollbarX = new am4core.Scrollbar();
 
 
+chart3.legend = new am4charts.Legend();
+chart3.legend.position = "top";
+chart3.legend.labels.template.text = "[bold {color}]{name}[/]";
 
 // -----------------------------
 
@@ -597,6 +605,7 @@ series.dataFields.valueY = "value";
 series.dataFields.dateX = "date";
 series.tooltipText = "{value}"
 series.stroke = am4core.color("#629FFF");  
+series.name = "Power/speed"; 
 
 series.tooltip.pointerOrientation = "vertical";
 
@@ -608,6 +617,9 @@ chart4.cursor.xAxis = dateAxis;
 // chart4.scrollbarX = new am4core.Scrollbar();
 
 
+chart4.legend = new am4charts.Legend();
+chart4.legend.position = "top";
+chart4.legend.labels.template.text = "[bold {color}]{name}[/]";
 
 // -----------------------------
 
@@ -642,6 +654,7 @@ series.dataFields.valueY = "value";
 series.dataFields.dateX = "date";
 series.tooltipText = "{value}"
 series.stroke = am4core.color("#EEFF88");  
+series.name = "SFOC/Engine load"; 
 
 series.tooltip.pointerOrientation = "vertical";
 
@@ -653,6 +666,9 @@ chart5.cursor.xAxis = dateAxis;
 // chart5.scrollbarX = new am4core.Scrollbar();
 
 
+chart5.legend = new am4charts.Legend();
+chart5.legend.position = "top";
+chart5.legend.labels.template.text = "[bold {color}]{name}[/]";
 
 // -----------------------------
 
@@ -687,6 +703,7 @@ series.dataFields.valueY = "value";
 series.dataFields.dateX = "date";
 series.tooltipText = "{value}"
 series.stroke = am4core.color("#EEFF88");  
+series.name = "SFOC/Engine load"; 
 
 series.tooltip.pointerOrientation = "vertical";
 
@@ -698,6 +715,9 @@ chart6.cursor.xAxis = dateAxis;
 // chart6.scrollbarX = new am4core.Scrollbar();
 
 
+chart6.legend = new am4charts.Legend();
+chart6.legend.position = "top";
+chart6.legend.labels.template.text = "[bold {color}]{name}[/]";
 
 // -----------------------------
 
@@ -732,6 +752,7 @@ series.dataFields.valueY = "value";
 series.dataFields.dateX = "date";
 series.tooltipText = "{value}"
 series.stroke = am4core.color("#EEFF88");  
+series.name = "SFOC/AE load"; 
 
 series.tooltip.pointerOrientation = "vertical";
 
@@ -743,10 +764,9 @@ chart7.cursor.xAxis = dateAxis;
 // chart7.scrollbarX = new am4core.Scrollbar();
 
 
-// Add a legend
 chart7.legend = new am4charts.Legend();
 chart7.legend.position = "top";
- 
+chart7.legend.labels.template.text = "[bold {color}]{name}[/]";
 
  
 
@@ -948,6 +968,7 @@ series.dataFields.valueY = "value";
 series.tooltipText = "{valueY.value}";
 series.strokeWidth = 3; 
 series.stroke = am4core.color("#EEFF88");  
+series.name = "SFOC/AE load"; 
 
 chart9.cursor = new am4charts.XYCursor();
 chart9.cursor.xAxis = dateAxis;
@@ -961,10 +982,9 @@ chart9.cursor.lineX.fillOpacity = 0.1;
 // Add a legend
 chart9.legend = new am4charts.Legend();
 chart9.legend.position = "top";
- 
+chart9.legend.labels.template.text = "[bold {color}]{name}[/]";
 
  
-
 
 
 
@@ -976,8 +996,7 @@ chart9.legend.position = "top";
 
 // Create chart instance
 var chartdivBoiler = am4core.create("chartdivBoiler", am4charts.XYChart3D);
-
-chartdivBoiler.titles.create().text = "Crude oil reserves";
+ 
 
 // Add data
 chartdivBoiler.data = [{
@@ -1014,6 +1033,7 @@ series1.columns.template.width = am4core.percent(80);
 series1.columns.template.fillOpacity = 0.9;
 series1.columns.template.strokeOpacity = 1;
 series1.columns.template.strokeWidth = 2;
+series1.name = "Boiler load"; 
 
 var series2 = chartdivBoiler.series.push(new am4charts.ConeSeries());
 series2.dataFields.valueY = "value2";
@@ -1025,8 +1045,14 @@ series2.columns.template.fillOpacity = 0.1;
 series2.columns.template.stroke = am4core.color("#EEFF88");
 series2.columns.template.strokeOpacity = 0.2;
 series2.columns.template.strokeWidth = 2;
+series2.name = "Fuel consumption";  
 
+// Add a legend
+chartdivBoiler.legend = new am4charts.Legend();
+chartdivBoiler.legend.position = "top";
+chartdivBoiler.legend.labels.template.text = "[bold {color}]{name}[/]";
 
+ 
 
 
 
@@ -1155,8 +1181,7 @@ valueAxis.renderer.grid.template.strokeOpacity = 1;
 valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
 
 var series = chartEcho.series.push(new am4charts.LineSeries());
-series.dataFields.dateX = "year";
-series.name = "cars";
+series.dataFields.dateX = "year"; 
 series.dataFields.valueY = "cars";
 series.tooltipHTML = "";
 series.tooltipText = "[#000]{valueY.value}[/]";
@@ -1167,9 +1192,9 @@ series.tooltip.getFillFromObject = false;
 series.fillOpacity = 0.6;
 series.strokeWidth = 2;
 series.stacked = true;
+series.name = "84.6 m"; 
 
-var series2 = chartEcho.series.push(new am4charts.LineSeries());
-series2.name = "motorcycles";
+var series2 = chartEcho.series.push(new am4charts.LineSeries()); 
 series2.dataFields.dateX = "year";
 series2.dataFields.valueY = "motorcycles";
 series2.tooltipHTML = "";
@@ -1183,8 +1208,7 @@ series2.fillOpacity = 0.6;
 series2.stacked = true;
 series2.strokeWidth = 2;
 
-var series3 = chartEcho.series.push(new am4charts.LineSeries());
-series3.name = "bicycles";
+var series3 = chartEcho.series.push(new am4charts.LineSeries()); 
 series3.dataFields.dateX = "year";
 series3.dataFields.valueY = "bicycles";
 series3.tooltipHTML = "";
@@ -1202,9 +1226,14 @@ series3.strokeWidth = 2;
 chartEcho.cursor = new am4charts.XYCursor();
 chartEcho.cursor.xAxis = dateAxis;
 // chartEcho.scrollbarX = new am4core.Scrollbar();
+ 
 
+// Add a legend
+chartEcho.legend = new am4charts.Legend();
+chartEcho.legend.position = "top";
+chartEcho.legend.labels.template.text = "[bold {color}]{name}[/]";
 
-
+ 
 
 
 
@@ -1331,7 +1360,7 @@ bullet.strokeWidth = 2;
 bullet.stroke = am4core.color("#fff");
 bullet.setStateOnChildren = true;
 bullet.propertyFields.fillOpacity = "opacity";
-bullet.propertyFields.strokeOpacity = "opacity";
+bullet.propertyFields.strokeOpacity = "opacity"; 
 
 var hoverState = bullet.states.create("hover");
 hoverState.properties.scale = 1.7;
@@ -1343,12 +1372,14 @@ function createTrendLine(data) {
   trend.strokeWidth = 2
   trend.stroke = trend.fill = am4core.color("#EEFF88");
   trend.data = data;
+  trend.name = "Peak"; 
 
   var bullet = trend.bullets.push(new am4charts.CircleBullet());
   bullet.tooltipText = "{date}\n[bold font-size: 17px]value: {valueY}[/]";
   bullet.strokeWidth = 2;
   bullet.stroke = am4core.color("#fff")
   bullet.circle.fill = trend.stroke;
+  bullet.name = "Peak"; 
 
   var hoverState = bullet.states.create("hover");
   hoverState.properties.scale = 1.7;
@@ -1366,12 +1397,13 @@ var lastTrend = createTrendLine([
   { "date": "2012-01-22", "value": 10 }
 ]);
 
-// Initial zoom once chart is ready
-lastTrend.events.once("datavalidated", function(){
-  series.xAxis.zoomToDates(new Date(2012, 0, 2), new Date(2012, 0, 13));
-});
+  
+// Add a legend
+chartdiv8.legend = new am4charts.Legend();
+chartdiv8.legend.position = "top";
+chartdiv8.legend.labels.template.text = "[bold {color}]{name}[/]";
 
-
+ 
 
 
 
