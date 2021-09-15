@@ -278,10 +278,12 @@ chart.data = [
 // Create axes
 var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
 dateAxis.renderer.minGridDistance = 50;
+dateAxis.renderer.labels.template.fill = am4core.color("#fff"); 
 
 var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 valueAxis.renderer.labels.template.fill = am4core.color("#fff");
 valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
+valueAxis.renderer.grid.template.strokeOpacity = 1; 
 
 // Create series
 var series = chart.series.push(new am4charts.LineSeries());
@@ -298,9 +300,9 @@ var series2 = chart.series.push(new am4charts.LineSeries());
 series2.dataFields.valueY = "value2";
 series2.dataFields.dateX = "date";
 series2.strokeWidth = 2;
-series2.stroke = am4core.color("#629FFF"); 
 series2.strokeDasharray = "3,4";
 series2.stroke = series.stroke;
+series2.stroke = am4core.color("#629FFF"); 
 
 // Add cursor
 chart.cursor = new am4charts.XYCursor();
@@ -318,42 +320,27 @@ chart.cursor.xAxis = dateAxis;
 var chart1 = am4core.create("chartdiv1", am4charts.XYChart);
 
 chart1.data = [{
- "country": "USA",
+ "country": "Oily bilge water",
  "visits": 2025
 }, {
- "country": "China",
+ "country": "Heavy fuel oil",
  "visits": 1882
 }, {
- "country": "Japan",
+ "country": "Diesel oil",
  "visits": 1809
 }, {
- "country": "Germany",
+ "country": "Natural gas",
  "visits": 1322
 }, {
- "country": "UK",
+ "country": "Fuel 5",
  "visits": 1122
 }, {
- "country": "France",
+ "country": "Fuel 6",
  "visits": 1114
 }, {
- "country": "India",
+ "country": "Fuel 7",
  "visits": 984
-}, {
- "country": "Spain",
- "visits": 711
-}, {
- "country": "Netherlands",
- "visits": 665
-}, {
- "country": "Russia",
- "visits": 580
-}, {
- "country": "South Korea",
- "visits": 443
-}, {
- "country": "Canada",
- "visits": 441
-}];
+} ];
 
 chart1.padding(40, 40, 40, 40);
 
@@ -363,10 +350,12 @@ categoryAxis.dataFields.category = "country";
 categoryAxis.renderer.minGridDistance = 60;
 categoryAxis.renderer.inversed = true;
 categoryAxis.renderer.grid.template.disabled = true;
+categoryAxis.renderer.labels.template.fill = am4core.color("#fff");
 
 var valueAxis = chart1.yAxes.push(new am4charts.ValueAxis());
 valueAxis.renderer.labels.template.fill = am4core.color("#fff");
 valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
+valueAxis.renderer.grid.template.strokeOpacity = 1; 
 valueAxis.min = 0;
 valueAxis.extraMax = 0.1;
 //valueAxis.rangeChangeEasing = am4core.ease.linear;
@@ -375,31 +364,17 @@ valueAxis.extraMax = 0.1;
 var series = chart1.series.push(new am4charts.ColumnSeries());
 series.dataFields.categoryX = "country";
 series.dataFields.valueY = "visits";
-series.tooltipText = "{valueY.value}"
-series.columns.template.strokeOpacity = 0;
-series.columns.template.column.cornerRadiusTopRight = 10;
-series.columns.template.column.cornerRadiusTopLeft = 10;
+series.tooltipText = "{valueY.value}"; 
+series.stroke = am4core.color("#629FFF");  
+series.columns.template.strokeOpacity = 1;
+series.columns.template.column.cornerRadiusTopRight = 0;
+series.columns.template.column.cornerRadiusTopLeft = 0; 
 //series.interpolationDuration = 1500;
-//series.interpolationEasing = am4core.ease.linear;
-var labelBullet = series.bullets.push(new am4charts.LabelBullet());
-labelBullet.label.verticalCenter = "bottom";
-labelBullet.label.dy = -10;
-labelBullet.label.text = "{values.valueY.workingValue.formatNumber('#.')}";
-
+//series.interpolationEasing = am4core.ease.linear; 
 chart1.zoomOutButton.disabled = true;
 
-// as by default columns of the same series are of the same color, we add adapter which takes colors from chart.colors color set
-series.columns.template.adapter.add("fill", function (fill, target) {
- return chart1.colors.getIndex(target.dataItem.index);
-});
-
-setInterval(function () {
- am4core.array.each(chart1.data, function (item) {
-   item.visits += Math.round(Math.random() * 200 - 100);
-   item.visits = Math.abs(item.visits);
- })
- chart1.invalidateRawData();
-}, 2000)
+ 
+ 
 
 
 
@@ -447,7 +422,9 @@ dateAxis.renderer.grid.template.strokeOpacity = 0;
 dateAxis.renderer.minGridDistance = 10;
 dateAxis.dateFormats.setKey("day", "d");
 dateAxis.tooltip.hiddenState.properties.opacity = 1;
-dateAxis.tooltip.hiddenState.properties.visible = true;
+dateAxis.tooltip.hiddenState.properties.visible = true; 
+dateAxis.renderer.labels.template.fill = am4core.color("#fff");
+dateAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
 
 
 dateAxis.tooltip.adapter.add("x", function (x, target) {
@@ -458,8 +435,8 @@ var valueAxis = chart2.yAxes.push(new am4charts.ValueAxis());
 valueAxis.renderer.labels.template.fill = am4core.color("#fff");
 valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
 valueAxis.renderer.inside = true;
-valueAxis.renderer.labels.template.fillOpacity = 0.3;
-valueAxis.renderer.grid.template.strokeOpacity = 0;
+valueAxis.renderer.labels.template.fillOpacity = 1;
+valueAxis.renderer.grid.template.strokeOpacity = 1;
 valueAxis.min = 0;
 valueAxis.cursorTooltipEnabled = false;
 
@@ -506,7 +483,7 @@ columnTemplate.adapter.add("fill", function (fill, target) {
         return chart2.colors.getIndex(0);
     }
     else {
-        return am4core.color("#a8b3b7");
+        return am4core.color("#EEFF88");
     }
 })
 
@@ -521,7 +498,7 @@ chart2.events.on("datavalidated", function () {
 
 var middleLine = chart2.plotContainer.createChild(am4core.Line);
 middleLine.strokeOpacity = 1;
-middleLine.stroke = am4core.color("#000000");
+middleLine.stroke = am4core.color("#fff");
 middleLine.strokeDasharray = "2,2";
 middleLine.align = "center";
 middleLine.zIndex = 1;
@@ -538,11 +515,7 @@ function updateTooltip() {
     series.tooltip.validate(); // otherwise will show other columns values for a second
 }
 
-
-var label = chart2.plotContainer.createChild(am4core.Label);
-label.text = "Pan chart to change date";
-label.x = 90;
-label.y = 50; 
+ 
 
 
 
@@ -566,16 +539,19 @@ chart3.data = data;
 // Create axes
 var dateAxis = chart3.xAxes.push(new am4charts.DateAxis());
 dateAxis.renderer.minGridDistance = 60;
+dateAxis.renderer.labels.template.fill = am4core.color("#fff");
 
 var valueAxis = chart3.yAxes.push(new am4charts.ValueAxis());
 valueAxis.renderer.labels.template.fill = am4core.color("#fff");
 valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
+valueAxis.renderer.grid.template.strokeOpacity = 1; 
 
 // Create series
 var series = chart3.series.push(new am4charts.LineSeries());
 series.dataFields.valueY = "value";
 series.dataFields.dateX = "date";
 series.tooltipText = "{value}"
+series.stroke = am4core.color("#629FFF");  
 
 series.tooltip.pointerOrientation = "vertical";
 
@@ -608,16 +584,19 @@ chart4.data = data;
 // Create axes
 var dateAxis = chart4.xAxes.push(new am4charts.DateAxis());
 dateAxis.renderer.minGridDistance = 60;
+dateAxis.renderer.labels.template.fill = am4core.color("#fff");
 
 var valueAxis = chart4.yAxes.push(new am4charts.ValueAxis());
 valueAxis.renderer.labels.template.fill = am4core.color("#fff");
 valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
+valueAxis.renderer.grid.template.strokeOpacity = 1; 
 
 // Create series
 var series = chart4.series.push(new am4charts.LineSeries());
 series.dataFields.valueY = "value";
 series.dataFields.dateX = "date";
 series.tooltipText = "{value}"
+series.stroke = am4core.color("#629FFF");  
 
 series.tooltip.pointerOrientation = "vertical";
 
@@ -650,16 +629,19 @@ chart5.data = data;
 // Create axes
 var dateAxis = chart5.xAxes.push(new am4charts.DateAxis());
 dateAxis.renderer.minGridDistance = 60;
+dateAxis.renderer.labels.template.fill = am4core.color("#fff");
 
 var valueAxis = chart5.yAxes.push(new am4charts.ValueAxis());
 valueAxis.renderer.labels.template.fill = am4core.color("#fff");
 valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
+valueAxis.renderer.grid.template.strokeOpacity = 1; 
 
 // Create series
 var series = chart5.series.push(new am4charts.LineSeries());
 series.dataFields.valueY = "value";
 series.dataFields.dateX = "date";
 series.tooltipText = "{value}"
+series.stroke = am4core.color("#EEFF88");  
 
 series.tooltip.pointerOrientation = "vertical";
 
@@ -692,16 +674,19 @@ chart6.data = data;
 // Create axes
 var dateAxis = chart6.xAxes.push(new am4charts.DateAxis());
 dateAxis.renderer.minGridDistance = 60;
+dateAxis.renderer.labels.template.fill = am4core.color("#fff");
 
 var valueAxis = chart6.yAxes.push(new am4charts.ValueAxis());
 valueAxis.renderer.labels.template.fill = am4core.color("#fff");
 valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
+valueAxis.renderer.grid.template.strokeOpacity = 1; 
 
 // Create series
 var series = chart6.series.push(new am4charts.LineSeries());
 series.dataFields.valueY = "value";
 series.dataFields.dateX = "date";
 series.tooltipText = "{value}"
+series.stroke = am4core.color("#EEFF88");  
 
 series.tooltip.pointerOrientation = "vertical";
 
@@ -734,16 +719,19 @@ chart7.data = data;
 // Create axes
 var dateAxis = chart7.xAxes.push(new am4charts.DateAxis());
 dateAxis.renderer.minGridDistance = 60;
+dateAxis.renderer.labels.template.fill = am4core.color("#fff");
 
 var valueAxis = chart7.yAxes.push(new am4charts.ValueAxis());
 valueAxis.renderer.labels.template.fill = am4core.color("#fff");
 valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
+valueAxis.renderer.grid.template.strokeOpacity = 1; 
 
 // Create series
 var series = chart7.series.push(new am4charts.LineSeries());
 series.dataFields.valueY = "value";
 series.dataFields.dateX = "date";
 series.tooltipText = "{value}"
+series.stroke = am4core.color("#EEFF88");  
 
 series.tooltip.pointerOrientation = "vertical";
 
@@ -755,6 +743,12 @@ chart7.cursor.xAxis = dateAxis;
 // chart7.scrollbarX = new am4core.Scrollbar();
 
 
+// Add a legend
+chart7.legend = new am4charts.Legend();
+chart7.legend.position = "top";
+ 
+
+ 
 
 // -----------------------------
 
@@ -940,16 +934,20 @@ chart9.dateFormatter.inputDateFormat = "yyyy";
 var dateAxis = chart9.xAxes.push(new am4charts.DateAxis());
 dateAxis.renderer.minGridDistance = 50;
 dateAxis.baseInterval = {timeUnit:"year", count:1};
+dateAxis.renderer.labels.template.fill = am4core.color("#fff");
 
 var valueAxis = chart9.yAxes.push(new am4charts.ValueAxis());
 valueAxis.tooltip.disabled = true;
 valueAxis.renderer.labels.template.fill = am4core.color("#fff");
+valueAxis.renderer.grid.template.strokeOpacity = 1; 
+valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
 
 var series = chart9.series.push(new am4charts.StepLineSeries());
 series.dataFields.dateX = "year";
 series.dataFields.valueY = "value";
 series.tooltipText = "{valueY.value}";
-series.strokeWidth = 3;
+series.strokeWidth = 3; 
+series.stroke = am4core.color("#EEFF88");  
 
 chart9.cursor = new am4charts.XYCursor();
 chart9.cursor.xAxis = dateAxis;
@@ -959,6 +957,13 @@ chart9.cursor.lineX.fill = chart9.colors.getIndex(2);
 chart9.cursor.lineX.fillOpacity = 0.1;
 
 // chart9.scrollbarX = new am4core.Scrollbar();
+
+// Add a legend
+chart9.legend = new am4charts.Legend();
+chart9.legend.position = "top";
+ 
+
+ 
 
 
 
@@ -976,13 +981,13 @@ chartdivBoiler.titles.create().text = "Crude oil reserves";
 
 // Add data
 chartdivBoiler.data = [{
-  "category": "2018 Q1",
+  "category": "Boiler load",
   "value1": 30,
   "value2": 70
 }, {
-  "category": "2018 Q2",
-  "value1": 15,
-  "value2": 85
+  "category": "Fuel consumption",
+  "value1": 30,
+  "value2": 70
 }, ];
 
 // Create axes
@@ -990,6 +995,7 @@ var categoryAxis = chartdivBoiler.xAxes.push(new am4charts.CategoryAxis());
 categoryAxis.dataFields.category = "category";
 categoryAxis.renderer.grid.template.location = 0;
 categoryAxis.renderer.grid.template.strokeOpacity = 0;
+categoryAxis.renderer.labels.template.fill = am4core.color("#fff");
 
 var valueAxis = chartdivBoiler.yAxes.push(new am4charts.ValueAxis());
 valueAxis.renderer.labels.template.fill = am4core.color("#fff");
@@ -998,15 +1004,7 @@ valueAxis.renderer.grid.template.strokeOpacity = 0;
 valueAxis.min = -10;
 valueAxis.max = 110;
 valueAxis.strictMinMax = true;
-valueAxis.renderer.baseGrid.disabled = true;
-valueAxis.renderer.labels.template.adapter.add("text", function(text) {
-  if ((text > 100) || (text < 0)) {
-    return "";
-  }
-  else {
-    return text + "%";
-  }
-})
+valueAxis.renderer.baseGrid.disabled = true; 
 
 // Create series
 var series1 = chartdivBoiler.series.push(new am4charts.ConeSeries());
@@ -1148,17 +1146,19 @@ dateAxis.baseInterval = {
   timeUnit: "year",
   count: 1
 }
+dateAxis.renderer.labels.template.fill = am4core.color("#fff");
 
 var valueAxis = chartEcho.yAxes.push(new am4charts.ValueAxis());
 valueAxis.tooltip.disabled = true;
-valueAxis.renderer.labels.template.fill = am4core.color("#fff");
+valueAxis.renderer.labels.template.fill = am4core.color("#fff"); 
+valueAxis.renderer.grid.template.strokeOpacity = 1; 
 valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
 
 var series = chartEcho.series.push(new am4charts.LineSeries());
 series.dataFields.dateX = "year";
 series.name = "cars";
 series.dataFields.valueY = "cars";
-series.tooltipHTML = "<img src='https://www.amcharts.com/lib/3/images/car.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
+series.tooltipHTML = "";
 series.tooltipText = "[#000]{valueY.value}[/]";
 series.tooltip.background.fill = am4core.color("#FFF");
 series.tooltip.getStrokeFromObject = true;
@@ -1172,7 +1172,7 @@ var series2 = chartEcho.series.push(new am4charts.LineSeries());
 series2.name = "motorcycles";
 series2.dataFields.dateX = "year";
 series2.dataFields.valueY = "motorcycles";
-series2.tooltipHTML = "<img src='https://www.amcharts.com/lib/3/images/motorcycle.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
+series2.tooltipHTML = "";
 series2.tooltipText = "[#000]{valueY.value}[/]";
 series2.tooltip.background.fill = am4core.color("#FFF");
 series2.tooltip.getFillFromObject = false;
@@ -1187,7 +1187,7 @@ var series3 = chartEcho.series.push(new am4charts.LineSeries());
 series3.name = "bicycles";
 series3.dataFields.dateX = "year";
 series3.dataFields.valueY = "bicycles";
-series3.tooltipHTML = "<img src='https://www.amcharts.com/lib/3/images/bicycle.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
+series3.tooltipHTML = "";
 series3.tooltipText = "[#000]{valueY.value}[/]";
 series3.tooltip.background.fill = am4core.color("#FFF");
 series3.tooltip.getFillFromObject = false;
@@ -1202,36 +1202,6 @@ series3.strokeWidth = 2;
 chartEcho.cursor = new am4charts.XYCursor();
 chartEcho.cursor.xAxis = dateAxis;
 // chartEcho.scrollbarX = new am4core.Scrollbar();
-
-// Add a legend
-chartEcho.legend = new am4charts.Legend();
-chartEcho.legend.position = "top";
-
-// axis ranges
-var range = dateAxis.axisRanges.create();
-range.date = new Date(2001, 0, 1);
-range.endDate = new Date(2003, 0, 1);
-range.axisFill.fill = chartEcho.colors.getIndex(7);
-range.axisFill.fillOpacity = 0.2;
-
-range.label.text = "Fines for speeding increased";
-range.label.inside = true;
-range.label.rotation = 90;
-range.label.horizontalCenter = "right";
-range.label.verticalCenter = "bottom";
-
-var range2 = dateAxis.axisRanges.create();
-range2.date = new Date(2007, 0, 1);
-range2.grid.stroke = chartEcho.colors.getIndex(7);
-range2.grid.strokeOpacity = 0.6;
-range2.grid.strokeDasharray = "5,2";
-
-
-range2.label.text = "Motorcycle fee introduced";
-range2.label.inside = true;
-range2.label.rotation = 90;
-range2.label.horizontalCenter = "right";
-range2.label.verticalCenter = "bottom";
 
 
 
@@ -1339,10 +1309,12 @@ dateAxis.dateFormatter.inputDateFormat = "yyyy-MM-dd";
 dateAxis.renderer.minGridDistance = 40;
 dateAxis.tooltipDateFormat = "MMM dd, yyyy";
 dateAxis.dateFormats.setKey("day", "dd");
+dateAxis.renderer.labels.template.fill = am4core.color("#fff");
 
 var valueAxis = chartdiv8.yAxes.push(new am4charts.ValueAxis());
 valueAxis.renderer.labels.template.fill = am4core.color("#fff");
 valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
+valueAxis.renderer.grid.template.strokeOpacity = 1;  
 
 // Create series
 var series = chartdiv8.series.push(new am4charts.LineSeries());
@@ -1421,10 +1393,12 @@ var chart10 = am4core.create("chartdiv10", am4charts.XYChart);
 var dateAxis1 = chart10.xAxes.push(new am4charts.DateAxis());
 dateAxis1.renderer.grid.template.location = 0;
 dateAxis1.renderer.minGridDistance = 40;
+dateAxis1.renderer.labels.template.fill = am4core.color("#fff");
 
 var valueAxis1 = chart10.yAxes.push(new am4charts.ValueAxis());
-valueAxis.renderer.labels.template.fill = am4core.color("#fff");
-valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
+valueAxis1.renderer.labels.template.fill = am4core.color("#fff");
+valueAxis1.renderer.grid.template.stroke = am4core.color("#A0CA92");
+valueAxis1.renderer.grid.template.strokeOpacity = 1; 
 
 var series1 = chart10.series.push(new am4charts.ColumnSeries());
 series1.dataFields.valueY = "value";
@@ -1432,23 +1406,25 @@ series1.dataFields.dateX = "date";
 series1.data = generateDailyData();
 series1.xAxis = dateAxis1;
 series1.yAxis = valueAxis1;
-series1.tooltipText = "{dateX}: [bold]{valueY}[/]";
+series1.tooltipText = "{dateX}: [bold]{valueY}[/]"; 
+series1.stroke = am4core.color("#EEFF88");  
 
 // Create hourly series and related axes
 var dateAxis2 = chart10.xAxes.push(new am4charts.DateAxis());
 dateAxis2.renderer.grid.template.location = 0;
-dateAxis2.renderer.minGridDistance = 40;
+dateAxis2.renderer.minGridDistance = 100;
 dateAxis2.renderer.labels.template.disabled = true;
 dateAxis2.renderer.grid.template.disabled = true;
 dateAxis2.renderer.tooltip.disabled = true;
+dateAxis2.renderer.labels.template.fill = am4core.color("#fff");
+dateAxis2.stroke = am4core.color("#EEFF88");  
 
 var valueAxis2 = chart10.yAxes.push(new am4charts.ValueAxis());
 valueAxis2.renderer.opposite = true;
-valueAxis2.renderer.grid.template.disabled = true;
-valueAxis2.renderer.labels.template.disabled = true;
-valueAxis2.renderer.tooltip.disabled = true;
-valueAxis.renderer.labels.template.fill = am4core.color("#fff");
-valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
+valueAxis2.renderer.grid.template.disabled = true; 
+valueAxis2.renderer.tooltip.disabled = true; 
+valueAxis2.renderer.grid.template.stroke = am4core.color("#A0CA92");
+valueAxis2.renderer.labels.template.fill = am4core.color("#fff");
 
 
 var series2 = chart10.series.push(new am4charts.LineSeries());
@@ -1458,8 +1434,8 @@ series2.data = generateHourlyData();
 series2.xAxis = dateAxis2;
 series2.yAxis = valueAxis2;
 series2.strokeWidth = 3;
-series2.tooltipText = "{dateX.formatDate('yyyy-MM-dd hh:00')}: [bold]{valueY}[/]";
-valueAxis.renderer.labels.template.fill = am4core.color("#fff");
+series2.tooltipText = "{dateX.formatDate('yyyy-MM-dd hh:00')}: [bold]{valueY}[/]"; 
+series2.stroke = am4core.color("#fff");  
 
 // Add cursor
 chart10.cursor = new am4charts.XYCursor();
@@ -1500,5 +1476,6 @@ function generateHourlyData() {
     }
   return data;
 }
+
 
 }); // end am4core.ready()

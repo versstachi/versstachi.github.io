@@ -312,11 +312,23 @@ removeAllPanel.addEventListener('click', function removeAllPanelFunc () {
 // PLAYBACK START
 const convertedCoords = coords.map(({ lon, lat }) => [lon, lat]);
 
+const curvePath = [];
+for (let i = 1; i < convertedCoords.length; i++) {
+    const [lon, lat] = convertedCoords[i];
+    curvePath.push('L', [lat, lon]);
+}
+
+const startPoint = convertedCoords[0];
+L.curve([
+    'M', [startPoint[1], startPoint[0]],
+    ...curvePath
+]).addTo(map);
+
 function createTimestamps(isPlaybackTimestamps = true) {
     let start = new Date('09.01.2021 10:00:00').getTime();
     const end = new Date('09.01.2021 18:00:00').getTime();
     const intervalValue = isPlaybackTimestamps ?
-        Math.ceil((end - start) / (convertedCoords.length - 1)) : 60000 * 10;
+    Math.ceil((end - start) / (convertedCoords.length - 1)) : 60000 * 10;
     const timestamps = isPlaybackTimestamps ? [start] : [];
     while (start < end) {
         start += intervalValue;
