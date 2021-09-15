@@ -2058,13 +2058,12 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
   .metric_content .content_vessel_notification_box {
     width: 100%;
     max-width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    overflow: hidden;
+    overflow-y: visible;
     overflow-x: hidden;
-    margin-bottom: 25px; }
+    white-space: nowrap;
+    vertical-align: text-top;
+    margin-bottom: 25px;
+    border-spacing: 15px; }
   .metric_content .notification_box {
     min-width: 368px;
     background: #181819;
@@ -2073,7 +2072,8 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
             box-sizing: border-box;
     border-radius: 20px;
     padding: 18px;
-    margin-right: 15px; }
+    margin-right: 15px;
+    display: table-cell; }
   .metric_content .content_vessel_notification_title {
     font-style: normal;
     font-weight: 500;
