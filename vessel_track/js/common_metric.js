@@ -1,5 +1,5 @@
 // Layer map
-var map = L.map('mapid').setView([23.135044427508504, -82.42811672821004], 3);
+var map = L.map('mapid').setView([53.5, 9.9], 2);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidmVyc3N0YWNoaSIsImEiOiJja3Q1bjI1OG0wYTB1MndwaG0wZTI0eG0yIn0.KW23CHoSsSdBk52ntlTaRA', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     id: 'mapbox/dark-v10',
@@ -20,43 +20,7 @@ function clickZoom(e) {
     map.setView(e.target.getLatLng(),5);
 }
 
-
-
- var markers = [
-    [ 23.135044427508504, -82.42811672821004, "MSC SEASIDE", "normal", "notification_warning","2"], 
-    [ 42.33975833769053, -70.98629466906411, "BUNGA LOTUS", "anchor", "notification_status","1" ] 
- ];
  
- //Loop through the markers array
- for (var i=0; i<markers.length; i++) { 
-  var lon = markers[i][0];
-  var lat = markers[i][1]; 
-  var marker;
-  var markerIcon = L.divIcon(
-    {
-    html: `
-    <div class='marker__image ${markers[i][3]}'><img src='img/marker-icon-${markers[i][5]}.png' alt=''></div>
-    <div class='marker__image_container ${markers[i][3]} ${markers[i][4]}'>
-      <div class='marker__image_label'>
-        <div class='marker__image_title'>${markers[i][2]}</div>
-        <div class='marker__label__status'>Under way</div>  
-      </div>
-      <div class='popup'>Catanzaro<img src='img/arrow-forward-poup.svg' alt=''>Taranto<div class='popup_status'>Normal</div></div>
-    </div>
-    `,
-    className: 'marker-label',
-  }); 
-  var markerLocation = new L.LatLng( lon, lat);
-    marker = new L.marker(markerLocation, {icon: markerIcon}).addTo(map).on('click', clickZoom); 
-    map.addLayer(marker); 
-    marker.addTo(map).on('click', function () {
-      sidebar.toggle(); 
-      document.querySelector(".notification_panel").classList.remove('active');  
-      document.querySelector(".all_vessel_tab").classList.remove('active'); 
-      document.querySelector(".voyage_panel").classList.remove('active');   
-    }); 
- }
-
 var markerIconOne = L.divIcon(
   {
   html: `
@@ -72,6 +36,21 @@ var markerIconOne = L.divIcon(
   className: 'marker-label',
   iconAnchor: [53.5, 9.9]
 });
+const convertedCoords = coords.map(({ lon, lat }) => [lon, lat]);
+
+const curvePath = [];
+for (let i = 1; i < convertedCoords.length; i++) {
+    const [lon, lat] = convertedCoords[i];
+    curvePath.push('L', [lat, lon]);
+}
+
+const startPoint = convertedCoords[0];
+L.curve([
+    'M', [startPoint[1], startPoint[0]],
+    ...curvePath
+]).addTo(map);
+
+L.marker([startPoint[1], startPoint[0]], { icon: markerIconOne }).addTo(map);
 
 // custom Tabs
 var d = document,
@@ -1470,6 +1449,8 @@ series2.strokeWidth = 3;
 series2.tooltipText = "{dateX.formatDate('yyyy-MM-dd hh:00')}: [bold]{valueY}[/]"; 
 series2.stroke = am4core.color("#EEFF88");   
 series2.name = "Speed"; 
+series2.columns.template.stroke = am4core.color("#EEFF88"); // red outline
+series2.columns.template.fill = am4core.color("#EEFF88"); // green fill
 
 // Add cursor
 chart10.cursor = new am4charts.XYCursor();
