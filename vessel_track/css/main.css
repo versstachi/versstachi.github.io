@@ -2304,8 +2304,7 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
     -webkit-align-items: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center;
-    margin-right: 40px; }
+            align-items: center; }
     .metric_content .water_tank_row_head_info .water_tank_row_head_info_box {
       display: -webkit-box;
       display: -webkit-flex;
@@ -2318,7 +2317,8 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
       -webkit-align-items: center;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center; }
+              align-items: center;
+      margin-right: 40px; }
     .metric_content .water_tank_row_head_info .water_tank_info_label {
       font-style: normal;
       font-weight: 500;
