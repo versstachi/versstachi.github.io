@@ -1928,7 +1928,7 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
         list-style-type: none;
         color: rgba(255, 255, 255, 0.6);
         cursor: pointer;
-        margin-right: 20px; }
+        margin-right: 35px; }
         .metric_content .vessel_info_tab__col .tabs li.open {
           color: #FFFFFF; }
   .metric_content .updated_info {

@@ -1439,7 +1439,8 @@ series1.data = generateDailyData();
 series1.xAxis = dateAxis1;
 series1.yAxis = valueAxis1;
 series1.tooltipText = "{dateX}: [bold]{valueY}[/]"; 
-series1.stroke = am4core.color("#EEFF88");  
+series1.stroke = am4core.color("#fff");  
+series1.name = "Daily fuel consumption"; 
 
 // Create hourly series and related axes
 var dateAxis2 = chart10.xAxes.push(new am4charts.DateAxis());
@@ -1467,7 +1468,8 @@ series2.xAxis = dateAxis2;
 series2.yAxis = valueAxis2;
 series2.strokeWidth = 3;
 series2.tooltipText = "{dateX.formatDate('yyyy-MM-dd hh:00')}: [bold]{valueY}[/]"; 
-series2.stroke = am4core.color("#fff");  
+series2.stroke = am4core.color("#EEFF88");   
+series2.name = "Speed"; 
 
 // Add cursor
 chart10.cursor = new am4charts.XYCursor();
@@ -1508,6 +1510,13 @@ function generateHourlyData() {
     }
   return data;
 }
+
+// Add a legend
+chart10.legend = new am4charts.Legend();
+chart10.legend.position = "top";
+chart10.legend.labels.template.text = "[bold {color}]{name}[/]";
+
+ 
 
 
 }); // end am4core.ready()
