@@ -347,16 +347,21 @@ const demoRoute = {
         time: timestamps,
     }
 }; 
-
+const numberOfIntervals = timestampsIntervals.length;
+const realStartDate = new Date('09.01.2021 10:00:00').getTime();
+const realEndDate = new Date('09.12.2021 12:53:00').getTime();
+const realIntervalValue = (realEndDate - realStartDate) / numberOfIntervals;
+const realTimestampsIntervals = [];
+for (let i = 1; i <= numberOfIntervals; i++) {
+    realTimestampsIntervals.push(realStartDate + i * realIntervalValue);
+}
  
 function onPlaybackTimeChange(event) {
-    const findTimestamp = timestampsIntervals.find(item => item.playbackInterval === event);
-    if (findTimestamp) {
-        const { apiInterval } = findTimestamp;
-        // api interval value to pass into OpenWeatherAPI
-        callback();  
+    const findTimestampIndex = timestampsIntervals.findIndex(item => item.playbackInterval === event);
+    if (findTimestampIndex !== -1) {
+        const { apiInterval } = timestampsIntervals[findTimestampIndex];
+        console.log('real interval date: ', new Date(realTimestampsIntervals[findTimestampIndex]));
         var refreshTime = apiInterval/1000;
-    console.log(refreshTime);
   
 
   if($( "#weather_clouds_panel" ).hasClass( "panel_open" )){
@@ -427,13 +432,17 @@ const playbackOptions = {
         return {
             icon: markerIconOne,
         };
-    }
+    },
+    clickCallback: function () {
+        sidebar.toggle();
+    },
 };
 
 new L.Playback(map, [demoRoute], onPlaybackTimeChange, playbackOptions);
 
 const controls = document.querySelectorAll('.leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control');
-
+controls[0].remove();
+controls[1].style.marginRight = '5rem';
 controls.forEach(control => {
     control.style.marginRight = '5rem';
 });
@@ -450,7 +459,10 @@ const target = document.querySelector('.leaflet-marker-icon.marker-label.leaflet
 target.lastElementChild.style.transform = 'rotate(48.14deg)';
 target.lastElementChild.style.marginLeft = '11rem';
 observer.observe(target, { attributes : true, attributeFilter : ['style'] });
- 
+  
+// target.addEventListener('click', function targetFunc () {   
+//       sidebar.toggle(); 
+// }, false); 
   
 // PLAYBACK FINISH
  
@@ -636,4 +648,5 @@ function lonkHoverActive(elem) {
     }
     elem.classList.toggle('active');
 }
+ 
  

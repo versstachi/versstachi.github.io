@@ -281,6 +281,7 @@ dateAxis.renderer.minGridDistance = 50;
 
 var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 valueAxis.renderer.labels.template.fill = am4core.color("#fff");
+valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
 
 // Create series
 var series = chart.series.push(new am4charts.LineSeries());
@@ -365,6 +366,7 @@ categoryAxis.renderer.grid.template.disabled = true;
 
 var valueAxis = chart1.yAxes.push(new am4charts.ValueAxis());
 valueAxis.renderer.labels.template.fill = am4core.color("#fff");
+valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
 valueAxis.min = 0;
 valueAxis.extraMax = 0.1;
 //valueAxis.rangeChangeEasing = am4core.ease.linear;
@@ -414,22 +416,7 @@ setInterval(function () {
 var chart2 = am4core.create("chartdiv2", am4charts.XYChart);
 chart2.hiddenState.properties.opacity = 0; // this creates initial fade-in
 
-chart2.data = [{
-    "date": "2018-01-01",
-    "steps": 4561
-}, {
-    "date": "2018-01-02",
-    "steps": 5687
-}, {
-    "date": "2018-01-03",
-    "steps": 6348
-}, {
-    "date": "2018-01-04",
-    "steps": 4878
-}, {
-    "date": "2018-01-05",
-    "steps": 9867
-}, {
+chart2.data = [ {
     "date": "2018-01-06",
     "steps": 7561
 }, {
@@ -469,6 +456,7 @@ dateAxis.tooltip.adapter.add("x", function (x, target) {
 
 var valueAxis = chart2.yAxes.push(new am4charts.ValueAxis());
 valueAxis.renderer.labels.template.fill = am4core.color("#fff");
+valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
 valueAxis.renderer.inside = true;
 valueAxis.renderer.labels.template.fillOpacity = 0.3;
 valueAxis.renderer.grid.template.strokeOpacity = 0;
@@ -581,6 +569,7 @@ dateAxis.renderer.minGridDistance = 60;
 
 var valueAxis = chart3.yAxes.push(new am4charts.ValueAxis());
 valueAxis.renderer.labels.template.fill = am4core.color("#fff");
+valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
 
 // Create series
 var series = chart3.series.push(new am4charts.LineSeries());
@@ -622,6 +611,7 @@ dateAxis.renderer.minGridDistance = 60;
 
 var valueAxis = chart4.yAxes.push(new am4charts.ValueAxis());
 valueAxis.renderer.labels.template.fill = am4core.color("#fff");
+valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
 
 // Create series
 var series = chart4.series.push(new am4charts.LineSeries());
@@ -663,6 +653,7 @@ dateAxis.renderer.minGridDistance = 60;
 
 var valueAxis = chart5.yAxes.push(new am4charts.ValueAxis());
 valueAxis.renderer.labels.template.fill = am4core.color("#fff");
+valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
 
 // Create series
 var series = chart5.series.push(new am4charts.LineSeries());
@@ -704,6 +695,7 @@ dateAxis.renderer.minGridDistance = 60;
 
 var valueAxis = chart6.yAxes.push(new am4charts.ValueAxis());
 valueAxis.renderer.labels.template.fill = am4core.color("#fff");
+valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
 
 // Create series
 var series = chart6.series.push(new am4charts.LineSeries());
@@ -745,6 +737,7 @@ dateAxis.renderer.minGridDistance = 60;
 
 var valueAxis = chart7.yAxes.push(new am4charts.ValueAxis());
 valueAxis.renderer.labels.template.fill = am4core.color("#fff");
+valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
 
 // Create series
 var series = chart7.series.push(new am4charts.LineSeries());
@@ -1000,6 +993,7 @@ categoryAxis.renderer.grid.template.strokeOpacity = 0;
 
 var valueAxis = chartdivBoiler.yAxes.push(new am4charts.ValueAxis());
 valueAxis.renderer.labels.template.fill = am4core.color("#fff");
+valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
 valueAxis.renderer.grid.template.strokeOpacity = 0;
 valueAxis.min = -10;
 valueAxis.max = 110;
@@ -1158,6 +1152,7 @@ dateAxis.baseInterval = {
 var valueAxis = chartEcho.yAxes.push(new am4charts.ValueAxis());
 valueAxis.tooltip.disabled = true;
 valueAxis.renderer.labels.template.fill = am4core.color("#fff");
+valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
 
 var series = chartEcho.series.push(new am4charts.LineSeries());
 series.dataFields.dateX = "year";
@@ -1347,6 +1342,7 @@ dateAxis.dateFormats.setKey("day", "dd");
 
 var valueAxis = chartdiv8.yAxes.push(new am4charts.ValueAxis());
 valueAxis.renderer.labels.template.fill = am4core.color("#fff");
+valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
 
 // Create series
 var series = chartdiv8.series.push(new am4charts.LineSeries());
@@ -1428,6 +1424,7 @@ dateAxis1.renderer.minGridDistance = 40;
 
 var valueAxis1 = chart10.yAxes.push(new am4charts.ValueAxis());
 valueAxis.renderer.labels.template.fill = am4core.color("#fff");
+valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
 
 var series1 = chart10.series.push(new am4charts.ColumnSeries());
 series1.dataFields.valueY = "value";
@@ -1451,6 +1448,8 @@ valueAxis2.renderer.grid.template.disabled = true;
 valueAxis2.renderer.labels.template.disabled = true;
 valueAxis2.renderer.tooltip.disabled = true;
 valueAxis.renderer.labels.template.fill = am4core.color("#fff");
+valueAxis.renderer.grid.template.stroke = am4core.color("#A0CA92");
+
 
 var series2 = chart10.series.push(new am4charts.LineSeries());
 series2.dataFields.valueY = "value";
