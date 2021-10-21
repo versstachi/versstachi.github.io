@@ -651,8 +651,12 @@ body {
               justify-content: space-between;
       margin-bottom: 5px; }
     .dashboard_content_wrap .dashboard_content_notification_wrap .dashboard_content_notification_list {
-      overflow-y: scroll;
-      height: 491px; }
+      overflow-y: scroll; }
+      .dashboard_content_wrap .dashboard_content_notification_wrap .dashboard_content_notification_list::-webkit-scrollbar {
+        width: 4px; }
+      .dashboard_content_wrap .dashboard_content_notification_wrap .dashboard_content_notification_list::-webkit-scrollbar-thumb {
+        background: #7a7f99;
+        opacity: 0.5; }
     .dashboard_content_wrap .dashboard_content_notification_wrap .dashboard_content_notification_title {
       font-size: 12px;
       letter-spacing: 1px;
@@ -880,6 +884,9 @@ body {
 
 .assets .dashboard_head_panel {
   margin-bottom: 9px; }
+
+.assets .dashboard_content_notification_list {
+  height: 491px; }
 
 .login_page {
   height: 100vh; }
