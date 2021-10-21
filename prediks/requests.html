@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="lookport" content="width=device-width, initial-scale=1.0">
+    <title>Prediks</title>
+    <meta property="og:title" content="Versstachi - Web Design Frontend Developers" />
+    <meta property="og:image" content="img/Ogg.png" />
+    <link rel="stylesheet" href="css/main.css" /> 
+  </head>
+  <body class="requests">
+    <!-- svg icons -->
+    <div w3-include-html="svg-list.html"></div>
+    <!-- svg icons -->
+
+    <!-- sidebar container -->
+    <div id="sidebar"  class="dashboard_sidebar_wrap">
+
+      <div class="sidebar_top_menu">
+        <div class="logo"><img src="img/logo_predix.png" alt=""></div>
+        <ul class="sidebar_menu">
+          <li class="sidebar_menu_item active sidebar_menu_dashboard">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_home" />
+              </svg>
+              <span>Dashboard <span class="sidebar_notification_count">1</span></span>
+            </a>
+          </li>
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_reports" />
+              </svg>
+              <span>Reports & Invoices</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="sidebar_menu">
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="12" height="16">
+                  <use xlink:href="#sidebar_menu_assets" />
+              </svg>
+              <span>Assets</span>
+            </a>
+          </li>
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_request" />
+              </svg>
+              <span>Requests <span class="sidebar_notification_count">1</span></span>
+            </a>
+          </li>
+        </ul>
+        <ul class="sidebar_menu">
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="14">
+                  <use xlink:href="#sidebar_menu_alarm" />
+              </svg>
+              <span>Alarms & Warnings</span>
+            </a>
+          </li>
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_trends" />
+              </svg>
+              <span>Trends & Forecast</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar_bottom_menu">
+        <ul class="sidebar_menu">
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="11" height="16">
+                  <use xlink:href="#sidebar_menu_help" />
+              </svg>
+              <span>Help</span>
+            </a>
+          </li>
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_contacts" />
+              </svg>
+              <span>Contact us</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="sidebar_menu">
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_settings" />
+              </svg>
+              <span>Settings</span>
+            </a>
+          </li>
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_logout" />
+              </svg>
+              <span>Logout</span>
+            </a>
+          </li>
+        </ul>
+        <div class="sidebar_copyrighnts">© 2021 PredIKS. All rights reserved.</div>
+      </div>
+    </div>
+    <!-- sidebar container -->
+
+
+    <!-- dashboard content container -->
+    <div class="dashboard_content_wrap">
+
+      <div class="dashboard_head_panel">
+        <div class="dashboard_head_title"> 
+          <svg class="sidebar_top_menu_svg" width="10" height="10">
+              <use xlink:href="#left_arrow_icon" />
+          </svg>
+          Home  /  Assets  /  Yeletski
+        </div>
+        <div class="dashboard_head_user_wrap">
+          <div class="dashboard_head_notification">
+            <a href="">
+              <svg class="sidebar_top_menu_svg" width="20" height="24">
+                  <use xlink:href="#notification_ico" />
+              </svg>
+              <div class="dashboard_head_notification_count">1</div>
+            </a>
+          </div>
+          <div class="dashboard_head_user_menu">
+            <div class="dashboard_user_avatar">
+              <img src="img/dashboard_user_avatar.png" alt="">
+            </div>
+            <div class="dashboard_user_name">Konstantin Karpov</div>
+            <span class="dashboard_user_menu_arrow">
+              <svg class="dashboard_user_menu_arrow_svg" width="6" height="3">
+                  <use xlink:href="#menu_triangle" />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="requests_nav">
+        <div class="requests_nav_left">
+          <div class="requests_assets_info">Assets <span>(4)</span></div>
+          <div class="requests_nav_search">
+            <form action="" class="requests_nav_search_form">
+              <div class="input_search">
+                <input type="text" placeholder="Search">
+                <svg class="search_icon" width="12" height="13">
+                    <use xlink:href="#search_icon" />
+                </svg>
+              </div>
+              <button type="submit" class="search_button">Filter</button>
+            </form>
+          </div>
+        </div>
+        <div class="requests_nav_add_new">
+          <a href="" class="green_link">+ Add new asset</a>
+        </div>
+      </div>
+
+      <div class="requests_assets_list">
+        <div class="requests_assets_tab">
+           <table>
+            <tr>
+              <th>status connectivity</th>
+              <th>Name</th>
+              <th>type</th>
+              <th># aggregate</th>
+              <th># Project</th>
+              <th>Location</th>
+              <th>Status of work</th>
+              <th></th>
+            </tr>
+            <tr>
+              <td><div class="status_connectivity">
+                <div class="status_connectivity_svg_box">
+                  <svg class="status_connectivity_svg" width="15" height="15">
+                      <use xlink:href="#notification_ok" />
+                  </svg>
+                </div>
+                Running</div>
+              </td>
+              <td>Yeletski vegies 1</td>
+              <td>JMS 624</td>
+              <td>1451658</td>
+              <td>T-7-Y423</td>
+              <td>Moscow</td>
+              <td><span class="status_work"></span> 1 alarm, 1 warning</td>
+              <td> 
+                <div class="form-group">
+                  <input type="checkbox" id="toggle_1" class="chkbx-toggle" value="1" checked>
+                  <label for="toggle_1"></label>
+                </div>
+                <div class="requests_assets_more">...</div>
+              </td>
+            </tr>
+            <tr>
+              <td><div class="status_connectivity">
+                <div class="status_connectivity_svg_box">
+                  <svg class="status_connectivity_svg" width="15" height="15">
+                      <use xlink:href="#notification_ok" />
+                  </svg>
+                </div>
+                Running</div>
+              </td>
+              <td>Yeletski vegies 1</td>
+              <td>JMS 624</td>
+              <td>1451658</td>
+              <td>T-7-Y423</td>
+              <td>Moscow</td>
+              <td><span class="status_work"></span> 1 alarm, 1 warning</td>
+              <td> 
+                <div class="form-group">
+                  <input type="checkbox" id="toggle_1" class="chkbx-toggle" value="1" checked>
+                  <label for="toggle_1"></label>
+                </div>
+                <div class="requests_assets_more">...</div>
+              </td>
+            </tr>
+            <tr>
+              <td><div class="status_connectivity">
+                <div class="status_connectivity_svg_box">
+                  <svg class="status_connectivity_svg" width="15" height="15">
+                      <use xlink:href="#notification_ok" />
+                  </svg>
+                </div>
+                Running</div>
+              </td>
+              <td>Yeletski vegies 1</td>
+              <td>JMS 624</td>
+              <td>1451658</td>
+              <td>T-7-Y423</td>
+              <td>Moscow</td>
+              <td><span class="status_work"></span> 1 alarm, 1 warning</td>
+              <td> 
+                <div class="form-group">
+                  <input type="checkbox" id="toggle_1" class="chkbx-toggle" value="1" checked>
+                  <label for="toggle_1"></label>
+                </div>
+                <div class="requests_assets_more">...</div>
+              </td>
+            </tr>
+            <tr>
+              <td><div class="status_connectivity">
+                <div class="status_connectivity_svg_box">
+                  <svg class="status_connectivity_svg" width="15" height="15">
+                      <use xlink:href="#notification_ok" />
+                  </svg>
+                </div>
+                Running</div>
+              </td>
+              <td>Yeletski vegies 1</td>
+              <td>JMS 624</td>
+              <td>1451658</td>
+              <td>T-7-Y423</td>
+              <td>Moscow</td>
+              <td><span class="status_work"></span> 1 alarm, 1 warning</td>
+              <td> 
+                <div class="form-group">
+                  <input type="checkbox" id="toggle_1" class="chkbx-toggle" value="1" checked>
+                  <label for="toggle_1"></label>
+                </div>
+                <div class="requests_assets_more">...</div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+    </div>
+    <!-- content container -->
+
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script src="js/custom.js"></script> 
+    <!-- scripts -->
+  </body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="lookport" content="width=device-width, initial-scale=1.0">
+    <title>Prediks</title>
+    <meta property="og:title" content="Versstachi - Web Design Frontend Developers" />
+    <meta property="og:image" content="img/Ogg.png" />
+    <link rel="stylesheet" href="css/main.css" /> 
+  </head>
+  <body class="dashboard">
+    <!-- svg icons -->
+    <div w3-include-html="svg-list.html"></div>
+    <!-- svg icons -->
+
+    <!-- sidebar container -->
+    <div id="sidebar"  class="dashboard_sidebar_wrap">
+
+      <div class="sidebar_top_menu">
+        <div class="logo"><img src="img/logo_predix.png" alt=""></div>
+        <ul class="sidebar_menu">
+          <li class="sidebar_menu_item active sidebar_menu_dashboard">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_home" />
+              </svg>
+              <span>Dashboard <span class="sidebar_notification_count">1</span></span>
+            </a>
+          </li>
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_reports" />
+              </svg>
+              <span>Reports & Invoices</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="sidebar_menu">
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="12" height="16">
+                  <use xlink:href="#sidebar_menu_assets" />
+              </svg>
+              <span>Assets</span>
+            </a>
+          </li>
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_request" />
+              </svg>
+              <span>Requests <span class="sidebar_notification_count">1</span></span>
+            </a>
+          </li>
+        </ul>
+        <ul class="sidebar_menu">
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="14">
+                  <use xlink:href="#sidebar_menu_alarm" />
+              </svg>
+              <span>Alarms & Warnings</span>
+            </a>
+          </li>
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_trends" />
+              </svg>
+              <span>Trends & Forecast</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar_bottom_menu">
+        <ul class="sidebar_menu">
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="11" height="16">
+                  <use xlink:href="#sidebar_menu_help" />
+              </svg>
+              <span>Help</span>
+            </a>
+          </li>
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_contacts" />
+              </svg>
+              <span>Contact us</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="sidebar_menu">
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_settings" />
+              </svg>
+              <span>Settings</span>
+            </a>
+          </li>
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_logout" />
+              </svg>
+              <span>Logout</span>
+            </a>
+          </li>
+        </ul>
+        <div class="sidebar_copyrighnts">© 2021 PredIKS. All rights reserved.</div>
+      </div>
+    </div>
+    <!-- sidebar container -->
+
+
+    <!-- dashboard content container -->
+    <div class="dashboard_content_wrap">
+
+      <div class="dashboard_head_panel">
+        <div class="dashboard_head_title"> 
+          <svg class="sidebar_top_menu_svg" width="24" height="24">
+              <use xlink:href="#dashboard_ico" />
+          </svg>
+          Dashboard
+        </div>
+        <div class="dashboard_head_user_wrap">
+          <div class="dashboard_head_notification">
+            <a href="">
+              <svg class="sidebar_top_menu_svg" width="20" height="24">
+                  <use xlink:href="#notification_ico" />
+              </svg>
+              <div class="dashboard_head_notification_count">1</div>
+            </a>
+          </div>
+          <div class="dashboard_head_user_menu">
+            <div class="dashboard_user_avatar">
+              <img src="img/dashboard_user_avatar.png" alt="">
+            </div>
+            <div class="dashboard_user_name">Konstantin Karpov</div>
+            <span class="dashboard_user_menu_arrow">
+              <svg class="dashboard_user_menu_arrow_svg" width="6" height="3">
+                  <use xlink:href="#menu_triangle" />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard_content_metrics">
+        
+        <div class="dashboard_content_total_wrap">
+          <div class="dashboard_content_total_info">
+            <div class="dashboard_content_total_info_col">
+              <div class="dashboard_content_total_title">Total energy cost
+                <div class="dashboard_content_total_title_info_icon">i</div>
+              </div>
+              <div class="dashboard_content_total_metric_info">€ 3,112</div>
+              <div class="dashboard_content_total_details">
+                <div class="deteils_text">View details</div>
+                <div class="deteils_grafs deteils_grafs_red">
+                  <svg class="deteils_grafs_svg" width="12" height="12">
+                      <use xlink:href="#vector_info_red" />
+                  </svg>
+                  <span>1,8%</span>
+                </div>
+              </div>
+            </div>
+            <div class="dashboard_content_total_info_col">
+              <div class="dashboard_content_total_title">Total energy usage
+                <div class="dashboard_content_total_title_info_icon">i</div>
+              </div>
+              <div class="dashboard_content_total_metric_info">2,328 <span>kWt</span></div>
+              <div class="dashboard_content_total_details">
+                <div class="deteils_text">View details</div>
+                <div class="deteils_grafs deteils_grafs_red">
+                  <svg class="deteils_grafs_svg" width="12" height="12">
+                      <use xlink:href="#vector_info_red" />
+                  </svg>
+                  <span>1,8%</span>
+                </div>
+              </div>
+            </div>
+            <div class="dashboard_content_total_info_col">
+              <div class="dashboard_content_total_title">Total energy score
+                <div class="dashboard_content_total_title_info_icon">i</div>
+              </div>
+              <div class="dashboard_content_total_metric_info">7/10</div>
+              <div class="dashboard_content_total_details">
+                <div class="deteils_text">View details</div>
+                <div class="deteils_grafs deteils_grafs_red">
+                  <svg class="deteils_grafs_svg" width="12" height="8">
+                      <use xlink:href="#vector_info_red" />
+                  </svg>
+                  <span>1,8%</span>
+                </div>
+              </div>
+            </div>
+            <div class="dashboard_content_total_info_col">
+              <div class="dashboard_content_total_title">Total assets health
+                <div class="dashboard_content_total_title_info_icon">i</div>
+              </div>
+              <div class="dashboard_content_total_metric_info">86%</div>
+              <div class="dashboard_content_total_details">
+                <div class="deteils_text">View details</div>
+                <div class="deteils_grafs deteils_grafs_green">
+                  <svg class="deteils_grafs_svg" width="12" height="8">
+                      <use xlink:href="#vector_info_green" />
+                  </svg>
+                  <span>1,8%</span>
+                </div>
+              </div>
+            </div>
+            <div class="dashboard_content_total_info_col">
+              <div class="dashboard_content_total_title">Total risk
+                <div class="dashboard_content_total_title_info_icon">i</div>
+              </div>
+              <div class="dashboard_content_total_metric_info">42%</div>
+              <div class="dashboard_content_total_details">
+                <div class="deteils_text">View details</div>
+                <div class="deteils_grafs deteils_grafs_green">
+                  <svg class="deteils_grafs_svg" width="12" height="12">
+                      <use xlink:href="#vector_info_green" />
+                  </svg>
+                  <span>1,8%</span>
+                </div>
+              </div>
+            </div>
+            <div class="dashboard_content_total_info_col">
+              <div class="dashboard_content_total_title">Next maintenance in
+                <div class="dashboard_content_total_title_info_icon">i</div>
+              </div>
+              <div class="dashboard_content_total_metric_info">6 <span>days</span></div>
+              <div class="dashboard_content_total_details">
+                <div class="deteils_text">View details</div>
+                <div class="deteils_grafs deteils_grafs_green">
+                  <svg class="deteils_grafs_svg" width="12" height="12">
+                      <use xlink:href="#vector_info_green" />
+                  </svg>
+                  <span>1,8%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard_map">
+            <!-- <img src="img/dashboard_map.svg" alt=""> -->
+            <!-- dashboard_map -->
+            <div w3-include-html="dashboard_map.html"></div>
+            <div class="pop_tooltip">Yeletski vegies 1</div>
+            <!-- dashboard_map -->
+          </div>
+
+        </div>
+
+        <div class="dashboard_content_notification_wrap">
+          <div class="dashboard_content_notification_head">
+            <div class="dashboard_content_notification_title">Notifications</div>
+            <div class="dashboard_content_notification_view_all">View all</div>
+          </div>
+          <div class="dashboard_content_notification_list">
+            
+            <div class="dashboard_notification_item">
+              <div class="dashboard_notification_icon">
+                <svg class="deteils_grafs_svg" width="15" height="15">
+                    <use xlink:href="#notification_ok" />
+                </svg>
+              </div>
+              <div class="dashboard_notification_item_content">
+                <div class="dashboard_notification_item_date">
+                  <span class="time">15:33:37</span>
+                  <span class="date">09.09.2021</span>
+                </div>
+                <div class="dashboard_notification_item_titile">Failure pre chamber gas compressor</div>
+                <div class="dashboard_notification_item_asset">Asset: 1451658 Yeletski vegies 1</div>
+              </div> 
+            </div>
+            <div class="dashboard_notification_item">
+              <div class="dashboard_notification_icon">
+                <svg class="deteils_grafs_svg" width="15" height="15">
+                    <use xlink:href="#notification_alarm" />
+                </svg>
+              </div>
+              <div class="dashboard_notification_item_content">
+                <div class="dashboard_notification_item_date">
+                  <span class="time">15:33:37</span>
+                  <span class="date">09.09.2021</span>
+                </div>
+                <div class="dashboard_notification_item_titile">Charge temprerature before high-pressure</div>
+                <div class="dashboard_notification_item_asset">Asset: 1451658 Yeletski vegies 1</div>
+              </div> 
+            </div>
+            <div class="dashboard_notification_item">
+              <div class="dashboard_notification_icon">
+                <svg class="deteils_grafs_svg" width="15" height="15">
+                    <use xlink:href="#notification_warning" />
+                </svg>
+              </div>
+              <div class="dashboard_notification_item_content">
+                <div class="dashboard_notification_item_date">
+                  <span class="time">15:33:37</span>
+                  <span class="date">09.09.2021</span>
+                </div>
+                <div class="dashboard_notification_item_titile">Temperature in right condition</div>
+                <div class="dashboard_notification_item_asset">Asset: 1451658 Yeletski vegies 1</div>
+              </div> 
+            </div>
+            <div class="dashboard_notification_item">
+              <div class="dashboard_notification_icon">
+                <svg class="deteils_grafs_svg" width="15" height="15">
+                    <use xlink:href="#notification_info" />
+                </svg>
+              </div>
+              <div class="dashboard_notification_item_content">
+                <div class="dashboard_notification_item_date">
+                  <span class="time">15:33:37</span>
+                  <span class="date">09.09.2021</span>
+                </div>
+                <div class="dashboard_notification_item_titile">New action for asset</div>
+                <div class="dashboard_notification_item_asset">Asset: 1451658 Yeletski vegies 1</div>
+              </div> 
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- content container -->
+
+    <!-- scripts -->
+    <script src="js/custom.js"></script> 
+    <!-- scripts -->
+  </body>
+</html>

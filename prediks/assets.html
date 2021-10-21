@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="lookport" content="width=device-width, initial-scale=1.0">
+    <title>Prediks</title>
+    <meta property="og:title" content="Versstachi - Web Design Frontend Developers" />
+    <meta property="og:image" content="img/Ogg.png" />
+    <link rel="stylesheet" href="css/main.css" /> 
+  </head>
+  <body class="assets">
+    <!-- svg icons -->
+    <div w3-include-html="svg-list.html"></div>
+    <!-- svg icons -->
+
+    <!-- sidebar container -->
+    <div id="sidebar"  class="dashboard_sidebar_wrap">
+
+      <div class="sidebar_top_menu">
+        <div class="logo"><img src="img/logo_predix.png" alt=""></div>
+        <ul class="sidebar_menu">
+          <li class="sidebar_menu_item active sidebar_menu_dashboard">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_home" />
+              </svg>
+              <span>Dashboard <span class="sidebar_notification_count">1</span></span>
+            </a>
+          </li>
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_reports" />
+              </svg>
+              <span>Reports & Invoices</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="sidebar_menu">
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="12" height="16">
+                  <use xlink:href="#sidebar_menu_assets" />
+              </svg>
+              <span>Assets</span>
+            </a>
+          </li>
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_request" />
+              </svg>
+              <span>Requests <span class="sidebar_notification_count">1</span></span>
+            </a>
+          </li>
+        </ul>
+        <ul class="sidebar_menu">
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="14">
+                  <use xlink:href="#sidebar_menu_alarm" />
+              </svg>
+              <span>Alarms & Warnings</span>
+            </a>
+          </li>
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_trends" />
+              </svg>
+              <span>Trends & Forecast</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar_bottom_menu">
+        <ul class="sidebar_menu">
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="11" height="16">
+                  <use xlink:href="#sidebar_menu_help" />
+              </svg>
+              <span>Help</span>
+            </a>
+          </li>
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_contacts" />
+              </svg>
+              <span>Contact us</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="sidebar_menu">
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_settings" />
+              </svg>
+              <span>Settings</span>
+            </a>
+          </li>
+          <li class="sidebar_menu_item">
+            <a href="" class="sidebar_menu_item_link">
+              <svg class="sidebar_top_menu_svg" width="16" height="16">
+                  <use xlink:href="#sidebar_menu_logout" />
+              </svg>
+              <span>Logout</span>
+            </a>
+          </li>
+        </ul>
+        <div class="sidebar_copyrighnts">© 2021 PredIKS. All rights reserved.</div>
+      </div>
+    </div>
+    <!-- sidebar container -->
+
+
+    <!-- dashboard content container -->
+    <div class="dashboard_content_wrap">
+
+      <div class="dashboard_head_panel">
+        <div class="dashboard_head_title"> 
+          <svg class="sidebar_top_menu_svg" width="10" height="10">
+              <use xlink:href="#left_arrow_icon" />
+          </svg>
+          Home  /  Assets  /  Yeletski
+        </div>
+        <div class="dashboard_head_user_wrap">
+          <div class="dashboard_head_notification">
+            <a href="">
+              <svg class="sidebar_top_menu_svg" width="20" height="24">
+                  <use xlink:href="#notification_ico" />
+              </svg>
+              <div class="dashboard_head_notification_count">1</div>
+            </a>
+          </div>
+          <div class="dashboard_head_user_menu">
+            <div class="dashboard_user_avatar">
+              <img src="img/dashboard_user_avatar.png" alt="">
+            </div>
+            <div class="dashboard_user_name">Konstantin Karpov</div>
+            <span class="dashboard_user_menu_arrow">
+              <svg class="dashboard_user_menu_arrow_svg" width="6" height="3">
+                  <use xlink:href="#menu_triangle" />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="assets_tabs_wrap">
+        <div class="assets_tabs">
+          <div id="tabOverview" class="tabs__content open">
+            <div class="tabs__content__wrap">
+              <div class="assets_img">
+                <img src="img/assets_agr.png" alt="">
+              </div>
+              <div class="assets__content__body">
+                <div class="assets__title">Yeletski vegies 1</div>
+                <div class="assets__content__body__deteils">
+                  <div class="assets__content__col">
+                    <div class="assets__content__item"><span>Serial number:</span><strong>Running</strong></div>
+                    <div class="assets__content__item"><span>Engine number:</span><strong>89%</strong></div>
+                    <div class="assets__content__item"><span>Starts:</span><strong>32%</strong></div>
+                  </div>
+                  <div class="assets__content__col">
+                    <div class="assets__content__item"><span>Location:</span><strong>1451658</strong></div>
+                    <div class="assets__content__item"><span>Project number:</span><strong>Y624</strong></div>
+                    <div class="assets__content__item"><span>Hours of work:</span><strong>Tver</strong></div>
+                  </div>
+                  <div class="assets__content__col assets__content__col__big">
+                    <div class="assets__content__item"><span>Status connectivity:</span><strong>
+                    <svg class="assets__content__item_svg" width="15" height="15">
+                        <use xlink:href="#notification_ok" />
+                    </svg>
+                    Running</strong></div>
+                    <div class="assets__content__item"><span>Status of work:</span><strong>
+                      <svg class="assets__content__item_svg" width="15" height="15">
+                          <use xlink:href="#notification_alarm" />
+                      </svg>1 alarm, 1 warning</strong></div> 
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+          <div id="tabReports" class="tabs__content">Yeletski vegies 2
+          </div>
+          <div id="tabRequests" class="tabs__content">tabRequests
+          </div>
+          <div id="tabAlarms" class="tabs__content">tabAlarms
+          </div>
+          <div id="tabTrends" class="tabs__content">tabTrends
+          </div>
+          <div id="tabFiles" class="tabs__content">tabFiles
+          </div>
+          <div id="tabInfo" class="tabs__content">tabInfo
+          </div>
+          <div id="tabLog" class="tabs__content">tabLog
+          </div>
+          <div class="dashboard_tabs_wrap">
+            <ul class="tabs">
+              <li class="open" data-tab-id="tabOverview">Overview</li>
+              <li data-tab-id="tabReports">Reports</li> 
+              <li data-tab-id="tabRequests">Requests</li> 
+              <li data-tab-id="tabAlarms">Alarms & Warnings</li> 
+              <li data-tab-id="tabTrends">Trends & Forecast</li> 
+              <li data-tab-id="tabFiles">Files</li> 
+              <li data-tab-id="tabInfo">Info</li> 
+              <li data-tab-id="tabLog">Log</li> 
+            </ul>
+            <div class="dashboard_tabs_date">
+              <svg class="dashboard_tabs_date_svg" width="17" height="14">
+                  <use xlink:href="#calendar_ico" />
+              </svg>
+              <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" /></div>
+          </div>
+        </div>
+      </div>
+
+
+          <div class="dashboard_content_total_info">
+            <div class="dashboard_content_total_info_col">
+              <div class="dashboard_content_total_title">Total energy cost
+                <div class="dashboard_content_total_title_info_icon">i</div>
+              </div>
+              <div class="dashboard_content_total_details"> 
+                <div class="dashboard_content_total_metric_info">€ 3,112</div>
+                <div class="deteils_grafs deteils_grafs_red">
+                  <svg class="deteils_grafs_svg" width="12" height="12">
+                      <use xlink:href="#vector_info_red" />
+                  </svg>
+                  <span>1,8%</span>
+                </div>
+              </div>
+            </div>
+            <div class="dashboard_content_total_info_col">
+              <div class="dashboard_content_total_title">Total energy usage
+                <div class="dashboard_content_total_title_info_icon">i</div>
+              </div>
+              <div class="dashboard_content_total_details">
+                <div class="dashboard_content_total_metric_info">2,328 <span>kWt</span></div> 
+                <div class="deteils_grafs deteils_grafs_red">
+                  <svg class="deteils_grafs_svg" width="12" height="12">
+                      <use xlink:href="#vector_info_red" />
+                  </svg>
+                  <span>1,8%</span>
+                </div>
+              </div>
+            </div>
+            <div class="dashboard_content_total_info_col">
+              <div class="dashboard_content_total_title">Total energy score
+                <div class="dashboard_content_total_title_info_icon">i</div>
+              </div>
+              <div class="dashboard_content_total_details">
+                <div class="dashboard_content_total_metric_info">7/10</div> 
+                <div class="deteils_grafs deteils_grafs_red">
+                  <svg class="deteils_grafs_svg" width="12" height="8">
+                      <use xlink:href="#vector_info_red" />
+                  </svg>
+                  <span>1,8%</span>
+                </div>
+              </div>
+            </div>
+            <div class="dashboard_content_total_info_col">
+              <div class="dashboard_content_total_title">Total assets health
+                <div class="dashboard_content_total_title_info_icon">i</div>
+              </div>
+              <div class="dashboard_content_total_details">
+                <div class="dashboard_content_total_metric_info">86%</div> 
+                <div class="deteils_grafs deteils_grafs_green">
+                  <svg class="deteils_grafs_svg" width="12" height="8">
+                      <use xlink:href="#vector_info_green" />
+                  </svg>
+                  <span>1,8%</span>
+                </div>
+              </div>
+            </div>
+            <div class="dashboard_content_total_info_col">
+              <div class="dashboard_content_total_title">Total risk
+                <div class="dashboard_content_total_title_info_icon">i</div>
+              </div>
+              <div class="dashboard_content_total_details">
+                <div class="dashboard_content_total_metric_info">42%</div> 
+                <div class="deteils_grafs deteils_grafs_green">
+                  <svg class="deteils_grafs_svg" width="12" height="12">
+                      <use xlink:href="#vector_info_green" />
+                  </svg>
+                  <span>1,8%</span>
+                </div>
+              </div>
+            </div>
+            <div class="dashboard_content_total_info_col">
+              <div class="dashboard_content_total_title">Next maintenance in
+                <div class="dashboard_content_total_title_info_icon">i</div>
+              </div>
+              <div class="dashboard_content_total_details">
+                <div class="dashboard_content_total_metric_info">6 <span>days</span></div> 
+                <div class="deteils_grafs deteils_grafs_green">
+                  <svg class="deteils_grafs_svg" width="12" height="12">
+                      <use xlink:href="#vector_info_green" />
+                  </svg>
+                  <span>1,8%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      <div class="dashboard_content_metrics">
+        
+        <div class="dashboard_content_total_wrap dashboard_assets_wrap"> 
+
+          <!-- assets_info_tooltip -->
+          <div class="assets_info_tooltip assets_info_tooltip_pos_1">
+            <div class="assets_info_tooltip_title"> Тепловая мощность, кВт
+            </div>
+            <div class="assets_info_tooltip_value"> 3,112
+            </div>
+            <div class="assets_info_tooltip_hover">
+              <div class="assets_tooltip_hover_head">
+                <div class="assets_tooltip_hover_status_point"></div>
+                <div class="assets_tooltip_hover_title">Тепловая мощность, кВт</div>
+                <div class="assets_tooltip_hover_close">x</div>
+              </div>
+              <div class="assets_tooltip_hover_body">
+                <div class="assets_tooltip_hover_col"> 
+                  <div class="assets_tooltip_col_item">Status:<span>Running</span></div>
+                  <div class="assets_tooltip_col_item">Asset health:<span>89%</span></div>
+                  <div class="assets_tooltip_col_item">Asset risk:<span>32%</span></div>
+                </div>
+                <div class="assets_tooltip_hover_col">
+                  <div class="assets_tooltip_col_item">Serial:<span>1451658</span></div>
+                  <div class="assets_tooltip_col_item">JNumber:<span>Y624</span></div>
+                  <div class="assets_tooltip_col_item">City: <span>Tver</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="assets_info_tooltip tooltip_small tooltip_blacknes assets_info_tooltip_pos_2"> 
+            <div class="assets_info_tooltip_value"> 3,112
+            </div>
+            <div class="assets_info_tooltip_hover">
+              <div class="assets_tooltip_hover_head">
+                <div class="assets_tooltip_hover_status_point"></div>
+                <div class="assets_tooltip_hover_title">Тепловая мощность, кВт</div>
+                <div class="assets_tooltip_hover_close">x</div>
+              </div>
+              <div class="assets_tooltip_hover_body">
+                <div class="assets_tooltip_hover_col"> 
+                  <div class="assets_tooltip_col_item">Status:<span>Running</span></div>
+                  <div class="assets_tooltip_col_item">Asset health:<span>89%</span></div>
+                  <div class="assets_tooltip_col_item">Asset risk:<span>32%</span></div>
+                </div>
+                <div class="assets_tooltip_hover_col">
+                  <div class="assets_tooltip_col_item">Serial:<span>1451658</span></div>
+                  <div class="assets_tooltip_col_item">JNumber:<span>Y624</span></div>
+                  <div class="assets_tooltip_col_item">City: <span>Tver</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="assets_info_tooltip assets_info_tooltip_pos_3">
+            <div class="assets_info_tooltip_title"> Тепловая мощность, кВт
+            </div>
+            <div class="assets_info_tooltip_value"> 3,112
+            </div>
+            <div class="assets_info_tooltip_hover">
+              <div class="assets_tooltip_hover_head">
+                <div class="assets_tooltip_hover_status_point"></div>
+                <div class="assets_tooltip_hover_title">Тепловая мощность, кВт</div>
+                <div class="assets_tooltip_hover_close">x</div>
+              </div>
+              <div class="assets_tooltip_hover_body">
+                <div class="assets_tooltip_hover_col"> 
+                  <div class="assets_tooltip_col_item">Status:<span>Running</span></div>
+                  <div class="assets_tooltip_col_item">Asset health:<span>89%</span></div>
+                  <div class="assets_tooltip_col_item">Asset risk:<span>32%</span></div>
+                </div>
+                <div class="assets_tooltip_hover_col">
+                  <div class="assets_tooltip_col_item">Serial:<span>1451658</span></div>
+                  <div class="assets_tooltip_col_item">JNumber:<span>Y624</span></div>
+                  <div class="assets_tooltip_col_item">City: <span>Tver</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="assets_info_tooltip assets_info_tooltip_pos_4">
+            <div class="assets_info_tooltip_title"> Тепловая мощность, кВт
+            </div>
+            <div class="assets_info_tooltip_value"> 3,112
+            </div>
+            <div class="assets_info_tooltip_hover">
+              <div class="assets_tooltip_hover_head">
+                <div class="assets_tooltip_hover_status_point"></div>
+                <div class="assets_tooltip_hover_title">Тепловая мощность, кВт</div>
+                <div class="assets_tooltip_hover_close">x</div>
+              </div>
+              <div class="assets_tooltip_hover_body">
+                <div class="assets_tooltip_hover_col"> 
+                  <div class="assets_tooltip_col_item">Status:<span>Running</span></div>
+                  <div class="assets_tooltip_col_item">Asset health:<span>89%</span></div>
+                  <div class="assets_tooltip_col_item">Asset risk:<span>32%</span></div>
+                </div>
+                <div class="assets_tooltip_hover_col">
+                  <div class="assets_tooltip_col_item">Serial:<span>1451658</span></div>
+                  <div class="assets_tooltip_col_item">JNumber:<span>Y624</span></div>
+                  <div class="assets_tooltip_col_item">City: <span>Tver</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="assets_info_tooltip assets_info_tooltip_pos_5">
+            <div class="assets_info_tooltip_title"> Тепловая мощность, кВт
+            </div>
+            <div class="assets_info_tooltip_value"> 3,112
+            </div>
+            <div class="assets_info_tooltip_hover">
+              <div class="assets_tooltip_hover_head">
+                <div class="assets_tooltip_hover_status_point"></div>
+                <div class="assets_tooltip_hover_title">Тепловая мощность, кВт</div>
+                <div class="assets_tooltip_hover_close">x</div>
+              </div>
+              <div class="assets_tooltip_hover_body">
+                <div class="assets_tooltip_hover_col"> 
+                  <div class="assets_tooltip_col_item">Status:<span>Running</span></div>
+                  <div class="assets_tooltip_col_item">Asset health:<span>89%</span></div>
+                  <div class="assets_tooltip_col_item">Asset risk:<span>32%</span></div>
+                </div>
+                <div class="assets_tooltip_hover_col">
+                  <div class="assets_tooltip_col_item">Serial:<span>1451658</span></div>
+                  <div class="assets_tooltip_col_item">JNumber:<span>Y624</span></div>
+                  <div class="assets_tooltip_col_item">City: <span>Tver</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="assets_info_tooltip tooltip_small tooltip_blacknes assets_info_tooltip_pos_6"> 
+            <div class="assets_info_tooltip_value"> 3,112
+            </div>
+            <div class="assets_info_tooltip_hover">
+              <div class="assets_tooltip_hover_head">
+                <div class="assets_tooltip_hover_status_point"></div>
+                <div class="assets_tooltip_hover_title">Тепловая мощность, кВт</div>
+                <div class="assets_tooltip_hover_close">x</div>
+              </div>
+              <div class="assets_tooltip_hover_body">
+                <div class="assets_tooltip_hover_col"> 
+                  <div class="assets_tooltip_col_item">Status:<span>Running</span></div>
+                  <div class="assets_tooltip_col_item">Asset health:<span>89%</span></div>
+                  <div class="assets_tooltip_col_item">Asset risk:<span>32%</span></div>
+                </div>
+                <div class="assets_tooltip_hover_col">
+                  <div class="assets_tooltip_col_item">Serial:<span>1451658</span></div>
+                  <div class="assets_tooltip_col_item">JNumber:<span>Y624</span></div>
+                  <div class="assets_tooltip_col_item">City: <span>Tver</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="assets_info_tooltip tooltip_small tooltip_blacknes assets_info_tooltip_pos_7"> 
+            <div class="assets_info_tooltip_value"> 3,112
+            </div>
+            <div class="assets_info_tooltip_hover">
+              <div class="assets_tooltip_hover_head">
+                <div class="assets_tooltip_hover_status_point"></div>
+                <div class="assets_tooltip_hover_title">Тепловая мощность, кВт</div>
+                <div class="assets_tooltip_hover_close">x</div>
+              </div>
+              <div class="assets_tooltip_hover_body">
+                <div class="assets_tooltip_hover_col"> 
+                  <div class="assets_tooltip_col_item">Status:<span>Running</span></div>
+                  <div class="assets_tooltip_col_item">Asset health:<span>89%</span></div>
+                  <div class="assets_tooltip_col_item">Asset risk:<span>32%</span></div>
+                </div>
+                <div class="assets_tooltip_hover_col">
+                  <div class="assets_tooltip_col_item">Serial:<span>1451658</span></div>
+                  <div class="assets_tooltip_col_item">JNumber:<span>Y624</span></div>
+                  <div class="assets_tooltip_col_item">City: <span>Tver</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="assets_info_tooltip tooltip_small tooltip_blacknes assets_info_tooltip_pos_8"> 
+            <div class="assets_info_tooltip_value"> 3,112
+            </div>
+            <div class="assets_info_tooltip_hover">
+              <div class="assets_tooltip_hover_head">
+                <div class="assets_tooltip_hover_status_point"></div>
+                <div class="assets_tooltip_hover_title">Тепловая мощность, кВт</div>
+                <div class="assets_tooltip_hover_close">x</div>
+              </div>
+              <div class="assets_tooltip_hover_body">
+                <div class="assets_tooltip_hover_col"> 
+                  <div class="assets_tooltip_col_item">Status:<span>Running</span></div>
+                  <div class="assets_tooltip_col_item">Asset health:<span>89%</span></div>
+                  <div class="assets_tooltip_col_item">Asset risk:<span>32%</span></div>
+                </div>
+                <div class="assets_tooltip_hover_col">
+                  <div class="assets_tooltip_col_item">Serial:<span>1451658</span></div>
+                  <div class="assets_tooltip_col_item">JNumber:<span>Y624</span></div>
+                  <div class="assets_tooltip_col_item">City: <span>Tver</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="assets_info_tooltip tooltip_big tooltip_blacknes assets_info_tooltip_pos_9"> 
+            <div class="assets_info_tooltip_title"> Тепловая мощность, кВт
+            </div>
+            <div class="assets_info_tooltip_value"> 3,112
+            </div> 
+            <div class="assets_info_tooltip_hover">
+              <div class="assets_tooltip_hover_head">
+                <div class="assets_tooltip_hover_status_point"></div>
+                <div class="assets_tooltip_hover_title">Тепловая мощность, кВт</div>
+                <div class="assets_tooltip_hover_close">x</div>
+              </div>
+              <div class="assets_tooltip_hover_body">
+                <div class="assets_tooltip_hover_col"> 
+                  <div class="assets_tooltip_col_item">Status:<span>Running</span></div>
+                  <div class="assets_tooltip_col_item">Asset health:<span>89%</span></div>
+                  <div class="assets_tooltip_col_item">Asset risk:<span>32%</span></div>
+                </div>
+                <div class="assets_tooltip_hover_col">
+                  <div class="assets_tooltip_col_item">Serial:<span>1451658</span></div>
+                  <div class="assets_tooltip_col_item">JNumber:<span>Y624</span></div>
+                  <div class="assets_tooltip_col_item">City: <span>Tver</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="assets_info_tooltip tooltip_big tooltip_blacknes assets_info_tooltip_pos_10"> 
+            <div class="assets_info_tooltip_title"> Тепловая мощность, кВт
+            </div>
+            <div class="assets_info_tooltip_value"> 3,112
+            </div> 
+            <div class="assets_info_tooltip_hover">
+              <div class="assets_tooltip_hover_head">
+                <div class="assets_tooltip_hover_status_point"></div>
+                <div class="assets_tooltip_hover_title">Тепловая мощность, кВт</div>
+                <div class="assets_tooltip_hover_close">x</div>
+              </div>
+              <div class="assets_tooltip_hover_body">
+                <div class="assets_tooltip_hover_col"> 
+                  <div class="assets_tooltip_col_item">Status:<span>Running</span></div>
+                  <div class="assets_tooltip_col_item">Asset health:<span>89%</span></div>
+                  <div class="assets_tooltip_col_item">Asset risk:<span>32%</span></div>
+                </div>
+                <div class="assets_tooltip_hover_col">
+                  <div class="assets_tooltip_col_item">Serial:<span>1451658</span></div>
+                  <div class="assets_tooltip_col_item">JNumber:<span>Y624</span></div>
+                  <div class="assets_tooltip_col_item">City: <span>Tver</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="assets_info_tooltip tooltip_big tooltip_blacknes assets_info_tooltip_pos_11"> 
+            <div class="assets_info_tooltip_title"> Тепловая мощность, кВт
+            </div>
+            <div class="assets_info_tooltip_value"> 3,112
+            </div> 
+            <div class="assets_info_tooltip_hover">
+              <div class="assets_tooltip_hover_head">
+                <div class="assets_tooltip_hover_status_point"></div>
+                <div class="assets_tooltip_hover_title">Тепловая мощность, кВт</div>
+                <div class="assets_tooltip_hover_close">x</div>
+              </div>
+              <div class="assets_tooltip_hover_body">
+                <div class="assets_tooltip_hover_col"> 
+                  <div class="assets_tooltip_col_item">Status:<span>Running</span></div>
+                  <div class="assets_tooltip_col_item">Asset health:<span>89%</span></div>
+                  <div class="assets_tooltip_col_item">Asset risk:<span>32%</span></div>
+                </div>
+                <div class="assets_tooltip_hover_col">
+                  <div class="assets_tooltip_col_item">Serial:<span>1451658</span></div>
+                  <div class="assets_tooltip_col_item">JNumber:<span>Y624</span></div>
+                  <div class="assets_tooltip_col_item">City: <span>Tver</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="assets_info_tooltip tooltip_small assets_info_tooltip_pos_12">  
+            <div class="assets_info_tooltip_value"> 3,112
+            </div> 
+          </div>
+          <div class="assets_info_tooltip assets_info_tooltip_pos_13">  
+            <div class="assets_info_tooltip_title"> Тепловая мощность, кВт
+            </div>
+            <div class="assets_info_tooltip_value"> 3,112
+            </div> 
+            <div class="assets_info_tooltip_hover">
+              <div class="assets_tooltip_hover_head">
+                <div class="assets_tooltip_hover_status_point"></div>
+                <div class="assets_tooltip_hover_title">Тепловая мощность, кВт</div>
+                <div class="assets_tooltip_hover_close">x</div>
+              </div>
+              <div class="assets_tooltip_hover_body">
+                <div class="assets_tooltip_hover_col"> 
+                  <div class="assets_tooltip_col_item">Status:<span>Running</span></div>
+                  <div class="assets_tooltip_col_item">Asset health:<span>89%</span></div>
+                  <div class="assets_tooltip_col_item">Asset risk:<span>32%</span></div>
+                </div>
+                <div class="assets_tooltip_hover_col">
+                  <div class="assets_tooltip_col_item">Serial:<span>1451658</span></div>
+                  <div class="assets_tooltip_col_item">JNumber:<span>Y624</span></div>
+                  <div class="assets_tooltip_col_item">City: <span>Tver</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="assets_info_tooltip assets_info_tooltip_pos_14" >  
+            <div class="assets_info_tooltip_title"> Тепловая мощность, кВт
+            </div>
+            <div class="assets_info_tooltip_value"> 3,112
+            </div> 
+            <div class="assets_info_tooltip_hover">
+              <div class="assets_tooltip_hover_head">
+                <div class="assets_tooltip_hover_status_point"></div>
+                <div class="assets_tooltip_hover_title">Тепловая мощность, кВт</div>
+                <div class="assets_tooltip_hover_close">x</div>
+              </div>
+              <div class="assets_tooltip_hover_body">
+                <div class="assets_tooltip_hover_col"> 
+                  <div class="assets_tooltip_col_item">Status:<span>Running</span></div>
+                  <div class="assets_tooltip_col_item">Asset health:<span>89%</span></div>
+                  <div class="assets_tooltip_col_item">Asset risk:<span>32%</span></div>
+                </div>
+                <div class="assets_tooltip_hover_col">
+                  <div class="assets_tooltip_col_item">Serial:<span>1451658</span></div>
+                  <div class="assets_tooltip_col_item">JNumber:<span>Y624</span></div>
+                  <div class="assets_tooltip_col_item">City: <span>Tver</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- assets_info_tooltip -->
+
+          <div class="dashboard_assets_info">
+            <img src="img/assets_agr_big.png" alt="">
+          </div>
+        </div>
+
+        <div class="dashboard_content_notification_wrap">
+          <div class="dashboard_content_notification_head">
+            <div class="dashboard_content_notification_title">Notifications</div>
+            <div class="dashboard_content_notification_view_all">View all</div>
+          </div>
+          <div class="dashboard_content_notification_list">
+            
+            <div class="dashboard_notification_item">
+              <div class="dashboard_notification_icon">
+                <svg class="deteils_grafs_svg" width="15" height="15">
+                    <use xlink:href="#notification_ok" />
+                </svg>
+              </div>
+              <div class="dashboard_notification_item_content">
+                <div class="dashboard_notification_item_date">
+                  <span class="time">15:33:37</span>
+                  <span class="date">09.09.2021</span>
+                </div>
+                <div class="dashboard_notification_item_titile">Failure pre chamber gas compressor</div>
+                <div class="dashboard_notification_item_asset">Asset: 1451658 Yeletski vegies 1</div>
+              </div> 
+            </div>
+            <div class="dashboard_notification_item">
+              <div class="dashboard_notification_icon">
+                <svg class="deteils_grafs_svg" width="15" height="15">
+                    <use xlink:href="#notification_alarm" />
+                </svg>
+              </div>
+              <div class="dashboard_notification_item_content">
+                <div class="dashboard_notification_item_date">
+                  <span class="time">15:33:37</span>
+                  <span class="date">09.09.2021</span>
+                </div>
+                <div class="dashboard_notification_item_titile">Charge temprerature before high-pressure</div>
+                <div class="dashboard_notification_item_asset">Asset: 1451658 Yeletski vegies 1</div>
+              </div> 
+            </div>
+            <div class="dashboard_notification_item">
+              <div class="dashboard_notification_icon">
+                <svg class="deteils_grafs_svg" width="15" height="15">
+                    <use xlink:href="#notification_warning" />
+                </svg>
+              </div>
+              <div class="dashboard_notification_item_content">
+                <div class="dashboard_notification_item_date">
+                  <span class="time">15:33:37</span>
+                  <span class="date">09.09.2021</span>
+                </div>
+                <div class="dashboard_notification_item_titile">Temperature in right condition</div>
+                <div class="dashboard_notification_item_asset">Asset: 1451658 Yeletski vegies 1</div>
+              </div> 
+            </div>
+            <div class="dashboard_notification_item">
+              <div class="dashboard_notification_icon">
+                <svg class="deteils_grafs_svg" width="15" height="15">
+                    <use xlink:href="#notification_info" />
+                </svg>
+              </div>
+              <div class="dashboard_notification_item_content">
+                <div class="dashboard_notification_item_date">
+                  <span class="time">15:33:37</span>
+                  <span class="date">09.09.2021</span>
+                </div>
+                <div class="dashboard_notification_item_titile">New action for asset</div>
+                <div class="dashboard_notification_item_asset">Asset: 1451658 Yeletski vegies 1</div>
+              </div> 
+            </div>
+            
+            <div class="dashboard_notification_item">
+              <div class="dashboard_notification_icon">
+                <svg class="deteils_grafs_svg" width="15" height="15">
+                    <use xlink:href="#notification_ok" />
+                </svg>
+              </div>
+              <div class="dashboard_notification_item_content">
+                <div class="dashboard_notification_item_date">
+                  <span class="time">15:33:37</span>
+                  <span class="date">09.09.2021</span>
+                </div>
+                <div class="dashboard_notification_item_titile">Failure pre chamber gas compressor</div>
+                <div class="dashboard_notification_item_asset">Asset: 1451658 Yeletski vegies 1</div>
+              </div> 
+            </div>
+            <div class="dashboard_notification_item">
+              <div class="dashboard_notification_icon">
+                <svg class="deteils_grafs_svg" width="15" height="15">
+                    <use xlink:href="#notification_alarm" />
+                </svg>
+              </div>
+              <div class="dashboard_notification_item_content">
+                <div class="dashboard_notification_item_date">
+                  <span class="time">15:33:37</span>
+                  <span class="date">09.09.2021</span>
+                </div>
+                <div class="dashboard_notification_item_titile">Charge temprerature before high-pressure</div>
+                <div class="dashboard_notification_item_asset">Asset: 1451658 Yeletski vegies 1</div>
+              </div> 
+            </div>
+            <div class="dashboard_notification_item">
+              <div class="dashboard_notification_icon">
+                <svg class="deteils_grafs_svg" width="15" height="15">
+                    <use xlink:href="#notification_warning" />
+                </svg>
+              </div>
+              <div class="dashboard_notification_item_content">
+                <div class="dashboard_notification_item_date">
+                  <span class="time">15:33:37</span>
+                  <span class="date">09.09.2021</span>
+                </div>
+                <div class="dashboard_notification_item_titile">Temperature in right condition</div>
+                <div class="dashboard_notification_item_asset">Asset: 1451658 Yeletski vegies 1</div>
+              </div> 
+            </div>
+            <div class="dashboard_notification_item">
+              <div class="dashboard_notification_icon">
+                <svg class="deteils_grafs_svg" width="15" height="15">
+                    <use xlink:href="#notification_info" />
+                </svg>
+              </div>
+              <div class="dashboard_notification_item_content">
+                <div class="dashboard_notification_item_date">
+                  <span class="time">15:33:37</span>
+                  <span class="date">09.09.2021</span>
+                </div>
+                <div class="dashboard_notification_item_titile">New action for asset</div>
+                <div class="dashboard_notification_item_asset">Asset: 1451658 Yeletski vegies 1</div>
+              </div> 
+            </div>
+            
+            <div class="dashboard_notification_item">
+              <div class="dashboard_notification_icon">
+                <svg class="deteils_grafs_svg" width="15" height="15">
+                    <use xlink:href="#notification_ok" />
+                </svg>
+              </div>
+              <div class="dashboard_notification_item_content">
+                <div class="dashboard_notification_item_date">
+                  <span class="time">15:33:37</span>
+                  <span class="date">09.09.2021</span>
+                </div>
+                <div class="dashboard_notification_item_titile">Failure pre chamber gas compressor</div>
+                <div class="dashboard_notification_item_asset">Asset: 1451658 Yeletski vegies 1</div>
+              </div> 
+            </div>
+            <div class="dashboard_notification_item">
+              <div class="dashboard_notification_icon">
+                <svg class="deteils_grafs_svg" width="15" height="15">
+                    <use xlink:href="#notification_alarm" />
+                </svg>
+              </div>
+              <div class="dashboard_notification_item_content">
+                <div class="dashboard_notification_item_date">
+                  <span class="time">15:33:37</span>
+                  <span class="date">09.09.2021</span>
+                </div>
+                <div class="dashboard_notification_item_titile">Charge temprerature before high-pressure</div>
+                <div class="dashboard_notification_item_asset">Asset: 1451658 Yeletski vegies 1</div>
+              </div> 
+            </div>
+            <div class="dashboard_notification_item">
+              <div class="dashboard_notification_icon">
+                <svg class="deteils_grafs_svg" width="15" height="15">
+                    <use xlink:href="#notification_warning" />
+                </svg>
+              </div>
+              <div class="dashboard_notification_item_content">
+                <div class="dashboard_notification_item_date">
+                  <span class="time">15:33:37</span>
+                  <span class="date">09.09.2021</span>
+                </div>
+                <div class="dashboard_notification_item_titile">Temperature in right condition</div>
+                <div class="dashboard_notification_item_asset">Asset: 1451658 Yeletski vegies 1</div>
+              </div> 
+            </div>
+            <div class="dashboard_notification_item">
+              <div class="dashboard_notification_icon">
+                <svg class="deteils_grafs_svg" width="15" height="15">
+                    <use xlink:href="#notification_info" />
+                </svg>
+              </div>
+              <div class="dashboard_notification_item_content">
+                <div class="dashboard_notification_item_date">
+                  <span class="time">15:33:37</span>
+                  <span class="date">09.09.2021</span>
+                </div>
+                <div class="dashboard_notification_item_titile">New action for asset</div>
+                <div class="dashboard_notification_item_asset">Asset: 1451658 Yeletski vegies 1</div>
+              </div> 
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- content container -->
+
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script src="js/custom.js"></script> 
+    <!-- scripts -->
+  </body>
+</html>
