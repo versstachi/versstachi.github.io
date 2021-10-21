@@ -1387,6 +1387,16 @@ body {
   width: 100%;
   margin-bottom: 17px; }
 
+.assets_view .assets_view_left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 .assets_view .assets_view_assets_info {
   font-size: 18px;
   line-height: 12px;
