@@ -5,10 +5,13 @@
     <meta name="lookport" content="width=device-width, initial-scale=1.0">
     <title>Prediks</title> 
     <link rel="stylesheet" href="css/main.css" /> 
+    <meta name="Access-Control-Allow-Headers" content="*" /> 
+    <meta name="Access-Control-Allow-Origin" content="*" />
   </head>
   <body class="dashboard">
     <!-- svg icons -->
-    <div w3-include-html="svg-list.html"></div>
+    <!-- <div w3-include-html="svg-list.html"></div> -->
+    <html-include src="svg-list.html"></html-include>
     <!-- svg icons -->
 
     <!-- sidebar container -->
@@ -247,7 +250,8 @@
           <div id="dashboard_map" class="dashboard_map">
             <!-- <img src="img/dashboard_map.svg" alt=""> -->
             <!-- dashboard_map -->
-            <div w3-include-html="dashboard_map.html"></div>
+            <!-- <div w3-include-html="dashboard_map.html"></div> -->
+    <html-include src="dashboard_map.html"></html-include>
 
             <div data-hover="pop_tooltip_1" class="dashboard_assets_info_tooltip_hover">
               <div class="assets_tooltip_hover_head">
