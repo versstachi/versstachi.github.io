@@ -38,7 +38,7 @@
         </ul>
         <ul class="sidebar_menu">
           <li class="sidebar_menu_item active">
-            <a href="" class="sidebar_menu_item_link">
+            <a href="/assets_view.html" class="sidebar_menu_item_link">
               <svg class="sidebar_top_menu_svg" width="12" height="16">
                   <use xlink:href="#sidebar_menu_assets" />
               </svg>
@@ -46,7 +46,7 @@
             </a>
           </li>
           <li class="sidebar_menu_item">
-            <a href="" class="sidebar_menu_item_link">
+            <a href="/requests.html" class="sidebar_menu_item_link">
               <svg class="sidebar_top_menu_svg" width="16" height="16">
                   <use xlink:href="#sidebar_menu_request" />
               </svg>
@@ -166,7 +166,7 @@
           </div>
         </div>
         <div class="assets_view_nav_add_new">
-          <a href="" class="green_link">+ Add new asset</a>
+          <button href="" class="green_link"  id="add_new_asset">+ Add new asset</button>
         </div>
       </div>
 
@@ -298,7 +298,108 @@
       </div>
     </div>
     <!-- content container -->
+ 
 
+    <!-- The Modal -->
+    <div id="add_new_asset_modal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="modal_close"><img src="img/modal_close.svg" alt=""></span>
+        <div class="modal-header">
+          <div class="modal-header-title">Add new asset</div>
+        </div>
+        <form action="">
+        <div class="modal-body"> 
+          <div class="form">
+              <div class="form_input">
+                <label class="form_input_label" for="brand_name"><span class="form_input_label_text">Brand</span> 
+                  <select name="brand_name"  id="brand_name" >
+                    <option disabled>Sergei</option>
+                    <option value="Sergei">Sergei</option>
+                    <option value="Sergei">Sergei</option>
+                    <option value="Sergei">Sergei</option>
+                 </select>
+                </label>
+              </div>
+              <div class="form_input">
+                <label class="form_input_label" for="type_name"><span class="form_input_label_text">Type</span> 
+                  <select name="type_name"  id="type_name" >
+                    <option disabled>Maintenance</option>
+                    <option value="Maintenance">Maintenance</option>
+                    <option value="Maintenance">Maintenance</option>
+                    <option value="Maintenance">Maintenance</option>
+                 </select>
+                </label>
+              </div>
+              <div class="form_input">
+                <label class="form_input_label" for="serial_number_role"><span class="form_input_label_text">Serial number</span>
+                  <input id="serial_number_role" type="text" name="serial_number_role" placeholder="Serial number">
+                </label>
+              </div>
+              <div class="form_input">
+                <label class="form_input_label" for="display_name"><span class="form_input_label_text">Display name</span>
+                  <input id="display_name" type="text" name="display_name" placeholder="Display name">
+                </label>
+              </div>
+              <div class="form_input">
+                <label class="form_input_label" for="location_name"><span class="form_input_label_text">Location</span> 
+                  <select name="location_name"  id="location_name" >
+                    <option disabled>Choose Location</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Russia">Russia</option>
+                 </select>
+                </label>
+                <div class="form_input_footer">
+                  <div class="input_info">Jacob Nielsen, jacob@ya.ru, +703452233</div>
+                  <div class="input_add_new"><a href="">Add new location</a></div>
+                </div>
+              </div>
+              <div class="form_input">
+                <label class="form_input_label" for="main_contact_name"><span class="form_input_label_text">Main contact</span> 
+                  <select name="main_contact_name"  id="main_contact_name" >
+                    <option disabled>Jacob Nielsen</option>
+                    <option value="Jacob Nielsen">Jacob Nielsen</option>
+                    <option value="Jacob Nielsen">Jacob Nielsen</option>
+                    <option value="Jacob Nielsen">Jacob Nielsen</option>
+                 </select>
+                </label>
+                <div class="form_input_footer">
+                  <div class="input_info">Jacob Nielsen, jacob@ya.ru, +703452233</div>
+                  <div class="input_add_new"><a href="">Add new user</a></div>
+                </div>
+              </div>
+              <div class="form_input">
+                <div class="form_input_label form_input_label_checkbox" for="notifications_name"><span class="form_input_label_text">Notifications</span>
+                  <div class="form_input_checkbox">
+                    <label class="form_container">All alarms & warnings
+                      <input type="checkbox" checked="checked" name="notifications_name">
+                      <span class="form_checkmark"></span>
+                    </label>
+
+                    <label class="form_container">All trends & forecast
+                      <input type="checkbox" name="notifications_name">
+                      <span class="form_checkmark"></span>
+                    </label>
+
+                    <label class="form_container">All logs
+                      <input type="checkbox" name="notifications_name">
+                      <span class="form_checkmark"></span>
+                    </label>
+                  </div> 
+                </div>
+              </div>  
+          </div>
+        </div>
+        <div class="modal-footer">
+              <div class="form_input"><span type="submit" class="form_button transparent_button modal_footer_close">Cancel</span></div> 
+              <div class="form_input"><button type="submit" class="form_button green_link">Create new asset</button></div> 
+        </div>
+            </form>
+      </div>
+
+    </div>
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>

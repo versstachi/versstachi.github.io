@@ -38,7 +38,7 @@
         </ul>
         <ul class="sidebar_menu">
           <li class="sidebar_menu_item">
-            <a href="" class="sidebar_menu_item_link">
+            <a href="/assets_view.html" class="sidebar_menu_item_link">
               <svg class="sidebar_top_menu_svg" width="12" height="16">
                   <use xlink:href="#sidebar_menu_assets" />
               </svg>
@@ -46,7 +46,7 @@
             </a>
           </li>
           <li class="sidebar_menu_item">
-            <a href="" class="sidebar_menu_item_link">
+            <a href="/requests.html" class="sidebar_menu_item_link">
               <svg class="sidebar_top_menu_svg" width="16" height="16">
                   <use xlink:href="#sidebar_menu_request" />
               </svg>
@@ -166,7 +166,7 @@
           </div>
         </div>
         <div class="requests_nav_add_new">
-          <a href="" class="green_link">+ Add new asset</a>
+          <button href="" class="green_link" id="add_new_asset">+ Add new asset</button>
         </div>
       </div>
 
@@ -174,104 +174,119 @@
         <div class="requests_assets_tab">
            <table>
             <tr>
-              <th>status connectivity</th>
-              <th>Name</th>
+              <th> <input type="checkbox" onclick='selects()' id="allselect"/>  </th>
+              <th>Ref</th>
+              <th>status</th>
+              <th>Date</th>
               <th>type</th>
-              <th># aggregate</th>
-              <th># Project</th>
-              <th>Location</th>
-              <th>Status of work</th>
+              <th>Asset</th>
+              <th>Name</th> 
               <th></th>
             </tr>
             <tr>
-              <td><div class="status_connectivity">
-                <div class="status_connectivity_svg_box">
-                  <svg class="status_connectivity_svg" width="15" height="15">
-                      <use xlink:href="#notification_ok" />
-                  </svg>
-                </div>
-                Running</div>
+              <td>
+                <label for="request_1">
+                  <input type="checkbox" id="request_1" name="chk" value="Smile">
+                </label>
               </td>
+              <td>3132</td>
+              <td><span class="status_work"></span> 
+                New</div>
+              </td>
+              <td>14 Oct 2021</td>
+              <td>Work order</td>
               <td>Yeletski vegies 1</td>
-              <td>JMS 624</td>
-              <td>1451658</td>
-              <td>T-7-Y423</td>
-              <td>Moscow</td>
-              <td><span class="status_work"></span> 1 alarm, 1 warning</td>
-              <td> 
-                <div class="form-group">
-                  <input type="checkbox" id="toggle_1" class="chkbx-toggle" value="1" checked>
-                  <label for="toggle_1"></label>
-                </div>
+              <td>Problem with changing password</td> 
+              <td>  
+                <div class="requests_assets_more">...</div>
+              </td>
+            </tr>  
+            <tr>
+              <td>
+                <label for="request_2">
+                  <input type="checkbox" id="request_2" name="chk" value="Smile">
+                </label>
+              </td>
+              <td>3132</td>
+              <td><span class="status_work"></span> 
+                New</div>
+              </td>
+              <td>14 Oct 2021</td>
+              <td>Work order</td>
+              <td>Yeletski vegies 1</td>
+              <td>Problem with changing password</td> 
+              <td>  
                 <div class="requests_assets_more">...</div>
               </td>
             </tr>
             <tr>
-              <td><div class="status_connectivity">
-                <div class="status_connectivity_svg_box">
-                  <svg class="status_connectivity_svg" width="15" height="15">
-                      <use xlink:href="#notification_ok" />
-                  </svg>
-                </div>
-                Running</div>
+              <td>
+                <label for="request_3">
+                  <input type="checkbox" id="request_3" name="chk" value="Smile">
+                </label>
               </td>
+              <td>3132</td>
+              <td><span class="status_work"></span> 
+                New</div>
+              </td>
+              <td>14 Oct 2021</td>
+              <td>Work order</td>
               <td>Yeletski vegies 1</td>
-              <td>JMS 624</td>
-              <td>1451658</td>
-              <td>T-7-Y423</td>
-              <td>Moscow</td>
-              <td><span class="status_work"></span> 1 alarm, 1 warning</td>
-              <td> 
-                <div class="form-group">
-                  <input type="checkbox" id="toggle_1" class="chkbx-toggle" value="1" checked>
-                  <label for="toggle_1"></label>
-                </div>
+              <td>Problem with changing password</td> 
+              <td>  
                 <div class="requests_assets_more">...</div>
               </td>
             </tr>
             <tr>
-              <td><div class="status_connectivity">
-                <div class="status_connectivity_svg_box">
-                  <svg class="status_connectivity_svg" width="15" height="15">
-                      <use xlink:href="#notification_ok" />
-                  </svg>
-                </div>
-                Running</div>
+              <td>
+                <label for="request_4">
+                  <input type="checkbox" id="request_4" name="chk" value="Smile">
+                </label>
               </td>
+              <td>3132</td>
+              <td><span class="status_work"></span> 
+                New</div>
+              </td>
+              <td>14 Oct 2021</td>
+              <td>Work order</td>
               <td>Yeletski vegies 1</td>
-              <td>JMS 624</td>
-              <td>1451658</td>
-              <td>T-7-Y423</td>
-              <td>Moscow</td>
-              <td><span class="status_work"></span> 1 alarm, 1 warning</td>
-              <td> 
-                <div class="form-group">
-                  <input type="checkbox" id="toggle_1" class="chkbx-toggle" value="1" checked>
-                  <label for="toggle_1"></label>
-                </div>
+              <td>Problem with changing password</td> 
+              <td>  
+                <div class="requests_assets_more">...</div>
+              </td>
+            </tr>
+              <td>
+                <label for="request_5">
+                  <input type="checkbox" id="request_5" name="chk" value="Smile">
+                </label>
+              </td>
+              <td>3132</td>
+              <td><span class="status_work"></span> 
+                New</div>
+              </td>
+              <td>14 Oct 2021</td>
+              <td>Work order</td>
+              <td>Yeletski vegies 1</td>
+              <td>Problem with changing password</td> 
+              <td>  
                 <div class="requests_assets_more">...</div>
               </td>
             </tr>
             <tr>
-              <td><div class="status_connectivity">
-                <div class="status_connectivity_svg_box">
-                  <svg class="status_connectivity_svg" width="15" height="15">
-                      <use xlink:href="#notification_ok" />
-                  </svg>
-                </div>
-                Running</div>
+              <td>
+                <label for="request_6">
+                  <input type="checkbox" id="request_6" name="chk" value="Smile">
+                </label>
               </td>
+              <td>3132</td>
+              <td><span class="status_work"></span> 
+                New</div>
+              </td>
+              <td>14 Oct 2021</td>
+              <td>Work order</td>
               <td>Yeletski vegies 1</td>
-              <td>JMS 624</td>
-              <td>1451658</td>
-              <td>T-7-Y423</td>
-              <td>Moscow</td>
-              <td><span class="status_work"></span> 1 alarm, 1 warning</td>
-              <td> 
-                <div class="form-group">
-                  <input type="checkbox" id="toggle_1" class="chkbx-toggle" value="1" checked>
-                  <label for="toggle_1"></label>
-                </div>
+              <td>Problem with changing password</td> 
+              <td>  
                 <div class="requests_assets_more">...</div>
               </td>
             </tr>
@@ -282,11 +297,109 @@
     </div>
     <!-- content container -->
 
+    <!-- The Modal -->
+    <div id="add_new_asset_modal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="modal_close"><img src="img/modal_close.svg" alt=""></span>
+        <div class="modal-header">
+          <div class="modal-header-title">Add new request</div>
+        </div>
+        <form action="">
+        <div class="modal-body"> 
+          <div class="form"> 
+              <div class="form_input">
+                <label class="form_input_label" for="serial_number_role"><span class="form_input_label_text">Name*</span>
+                <input id="form_login" type="text" name="form_login" placeholder="Sergei">
+                </label>
+              </div>
+            <div class="form_input">
+              <label class="form_input_label" for="rRequest_type_name"><span class="form_input_label_text">Request type*</span> 
+                <select name="rRequest_type_name"  id="rRequest_type_name" >
+                  <option disabled>Maintenance</option>
+                  <option value="Maintenance">Maintenance</option>
+                  <option value="Maintenance">Maintenance</option>
+                  <option value="Maintenance">Maintenance</option>
+               </select>
+              </label>
+            </div>
+            <div class="form_input">
+              <label class="form_input_label" for="asset_name"><span class="form_input_label_text">Asset*</span> 
+                <select name="asset_name"  id="asset_name" >
+                  <option disabled>Choose asset</option>
+                  <option value="asset">asset</option>
+                  <option value="asset">asset</option>
+                  <option value="asset">asset</option>
+               </select>
+              </label>
+            </div> 
+            <div class="form_input">
+              <label class="form_input_label" for="serial_number_role"><span class="form_input_label_text">Description</span>
+              <textarea id="Description_name" type="text" name="Description_name" placeholder="Description" cols="30" rows="10"></textarea>
+              </label>
+            </div> 
+            <div class="form_input">
+              <label class="form_input_label" for="asset_name"><span class="form_input_label_text">Priority*</span> 
+                <select name="asset_name"  id="asset_name" >
+                  <option disabled>Choose Priority</option>
+                  <option value="Priority">Priority</option>
+                  <option value="Priority">Priority</option>
+                  <option value="Priority">Priority</option>
+               </select>
+              </label>
+            </div> 
+            <div class="form_input"> 
+                <label for="upload_photo" class="form_input_label"><span class="form_input_label_text">Files</span>
+                  <div class="upload_photo_input_wrap">
+                    <div class="upload_photo_input">
+                      <img src="../img/Upload_photo.svg" alt="">
+                      Upload
+                      <input type="file" name="upload_photo" id="upload_photo" />
+                    </div>
+                  </div>
+                </label> 
+            </div> 
+            <div class="form_input">
+              <label class="form_input_label form_input_label_linked form_input_label_checkbox" for="serial_number_role"><span class="form_input_label_text">Linked</span> 
+                  <div class="form_input_checkbox">
+                    <label class="form_container">
+                      <input type="checkbox" checked="checked" name="notifications_name">
+                      <span>Reports & invoices</span>
+                      <span class="form_checkmark"></span>
+                    </label>
+
+                    <label class="form_container">
+                      <input type="checkbox" name="notifications_name">
+                      <span>Requests</span>
+                      <span class="form_checkmark"></span>
+                    </label>
+
+                    <label class="form_container">
+                      <input type="checkbox" name="notifications_name">
+                      <span>Alarms & warnings</span>
+                      <span class="form_checkmark"></span>
+                    </label>
+
+                    <label class="form_container">
+                      <input type="checkbox" name="notifications_name">
+                      <span>Trends & forecast</span>
+                      <span class="form_checkmark"></span>
+                    </label>
+                  </div> 
+              </label>
+            </div> 
+          </div>
+        </div>
+        <div class="modal-footer">
+              <div class="form_input"><span type="submit" class="form_button modal_footer_close transparent_button">Cancel</span></div> 
+              <div class="form_input"><button type="submit" class="form_button green_link">Create new request</button></div> 
+        </div>
+            </form>
+      </div>
+
+    </div>
     <!-- scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <script src="js/custom.js"></script> 
     <!-- scripts -->
   </body>
