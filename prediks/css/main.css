@@ -752,6 +752,8 @@ body {
     -webkit-flex: 0 0 230px;
         -ms-flex: 0 0 230px;
             flex: 0 0 230px; }
+    .assets .dashboard_content_wrap .dashboard_content_total_info .dashboard_content_total_info_col:nth-child(3n+3) {
+      margin-right: 1%; }
   .assets .dashboard_content_wrap .dashboard_content_total_info .dashboard_content_total_details {
     -webkit-align-items: flex-end;
     -webkit-box-align: end;
